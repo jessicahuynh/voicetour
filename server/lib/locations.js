@@ -1,13 +1,15 @@
 locations = [
 	volen = {
 		"name": "The Volen National Center for Complex Systems",
-		"nickname": "Volen",
+		"nickname": ["Volen"],
 		"coordinates": [],
 		"function": "Volen is home to Brandeis' computer science and linguistics departments.",
 		"description": "A longer description",
+		"category":"classroom"
 
 	},
 	gzang = {
-		"name":"Gerstenzang"
+		"name":"Gerstenzang",
+		"nickname":["Gzang"]
 	}
 ]
