@@ -5,9 +5,21 @@ Template.welcome.helpers({
 			Session.set("currentLocation",current);
 			
 		});
+
+		
 		return Session.get("currentLocation");
 	}
 });
+
+Template.welcome.events({
+	'click #here': function() {
+		var volen = Meteor.call("pointIncluded",
+			Locations.findOne({nickname:"Volen"}).coordinates,
+			Session.get("currentLocation"));
+		alert(volen);
+	}
+});
+
 
 function Point(x,y) {
 	this.x = x;
