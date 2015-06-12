@@ -5,7 +5,7 @@ This is going to be a web and mobile app with multi-modal navigation that tours 
 ## Members
 Jessica Huynh
 Tianci Zhong
-Ziyu
+Ziyu Qiu
 
 
 ----------
