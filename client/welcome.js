@@ -10,23 +10,27 @@ Template.welcome.helpers({
 
 		
 		return Session.get("currentLocation");
+	},
+	inBuilding: function() {
+		return Session.get("inBuilding");
 	}
 });
 
 Template.welcome.events({
 	'click #here': function() {	
-		Meteor.call("pointIncluded",
-			Locations.findOne().coordinates,
+		Session.set("currentLocation",new Point(42.365947,-71.260036));
+
+		Meteor.call("searchLocations",			
 			Session.get("currentLocation"),
 			function(error, data) {
 				if (error) {
 					console.log(error);
 				}
 				else {
-					Session.set("inABuilding",data)
+					Session.set("inBuilding",data);
 				}
-		});
-		alert(Session.get("inABuilding"));
+			}
+		);
 	}
 });
 
