@@ -11,13 +11,21 @@ Template.welcome.helpers({
 		
 		return Session.get("currentLocation");
 	},
-	inBuilding: function() {
-		return Session.get("inBuilding");
+	inLocation: function() {
+		var at = Session.get("inLocation");
+		if (at === undefined) {
+			return "off campus";
+		}
+		else {
+			return Session.get("inLocation").name;
+		}
+		
 	}
 });
 
 Template.welcome.events({
 	'click #here': function() {	
+		// a test to see if it knows this coordinate is in the SCC...
 		Session.set("currentLocation",new Point(42.365947,-71.260036));
 
 		Meteor.call("searchLocations",			
@@ -27,7 +35,7 @@ Template.welcome.events({
 					console.log(error);
 				}
 				else {
-					Session.set("inBuilding",data);
+					Session.set("inLocation",data);
 				}
 			}
 		);
