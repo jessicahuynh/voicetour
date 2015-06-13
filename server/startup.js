@@ -5,4 +5,5 @@ Meteor.startup(function() {
 			Locations.insert(location);
 		});
 	}
+
 });

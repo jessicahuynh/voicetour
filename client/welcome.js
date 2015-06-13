@@ -1,3 +1,5 @@
+
+
 Template.welcome.helpers({
 	currentLocation: function() {
 		navigator.geolocation.watchPosition(function(position){
@@ -12,11 +14,19 @@ Template.welcome.helpers({
 });
 
 Template.welcome.events({
-	'click #here': function() {
-		var volen = Meteor.call("pointIncluded",
-			Locations.findOne({nickname:"Volen"}).coordinates,
-			Session.get("currentLocation"));
-		alert(volen);
+	'click #here': function() {	
+		Meteor.call("pointIncluded",
+			Locations.findOne().coordinates,
+			Session.get("currentLocation"),
+			function(error, data) {
+				if (error) {
+					console.log(error);
+				}
+				else {
+					Session.set("inABuilding",data)
+				}
+		});
+		alert(Session.get("inABuilding"));
 	}
 });
 

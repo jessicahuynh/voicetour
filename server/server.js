@@ -1,8 +1,4 @@
 Meteor.methods({
-	Point: function(x,y) {
-		this.x = x;
-		this.y = y;
-	},
 	// numVert: number of vertices
 	// vertices: array of vertices
 	// current: current location
@@ -15,6 +11,7 @@ Meteor.methods({
 		for (var i = 0; i < numVert; i++) {
 			xArray.push(vertices[i].x);
 		}
+		
 		var yArray = [];
 		for (var i = 0; i < numVert; i++) {
 			yArray.push(vertices[i].y);
@@ -30,7 +27,7 @@ Meteor.methods({
 
 			}
 		}
-
-		return "here";
+		console.log("Result is " + included);
+		return included;
 	}
 });
