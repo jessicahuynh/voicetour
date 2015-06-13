@@ -1,7 +1,10 @@
 Meteor.methods({
-	// numVert: number of vertices
-	// vertices: array of vertices
-	// current: current location
+	/* numVert: number of vertices
+	 * vertices: array of vertices
+	 * current: current location 
+	 *
+	 * Determines if a given Point is located within a polygon of n vertices
+	 * Algorithm from http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html */
 	pointIncluded: function(vertices, current) {
 		included = false;
 		numVert = vertices.length;
@@ -27,7 +30,32 @@ Meteor.methods({
 
 			}
 		}
-		console.log("Result is " + included);
+	
 		return included;
+	},
+
+	/* Search through all locations to see where you are */
+	searchLocations: function(current) {
+		location = null;
+
+		for (var i = 0; i < Locations.find().count(); i++) {
+			// if the given Point is in the location, return the location
+			Meteor.call("pointIncluded",Locations.find().fetch()[i].coordinates,current,function(error, data) {
+				if (error) {
+					console.log(error);
+				}
+				else {
+					locatedHere = data;
+				}
+			});
+
+			if (locatedHere) {
+				location = Locations.find().fetch()[i];
+				console.log(location);
+				break;
+			}
+		}
+
+		return location;
 	}
 });
