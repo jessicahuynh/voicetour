@@ -50,9 +50,22 @@ Template.welcome.events({
 			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
 		}
 		else {
-			readLocation = new SpeechSynthesisUtterance(Session.get("inLocation").name);
+			readLocation = new SpeechSynthesisUtterance("You are at " + Session.get("inLocation").name);
 
 			window.speechSynthesis.speak(readLocation);
+		}
+	},
+
+	'click #whatIsHere': function(event) {
+		event.preventDefault();
+
+		if (Session.get("inLocation") == null) {
+			window.speechSynthesis.speak(new SpeechSynthesisUtterance("There's lots to do off campus, but unfortunately I can't tell you all that much about it."));
+		}
+		else {
+			readFunction = new SpeechSynthesisUtterance(Session.get("inLocation").function);
+
+			window.speechSynthesis.speak(readFunction);
 		}
 	}
 });
