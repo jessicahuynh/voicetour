@@ -21,8 +21,8 @@ Meteor.methods({
 		}
 
 		for (var i = 0, j = numVert - 1; i < numVert; j = i++) {
-			if ((yArray[i] > current.y) != (yArray[j] > current.y) &&
-				(current.x < (xArray[j] - xArray[i]) * 
+			if ((yArray[i] >= current.y) != (yArray[j] >= current.y) &&
+				(current.x <= (xArray[j] - xArray[i]) * 
 					(current.y - yArray[i]) / (yArray[j] - yArray[i]) +
 					xArray[i])
 				) {

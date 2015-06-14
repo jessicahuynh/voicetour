@@ -64,7 +64,10 @@ locations = [
 		"name":"Feldberg Communications Center",
 		"nickname":"Feldberg",
 		"coordinates": [
-			new Point()],
+			new Point(42.366985,-71.259075),
+			new Point(42.366800,-71.258632),
+			new Point(42.366546,-71.258833),
+			new Point(42.366751,-71.259269)],
 		"function":"Feldberg contains offices and is home to Library and Technology Services.",
 		"description":"stuff",
 		"category":"Offices"
