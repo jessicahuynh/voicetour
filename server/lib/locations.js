@@ -22,7 +22,7 @@ locations = [
 			new Point(42.365522,-71.260561)],
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
 		"description":"green",
-		"category":"studentCenter"
+		"category":"Student center"
 	},
 	fellowsgarden = {
 		"name": "Fellows Garden",
@@ -33,18 +33,18 @@ locations = [
 			new Point(42.365813,-71.259543),
 			new Point(42.366023,-71.259101)],
 		"function": "Fellows Garden is a nice place to hangout with friends in nice weather",
-		"description":"Nobody knowns the name",
+		"description":"Nobody knows the name",
 		"category":"Lawn"
 	},
-	rosen = {
+	rose = {
 		"name": "The Rose Art Museum",
-		"nickname": "Rosen",
+		"nickname": "Rose",
 		"coordinates": [
 			new Point(42.366033,-71.262631),
 			new Point(42.365498,-71.262948),
 			new Point(42.365442,-71.262288),
 			new Point(42.365902,-71.262218)],
-		"function": "The Rose Art Museum",
+		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Museum",
 		"category":"Other"
 	},
@@ -60,6 +60,15 @@ locations = [
 		"description":"Lab",
 		"category":"Classroom"
 	},
+	feldberg = {
+		"name":"Feldberg Communications Center",
+		"nickname":"Feldberg",
+		"coordinates": [
+			new Point()],
+		"function":"Feldberg contains offices and is home to Library and Technology Services.",
+		"description":"stuff",
+		"category":"Offices"
+	}
 ]
 
 function Point(x,y) {

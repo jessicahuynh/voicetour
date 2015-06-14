@@ -1,45 +1,49 @@
-
+offCampus = {
+	"name":"off campus",
+	"nickname":"off campus",
+	"function":"not at Brandeis!"
+}
 
 Template.welcome.helpers({
 	currentLocation: function() {
+		// watchPosition watches to see if position changes
+		// the function then sets the new location
+		// and calls searchLocations to determine the new location
 		navigator.geolocation.watchPosition(function(position){
 			var current = new Point(position.coords.latitude,position.coords.longitude);
 			Session.set("currentLocation",current);
+
+			Meteor.call("searchLocations",			
+				Session.get("currentLocation"),
+				function(error, data) {
+					if (error) {
+						console.log(error);
+					}
+					else {
+						Session.set("inLocation",data);
+					}
+				}
+			);
 			
 		});
 
 		
 		return Session.get("currentLocation");
 	},
-	inLocation: function() {
+	inLocation: function(property) {
 		var at = Session.get("inLocation");
-		if (at === undefined) {
-			return "off campus";
+		if (at === null) {
+			return offCampus;
 		}
 		else {
-			return Session.get("inLocation").name;
+			return Session.get("inLocation");
 		}
 		
 	}
 });
 
 Template.welcome.events({
-	'click #here': function() {	
-		// a test to see if it knows this coordinate is in the SCC...
-		Session.set("currentLocation",new Point(42.365947,-71.260036));
-
-		Meteor.call("searchLocations",			
-			Session.get("currentLocation"),
-			function(error, data) {
-				if (error) {
-					console.log(error);
-				}
-				else {
-					Session.set("inLocation",data);
-				}
-			}
-		);
-	}
+	
 });
 
 

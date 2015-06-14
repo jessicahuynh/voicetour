@@ -1,10 +1,16 @@
 <template name="welcome">
 <div class="jumbotron">
-<h1>Brandeis Voice Tour</h1>
-<p>Current location: ({{currentLocation.x}}, {{currentLocation.y}})</p>
+	<h1 class="page-header">Brandeis Voice Tour</h1>
 
-<button id="here">Where are you?</button>
-<p>{{inLocation}}</p>
+	<p>Current location: ({{currentLocation.x}}, {{currentLocation.y}})</p>
+	<p>{{inLocation.name}}</p>
+	<p><a href="#locationDescription" id="here" class="btn btn-info" data-toggle="collapse">Learn more</a></p>
+	<div class="collapse bg-info" id="locationDescription">
+		<p>{{inLocation.function}}</p>
+		<p>{{inLocation.description}}</p>
+	</div>
+
 
 </div>
+
 </template>

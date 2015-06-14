@@ -1,8 +1,12 @@
 <template name="locationList">
 	<h1>Locations at Brandeis</h1>
+	<div class="list-group">
 	{{#each locationsData}}
-		<h2>{{nickname}} ({{name}})</h2>
-		<p>{{function}}</p>
-		<p><strong>Category:</strong> {{category}}</p>
+		<a class="list-group-item">
+			<h2 class="list-group-item-heading">{{nickname}} ({{name}})</h2>
+			<p class="list-group-item-text">{{function}}</p>
+			<p class="list-group-item-text"><strong>Category:</strong> {{category}}</p>
+		</a>
 	{{/each}}
+	</div>
 </template>
