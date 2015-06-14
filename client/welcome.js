@@ -24,15 +24,6 @@ Template.welcome.helpers({
 					}
 				}
 			);
-
-			if (Session.get("inLocation") == null) {
-				window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
-			}
-			else {
-				readLocation = new SpeechSynthesisUtterance(Session.get("inLocation").name);
-
-				window.speechSynthesis.speak(readLocation);
-			}
 			
 		});
 
@@ -52,7 +43,18 @@ Template.welcome.helpers({
 });
 
 Template.welcome.events({
-	
+	'click #whereAmI': function(event) {
+		event.preventDefault();
+
+		if (Session.get("inLocation") == null) {
+			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
+		}
+		else {
+			readLocation = new SpeechSynthesisUtterance(Session.get("inLocation").name);
+
+			window.speechSynthesis.speak(readLocation);
+		}
+	}
 });
 
 
