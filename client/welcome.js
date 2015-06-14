@@ -24,6 +24,15 @@ Template.welcome.helpers({
 					}
 				}
 			);
+
+			if (Session.get("inLocation") == null) {
+				window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
+			}
+			else {
+				readLocation = new SpeechSynthesisUtterance(Session.get("inLocation").name);
+
+				window.speechSynthesis.speak(readLocation);
+			}
 			
 		});
 
