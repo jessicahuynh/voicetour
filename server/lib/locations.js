@@ -3,10 +3,10 @@ locations = [
 		"name": "The Volen National Center for Complex Systems",
 		"nickname": "Volen",
 		"coordinates": [
-			new Point(42.367146,-71.258926), 
-			new Point(42.366950,-71.258507),
-			new Point(42.366815,-71.258593),
-			new Point(42.367029,-71.259071)],
+			new Point(42.367036,-71.259186), 
+			new Point(42.367184,-71.259039),
+			new Point(42.366944,-71.258458),
+			new Point(42.366783,-71.258614)],
 		"function": "Volen is home to Brandeis' computer science and linguistics departments.",
 		"description": "A longer description",
 		"category":"classroom"
