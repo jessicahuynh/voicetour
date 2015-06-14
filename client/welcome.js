@@ -42,6 +42,20 @@ Template.welcome.helpers({
 	}
 });
 
+Template.welcome.rendered = function() {
+		if (Session.get("inLocation") == null) {
+			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
+			window.speechSynthesis.speak(new SpeechSynthesisUtterance("There's lots to do off campus, but unfortunately I can't tell you all that much about it."));
+		}
+		else {
+			readLocation = new SpeechSynthesisUtterance("You are at " + Session.get("inLocation").name);
+			readFunction = new SpeechSynthesisUtterance(Session.get("inLocation").function);
+
+			window.speechSynthesis.speak(readLocation);
+			window.speechSynthesis.speak(readFunction);
+		}
+}
+
 Template.welcome.events({
 	'click #whereAmI': function(event) {
 		event.preventDefault();
