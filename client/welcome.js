@@ -31,14 +31,8 @@ Template.welcome.helpers({
 		return Session.get("currentLocation");
 	},
 	inLocation: function(property) {
-		var at = Session.get("inLocation");
-		if (at === null) {
-			return offCampus;
-		}
-		else {
-			return Session.get("inLocation");
-		}
-		
+		console.log(Session.get("inLocation"));
+		return Session.get("inLocation");		
 	}
 });
 

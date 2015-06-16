@@ -69,16 +69,17 @@ Meteor.methods({
 				}
 				else {
 					console.log("got the nearest location: " + data.name);
-					return data;
+					location = data;
 				}
 			});
 		}
+		console.log(location);
 		return location;
 	},
 
 	getNearest: function(location) {
 		var points = CornerPoints.find().fetch();
-		console.log(location);
+		//console.log(location);
 
 		// hold the current iteration
 		// nearLocationDistance is the distance to the point
@@ -109,7 +110,7 @@ Meteor.methods({
 				}
 				);
 			nearLocation = points[i];
-			console.log(nearLocationDistance + "<" + theNearestDistance);
+			//console.log(nearLocationDistance + "<" + theNearestDistance);
 			if (nearLocationDistance < theNearestDistance) {
 				theNearest = nearLocation;
 				theNearestDistance = nearLocationDistance;
@@ -117,7 +118,7 @@ Meteor.methods({
 			previousClosest = nearLocation;
 			previousClosestDistance = nearLocationDistance;
 		}
-		console.log("nearest distance location:" + theNearestDistance + JSON.stringify(theNearest));
+		//console.log("nearest distance location:" + theNearestDistance + JSON.stringify(theNearest));
 		if (theNearestDistance < 10000000) {
 			console.log(JSON.stringify(theNearest));
 			return theNearest;
@@ -152,7 +153,7 @@ Meteor.methods({
 		var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
 		var d = R * c;
-		console.log(d);
+		//console.log(d);
 
 		return d;
 	}
