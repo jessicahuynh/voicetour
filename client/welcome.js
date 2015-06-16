@@ -79,7 +79,7 @@ Template.welcome.events({
 		}
 		else {
 			readFunction = new SpeechSynthesisUtterance(Session.get("inLocation").name);
-			console.log(Session.get("inLocation").name);
+			//console.log(Session.get("inLocation").name);
 
 			window.speechSynthesis.speak(readFunction);
 		}
