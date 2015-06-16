@@ -63,7 +63,27 @@ Template.welcome.events({
 		event.preventDefault();
 
 		if (Session.get("inLocation") == null) {
-			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
+			for (var i = 0; i < CornerPoints.find().count(); i++) {
+				Meteor.call("distance",
+							Session.get("currentLocation"),
+							CornerPoints.find().fetch()[i].point,
+							function(error,data) {
+								if (error) {
+									console.log(error);
+								}
+								else {
+									Session.set("nearLocation",data);
+								}
+							});
+				if (Session.get("nearLocation") < 5) {
+					console.log("Near something");
+					break;
+				}
+				else {
+					window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
+					break;
+				}
+			}
 		}
 		else {
 			readLocation = new SpeechSynthesisUtterance("You are at " + Session.get("inLocation").name);
