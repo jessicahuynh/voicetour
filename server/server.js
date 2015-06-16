@@ -64,17 +64,15 @@ Meteor.methods({
 	distance: function(start, end) {
 		var R = 6371000; // metres
 
-		function toRadians (angle) {
-
 		var lat1 = start.x;
 		var lat2 = end.x;
 		var lon1 = start.y;
 		var lon2 = end.y;
 
-		var p1 = lat1.radians();
-		var p2 = lat2.radians();
-		var dp = (lat2-lat1).radians();
-		var dl = (lon2-lon1).radians();
+		var p1 = lat1 * (Math.PI / 180);
+		var p2 = lat2 * (Math.PI / 180);
+		var dp = (lat2-lat1) * (Math.PI / 180);
+		var dl = (lon2-lon1) * (Math.PI / 180);
 
 		var a = Math.sin(dp/2) * Math.sin(dp/2) +
 		        Math.cos(p1) * Math.cos(p2) *
@@ -82,7 +80,9 @@ Meteor.methods({
 		var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
 		var d = R * c;
+		//console.log(d);
 
 		return d;
 	}
+
 });

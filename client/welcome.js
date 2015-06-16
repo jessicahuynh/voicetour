@@ -62,27 +62,48 @@ Template.welcome.events({
 	'click #whereAmI': function(event) {
 		event.preventDefault();
 
+		var points = CornerPoints.find().fetch();
+
 		if (Session.get("inLocation") == null) {
-			for (var i = 0; i < CornerPoints.find().count(); i++) {
+			// hold the current iteration
+			// nearLocationDistance is the distance to the point
+			// nearLocation is the object itself containing a point and a name
+
+			// previousClosest is the previous nearestLocation
+			// previousClosestDistance is the previous location's distance
+
+			// theNearest
+			// theNearestDistance
+
+			Session.set("previousClosest",points[0].point);
+			console.log(points[0].point);
+			Session.set("previousClosestDistance",1000000000000);
+			for (var i = 0; i < points.length; i++) {
 				Meteor.call("distance",
-							Session.get("currentLocation"),
-							CornerPoints.find().fetch()[i].point,
-							function(error,data) {
-								if (error) {
-									console.log(error);
-								}
-								else {
-									Session.set("nearLocation",data);
-								}
-							});
-				if (Session.get("nearLocation") < 5) {
-					console.log("Near something");
-					break;
+					Session.get("currentLocation"),
+					CornerPoints.find().fetch()[i].point,
+					function(error,data) {
+						if (error) {
+							console.log(error);
+						}
+						else {
+							Session.set("nearLocationDistance",data);
+							Session.set("nearLocation",points[i].point)
+						}
+					});
+				console.log(Session.get("nearLocationDistance") + "<" + Session.get("previousClosestDistance"));
+				if (Session.get("nearLocationDistance") < Session.get("previousClosestDistance")) {
+					Session.set("theNearest",Session.get("nearLocation"));
+					Session.set("theNearestDistance",Session.get("nearLocationDistance"));
 				}
-				else {
-					window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
-					break;
-				}
+				Session.set("previousClosest",Session.get("nearLocation"));
+				Session.set("previousClosestDistance",Session.get("nearLocationDistance"));
+			}
+			if (Session.get("theNearestDistance") < 5000) {
+				console.log("Near something: " + Session.get("theNearest").nickname);
+			}
+			else {
+				window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
 			}
 		}
 		else {
