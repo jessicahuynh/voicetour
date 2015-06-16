@@ -31,7 +31,7 @@ Template.welcome.helpers({
 		return Session.get("currentLocation");
 	},
 	inLocation: function(property) {
-		console.log(Session.get("inLocation"));
+		//console.log(Session.get("inLocation"));
 		return Session.get("inLocation");		
 	}
 });
@@ -73,6 +73,16 @@ Template.welcome.events({
 				}
 			}
 		);
+
+		if (Session.get("inLocation") == null) {
+			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
+		}
+		else {
+			readFunction = new SpeechSynthesisUtterance(Session.get("inLocation").name);
+			console.log(Session.get("inLocation").name);
+
+			window.speechSynthesis.speak(readFunction);
+		}
 
 		
 	},

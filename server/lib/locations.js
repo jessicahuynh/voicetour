@@ -72,8 +72,14 @@ locations = [
 		"description":"stuff",
 		"category":"Offices"
 	},
-
-turner={"name":"60 Turner Street","coordinates":[new Point(42.362028,-71.264118), new Point(42.361976,-71.263828),new Point(42.361834,-71.26386),new Point(42.361889,-71.264187)]},
+	turner = {
+		"name":"60 Turner Street",
+		"coordinates":[
+			new Point(42.362028,-71.264118), 
+			new Point(42.361976,-71.263828),
+			new Point(42.361834,-71.26386),
+			new Point(42.361889,-71.264187)]
+	},
 ss567={"name":"567 South Street Apartments","coordinates":[new Point(42.36141,-71.261572), new Point(42.361333,-71.261402), new Point(42.361165,-71.261552), new Point(42.36124,-71.261714)]},
 bernstein={"name":"Bernstein-Marcus Administration Center","coordinates":[new Point(42.365077,-71.25998), new Point(42.365222,-71.259642), new Point(42.365046,-71.259492), new Point(42.36489,-71.259837)]},
 coffman={"name":"Coffman Residence Hall","coordinates":[new Point(42.359936,-71.257469), new Point(42.359989,-71.257373), new Point(42.359397,-71.25678), new Point(42.359327,-71.256919)]},

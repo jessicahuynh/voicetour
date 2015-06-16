@@ -73,7 +73,7 @@ Meteor.methods({
 				}
 			});
 		}
-		console.log(location);
+		//console.log(location);
 		return location;
 	},
 
