@@ -40,35 +40,106 @@ Meteor.methods({
 
 		for (var i = 0; i < Locations.find().count(); i++) {
 			// if the given Point is in the location, return the location
-			Meteor.call("pointIncluded",Locations.find().fetch()[i].coordinates,current,function(error, data) {
-				if (error) {
-					console.log(error);
-				}
-				else {
-					locatedHere = data;
-				}
+			Meteor.call("pointIncluded",Locations.find().fetch()[i].coordinates,current,
+				function(error, data) {
+					if (error) {
+						console.log(error);
+					}
+					else {
+						locatedHere = data;
+					}
 			});
 
 			if (locatedHere) {
 				location = Locations.find().fetch()[i];
-				console.log(location);
+				//console.log(location);
 				break;
 			}
 		}
 
+		// call getNearest
+		// pass current
+		//console.log(locatedHere);
+		if (!locatedHere) {
+			Meteor.call("getNearest",
+			current,
+			function(error,data) {
+				if (error) {
+					console.log(error);
+				}
+				else {
+					console.log("got the nearest location: " + data.name);
+					return data;
+				}
+			});
+		}
 		return location;
 	},
 
+	getNearest: function(location) {
+		var points = CornerPoints.find().fetch();
+		console.log(location);
+
+		// hold the current iteration
+		// nearLocationDistance is the distance to the point
+		// nearLocation is the object itself containing a point and a name
+		// previousClosest is the previous nearestLocation
+		// previousClosestDistance is the previous location's distance
+
+		// theNearest
+		// theNearestDistance
+
+		previousClosest= points[0];
+		previousClosestDistance = 1000000000000;
+		theNearestDistance = 100000000000;
+
+		for (var i = 0; i < points.length; i++) {
+			//console.log(JSON.stringify(location)+JSON.stringify(points[i]));
+			Meteor.call("distance",
+				location,
+				points[i],
+				function(error,data) {
+					if (error) {
+						console.log(error);
+					}
+					else {
+						//console.log(data);
+						nearLocationDistance = data;							
+					}
+				}
+				);
+			nearLocation = points[i];
+			console.log(nearLocationDistance + "<" + theNearestDistance);
+			if (nearLocationDistance < theNearestDistance) {
+				theNearest = nearLocation;
+				theNearestDistance = nearLocationDistance;
+			}
+			previousClosest = nearLocation;
+			previousClosestDistance = nearLocationDistance;
+		}
+		console.log("nearest distance location:" + theNearestDistance + JSON.stringify(theNearest));
+		if (theNearestDistance < 10000000) {
+			console.log(JSON.stringify(theNearest));
+			return theNearest;
+		}
+		else {
+			console.log("You are off campus.");
+			return;
+		}
+
+	},
+
 	/* returns the distance between two points 
-	 * adapted from http://www.movable-type.co.uk/scripts/latlong.html */
+	* adapted from http://www.movable-type.co.uk/scripts/latlong.html */
 	distance: function(start, end) {
 		//console.log(JSON.stringify(start)+JSON.stringify(end));
 		var R = 6371000; // metres
+		//console.log(start.point+end.point);
 
 		var lat1 = start.x;
-		var lat2 = end.x;
+		var lat2 = end.point.x;
 		var lon1 = start.y;
-		var lon2 = end.y;
+		var lon2 = end.point.y;
 
 		var p1 = lat1 * (Math.PI / 180);
 		var p2 = lat2 * (Math.PI / 180);
@@ -81,7 +152,7 @@ Meteor.methods({
 		var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
 		var d = R * c;
-		//console.log(d);
+		console.log(d);
 
 		return d;
 	}

@@ -6,7 +6,7 @@ Meteor.startup(function() {
 			var c = location.coordinates;
 
 			for (var i = 0; i < c.length; i++) {
-				CornerPoints.insert({"point":c[i],"name":location.nickname});
+				CornerPoints.insert({"point":c[i],"name":location.name});
 			}
 		});
 	}

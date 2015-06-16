@@ -62,57 +62,25 @@ Template.welcome.events({
 	'click #whereAmI': function(event) {
 		event.preventDefault();
 
-		var points = CornerPoints.find().fetch();
-		thePoints = points;
+		navigator.geolocation.getCurrentPosition(function(position) {
+ 			var current = new Point(position.coords.latitude,position.coords.longitude);
+			Session.set("currentLocation",current);
+		});
+		
 
-		if (Session.get("inLocation") == null) {
-			// hold the current iteration
-			// nearLocationDistance is the distance to the point
-			// nearLocation is the object itself containing a point and a name
-
-			// previousClosest is the previous nearestLocation
-			// previousClosestDistance is the previous location's distance
-
-			// theNearest
-			// theNearestDistance
-
-			Session.set("previousClosest",points[0]);
-			Session.set("previousClosestDistance",1000000000000);
-			for (var i = 0; i < points.length; i++) {
-				//console.log(JSON.stringify(Session.get("currentLocation"))+JSON.stringify(points[i].point));
-				Meteor.call("distance",
-					Session.get("currentLocation"),
-					points[i].point,
-					function(error,data) {
-						if (error) {
-							console.log(error);
-						}
-						else {
-							console.log(data);
-							Session.set("nearLocationDistance",data);							
-						}
-					});
-				Session.set("nearLocation",points[i].point);
-				console.log(Session.get("nearLocationDistance") + "<" + Session.get("previousClosestDistance"));
-				if (Session.get("nearLocationDistance") < Session.get("previousClosestDistance")) {
-					Session.set("theNearest",Session.get("nearLocation"));
-					Session.set("theNearestDistance",Session.get("nearLocationDistance"));
+		Meteor.call("searchLocations",			
+			Session.get("currentLocation"),
+			function(error, data) {
+				if (error) {
+					console.log(error);
 				}
-				Session.set("previousClosest",Session.get("nearLocation"));
-				Session.set("previousClosestDistance",Session.get("nearLocationDistance"));
+				else {
+					Session.set("inLocation",data);
+				}
 			}
-			if (Session.get("theNearestDistance") < 5000) {
-				console.log("Near something: " + Session.get("theNearest").nickname);
-			}
-			else {
-				window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
-			}
-		}
-		else {
-			readLocation = new SpeechSynthesisUtterance("You are at " + Session.get("inLocation").name);
+		);
 
-			window.speechSynthesis.speak(readLocation);
-		}
+		
 	},
 
 	'click #whatIsHere': function(event) {
