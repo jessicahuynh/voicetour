@@ -63,6 +63,7 @@ Template.welcome.events({
 		event.preventDefault();
 
 		var points = CornerPoints.find().fetch();
+		thePoints = points;
 
 		if (Session.get("inLocation") == null) {
 			// hold the current iteration
@@ -75,22 +76,23 @@ Template.welcome.events({
 			// theNearest
 			// theNearestDistance
 
-			Session.set("previousClosest",points[0].point);
-			console.log(points[0].point);
+			Session.set("previousClosest",points[0]);
 			Session.set("previousClosestDistance",1000000000000);
 			for (var i = 0; i < points.length; i++) {
+				//console.log(JSON.stringify(Session.get("currentLocation"))+JSON.stringify(points[i].point));
 				Meteor.call("distance",
 					Session.get("currentLocation"),
-					CornerPoints.find().fetch()[i].point,
+					points[i].point,
 					function(error,data) {
 						if (error) {
 							console.log(error);
 						}
 						else {
-							Session.set("nearLocationDistance",data);
-							Session.set("nearLocation",points[i].point)
+							console.log(data);
+							Session.set("nearLocationDistance",data);							
 						}
 					});
+				Session.set("nearLocation",points[i].point);
 				console.log(Session.get("nearLocationDistance") + "<" + Session.get("previousClosestDistance"));
 				if (Session.get("nearLocationDistance") < Session.get("previousClosestDistance")) {
 					Session.set("theNearest",Session.get("nearLocation"));

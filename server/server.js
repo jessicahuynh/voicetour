@@ -62,6 +62,7 @@ Meteor.methods({
 	/* returns the distance between two points 
 	 * adapted from http://www.movable-type.co.uk/scripts/latlong.html */
 	distance: function(start, end) {
+		//console.log(JSON.stringify(start)+JSON.stringify(end));
 		var R = 6371000; // metres
 
 		var lat1 = start.x;

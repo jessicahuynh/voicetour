@@ -71,10 +71,10 @@ locations = [
 		"function":"Feldberg contains offices and is home to Library and Technology Services.",
 		"description":"stuff",
 		"category":"Offices"
-	}
+	},
 
 turner={"name":"60 Turner Street","coordinates":[new Point(42.362028,-71.264118), new Point(42.361976,-71.263828),new Point(42.361834,-71.26386),new Point(42.361889,-71.264187)]},
-567={"name":"567 South Street Apartments","coordinates":[new Point(42.36141,-71.261572), new Point(42.361333,-71.261402), new Point(42.361165,-71.261552), new Point(42.36124,-71.261714)]},
+ss567={"name":"567 South Street Apartments","coordinates":[new Point(42.36141,-71.261572), new Point(42.361333,-71.261402), new Point(42.361165,-71.261552), new Point(42.36124,-71.261714)]},
 bernstein={"name":"Bernstein-Marcus Administration Center","coordinates":[new Point(42.365077,-71.25998), new Point(42.365222,-71.259642), new Point(42.365046,-71.259492), new Point(42.36489,-71.259837)]},
 coffman={"name":"Coffman Residence Hall","coordinates":[new Point(42.359936,-71.257469), new Point(42.359989,-71.257373), new Point(42.359397,-71.25678), new Point(42.359327,-71.256919)]},
 cohen={"name":"Cohen Residence Hall","coordinates":[new Point(42.359859,-71.257805), new Point(42.359894,-71.257695), new Point(42.359111,-71.257282), new Point(42.359074,-71.257394)]},
@@ -112,7 +112,7 @@ berlin={"name":"Berlin Chapel","coordinates":[new Point(42.368284,-71.260708), n
 bethlehem={"name":"Bethlehem Chapel","coordinates":[new Point(42.368343,-71.260178), new Point(42.368259,-71.259998), new Point(42.368196,-71.260047), new Point(42.368267,-71.260243)]},
 harlan={"name":"Harlan Chapel","coordinates":[new Point(42.368776,-71.260739), new Point(42.368692,-71.260564), new Point(42.36865,-71.2606), new Point(42.368732,-71.260779)]},
 chapelField={"name":"Chapel Fields","coordinates":[new Point(42.368103,-71.260244), new Point(42.36763,-71.25901), new Point(42.367281,-71.259034), new Point(42.367681,-71.260542)]},
-brwon={"name":"Brown Social Science Center","coordinates":[new Point(42.367383,-71.257225), new Point(42.36728,-71.256666), new Point(42.367169,-71.256718), new Point(42.367266-71.257265,)]},
+brown={"name":"Brown Social Science Center","coordinates":[new Point(42.367383,-71.257225), new Point(42.36728,-71.256666), new Point(42.367169,-71.256718), new Point(42.367266,-71.257265)]},
 edison={"name":"Edison-Lecks Science Building","coordinates":[new Point(42.36652,-71.25835), new Point(42.366312,-71.25788), new Point(42.366168,-71.258001), new Point(42.366374,-71.258462)]},
 farber={"name":"Farber Library","coordinates":[new Point(42.367907,-71.258866), new Point(42.368046,-71.25855), new Point(42.367823,-71.258354), new Point(42.367688,-71.25867)]},
 goldsmith={"name":"Goldsmith Building","coordinates":[new Point(42.367263,-71.258512), new Point(42.365328,-71.26243), new Point(42.367122,-71.258208), new Point(42.366997,-71.258307)]},
@@ -121,8 +121,8 @@ rabbGrad={"name":"Rabb Graduate Center","coordinates":[new Point(42.369289,-71.2
 roseMedical={"name":"Rosenstiel Basic Medical Sciences Research Center","coordinates":[new Point(42.366103,-71.257429), new Point(42.365901,-71.257013), new Point(42.365724,-71.257239), new Point(42.365884,-71.257585)]},
 schwartz={"name":"Schwartz Hall","coordinates":[new Point(42.367642,-71.257438), new Point(42.367563,-71.257024), new Point(42.367418,-71.257072), new Point(42.367494,-71.257484)]},
 SSC={"name":"Carl J. Shapiro Science Center","coordinates":[new Point(42.36595,-71.258617), new Point(42.366115,-71.257734), new Point(42.365759,-71.258559), new Point(42.365894,-71.257864)]},
-usdan={"name":"Usdan Student Center","coordinates":[new Point(42.368296,-71.256585), new Point(42.367852,-71.256794), new Point(42.367777,-71.256451), new Point(42.368243,)]},
-gosman={"name":"Gosman Sports and Convocation Center","coordinates":[new Point(42.365193,-71.255688), new Point(42.365761,-71.25482), new Point(42.364998,-71.253952), new Point(42.364449,)]}
+//usdan={"name":"Usdan Student Center","coordinates":[new Point(42.368296,-71.256585), new Point(42.367852,-71.256794), new Point(42.367777,-71.256451), new Point(42.368243,)]},
+//gosman={"name":"Gosman Sports and Convocation Center","coordinates":[new Point(42.365193,-71.255688), new Point(42.365761,-71.25482), new Point(42.364998,-71.253952), new Point(42.364449,)]}
 
 		
 ]
