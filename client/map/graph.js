@@ -144,19 +144,25 @@ var Graph = (function (undefined) {
 
 })();
 
-/* var map = {};
+
+
+var map = {};
  console.log("test1");
  var l = Locations.find().fetch();
  console.log("test2");
  var i = 0;
  var count = l.length;
- var name = Locations.find().fetch()[0];
- console.log(name.nickname);
- for(i=0;i<6;i++) {
-   console.log("Hi");
-   console.log(Locations.find().fetch()[i].nickname);
-   map[Locations.find().fetch()[i].nickname] = l[i].route;
-};*/
+ var name = Locations.find().fetch();
+
+var lo2 = name[0];
+
+
+// console.log(lo2.nickname);
+//  for(i=0;i<6;i++) {
+//    console.log("Hi");
+//    console.log(Locations.find().fetch()[i].nickname);
+//    map[Locations.find().fetch()[i].nickname] = l[i].route;
+// };
 
 /*while (i<l.length()) {
 	console.log("Hi");
@@ -172,7 +178,7 @@ console.log("test6");*/
 
 /*console.log(map);*/
 /*var map = {a:{c:1},b:{a:2,c:1},c:{a:4,b:1}},*/
-var map = {"volen":{"fellowsgarden": 2,
+/*var map = {"volen":{"fellowsgarden": 2,
 					"bassine": 1,
 					"feldberg":1,},
 			"scc":{"fellowsgarden": 1,
@@ -186,7 +192,7 @@ var map = {"volen":{"fellowsgarden": 2,
 			"feldberg":{"volen": 1,
 					"fellowsgarden": 3,
 					"bassine":2,},
-		}
+		}*/
 	graph = new Graph(map);
 
 
