@@ -9,9 +9,13 @@ locations = [
 			new Point(42.366783,-71.258614)],
 		"function": "Volen is home to Brandeis' computer science and linguistics departments.",
 		"description": "A longer description",
-		"category":"classroom"
+		"category":"classroom",
+		"route": {"fellowsgarden": 2,
+					"bassine": 1,
+					"feldberg":1,}
 
 	},
+
 	scc = {
 		"name": "Carl and Ruth Shapiro Campus Center",
 		"nickname": "SCC",
@@ -22,11 +26,14 @@ locations = [
 			new Point(42.365522,-71.260561)],
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
 		"description":"green",
-		"category":"Student center"
+		"category":"Student center",
+		"route": {"fellowsgarden": 1,
+					"rose" : 2,}
 	},
+
 	fellowsgarden = {
 		"name": "Fellows Garden",
-		"nickname": "Fellows Garden",
+		"nickname": "FellowsGarden",
 		"coordinates": [
 			new Point(42.366813,-71.259628),
 			new Point(42.366375,-71.260151),
@@ -34,8 +41,12 @@ locations = [
 			new Point(42.366023,-71.259101)],
 		"function": "Fellows Garden is a nice place to hangout with friends in nice weather",
 		"description":"Nobody knows the name",
-		"category":"Lawn"
+		"category":"Lawn",
+		"route": {"volen": 2,
+					"scc" : 1,
+					"feldberg" : 3,}
 	},
+
 	rose = {
 		"name": "The Rose Art Museum",
 		"nickname": "Rose",
@@ -46,8 +57,10 @@ locations = [
 			new Point(42.365902,-71.262218)],
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Museum",
-		"category":"Other"
+		"category":"Other",
+		"route": {"scc": 2,}
 	},
+
 	bassine = {
 		"name": "Bassine Science Building",
 		"nickname": "Bassine",
@@ -58,8 +71,11 @@ locations = [
 			new Point(42.366656,-71.257562)],
 		"function": "Bassine Science Building has many bio lab?",
 		"description":"Lab",
-		"category":"Classroom"
+		"category":"Classroom",
+		"route": {"volen": 1,
+					"feldberg": 1,}
 	},
+
 	feldberg = {
 		"name":"Feldberg Communications Center",
 		"nickname":"Feldberg",
@@ -70,7 +86,10 @@ locations = [
 			new Point(42.366751,-71.259269)],
 		"function":"Feldberg contains offices and is home to Library and Technology Services.",
 		"description":"stuff",
-		"category":"Offices"
+		"category":"Offices",
+		"route": {"volen": 1,
+					"fellowsgarden": 3,
+					"bassine":2,}
 	}
 ]
 
