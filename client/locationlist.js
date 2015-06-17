@@ -1,5 +1,4 @@
 Session.setDefault("category","");
-var tabIds = ["all","science","dorm"];
 
 Template.locationList.helpers({
 	locationsData: function() {
@@ -32,8 +31,28 @@ Template.locationList.events({
 		event.preventDefault();
 		Session.set("category","science");
 	},
+	'click #art':function(event){
+		event.preventDefault();
+		Session.set("category","art");
+	},
 	'click #dorm':function(event){
 		event.preventDefault();
 		Session.set("category","dorm");
+	},
+	'click #religious':function(event){
+		event.preventDefault();
+		Session.set("category","religious");
+	},
+	'click #dining':function(event){
+		event.preventDefault();
+		Session.set("category","dining");
+	},
+	'click #admin':function(event){
+		event.preventDefault();
+		Session.set("category","administrative");
+	},
+	'click #grad':function(event){
+		event.preventDefault();
+		Session.set("category","graduate");
 	}
 });

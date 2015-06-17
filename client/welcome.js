@@ -32,12 +32,12 @@ Template.welcome.helpers({
 	},
 	inLocation: function(property) {
 		//console.log(Session.get("inLocation"));
-		return Session.get("inLocation");		
+		return Locations.findOne({"name":Session.get("inLocation").name});		
 	}
 });
 
 /* Code for speech on template render
- * For a later date??
+ For a later date??
 Template.welcome.rendered = function() {
 	if (Session.get("inLocation") == null) {
 		window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
@@ -78,10 +78,10 @@ Template.welcome.events({
 			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
 		}
 		else {
-			readFunction = new SpeechSynthesisUtterance(Session.get("inLocation").name);
+			readName = new SpeechSynthesisUtterance(Session.get("inLocation").name);
 			//console.log(Session.get("inLocation").name);
 
-			window.speechSynthesis.speak(readFunction);
+			window.speechSynthesis.speak(readName);
 		}
 
 		
@@ -94,7 +94,9 @@ Template.welcome.events({
 			window.speechSynthesis.speak(new SpeechSynthesisUtterance("There's lots to do off campus, but unfortunately I can't tell you all that much about it."));
 		}
 		else {
-			readFunction = new SpeechSynthesisUtterance(Session.get("inLocation").function);
+			var loc = Locations.findOne({"name":Session.get("inLocation").name});
+			//console.log(loc.function);
+			readFunction = new SpeechSynthesisUtterance(loc.function);
 
 			window.speechSynthesis.speak(readFunction);
 		}

@@ -9,8 +9,7 @@ locations = [
 			new Point(42.366783,-71.258614)],
 		"function": "Volen is home to Brandeis' computer science and linguistics departments.",
 		"description": "A longer description",
-		"category":["science","classroom"]
-
+		"category":["science","classroom","offices"]
 	},
 	scc = {
 		"name": "Carl and Ruth Shapiro Campus Center",
@@ -38,7 +37,7 @@ locations = [
 	},
 	museum = {
 		"name": "The Rose Art Museum",
-		"nickname": "Rose",
+		"nickname": "the Rose",
 		"coordinates": [
 			new Point(42.366033,-71.262631),
 			new Point(42.365498,-71.262948),
@@ -78,15 +77,18 @@ locations = [
 			new Point(42.362028,-71.264118), 
 			new Point(42.361976,-71.263828),
 			new Point(42.361834,-71.26386),
-			new Point(42.361889,-71.264187)]
+			new Point(42.361889,-71.264187)],
+		"category":["administrative"]
 	},
 	bernstein = {
 		"name":"Bernstein-Marcus Administration Center",
+		"nickname":"Bernstein-Marcus",
 		"coordinates":[
 			new Point(42.365077,-71.25998), 
 			new Point(42.365222,-71.259642), 
 			new Point(42.365046,-71.259492), 
-			new Point(42.36489,-71.259837)]
+			new Point(42.36489,-71.259837)],
+		"category":["administrative"]
 		},
 	epstein = {
 		"name":"Epstein Building",
@@ -95,7 +97,8 @@ locations = [
 			new Point(42.362457,-71.261636), 
 			new Point(42.362374,-71.260823), 
 			new Point(42.362134,-71.260864), 
-			new Point(42.362204,-71.261671)]
+			new Point(42.362204,-71.261671)],
+		"category":["classroom","offices"]
 		},
 	facultyCenter = {
 		"name":"Faculty Center",
@@ -103,7 +106,8 @@ locations = [
 			new Point(42.36569,-71.261466), 
 			new Point(42.365861,-71.261069), 
 			new Point(42.365651,-71.260898), 
-			new Point(42.36548,-71.2613)]
+			new Point(42.36548,-71.2613)],
+		"category":["dining"]
 		},
 	goldman = {
 		"name":"Goldman-Schwartz Fine Arts",
@@ -120,7 +124,8 @@ locations = [
 			new Point(42.365593,-71.259553), 
 			new Point(42.365759,-71.25918), 
 			new Point(42.365577,-71.259025), 
-			new Point(42.365417,-71.259403)]
+			new Point(42.365417,-71.259403)],
+		"category":["administrative"]
 		},
 	sachar = {
 		"name":"Sachar International Center",
@@ -128,7 +133,8 @@ locations = [
 			new Point(42.365064,-71.25997), 
 			new Point(42.365424,-71.259121), 
 			new Point(42.365279,-71.258993), 
-			new Point(42.364897,-71.25983)]
+			new Point(42.364897,-71.25983)],
+		"category":["classroom","graduate"]
 		},
 	irving = {
 		"name":"Irving Presidential Enclave",
@@ -136,15 +142,18 @@ locations = [
 			new Point(42.365209,-71.259623), 
 			new Point(42.365423,-71.259113), 
 			new Point(42.36529,-71.259006), 
-			new Point(42.365076,-71.259521)]
+			new Point(42.365076,-71.259521)],
+		"category":["administrative"]
 		},
 	info = {
 		"name":"Information Booth",
+		"nickname":"Info Booth",
 		"coordinates":[
 			new Point(42.365015,-71.258721), 
 			new Point(42.365046,-71.258676), 
 			new Point(42.364978,-71.258681), 
-			new Point(42.365007,-71.258634)]
+			new Point(42.365007,-71.258634)],
+		"category":["informational"]
 		},
 	pollack = {
 		"name":"Pollack Fine Arts Teaching Center",
@@ -152,7 +161,8 @@ locations = [
 			new Point(42.365328,-71.26243), 
 			new Point(42.365291,-71.262325), 
 			new Point(42.365122,-71.262435), 
-			new Point(42.365158,-71.262541)]
+			new Point(42.365158,-71.262541)],
+		"category":["art","classroom"]
 		},
 	rabbSchool = {
 		"name":"The Rabb School",
@@ -160,7 +170,8 @@ locations = [
 			new Point(42.36298,-71.25929), 
 			new Point(42.363061,-71.258924), 
 			new Point(42.362961,-71.258887), 
-			new Point(42.362872,-71.259233)]
+			new Point(42.362872,-71.259233)],
+		"category":["graduate"]
 		},
 	admissions = {
 		"name":"Carl and Ruth Shapiro Admissions Center",
@@ -169,7 +180,8 @@ locations = [
 			new Point(42.36615,-71.260189), 
 			new Point(42.365803,-71.259658), 
 			new Point(42.365546,-71.259934), 
-			new Point(42.36552,-71.260634)]
+			new Point(42.36552,-71.260634)],
+		"category":["offices","informational"]
 		},	
 	slosberg = {
 		"name":"Slosberg Music Center",
@@ -178,7 +190,8 @@ locations = [
 			new Point(42.364412,-71.259683), 
 			new Point(42.364319,-71.2594), 
 			new Point(42.363891,-71.259666), 
-			new Point(42.363985,-71.259942)]
+			new Point(42.363985,-71.259942)],
+		"category":["art","classroom"]
 		},
 	spingold = {
 		"name":"Spingold Theater Center",
@@ -187,7 +200,8 @@ locations = [
 			new Point(42.364788,-71.262031), 
 			new Point(42.364612,-71.261474), 
 			new Point(42.364008,-71.261774), 
-			new Point(42.364194,-71.262415)]
+			new Point(42.364194,-71.262415)],
+		"category":["art"]
 		},
 	abelson = {
 		"name":"Abelson-Bass-Yalem",
@@ -205,7 +219,8 @@ locations = [
 			new Point(42.368284,-71.260708), 
 			new Point(42.368244,-71.260593), 
 			new Point(42.368082,-71.260705), 
-			new Point(42.368135,-71.26081)]
+			new Point(42.368135,-71.26081)],
+		"category":["religious"]
 		},
 	bethlehem = {
 		"name":"Bethlehem Chapel",
@@ -213,7 +228,8 @@ locations = [
 			new Point(42.368343,-71.260178), 
 			new Point(42.368259,-71.259998), 
 			new Point(42.368196,-71.260047), 
-			new Point(42.368267,-71.260243)]
+			new Point(42.368267,-71.260243)],
+		"category":["religious"]
 		},
 	harlan = {
 		"name":"Harlan Chapel",
@@ -221,15 +237,17 @@ locations = [
 			new Point(42.368776,-71.260739), 
 			new Point(42.368692,-71.260564), 
 			new Point(42.36865,-71.2606), 
-			new Point(42.368732,-71.260779)]
+			new Point(42.368732,-71.260779)],
+		"category":["religious"]
 		},
 	chapelsField = {
-		"name":"Chapels Fields",
+		"name":"Chapels Field",
 		"coordinates":[
 			new Point(42.368103,-71.260244), 
 			new Point(42.36763,-71.25901), 
 			new Point(42.367281,-71.259034), 
-			new Point(42.367681,-71.260542)]
+			new Point(42.367681,-71.260542)],
+		"category":["lawn"]
 		},
 	brown = {
 		"name":"Brown Social Science Center",
@@ -238,7 +256,8 @@ locations = [
 			new Point(42.367383,-71.257225), 
 			new Point(42.36728,-71.256666), 
 			new Point(42.367169,-71.256718), 
-			new Point(42.367266,-71.257265)]
+			new Point(42.367266,-71.257265)],
+		"category":["classroom"]
 		},
 	edison = {
 		"name":"Edison-Lecks Science Building",
@@ -247,7 +266,8 @@ locations = [
 			new Point(42.36652,-71.25835), 
 			new Point(42.366312,-71.25788), 
 			new Point(42.366168,-71.258001), 
-			new Point(42.366374,-71.258462)]
+			new Point(42.366374,-71.258462)],
+		"category":["science","classroom"]
 		},
 	farber = {
 		"name":"Farber Library",
@@ -256,7 +276,8 @@ locations = [
 			new Point(42.367907,-71.258866), 
 			new Point(42.368046,-71.25855), 
 			new Point(42.367823,-71.258354), 
-			new Point(42.367688,-71.25867)]
+			new Point(42.367688,-71.25867)],
+		"category":["library"]
 		},
 	goldsmith = {
 		"name":"Goldsmith Building",
@@ -277,14 +298,17 @@ locations = [
 			new Point(42.369187,-71.258417), 
 			new Point(42.369025,-71.258474), 
 			new Point(42.369158,-71.259171)],
-		"function":"Heller-Brown is home to the Heller School for Social Policy and Management, one of the top ten schools of social policy in the United States and one of the eight approved U.S. training institutions for World Bank Scholars."},
+		"function":"Heller-Brown is home to the Heller School for Social Policy and Management, one of the top ten schools of social policy in the United States and one of the eight approved U.S. training institutions for World Bank Scholars.",
+		"category":["classroom","graduate"]
+		},
 	rabbGrad = {
 		"name":"Rabb Graduate Center",
 		"coordinates":[
 			new Point(42.369289,-71.25762), 
 			new Point(42.369127,-71.256792), 
 			new Point(42.36915,-71.257674), 
-			new Point(42.368996,-71.256845)]
+			new Point(42.368996,-71.256845)],
+		"category":["graduate"]
 		},
 	roseMedical = {
 		"name":"Rosenstiel Basic Medical Sciences Research Center",
@@ -292,7 +316,8 @@ locations = [
 			new Point(42.366103,-71.257429), 
 			new Point(42.365901,-71.257013), 
 			new Point(42.365724,-71.257239), 
-			new Point(42.365884,-71.257585)]
+			new Point(42.365884,-71.257585)],
+		"category":["science"]
 		},
 	schwartz = {
 		"name":"Schwartz Hall",
@@ -301,7 +326,8 @@ locations = [
 			new Point(42.367642,-71.257438), 
 			new Point(42.367563,-71.257024), 
 			new Point(42.367418,-71.257072), 
-			new Point(42.367494,-71.257484)]
+			new Point(42.367494,-71.257484)],
+		"category":["classroom"]
 		},
 	scienceCenter = {
 		"name":"Carl J. Shapiro Science Center",
@@ -311,7 +337,7 @@ locations = [
 			new Point(42.366115,-71.257734), 
 			new Point(42.365759,-71.258559), 
 			new Point(42.365894,-71.257864)],
-		"category":["science","classroom"]
+		"category":["science","classroom","student center"]
 		},
 	usdan = {
 		"name":"Usdan Student Center",
@@ -320,7 +346,8 @@ locations = [
 			new Point(42.368296,-71.256585), 
 			new Point(42.367852,-71.256794), 
 			new Point(42.367777,-71.256451), 
-			new Point(42.368243,-71.256259)]
+			new Point(42.368243,-71.256259)],
+		"category":["student center","dining"]
 		},
 	gosman = {
 		"name":"Gosman Sports and Convocation Center",
@@ -329,7 +356,8 @@ locations = [
 			new Point(42.365193,-71.255688), 
 			new Point(42.365761,-71.25482), 
 			new Point(42.364998,-71.253952), 
-			new Point(42.364449,-71.254864)]
+			new Point(42.364449,-71.254864)],
+		"category":["athletics"]
 		}
 
 		
