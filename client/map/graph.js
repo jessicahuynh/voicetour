@@ -157,12 +157,12 @@ var map = {};
 var lo2 = name[0];
 
 
-// console.log(lo2.nickname);
-//  for(i=0;i<6;i++) {
-//    console.log("Hi");
-//    console.log(Locations.find().fetch()[i].nickname);
-//    map[Locations.find().fetch()[i].nickname] = l[i].route;
-// };
+console.log(lo2.nickname);
+ for(i=0;i<6;i++) {
+   console.log("Hi");
+   console.log(Locations.find().fetch()[i].nickname);
+   map[Locations.find().fetch()[i].nickname] = l[i].route;
+};
 
 /*while (i<l.length()) {
 	console.log("Hi");

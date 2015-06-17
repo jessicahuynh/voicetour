@@ -31,19 +31,13 @@ Template.welcome.helpers({
 		return Session.get("currentLocation");
 	},
 	inLocation: function(property) {
-		var at = Session.get("inLocation");
-		if (at === null) {
-			return offCampus;
-		}
-		else {
-			return Session.get("inLocation");
-		}
-		
+		//console.log(Session.get("inLocation"));
+		return Locations.findOne({"name":Session.get("inLocation").name});		
 	}
 });
 
 /* Code for speech on template render
- * For a later date??
+ For a later date??
 Template.welcome.rendered = function() {
 	if (Session.get("inLocation") == null) {
 		window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
@@ -62,14 +56,35 @@ Template.welcome.events({
 	'click #whereAmI': function(event) {
 		event.preventDefault();
 
+		navigator.geolocation.getCurrentPosition(function(position) {
+ 			var current = new Point(position.coords.latitude,position.coords.longitude);
+			Session.set("currentLocation",current);
+		});
+		
+
+		Meteor.call("searchLocations",			
+			Session.get("currentLocation"),
+			function(error, data) {
+				if (error) {
+					console.log(error);
+				}
+				else {
+					Session.set("inLocation",data);
+				}
+			}
+		);
+
 		if (Session.get("inLocation") == null) {
 			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
 		}
 		else {
-			readLocation = new SpeechSynthesisUtterance("You are at " + Session.get("inLocation").name);
+			readName = new SpeechSynthesisUtterance(Session.get("inLocation").name);
+			//console.log(Session.get("inLocation").name);
 
-			window.speechSynthesis.speak(readLocation);
+			window.speechSynthesis.speak(readName);
 		}
+
+		
 	},
 
 	'click #whatIsHere': function(event) {
@@ -79,7 +94,9 @@ Template.welcome.events({
 			window.speechSynthesis.speak(new SpeechSynthesisUtterance("There's lots to do off campus, but unfortunately I can't tell you all that much about it."));
 		}
 		else {
-			readFunction = new SpeechSynthesisUtterance(Session.get("inLocation").function);
+			var loc = Locations.findOne({"name":Session.get("inLocation").name});
+			//console.log(loc.function);
+			readFunction = new SpeechSynthesisUtterance(loc.function);
 
 			window.speechSynthesis.speak(readFunction);
 		}
