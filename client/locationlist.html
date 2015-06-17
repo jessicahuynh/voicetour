@@ -1,9 +1,14 @@
 <template name="locationList">
 	<h1>Locations at Brandeis</h1>
+	<ul class="nav nav-pills">
+		<li role="presentation" data-toggle="pill" class="active"><a href="#" id="all">All</a></li>
+		<li role="presentation" data-toggle="pill"><a href="#" id="science">Science complex</a></li>
+		<li role="presentation" data-toggle="pill"><a href="#" id="dorm">Dorms</a></li>
+	</ul>
 	<div class="list-group">
 	{{#each locationsData}}
 		<a class="list-group-item">
-			<h2 class="list-group-item-heading">{{nickname}} ({{name}})</h2>
+			<h4 class="list-group-item-heading">{{nickname}} ({{name}})</h4>
 			<p class="list-group-item-text">{{function}}</p>
 			<p class="list-group-item-text"><strong>Category:</strong> {{category}}</p>
 		</a>
