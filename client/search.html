@@ -1,4 +1,15 @@
 <template name="search">
 <h1>Search</h1>
 <p>You searched for: {{searchTerm}}</p>
+
+<div class="row">
+	<div class="list-group">
+		{{#each result}}
+			<a class="list-group-item">
+				<h4 class="list-group-item-header">{{resultTitle}}</h4>
+				<p class="list-group-item-text">{{resultText}}</p>
+			</a>
+		{{/each}}
+	</div>
+</div>
 </template>
