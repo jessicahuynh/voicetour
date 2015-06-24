@@ -380,8 +380,6 @@ locations = [
 		"category":["athletics"]
 		}
 
-		
->>>>>>> master
 ]
 
 function Point(x,y) {

@@ -1,0 +1,46 @@
+<template name="search">
+<h1>Search</h1>
+<p>You searched for: {{searchTerm}} in {{searchCategory}}</p>
+
+<div class="row">
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" data-toggle="tab"><a href="#all" aria-control="all" role="tab">All</a></li>
+		<li role="presentation" data-toggle="tab" class="active"><a href="#locations" aria-control="locations" role="tab">Locations</a></li>
+		<li role="presentation" data-toggle="tab"><a href="#events" aria-control="events" role="tab">Events</a></li>
+		<li role="presentation" data-toggle="tab"><a href="#tours" aria-control="tours" role="tab">Tours</a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div class="tab-pane" id="all" role="tabpanel">
+			Test
+		</div>
+		<div class="tab-pane active" id="locations" role="tabpanel">
+			{{#ifEsInputIsEmpty index="locations" id="searchBox"}}
+			<p>Search for something!</p>
+			{{/ifEsInputIsEmpty}}
+
+			{{#ifEsIsSearching index="locations" id="searchBox"}}
+			<p>Loading&hellip;</p>
+			{{else}}
+			<div class="list-group">
+				{{#esEach index="locations" id="searchBox"}}
+					<a class="list-group-item">
+						<h4 class="list-group-item-header">{{name}}</h4>
+						<p class="list-group-item-text">{{function}}</p>
+						<p class="list-group-item-text"><strong>Category:</strong>&nbsp;{{category}}</p>
+					</a>
+				{{/esEach}}
+			</div>
+			{{/ifEsIsSearching}}
+
+			{{#ifEsHasNoResults index="locations" id="searchBox"}}
+			<p>No results found for &ldquo;{{searchTerm}}&rdquo;! Try searching again.</p>
+			{{/ifEsHasNoResults}}
+		</div>
+		<div class="tab-pane" id="events" role="tabpanel">
+		</div>
+		<div class="tab-pane" id="tours" role="tabpanel">
+		</div>
+	</div>
+</div>
+</template>
