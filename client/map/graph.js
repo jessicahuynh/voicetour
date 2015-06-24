@@ -147,6 +147,10 @@ var Graph = (function (undefined) {
 
 
 /*var map = {};
+=======
+/*
+var map = {};
+>>>>>>> tianci
  console.log("test1");
  var l = Locations.find().fetch();
  console.log("test2");
