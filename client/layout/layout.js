@@ -1,8 +1,11 @@
+Session.setDefault("searchCategory","All");
+
 Template.layout.events({
 	'submit #searchForm': function(event) {
 		event.preventDefault();
 		var s = searchBox.value;
 		Session.set("searchTerm",s);
+
 		
 		Router.go('/search/'+Session.get("searchTerm"));
 	},
@@ -14,5 +17,7 @@ Template.layout.events({
 
   		// append the caret
   		$(event.target).parents('.btn-group').find('.btn').append('&nbsp;<span class="caret"></span>');
+
+  		Session.set("searchCategory",$(event.target).text());
 	}
 });

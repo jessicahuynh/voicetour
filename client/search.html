@@ -1,15 +1,28 @@
 <template name="search">
 <h1>Search</h1>
-<p>You searched for: {{searchTerm}}</p>
+<p>You searched for: {{searchTerm}} in {{searchCategory}}</p>
 
 <div class="row">
+	{{#ifEsInputIsEmpty index="locations" id="searchBox"}}
+	<p>Search for something!</p>
+	{{/ifEsInputIsEmpty}}
+
+	{{#ifEsIsSearching index="locations" id="searchBox"}}
+	<p>Loading&hellip;</p>
+	{{else}}
 	<div class="list-group">
-		{{#each result}}
+		{{#esEach index="locations" id="searchBox"}}
 			<a class="list-group-item">
-				<h4 class="list-group-item-header">{{resultTitle}}</h4>
-				<p class="list-group-item-text">{{resultText}}</p>
+				<h4 class="list-group-item-header">{{name}}</h4>
+				<p class="list-group-item-text">{{function}}</p>
+				<p class="list-group-item-text"><strong>Category:</strong>&nbsp;{{category}}</p>
 			</a>
-		{{/each}}
+		{{/esEach}}
 	</div>
+	{{/ifEsIsSearching}}
+
+	{{#ifEsHasNoResults index="locations" id="searchBox"}}
+	<p>No results found for &ldquo;{{searchTerm}}&rdquo;! Try searching again.</p>
+	{{/ifEsHasNoResults}}
 </div>
 </template>
