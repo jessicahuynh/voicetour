@@ -9,5 +9,14 @@ Template.search.helpers({
 	},
 	searchCategory:function(){
 		return Session.get("searchCategory");
+	},
+});
+
+Template.search.events({
+	'click .nav-tabs a':function(event) {
+		event.preventDefault();
+		$(event.target).tab('show');
+		//console.log($(event.target).text());
+		Session.set("searchCategory",$(event.target).text());
 	}
 });
