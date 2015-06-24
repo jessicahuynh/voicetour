@@ -20,4 +20,15 @@ Meteor.startup(function() {
 		});
 	}
 
+	if (Routes.find().count() == 0) {
+		// load routes into collection
+		locations.forEach(function(location) {
+			var c = location.route;
+			var name = location.name.toString();
+			Routes.insert( c);
+		});
+	}
+
+
+
 });
