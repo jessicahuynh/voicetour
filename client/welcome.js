@@ -39,12 +39,18 @@ Template.welcome.helpers({
 		else {
 			return "You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name;
 		}
-		if (name == undefined) {
+		if (name == null) {
 			return "You're off campus";
 		}
 	},
 	inLocationFunction:function() {
-		return Locations.findOne({"name":Session.get("inLocation")[0].name}).function;
+		var loc = Locations.findOne({"name":Session.get("inLocation")[0].name}); 
+		if (loc == null) {
+			return offCampus.function;
+		}
+		else {
+			return loc.function;
+		}
 	},
 	locationMapOptions: function() {
 		if (GoogleMaps.loaded()) {
