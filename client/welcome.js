@@ -38,7 +38,10 @@ Template.welcome.helpers({
 		}	
 		else {
 			return "You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name;
-		}	
+		}
+		if (name == undefined) {
+			return "You're off campus";
+		}
 	},
 	inLocationFunction:function() {
 		return Locations.findOne({"name":Session.get("inLocation")[0].name}).function;
@@ -90,8 +93,14 @@ Template.welcome.events({
 			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
 		}
 		else {
-			readName = new SpeechSynthesisUtterance(Session.get("inLocation").name);
-			//console.log(Session.get("inLocation").name);
+			var name = Session.get("inLocation")[0].name;
+
+			if (Session.get("inLocation")[1] == "in") {
+				readName = new SpeechSynthesisUtterance("You're in " + name);
+			}
+			else {
+				readName = new SpeechSynthesisUtterance("You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name);
+			}
 
 			window.speechSynthesis.speak(readName);
 		}
@@ -106,7 +115,7 @@ Template.welcome.events({
 			window.speechSynthesis.speak(new SpeechSynthesisUtterance("There's lots to do off campus, but unfortunately I can't tell you all that much about it."));
 		}
 		else {
-			var loc = Locations.findOne({"name":Session.get("inLocation").name});
+			var loc = Locations.findOne({"name":Session.get("inLocation")[0].name});
 			//console.log(loc.function);
 			readFunction = new SpeechSynthesisUtterance(loc.function);
 
