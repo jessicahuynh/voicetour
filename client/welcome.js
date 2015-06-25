@@ -30,9 +30,18 @@ Template.welcome.helpers({
 		
 		return Session.get("currentLocation");
 	},
-	inLocation: function(property) {
+	inLocation: function() {
 		//console.log(Session.get("inLocation"));
-		return Locations.findOne({"name":Session.get("inLocation").name});		
+		var name = Locations.findOne({"name":Session.get("inLocation")[0].name}).name;
+		if (Session.get("inLocation")[1] == "in") {
+			return "You're in " + name;
+		}	
+		else {
+			return "You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name;
+		}	
+	},
+	inLocationFunction:function() {
+		return Locations.findOne({"name":Session.get("inLocation")[0].name}).function;
 	},
 	locationMapOptions: function() {
 		if (GoogleMaps.loaded()) {

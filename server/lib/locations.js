@@ -185,12 +185,13 @@ locations = [
 		"category":["art","classroom"]
 		},
 	rabbSchool = {
-		"name":"The Rabb School",
+		"name":"The Rabb School of Continuing Studies",
 		"coordinates":[
 			new Point(42.36298,-71.25929), 
 			new Point(42.363061,-71.258924), 
 			new Point(42.362961,-71.258887), 
 			new Point(42.362872,-71.259233)],
+		"function":"The Rabb School is home to",
 		"category":["graduate"]
 		},
 	admissions = {
