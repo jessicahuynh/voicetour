@@ -10,9 +10,15 @@ Template.search.helpers({
 	searchCategory:function(){
 		return Session.get("searchCategory");
 	},
+	locationId:function() {
+		return Session.get("viewLocation");
+	}
 });
 
 Template.search.events({
+	'click a.go-to-location':function(event) {
+		Session.set("viewLocation",this._id);
+	},
 	'click .nav-tabs a':function(event) {
 		event.preventDefault();
 		$(event.target).tab('show');

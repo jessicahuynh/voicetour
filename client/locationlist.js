@@ -8,10 +8,16 @@ Template.locationList.helpers({
 		else {
 			return Locations.find({"category":Session.get("category")},{sort:{"nickname":1}});
 		}
+	},
+	locationId:function() {
+		return this._id;
 	}
 });
 
 Template.locationList.events({
+	'click a.go-to-location':function(event) {
+		Session.set("viewLocation",this._id);
+	},
 	'click .nav li':function(event) {
 		event.preventDefault();
 		// removes active class from previous tab

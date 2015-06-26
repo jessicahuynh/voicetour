@@ -24,7 +24,7 @@
 			{{else}}
 			<div class="list-group">
 				{{#esEach index="locations" id="searchBox"}}
-					<a class="list-group-item">
+					<a class="list-group-item go-to-location" href="/viewLocation/{{locationId}}">
 						<h4 class="list-group-item-header">{{name}}</h4>
 						<p class="list-group-item-text">{{function}}</p>
 						<p class="list-group-item-text"><strong>Category:</strong>&nbsp;{{category}}</p>
