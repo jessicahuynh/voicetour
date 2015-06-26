@@ -1,9 +1,10 @@
 <template name="locationListing">
 	<a class="list-group-item go-to-location" href="/viewLocation/{{locationId}}">
 		<div class="pull-left">
-			<h4 class="list-group-item-heading">{{nickname}} ({{name}})</h4>
+			<h4 class="list-group-item-heading">{{nickname}} ({{name}}) 
+				<small>{{categories}}</small></h4>
 			<p class="list-group-item-text">{{function}}</p>
-			<p class="list-group-item-text"><strong>Category:</strong> {{category}}</p>
+			<!-- <p class="list-group-item-text"><strong>Category:</strong> {{category}}</p> -->
 		</div>
 		<div class="pull-right">
 			<span class="glyphicon glyphicon-chevron-right"></span>
