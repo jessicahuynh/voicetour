@@ -9,15 +9,33 @@ Template.locationList.helpers({
 			return Locations.find({"category":Session.get("category")},{sort:{"nickname":1}});
 		}
 	},
-	locationId:function() {
-		return this._id;
+	allCount:function() {
+		return Locations.find().count();
+	},
+	scienceCount:function() {
+		return Locations.find({"category":"science"}).count();
+	},
+	artCount:function() {
+		return Locations.find({"category":"art"}).count();
+	},
+	dormCount:function() {
+		return Locations.find({"category":"dorm"}).count();
+	},
+	religiousCount:function() {
+		return Locations.find({"category":"religious"}).count();
+	},
+	diningCount:function() {
+		return Locations.find({"category":"dining"}).count();
+	},
+	administrativeCount:function() {
+		return Locations.find({"category":"administrative"}).count();
+	},
+	graduateCount:function() {
+		return Locations.find({"category":"graduate"}).count();
 	}
 });
 
 Template.locationList.events({
-	'click a.go-to-location':function(event) {
-		Session.set("viewLocation",this._id);
-	},
 	'click .nav li':function(event) {
 		event.preventDefault();
 		// removes active class from previous tab

@@ -1,0 +1,13 @@
+<template name="locationListing">
+	<a class="list-group-item go-to-location" href="/viewLocation/{{locationId}}">
+		<div class="pull-left">
+			<h4 class="list-group-item-heading">{{nickname}} ({{name}})</h4>
+			<p class="list-group-item-text">{{function}}</p>
+			<p class="list-group-item-text"><strong>Category:</strong> {{category}}</p>
+		</div>
+		<div class="pull-right">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</div>
+		<div class="clear">&nbsp;<br />&nbsp;</div>
+	</a>
+</template>
