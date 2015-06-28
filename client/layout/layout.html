@@ -1,13 +1,10 @@
-<template name="layout">
-	<div class="container">
-		
+<template name="layout">		
 		<!-- Here is the standard Bootstrap code for a Navigation bar taken directly from getbootstrap.com/components -->
-		<nav class="navbar navbar-inverse">
-		  <div class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+		  <div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" 
-			  			data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <button type="button" class="navbar-toggle collapsed" 	data-target="#navbar-hamburger">
 		        <span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
@@ -19,12 +16,37 @@
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <div class="navbar-collapse" id="navbar-hamburger">
+				<form class="navbar-form navbar-right" role="search" id="searchForm" name="searchForm">
+			    	<div class="form-group">
+			    		<div class="btn-group">
+			    			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    				All&nbsp;<span class="caret"></span>
+			    			</button>
+			    			<ul class="dropdown-menu" id="selectSearchType">
+			    				<li><a href="#">Locations</a></li>
+			    				<li><a href="#">Events</a></li>
+			    				<li><a href="#">Tours</a></li>
+			    				<li role="separator" class="divider"></li>
+			    				<li><a href="#">All</a></li>
+			    			</ul>
+
+			    		</div>
+
+			        	<!-- <input type="text" class="form-control" placeholder="Search" id="searchBox" name="searchBox"> -->
+			        	{{> esInput index="locations" placeholder="Search" id="searchBox" class="form-control"}}
+
+		        		<button type="submit" class="btn btn-default">
+				    		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</div>
+			    </form>		
 		      	<ul class="nav navbar-nav">
 					<li><a href="{{pathFor 'about'}}">About</a></li>
 					<li><a href="{{pathFor 'locationList'}}">Location List</a></li>
 					<li><a href="{{pathFor 'graph'}}">Graph</a></li>
 				</ul>
+
 			    <ul class="nav navbar-nav navbar-right">
 			             <!-- here -->
 			    </ul>				
@@ -32,9 +54,11 @@
 			
 		  </div><!-- /.container-fluid -->
 		</nav>
-		
-		<!-- Here is where the actual content of the page gets inserted by the router! -->
-		{{> yield}}
-		
-	</div>
+
+		<div id="page-content">
+			<div class="container">
+			<!-- Here is where the actual content of the page gets inserted by the router! -->
+			{{> yield}}
+			</div>
+		</div>
 </template>

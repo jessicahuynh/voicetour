@@ -145,8 +145,9 @@ var Graph = (function (undefined) {
 })();
 
 
-
-/*var map = {};
+/*
+var map = {};
+>>>>>>> 83e1511cd611a25bd35aa12a3fec4814eb877f1f
  console.log("test1");
  var l = Locations.find().fetch();
  console.log("test2");
@@ -162,8 +163,12 @@ console.log(lo2.nickname);
    console.log("Hi");
    console.log(Locations.find().fetch()[i].nickname);
    map[Locations.find().fetch()[i].nickname] = l[i].route;
-};
-*/
+
+};*/
+
+
+
+
 /*while (i<l.length()) {
 	console.log("Hi");
 	map[l[i].nickname] = l[i].route;

@@ -51,7 +51,7 @@ Meteor.methods({
 			});
 
 			if (locatedHere) {
-				location = Locations.find().fetch()[i];
+				location = [Locations.find().fetch()[i],"in"];
 				//console.log(location);
 				break;
 			}
@@ -69,7 +69,7 @@ Meteor.methods({
 				}
 				else {
 					console.log("got the nearest location: " + data.name);
-					location = data;
+					location = [data[0],"near",data[1]];
 				}
 			});
 		}
@@ -121,7 +121,7 @@ Meteor.methods({
 		//console.log("nearest distance location:" + theNearestDistance + JSON.stringify(theNearest));
 		if (theNearestDistance < 10000000) {
 			console.log(JSON.stringify(theNearest));
-			return theNearest;
+			return [theNearest,theNearestDistance];
 		}
 		else {
 			console.log("You are off campus.");

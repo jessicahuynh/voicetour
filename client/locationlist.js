@@ -8,6 +8,30 @@ Template.locationList.helpers({
 		else {
 			return Locations.find({"category":Session.get("category")},{sort:{"nickname":1}});
 		}
+	},
+	allCount:function() {
+		return Locations.find().count();
+	},
+	scienceCount:function() {
+		return Locations.find({"category":"science"}).count();
+	},
+	artCount:function() {
+		return Locations.find({"category":"art"}).count();
+	},
+	dormCount:function() {
+		return Locations.find({"category":"dorm"}).count();
+	},
+	religiousCount:function() {
+		return Locations.find({"category":"religious"}).count();
+	},
+	diningCount:function() {
+		return Locations.find({"category":"dining"}).count();
+	},
+	administrativeCount:function() {
+		return Locations.find({"category":"administrative"}).count();
+	},
+	graduateCount:function() {
+		return Locations.find({"category":"graduate"}).count();
 	}
 });
 
