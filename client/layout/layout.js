@@ -8,18 +8,10 @@ Template.layout.events({
 
 
         Router.go('/search/' + Session.get("searchTerm"));
-    },
-    // changes category in the dropdown
-    'click #selectSearchType li a': function (event) {
-        event.preventDefault();
-        $(event.target).parents('.btn-group').find('.btn').text($(event.target).text());
-        $(event.target).parents('.btn-group').find('.btn').val($(event.target).text());
-
-        // append the caret
-        $(event.target).parents('.btn-group').find('.btn').append('&nbsp;<span class="caret"></span>');
-
-        Session.set("searchCategory", $(event.target).text());
-    }
+     },
+     'click #searchBox': function(event) {
+         searchBox.value = '';
+     }
 });
 
 // Adapted from http://jsbin.com/eHAfIhI/1/edit?html,css,js,output
@@ -33,7 +25,6 @@ Template.layout.rendered = function () {
     var toggler = '.navbar-toggle';
     var pagewrapper = '#page-content';
     var navigationwrapper = '.navbar-header';
-    var menuwidth = '100%'; // the menu inside the slide menu itself
     var slidewidth = '80%';
     var menuneg = '-100%';
     var slideneg = '-80%';
