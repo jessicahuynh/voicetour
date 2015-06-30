@@ -1,6 +1,6 @@
 <template name="layout">		
 		<!-- Here is the standard Bootstrap code for a Navigation bar taken directly from getbootstrap.com/components -->
-	<div>
+	
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
 		  <div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,7 +55,7 @@
 			
 		  </div><!-- /.container-fluid -->
 		</nav>
-	</div>
+	
 
 		<div id="page-content">
 			<div class="container">
@@ -63,5 +63,7 @@
 			{{> yield}}
 			</div>
 		</div>
-		<div class="clear"></div>
+		
+		
+		{{> footer}}
 </template>

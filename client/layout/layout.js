@@ -82,3 +82,4 @@ Template.layout.rendered = function () {
 
     });
 }
+
