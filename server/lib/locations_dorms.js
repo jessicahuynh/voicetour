@@ -81,6 +81,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	rosieEast = {
+		"id":"rosieeast",
 		"name":"Rosenthal Residence Hall East",
 		"nickname":"Rosie East",
 		"coordinates":[
@@ -91,6 +92,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	rosieNorth = {
+		"id":"rosienorth",
 		"name":"Rosenthal Residence Hall North",
 		"nickname":"Rosie North",
 		"coordinates":[
@@ -101,6 +103,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	rosieSouth = {
+		"id":"rosiesouth",
 		"name":"Rosenthal Residence Hall South",
 		"nickname":"Rosie South",
 		"coordinates":[
@@ -111,7 +114,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	shapiroDorm = {
-		"name":"Shapiro Residence Hall",
+		"name":"Shapiro Hall",
 		"coordinates":[
 			new Point(42.367058,-71.261655), 
 			new Point(42.367139,-71.261459), 
@@ -120,7 +123,8 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	renfield = {
-		"name":"Renfield Residence Hall",
+		"id":"renfield",
+		"name":"Anna Renfield Hall",
 		"coordinates":[
 			new Point(42.367591,-71.261234), 
 			new Point(42.367458,-71.262894), 
@@ -129,7 +133,8 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	deroy = {
-		"name":"Deroy Residence Hall",
+		"id":"deroy",
+		"name":"Helen L. Deroy Hall",
 		"coordinates":[
 			new Point(42.367526,-71.261539), 
 			new Point(42.367458,-71.261429), 
@@ -138,7 +143,8 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	usen = {
-		"name":"Usen Residence Hall",
+		"id":"usen",
+		"name":"Edyth and Irving Usen Hall",
 		"coordinates":[
 			new Point(42.367359,-71.260625), 
 			new Point(42.367351,-71.260477), 

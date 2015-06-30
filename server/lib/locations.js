@@ -241,7 +241,8 @@ locations = [
 		"category":["science","classroom"]
 		},
 	berlin = {
-		"name":"Berlin Chapel",
+		"id":"berlin",
+		"name":"Mendel and Leah Berlin Chapel",
 		"coordinates":[
 			new Point(42.368284,-71.260708), 
 			new Point(42.368244,-71.260593), 
@@ -250,6 +251,7 @@ locations = [
 		"category":["religious"]
 		},
 	bethlehem = {
+		"id":"bethlehem",
 		"name":"Bethlehem Chapel",
 		"coordinates":[
 			new Point(42.368343,-71.260178), 
@@ -259,7 +261,8 @@ locations = [
 		"category":["religious"]
 		},
 	harlan = {
-		"name":"Harlan Chapel",
+		"id":"harlan",
+		"name":"John Marshall Harlan Chapel",
 		"coordinates":[
 			new Point(42.368776,-71.260739), 
 			new Point(42.368692,-71.260564), 
