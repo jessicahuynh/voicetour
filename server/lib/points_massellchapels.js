@@ -149,7 +149,7 @@ points = [
 		"id":"rosienorth_e01",
 		"coordinate":new Point(42.367297, -71.260061),
 		"type":"entrance"
-	}
+	},
 	{
 		"id":"rosieeast_e01",
 		"coordinate":new Point(42.367037, -71.259934),
