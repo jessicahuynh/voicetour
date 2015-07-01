@@ -1,5 +1,6 @@
 locations = [
-	volen = {
+	{
+		"id":"volen",
 		"name": "The Volen National Center for Complex Systems",
 		"nickname": "Volen",
 		"coordinates": [
@@ -14,8 +15,8 @@ locations = [
 					"feldberg":1,},
 		"category":["science","classroom","offices"]
 	},
-
-	scc = {
+	{
+		"id":"scc",
 		"name": "Carl and Ruth Shapiro Campus Center",
 		"nickname": "SCC",
 		"coordinates": [
@@ -29,10 +30,10 @@ locations = [
 					"rose" : 2,},
 		"category":["student center"]
 	},
-
-	fellowsgarden = {
+	{
+		"id":"fellowsgarden",
 		"name": "Fellows Garden",
-		"nickname": "FellowsGarden",
+		"nickname": "Fellows Garden",
 		"coordinates": [
 			new Point(42.366813,-71.259628),
 			new Point(42.366375,-71.260151),
@@ -45,8 +46,8 @@ locations = [
 					"scc" : 1,
 					"feldberg" : 3,}
 	},
-
-	museum = {
+	{
+		"id":"roseart",
 		"name": "The Rose Art Museum",
 		"nickname": "the Rose",
 		"coordinates": [
@@ -61,6 +62,7 @@ locations = [
 	},
 
 	bassine = {
+		"id":"bassine",
 		"name": "Bassine Science Building",
 		"nickname": "Bassine",
 		"coordinates": [
@@ -77,6 +79,7 @@ locations = [
 	},
 
 	feldberg = {
+		"id":"feldberg",
 		"name":"Feldberg Communications Center",
 		"nickname":"Feldberg",
 		"coordinates": [
@@ -92,6 +95,7 @@ locations = [
 	},
 	
 	turner = {
+		"id":"turner",
 		"name":"60 Turner Street",
 		"coordinates":[
 			new Point(42.362028,-71.264118), 
@@ -101,6 +105,7 @@ locations = [
 		"category":["administrative"]
 	},
 	bernstein = {
+		"id":"bernstein-marcus",
 		"name":"Bernstein-Marcus Administration Center",
 		"nickname":"Bernstein-Marcus",
 		"coordinates":[
@@ -111,6 +116,7 @@ locations = [
 		"category":["administrative"]
 		},
 	epstein = {
+		"id":"epstein",
 		"name":"Epstein Building",
 		"nickname":"Epstein",
 		"coordinates":[
@@ -235,7 +241,8 @@ locations = [
 		"category":["science","classroom"]
 		},
 	berlin = {
-		"name":"Berlin Chapel",
+		"id":"berlin",
+		"name":"Mendel and Leah Berlin Chapel",
 		"coordinates":[
 			new Point(42.368284,-71.260708), 
 			new Point(42.368244,-71.260593), 
@@ -244,6 +251,7 @@ locations = [
 		"category":["religious"]
 		},
 	bethlehem = {
+		"id":"bethlehem",
 		"name":"Bethlehem Chapel",
 		"coordinates":[
 			new Point(42.368343,-71.260178), 
@@ -253,7 +261,8 @@ locations = [
 		"category":["religious"]
 		},
 	harlan = {
-		"name":"Harlan Chapel",
+		"id":"harlan",
+		"name":"John Marshall Harlan Chapel",
 		"coordinates":[
 			new Point(42.368776,-71.260739), 
 			new Point(42.368692,-71.260564), 
@@ -301,7 +310,7 @@ locations = [
 		"category":["library"]
 		},
 	goldsmith = {
-		"name":"Goldsmith Building",
+		"name":"Horace W. Goldsmith Mathematics Building",
 		"nickname":"Goldsmith",
 		"coordinates":[
 			new Point(42.367263,-71.258512), 
