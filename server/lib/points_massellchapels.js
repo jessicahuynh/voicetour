@@ -17,17 +17,17 @@ points_massellchapels = [
 
 	{
 		"id":"chapelsfield_c01",
-		"coordinate":new Point(42.36721893234638,-71.2594206496081),
+		"coordinate":new Point(42.367309, -71.259245),
 		"type":"crossing"
 	},
 	{
 		"id":"chapelsfield_c02",
-		"coordinate":new Point(42.367182299999996, -71.2599171),
+		"coordinate":new Point(42.367356, -71.259825),
 		"type":"crossing"
 	},
 	{
 		"id":"chapelsfield_c03",
-		"coordinate":new Point(42.3674051, -71.2604309),
+		"coordinate":new Point(42.367532, -71.260418),
 		"type":"crossing"
 	},
 	{
@@ -87,18 +87,23 @@ points_massellchapels = [
 	},
 	{
 		"id":"deroy_c01",
-		"coordinate":new Point(42.367213199999995, -71.2611545),
+		"coordinate":new Point(42.367452, -71.261361),
 		"type":"crossing"
 	},
 	{
 		"id":"deroy_c02",
-		"coordinate":new Point(42.3672646, -71.26109869999999),
+		"coordinate":new Point(42.367348, -71.261285),
 		"type":"crossing"
 	},
 	{
 		"id":"deroy_e02",
 		"coordinate":new Point(42.367261, -71.261742),
 		"type":"entrance"
+	},
+	{
+		"id":"shapiro_c01",
+		"coordinate":new Point(42.367205, -71.261474),
+		"type":"crossing"	
 	},
 	{
 		"id":"shapiro_e01",
@@ -111,7 +116,7 @@ points_massellchapels = [
 		"type":"entrance"
 	},
 	{
-		"id":"shapiro_c01",
+		"id":"shapiro_c02",
 		"coordinate":new Point(42.366841, -71.261141),
 		"type":"crossing"
 	},
