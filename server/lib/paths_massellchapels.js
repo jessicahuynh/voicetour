@@ -249,5 +249,15 @@ paths_massellchapels = [
 		"start":"shapiro_c02",
 		"end":"shapiro_c01",
 		"description":"Follow the road, keeping the pond on your right."
+	},
+	{
+		"start":"shapiro_c02",
+		"end":"shapiro_e02",
+		"description":"Walk up the sidewalk leading to Shapiro."
+	},
+	{
+		"start":"shapiro_e02",
+		"end":"shapiro_c02",
+		"description":"Walk down the sidewalk to the pond."
 	}
 ]
