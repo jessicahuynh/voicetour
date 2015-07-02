@@ -1,19 +1,19 @@
-points = [
-	{
-		"id":"building_e01",
-		"coordinate":new Point(),
-		"type":"entrance"
-	},
-	{
-		"id":"buildingid_c01",
-		"coordinate":new Point(),
-		"type":"crossing"
-	},
-	{
-		"id":"buildingid_i01",
-		"coordinate":new Point(),
-		"type":"inside"
-	},
+points_massellchapels = [
+	// {
+	// 	"id":"building_e01",
+	// 	"coordinate":new Point(),
+	// 	"type":"entrance"
+	// },
+	// {
+	// 	"id":"buildingid_c01",
+	// 	"coordinate":new Point(),
+	// 	"type":"crossing"
+	// },
+	// {
+	// 	"id":"buildingid_i01",
+	// 	"coordinate":new Point(),
+	// 	"type":"inside"
+	// },
 
 	{
 		"id":"chapelsfield_c01",
@@ -37,7 +37,7 @@ points = [
 	},
 	{
 		"id":"berlin_e01",
-		"coordinate":new Point(42.3679717, -71.2609025),
+		"coordinate":new Point(42.368075, -71.260755),
 		"type":"entrance"
 	},
 		{
@@ -57,7 +57,7 @@ points = [
 	},
 	{
 		"id":"usen_e01",
-		"coordinate":new Point(42.368463, -71.260944),
+		"coordinate":new Point(42.367370, -71.260560),
 		"type":"entrance"
 	},
 	{
