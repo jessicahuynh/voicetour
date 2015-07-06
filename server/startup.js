@@ -1,34 +1,28 @@
 Meteor.startup(function() {
 	if (Locations.find().count() == 0) {
-		// load main locations json file into collection
-		locations.forEach(function(location) {
-			Locations.insert(location);
-			var c = location.coordinates;
-
-			c.forEach(function(point) {
-				CornerPoints.insert({"point":point,"name":location.name});
+		// list of all of the files containing location data
+		var locFiles = [locations,locations_artinstallations,locations_dorms,locations_parking];
+		
+		locFiles.forEach(function(locFile) {
+			locFile.forEach(function(location) {
+				Locations.insert(location);
+				var c = location.coordinates;
+				
+				c.forEach(function(point) {
+					CornerPoints.insert({"point":point,"name":location.name});
+				})
 			});
-		});
-		// load dorms into collection
-		locations_dorms.forEach(function(location) {
-			Locations.insert(location);
-			var c = location.coordinates;
-
-			c.forEach(function(point) {
-				CornerPoints.insert({"point":point,"name":location.name});
+		});		
+	}
+	
+	if (Intersections.find().count() == 0) {
+		var intersectFiles = [points_massellchapels,points_gym];
+		
+		intersectFiles.forEach(function(intersectFile) {
+			intersectFile.forEach(function(point) {
+				Intersections.insert(point);
 			});
 		});
 	}
-
-	if (Routes.find().count() == 0) {
-		// load routes into collection
-		locations.forEach(function(location) {
-			var c = location.route;
-			var name = location.name.toString();
-			Routes.insert( c);
-		});
-	}
-
-
 
 });

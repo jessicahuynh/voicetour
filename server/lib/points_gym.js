@@ -1,4 +1,4 @@
-points = [
+points_gym = [
 	{
 		"id":"gosman_c01",
 		"coordinate":new Point(42.365305,-71.256108),
