@@ -108,7 +108,7 @@ paths_massellchapels = [
 	{
 		"start":"renfield_c02",
 		"end":"chapelsfield_c03",
-		"description":"Facing away from the pond, head straight towards the larg path."
+		"description":"Facing away from the pond, head straight towards the large path."
 	},
 	{
 		"start":"renfield_e01",
@@ -259,5 +259,105 @@ paths_massellchapels = [
 		"start":"shapiro_e02",
 		"end":"shapiro_c02",
 		"description":"Walk down the sidewalk to the pond."
+	},
+	{
+		"start":"shapiro_c02",
+		"end":"shapiro_e03",
+		"description":"Continue straight down the sidewalk and veer right, pass Hassenfeld."
+	},
+	{
+		"start":"shapiro_e03",
+		"end":"shapiro_c02",
+		"description":"Turn left and walk on the sidewalk towards the pond."
+	},
+	{
+		"start":"shapiro_c02",
+		"end":"usen_c02",
+		"description":"Continue on the path, keeping the pond on your left and Hassenfeld on your right."
+	},
+	{
+		"start":"usen_c02",
+		"end":"shapiro_c02",
+		"description":"Continue along the path, keeping the pond on your right and Hassenfeld on your left."
+	},
+	{
+		"start":"usen_c02",
+		"end":"usen_c01",
+		"description":"Continue along the path, keeping the pond on your left and Usen on your right. Stop at the small sidewalk leading to Usen."
+	},
+	{
+		"start":"usen_c01",
+		"end":"usen_c02",
+		"description":"Turn left and continue along the path, keeping the pond on your right and Usen on your left."
+	},
+	{
+		"start":"usen_c02",
+		"end":"renfield_c02",
+		"description":"Continue along the path, keeping the pond on your left and Usen on your right."
+	},
+	{
+		"start":"renfield_c02",
+		"end":"usen_c02",
+		"description":"Continue along the path, keeping the pond on your left and Usen on your right."
+	},
+	{
+		"start":"renfield_c02",
+		"end":"usen_c01",
+		"description":"Walk a short distance along the main path, keeping the pond on your right."
+	},
+	{
+		"start":"usen_c01",
+		"end":"renfield_c02",
+		"description":"Turn right and walk a short distance along the main path, keeping the pond on your left."
+	},
+	{
+		"start":"chapelsfield_c02",
+		"end":"rosienorth_c01",
+		"description":"Head down the path between the two brick bulildings in Rosie Quad."
+	},
+	{
+		"start":"rosienorth_c01",
+		"end":"chapelsfield_c02",
+		"description":"Head towards the main path."
+	},
+	{
+		"start":"rosienorth_c01",
+		"end":"rosienorth_e01",
+		"description":"Veer right towards the entrance of Rosie North."
+	},
+	{
+		"start":"rosienorth_e01",
+		"end":"rosienorth_c01",
+		"description":"Turn left towards the main road."
+	},
+	{
+		"start":"rosienorth_c01",
+		"end":"rosieeast_e01",
+		"description":"Turn left and then left again at the entrance of the building on your left."
+	},
+	{
+		"start":"rosieeast_e01",
+		"end":"rosienorth_c01",
+		"description":"Turn right and right again between Rosie North and Rosie East."
+	},
+	{
+		"start":"rosienorth_c01",
+		"end":"rosiesouth_e01",
+		"description":"Head straight up the hill and veer slightly left towards the door to Rosie South."
+	},
+	{
+		"start":"rosiesouth_e01",
+		"end":"rosienorth_c01",
+		"description":"Turn slightly to the right and head downhill towards the main path."
+	},
+	{
+		"start":"rosiesouth_e01",
+		"end":"rosiesouth_c01",
+		"description":"Turn left towards the stairs."
+	},
+	{
+		"start":"rosiesouth_c01",
+		"end":"rosiesouth_e01",
+		"description":"Turn right immediately."
 	}
 ]

@@ -137,7 +137,7 @@ points_massellchapels = [
 	},
 	{
 		"id":"usen_e02",
-		"coordinate":new Point(42.36720248807261,-71.2606509225226),
+		"coordinate":new Point(42.366988, -71.260654),
 		"type":"entrance"
 	},
 	{
@@ -147,7 +147,7 @@ points_massellchapels = [
 	},
 	{
 		"id":"rosienorth_c01",
-		"coordinate":new Point(42.367246, -71.260334),
+		"coordinate":new Point(42.367270, -71.259956),
 		"type":"crossing"
 	},
 	{
