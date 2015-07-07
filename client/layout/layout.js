@@ -28,9 +28,9 @@ Template.layout.rendered = function () {
     var toggler = '.navbar-toggle';
     var pagewrapper = '#page-content';
     var navigationwrapper = '.navbar-header';
-    var slidewidth = '80%';
+    var slidewidth = '60%';
     var menuneg = '-100%';
-    var slideneg = '-80%';
+    var slideneg = '-60%';
 
 
     $("#slide-nav").on("click", toggler, function (e) {

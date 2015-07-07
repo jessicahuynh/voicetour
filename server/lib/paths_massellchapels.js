@@ -1,4 +1,4 @@
-/* most of the chapels and shapiro_e04 will be linked up in the loop road */
+/* most of the chapels and shapirodorm_e04 will be linked up in the loop road */
 paths_massellchapels = [
 	{
 		"start":"chapelsfield_c01",
@@ -212,72 +212,72 @@ paths_massellchapels = [
 	},
 	{
 		"start":"deroy_e02",
-		"end":"shapiro_c01",
+		"end":"shapirodorm_c01",
 		"description":"Turn left down the large road towards the pond."
 	},
 	{
-		"start":"shapiro_c01",
+		"start":"shapirodorm_c01",
 		"end":"deroy_e02",
 		"description":"Facing away from the pond, head towards the main road but veer towards the building on your right."
 	},
 	{
-		"start":"shapiro_c01",
+		"start":"shapirodorm_c01",
 		"end":"deroy_c02",
 		"description":"Follow the road next to the pond, keeping it on your right."
 	},
 	{
 		"start":"deroy_c02",
-		"end":"shapiro_c01",
+		"end":"shapirodorm_c01",
 		"description":"Follow the road next to the pond, keeping it on your left."
 	},
 	{
-		"start":"shapiro_c01",
-		"end":"shapiro_e01",
+		"start":"shapirodorm_c01",
+		"end":"shapirodorm_e01",
 		"description":"Follow the road, keeping the pond to your left, until you see the door on your right."
 	},
 	{
-		"start":"shapiro_e01",
-		"end":"shapiro_c01",
+		"start":"shapirodorm_e01",
+		"end":"shapirodorm_c01",
 		"description":"Take an immediate left and follow the road with the pond on your right."
 	},
 	{
-		"start":"shapiro_c01",
-		"end":"shapiro_c02",
+		"start":"shapirodorm_c01",
+		"end":"shapirodorm_c02",
 		"description":"Follow the road, keeping the pond on your left."
 	},
 	{
-		"start":"shapiro_c02",
-		"end":"shapiro_c01",
+		"start":"shapirodorm_c02",
+		"end":"shapirodorm_c01",
 		"description":"Follow the road, keeping the pond on your right."
 	},
 	{
-		"start":"shapiro_c02",
-		"end":"shapiro_e02",
+		"start":"shapirodorm_c02",
+		"end":"shapirodorm_e02",
 		"description":"Walk up the sidewalk leading to Shapiro."
 	},
 	{
-		"start":"shapiro_e02",
-		"end":"shapiro_c02",
+		"start":"shapirodorm_e02",
+		"end":"shapirodorm_c02",
 		"description":"Walk down the sidewalk to the pond."
 	},
 	{
-		"start":"shapiro_c02",
-		"end":"shapiro_e03",
+		"start":"shapirodorm_c02",
+		"end":"shapirodorm_e03",
 		"description":"Continue straight down the sidewalk and veer right, pass Hassenfeld."
 	},
 	{
-		"start":"shapiro_e03",
-		"end":"shapiro_c02",
+		"start":"shapirodorm_e03",
+		"end":"shapirodorm_c02",
 		"description":"Turn left and walk on the sidewalk towards the pond."
 	},
 	{
-		"start":"shapiro_c02",
+		"start":"shapirodorm_c02",
 		"end":"usen_c02",
 		"description":"Continue on the path, keeping the pond on your left and Hassenfeld on your right."
 	},
 	{
 		"start":"usen_c02",
-		"end":"shapiro_c02",
+		"end":"shapirodorm_c02",
 		"description":"Continue along the path, keeping the pond on your right and Hassenfeld on your left."
 	},
 	{

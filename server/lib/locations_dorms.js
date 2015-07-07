@@ -125,6 +125,7 @@ locations_dorms = [
 		"entrances":["rosiesouth_e01"]
 		},
 	shapiroDorm = {
+		"id":"shapirodorm",
 		"name":"Shapiro Hall",
 		"nickname":"Shapiro",
 		"coordinates":[
@@ -168,6 +169,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	village = {
+		"id":"village",
 		"name":"Village Residence Hall",
 		"nickname":"the Village",
 		"coordinates":[
