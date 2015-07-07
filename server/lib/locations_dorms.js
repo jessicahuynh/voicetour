@@ -97,7 +97,8 @@ locations_dorms = [
 			new Point(42.367225,-71.259817), 
 			new Point(42.366945,-71.25979), 
 			new Point(42.366962,-71.259988)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["rosieeast_e01"]
 		},
 	rosieNorth = {
 		"id":"rosienorth",
@@ -108,7 +109,8 @@ locations_dorms = [
 			new Point(42.367364,-71.259949), 
 			new Point(42.367263,-71.25996), 
 			new Point(42.367268,-71.260348)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["rosienorth_e01"]
 		},
 	rosieSouth = {
 		"id":"rosiesouth",
@@ -119,7 +121,8 @@ locations_dorms = [
 			new Point(42.366919,-71.25997), 
 			new Point(42.366814,-71.259979), 
 			new Point(42.36681,-71.260375)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["rosiesouth_e01"]
 		},
 	shapiroDorm = {
 		"name":"Shapiro Hall",
