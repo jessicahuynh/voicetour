@@ -1,5 +1,4 @@
-// golbal variable 
-totalCost = 0;
+
 
 var Graph = (function (undefined) {
 
@@ -148,62 +147,6 @@ var Graph = (function (undefined) {
 })();
 
 
-/*
-var map = {};
->>>>>>> 83e1511cd611a25bd35aa12a3fec4814eb877f1f
- console.log("test1");
- var l = Locations.find().fetch();
- console.log("test2");
- var i = 0;
- var count = l.length;
- var name = Locations.find().fetch();
-
-var lo2 = name[0];
-console.log(count);
-
-console.log(lo2.nickname);
- for(i=0;i<count;i++) {
-   console.log("Hi");
-   console.log(Locations.find().fetch()[i].nickname);
-   map[Locations.find().fetch()[i].nickname] = l[i].route;
-
-};*/
-
-
-
-
-/*while (i<l.length()) {
-	console.log("Hi");
-	map[l[i].nickname] = l[i].route;
-	i ++;
-};
-console.log("test6");*/
-
-/*l.forEach(function(location){
-	console.log("test4");
-	map[location.nickname] = location.route;
-});*/
-
-/*console.log(map);*/
-/*var map = {a:{c:1},b:{a:2,c:1},c:{a:4,b:1}},*/
-
-/*map = {};
-
-Template.graph.rendered = function(){
-paths = Paths.find().fetch();
-console.log(paths);
-paths.forEach(function(path){
-	console.log("loop");
-	var start = path.start;
-	var end = path.end;
-	var dist = path.distance;
-	if (map[start] == undefined || map[start] == null){
-		map[start] = {};
-	}
-	map[start][end] = dist;
-})
-
-}*/
 
 /*map = {"volen":{"fellowsgarden": 2,
 					"bassine": 1,
@@ -221,8 +164,17 @@ paths.forEach(function(path){
 					"bassine":2,},
 		};
 */
-var map = Map.findOne();
-graph = new Graph(map);
+
+var graph;
+
+Template.graph.rendered = function(){
+	console.log(Map.find().count());
+	map = Map.findOne();
+	console.log(map);
+	graph = new Graph(map);
+}
+
+
 
 
 Template.graph.helpers({
@@ -233,14 +185,18 @@ Template.graph.helpers({
 });
 
 Template.graph.events({
-	"click #search": function(event){
+	"submit #navform": function(event){
+
 		event.preventDefault();
+
+		/*alert("test");*/
 		var starts = document.getElementById('startpoint').value;
 		var ends = document.getElementById('endpoint').value;
 		Session.set("starts",starts);
 		Session.set("ends",ends);
 		console.log(graph.findShortestPath(starts, ends));
-		console.log(totalCost);	
+		
+		
 	}
 
 });

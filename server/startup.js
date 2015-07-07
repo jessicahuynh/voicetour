@@ -66,6 +66,7 @@ Meteor.startup(function() {
 		/*console.log(map);*/
 		Map.insert(map);
 	}
+	console.log(Map.find().count());
 	console.log("startup end");
 
 
