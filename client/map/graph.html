@@ -10,11 +10,11 @@
 <button type="submit" id="search">Find the Shortest Path</button>
 <br>
 </form>
-{{stops}}
-
-<h2>List of Location</h2>
-<p>volen, scc, fellowsgarden, rose, bassine, feldberg</p>
-<p>(now you can only enter the names of the buildings exactly as listed above.)</p>
+<ul>
+{{#each stops}}
+<li>{{description}}</li>
+{{/each}}
+</ul>
 
 </Template>
 

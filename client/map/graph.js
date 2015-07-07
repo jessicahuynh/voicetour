@@ -179,7 +179,7 @@ Template.graph.rendered = function(){
 
 Template.graph.helpers({
 	stops: function() {
-		return graph.findShortestPath(Session.get("starts"), Session.get("ends"));
+		return Session.get("routeToTake");
 
 	}
 });
@@ -192,11 +192,19 @@ Template.graph.events({
 		/*alert("test");*/
 		var starts = document.getElementById('startpoint').value;
 		var ends = document.getElementById('endpoint').value;
-		Session.set("starts",starts);
-		Session.set("ends",ends);
-		console.log(graph.findShortestPath(starts, ends));
+		console.log(graph);
+		var route = graph.findShortestPath(starts, ends);
+		console.log(route);
 		
+		var r = [];
+		for (var i = 0; i < route.length - 1; i++) {
+			thePath = Paths.findOne({"start":route[i],"end":route[i+1]});
+			r.push(thePath);
 		
+		}
+		console.log(r);
+		
+		Session.set("routeToTake",r);
 	}
 
 });
