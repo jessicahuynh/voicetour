@@ -24,5 +24,29 @@ Meteor.startup(function() {
 			});
 		});
 	}
+	
+	if (Paths.find().count() == 0) {
+		var pathFiles = [paths_massellchapels];
+		
+		pathFiles.forEach(function(pathFile) {
+			pathFile.forEach(function(path) {
+				// console.log(path.start);
+				Meteor.call("distance",
+					Intersections.findOne({"id":path.start}).coordinate,
+					Intersections.findOne({"id":path.end}).coordinate,
+					function(error,data) {
+						if (error) {
+							console.log(error);
+						}
+						else {
+							path.distance = data;
+							Paths.insert(path);
+							// console.log(path);	
+						}
+				});
+			});
+			
+		});
+	}
 
 });

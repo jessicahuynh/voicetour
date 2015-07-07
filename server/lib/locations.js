@@ -243,6 +243,7 @@ locations = [
 	berlin = {
 		"id":"berlin",
 		"name":"Mendel and Leah Berlin Chapel",
+		"nickname":"Berlin Chapel",
 		"coordinates":[
 			new Point(42.368284,-71.260708), 
 			new Point(42.368244,-71.260593), 
@@ -253,6 +254,7 @@ locations = [
 	bethlehem = {
 		"id":"bethlehem",
 		"name":"Bethlehem Chapel",
+		"nickname":"Bethlehem Chapel",
 		"coordinates":[
 			new Point(42.368343,-71.260178), 
 			new Point(42.368259,-71.259998), 
@@ -263,6 +265,7 @@ locations = [
 	harlan = {
 		"id":"harlan",
 		"name":"John Marshall Harlan Chapel",
+		"nickname":"Harlan Chapel",
 		"coordinates":[
 			new Point(42.368776,-71.260739), 
 			new Point(42.368692,-71.260564), 
@@ -272,6 +275,7 @@ locations = [
 		},
 	chapelsField = {
 		"name":"Chapels Field",
+		"nickname":"Chapels Field",
 		"coordinates":[
 			new Point(42.368103,-71.260244), 
 			new Point(42.36763,-71.25901), 

@@ -11,6 +11,7 @@ locations_dorms = [
 	},
 	coffman = {
 		"name":"Coffman Residence Hall",
+		"nickname":"Coffman",
 		"coordinates":[
 			new Point(42.359936,-71.257469), 
 			new Point(42.359989,-71.257373), 
@@ -20,6 +21,7 @@ locations_dorms = [
 		},
 	cohen = {
 		"name":"Cohen Residence Hall",
+		"nickname":"Cohen",
 		"coordinates":[
 			new Point(42.359859,-71.257805), 
 			new Point(42.359894,-71.257695), 
@@ -29,6 +31,7 @@ locations_dorms = [
 		},
 	lewis = {
 		"name":"Lewis Residence Hall",
+		"nickname":"Lewis",
 		"coordinates":[
 			new Point(42.360203,-71.257102), 
 			new Point(42.359815,-71.256402), 
@@ -38,6 +41,7 @@ locations_dorms = [
 		},
 	may = {
 		"name":"May Residence Hall",
+		"nickname":"May",
 		"coordinates":[
 			new Point(42.360515,-71.25694), 
 			new Point(42.360223,-71.256167), 
@@ -47,6 +51,7 @@ locations_dorms = [
 		},
 	mazer = {
 		"name":"Mazer Residence Hall",
+		"nickname":"Mazer",
 		"coordinates":[
 			new Point(42.36312,-71.261151), 
 			new Point(42.363011,-71.260811), 
@@ -56,6 +61,7 @@ locations_dorms = [
 		},
 	ridgewoodA = {
 		"name":"Ridgewood Residence Hall A",
+		"nickname":"Ridgewood A",
 		"coordinates":[
 			new Point(42.364163,-71.260638), 
 			new Point(42.364036,-71.260324), 
@@ -65,6 +71,7 @@ locations_dorms = [
 		},
 	ridgewoodB = {
 		"name":"Ridgewood Residence Hall B",
+		"nickname":"Ridgewood B",
 		"coordinates":[
 			new Point(42.363939,-71.261456), 
 			new Point(42.363978,-71.260872), 
@@ -73,6 +80,7 @@ locations_dorms = [
 		},
 	ridgewoodC = {
 		"name":"Ridgewood Residence Hall C",
+		"nickname":"Ridgewood C",
 		"coordinates":[
 			new Point(42.363691,-71.260904), 
 			new Point(42.363562,-71.260466), 
@@ -115,6 +123,7 @@ locations_dorms = [
 		},
 	shapiroDorm = {
 		"name":"Shapiro Hall",
+		"nickname":"Shapiro",
 		"coordinates":[
 			new Point(42.367058,-71.261655), 
 			new Point(42.367139,-71.261459), 
@@ -125,6 +134,7 @@ locations_dorms = [
 	renfield = {
 		"id":"renfield",
 		"name":"Anna Renfield Hall",
+		"nickname":"Renfield",
 		"coordinates":[
 			new Point(42.367591,-71.261234), 
 			new Point(42.367458,-71.262894), 
@@ -135,6 +145,7 @@ locations_dorms = [
 	deroy = {
 		"id":"deroy",
 		"name":"Helen L. Deroy Hall",
+		"nickname":"Deroy",
 		"coordinates":[
 			new Point(42.367526,-71.261539), 
 			new Point(42.367458,-71.261429), 
@@ -145,6 +156,7 @@ locations_dorms = [
 	usen = {
 		"id":"usen",
 		"name":"Edyth and Irving Usen Hall",
+		"nickname":"Usen",
 		"coordinates":[
 			new Point(42.367359,-71.260625), 
 			new Point(42.367351,-71.260477), 
