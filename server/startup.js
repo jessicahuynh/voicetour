@@ -16,7 +16,7 @@ Meteor.startup(function() {
 	}
 	
 	if (Intersections.find().count() == 0) {
-		var intersectFiles = [points_massellchapels,points_gym];
+		var intersectFiles = [points_massellchapels,points_science,points_gym];
 		
 		intersectFiles.forEach(function(intersectFile) {
 			intersectFile.forEach(function(point) {
@@ -26,7 +26,7 @@ Meteor.startup(function() {
 	}
 	
 	if (Paths.find().count() == 0) {
-		var pathFiles = [paths_massellchapels];
+		var pathFiles = [paths_massellchapels,paths_science];
 		
 		pathFiles.forEach(function(pathFile) {
 			pathFile.forEach(function(path) {
