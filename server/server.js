@@ -98,7 +98,7 @@ Meteor.methods({
 			//console.log(JSON.stringify(location)+JSON.stringify(points[i]));
 			Meteor.call("distance",
 				location,
-				points[i],
+				points[i].point,
 				function(error,data) {
 					if (error) {
 						console.log(error);
@@ -138,9 +138,9 @@ Meteor.methods({
 		//console.log(start.point+end.point);
 
 		var lat1 = start.x;
-		var lat2 = end.point.x;
+		var lat2 = end.x;
 		var lon1 = start.y;
-		var lon2 = end.point.y;
+		var lon2 = end.y;
 
 		var p1 = lat1 * (Math.PI / 180);
 		var p2 = lat2 * (Math.PI / 180);
