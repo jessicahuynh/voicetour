@@ -11,13 +11,16 @@ Template.layout.events({
      },
      'click #searchBox': function(event) {
          searchBox.value = '';
+     },
+     'click #searchGlass':function(event) {
+         event.preventDefault();
+         $("#searchBox").toggle("searchBox");
+         $("#searchBox").focus();
      }
 });
 
 // Adapted from http://jsbin.com/eHAfIhI/1/edit?html,css,js,output
 Template.layout.rendered = function () {
-
-
     //stick in the fixed 100% height behind the navbar but don't wrap it
     $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
 
@@ -32,6 +35,9 @@ Template.layout.rendered = function () {
 
     $("#slide-nav").on("click", toggler, function (e) {
 
+        $("#searchGlass").toggle("searchGlass");
+        $("#searchForm").toggle("searchForm");
+        
         var selected = $(this).hasClass('slide-active');
 
         $('#navbar-hamburger').stop().animate({

@@ -169,16 +169,41 @@ body.slide-active {
 }
 
 /* STYLES FOR THE SEARCH BOX */
-div#searchBoxContainer {
+form#searchForm {
 	position:fixed;
+	float:right;
 	top:20px;
 	right:20px;
-	max-width:500px;
-	z-index:500;
+	max-width:550px;
+	z-index:1100;
+	input {
+		display:none;
+		width:100%;
+	}
+}
+button#searchGlass {
+	border:0;
 	float:right;
-	
-	button {
-		border:0;
-		background:transparent;
+	background:transparent;
+	float:none;
+	position:fixed;
+	top:1.2em;
+	right:1em;
+	z-index:12000;
+}
+
+@media (max-width:768px) {
+	form#searchForm {
+		top:56px;
+		right:0;
+		margin:0 auto;
+		max-width:100%;
+		min-width:96%;
+		width:100%;
+	}
+	button#searchGlass {
+		color:#ffffff;
+		top:.25em;
+		right:.25em;
 	}
 }

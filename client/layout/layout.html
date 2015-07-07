@@ -32,18 +32,18 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 		
-		<div id="searchBoxContainer">
+		
 			<form role="search" id="searchForm" name="searchForm" class="form-inline">
 			    	<div class="form-group">
 			        	<!-- <input type="text" class="form-control" placeholder="Search" id="searchBox" name="searchBox"> -->
 			        	{{> esInput index="locations" placeholder="Search" id="searchBox" class="form-control input-lg"}}
-
-		        		<button type="submit" class="btn btn-default btn-lg">
-				    		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-						</button>
 					</div>
-			    </form>		
-		</div>
+					
+			</form>
+			<button class="btn btn-default btn-lg" id="searchGlass">
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+			</button>
+		
 	
 
 		<div id="page-content">
