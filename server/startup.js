@@ -49,4 +49,24 @@ Meteor.startup(function() {
 		});
 	}
 
+	if (Map.find().count() == 0) {
+		var map = {};
+		paths = Paths.find().fetch();
+		/*console.log(paths);*/
+		paths.forEach(function(path){
+			var start = path.start;
+			var end = path.end;
+			var dist = path.distance;
+			if (map[start] == undefined || map[start] == null){
+				map[start] = {};
+			}
+			map[start][end] = dist;
+		});
+		
+		/*console.log(map);*/
+		Map.insert(map);
+	}
+	console.log("startup end");
+
+
 });

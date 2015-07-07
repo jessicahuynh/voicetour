@@ -1,3 +1,6 @@
+// golbal variable 
+totalCost = 0;
+
 var Graph = (function (undefined) {
 
 	var extractKeys = function (obj) {
@@ -183,7 +186,26 @@ console.log("test6");*/
 
 /*console.log(map);*/
 /*var map = {a:{c:1},b:{a:2,c:1},c:{a:4,b:1}},*/
-var map = {"volen":{"fellowsgarden": 2,
+
+/*map = {};
+
+Template.graph.rendered = function(){
+paths = Paths.find().fetch();
+console.log(paths);
+paths.forEach(function(path){
+	console.log("loop");
+	var start = path.start;
+	var end = path.end;
+	var dist = path.distance;
+	if (map[start] == undefined || map[start] == null){
+		map[start] = {};
+	}
+	map[start][end] = dist;
+})
+
+}*/
+
+/*map = {"volen":{"fellowsgarden": 2,
 					"bassine": 1,
 					"feldberg":1,},
 			"scc":{"fellowsgarden": 1,
@@ -197,8 +219,10 @@ var map = {"volen":{"fellowsgarden": 2,
 			"feldberg":{"volen": 1,
 					"fellowsgarden": 3,
 					"bassine":2,},
-		}
-	graph = new Graph(map);
+		};
+*/
+var map = Map.findOne();
+graph = new Graph(map);
 
 
 Template.graph.helpers({
@@ -215,7 +239,8 @@ Template.graph.events({
 		var ends = document.getElementById('endpoint').value;
 		Session.set("starts",starts);
 		Session.set("ends",ends);
-		console.log(graph.findShortestPath(starts, ends));	
+		console.log(graph.findShortestPath(starts, ends));
+		console.log(totalCost);	
 	}
 
 });
