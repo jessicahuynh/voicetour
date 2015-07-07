@@ -133,7 +133,8 @@ locations_dorms = [
 			new Point(42.367139,-71.261459), 
 			new Point(42.366469,-71.26103), 
 			new Point(42.366398,-71.261164)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["shapirodorm_e01","shapirodorm_e02","shapirodorm_e03","shapirodorm_e04"]
 		},
 	renfield = {
 		"id":"renfield",
@@ -144,7 +145,8 @@ locations_dorms = [
 			new Point(42.367458,-71.262894), 
 			new Point(42.367373,-71.260839), 
 			new Point(42.367498,-71.261277)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["renfield_e01","renfield_e02"]
 		},
 	deroy = {
 		"id":"deroy",
@@ -155,7 +157,8 @@ locations_dorms = [
 			new Point(42.367458,-71.261429), 
 			new Point(42.367238,-71.261668), 
 			new Point(42.3673,-71.261778)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["deroy_e01","deroy_e02"]
 		},
 	usen = {
 		"id":"usen",
@@ -166,7 +169,8 @@ locations_dorms = [
 			new Point(42.367351,-71.260477), 
 			new Point(42.367,-71.260499), 
 			new Point(42.367012,-71.26066)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["usen_e01","usen_e02"]
 		},
 	village = {
 		"id":"village",
