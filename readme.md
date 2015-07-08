@@ -17,10 +17,17 @@ All of these features are planned to be used with voice commands as well. We wil
 
 We are currently working on the UX, implementing voice commands, adding more locations, and route finding.
 
+### v1.3.0
+- UI improvements related to search bar
+- Route finding implemented!
+- Autocomplete when searching for locations to navigate
+- Location data and intersection points for Massell, Chapels, Rosie, and athletics
+- Algorithm to determine the shortest path from a building with multiple entrances
+
 ### v1.2.0
-- search through multiple fields
-- collapsable sidebar and other UI tweaks
-- location information pages
+- Search through multiple fields
+- Collapsable sidebar and other UI tweaks
+- Location information pages
 
 ### v1.1.0
 * Much more reliable location finding
