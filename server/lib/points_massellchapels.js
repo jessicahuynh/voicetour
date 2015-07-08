@@ -101,32 +101,32 @@ points_massellchapels = [
 		"type":"entrance"
 	},
 	{
-		"id":"shapiro_c01",
+		"id":"shapirodorm_c01",
 		"coordinate":new Point(42.367205, -71.261474),
 		"type":"crossing"	
 	},
 	{
-		"id":"shapiro_e01",
+		"id":"shapirodorm_e01",
 		"coordinate":new Point(42.367041, -71.261407),
 		"type":"entrance"
 	},
 	{
-		"id":"shapiro_e02",
+		"id":"shapirodorm_e02",
 		"coordinate":new Point(42.366810, -71.261276),
 		"type":"entrance"
 	},
 	{
-		"id":"shapiro_c02",
+		"id":"shapirodorm_c02",
 		"coordinate":new Point(42.366841, -71.261141),
 		"type":"crossing"
 	},
 	{
-		"id":"shapiro_e03",
+		"id":"shapirodorm_e03",
 		"coordinate":new Point(42.366471, -71.261080),
 		"type":"entrance"
 	},
 	{
-		"id":"shapiro_e04",
+		"id":"shapirodorm_e04",
 		"coordinate":new Point(42.366754, -71.261426),
 		"type":"entrance"
 	},
