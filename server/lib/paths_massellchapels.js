@@ -253,11 +253,7 @@ paths_massellchapels = [
 	{
 		"start":"shapirodorm_c02",
 		"end":"shapirodorm_e02",
-<<<<<<< HEAD
-		"description":"Walk up the sidewalk leading to shapirodorm."
-=======
-		"description":"Walk up the sidewalk leading to Shapiro."
->>>>>>> 9f160a978c55082c5564119baa1fd076e140aac3
+		"description":"Walk up the sidewalk leading to Shapiro Dorm."
 	},
 	{
 		"start":"shapirodorm_e02",

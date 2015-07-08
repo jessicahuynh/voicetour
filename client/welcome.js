@@ -23,7 +23,7 @@ Template.welcome.helpers({
 						Session.set("inLocation",data);
 					}
 				}
-				);
+			);
 			
 		});
 

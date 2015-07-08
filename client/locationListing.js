@@ -4,11 +4,13 @@ Template.locationListing.helpers({
 	},
 	categories:function() {
 		var c = "";
+		if (catArray != null && catArray != undefined) {
 		var catArray = this.category;
-		for (var i = 0; i < catArray.length - 1; i++) {
-			c += catArray[i] + ", ";
+			for (var i = 0; i < catArray.length - 1; i++) {
+				c += catArray[i] + ", ";
+			}
+			c+=catArray[i];
 		}
-		c+=catArray[i];
 		return c;
 	}
 });
@@ -16,5 +18,8 @@ Template.locationListing.helpers({
 Template.locationListing.events({
 	'click a.go-to-location':function(event) {
 		Session.set("viewLocation",this._id);
+	},
+	'click a.go-to-navigate':function(event) {
+		Session.set("navigateTo",this.name);
 	}
 });

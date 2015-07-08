@@ -1,10 +1,15 @@
 <template name="locationListing">
-	<a class="list-group-item go-to-location" href="/viewLocation/{{locationId}}">
-		<div>
-			<h4 class="list-group-item-heading">{{nickname}} ({{name}}) 
-				<small>{{categories}}</small></h4>
-			<p class="list-group-item-text">{{function}}</p>
-			<!-- <p class="list-group-item-text"><strong>Category:</strong> {{category}}</p> -->
-		</div>
-	</a>
+	<div class="locationListing row">
+		<a class="go-to-navigate col-xs-1" href="{{pathFor 'graph'}}">
+			<span class="glyphicon glyphicon-send"></span>
+		</a>
+		<a class="go-to-location col-xs-11" href="/viewLocation/{{locationId}}">
+			<div>
+				<h4 class="list-group-item-heading">{{nickname}} ({{name}}) 
+					<small>{{categories}}</small></h4>
+				<p class="list-group-item-text">{{function}}</p>
+				<!-- <p class="list-group-item-text"><strong>Category:</strong> {{category}}</p> -->
+			</div>
+		</a>	
+	</div>
 </template>

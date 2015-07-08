@@ -7,8 +7,11 @@
 	<form id="navform">
 		<div class="form-group">
 			<label for="startpoint">Start</label>
-			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location"}}
+			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location" }}
 			<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
+			<a id="getCurrentLoc" class="btn btn-default" href="#">
+				<span class="glyphicon glyphicon-record"></span>&nbsp;Use current location
+			</a>
 		</div>
 		<div class="form-group">
 			<label for="endpoint">End</label>
@@ -22,7 +25,7 @@
 <div class="col-sm-6">
 	<ul>
 		{{#each stops}}
-		<li>{{description}}</li>
+		<li>{{stopDescription}}</li>
 		{{/each}}
 	</ul>
 </div>

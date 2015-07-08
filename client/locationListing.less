@@ -1,7 +1,29 @@
-a.go-to-location {
-	min-height:6em;
-	background-image: url('/Chevron_right.svg'); /* From https://commons.wikimedia.org/wiki/File:Chevron_right.svg, in the public domain */
-	background-repeat:no-repeat;
-	background-position: right center;
-	padding-right:1.5em;
+@deis-blue: #0070FF;
+@dark-blue: #003e8c;
+
+.locationListing {
+	margin:0;
+	
+	a {
+		min-height:6em;
+		color:#111;
+		padding:1em;
+		margin:0;
+	}
+	a:hover {
+		text-decoration:none;
+		background-color:#ededed;
+	}
+	a.go-to-location {
+		background-image: url('/Chevron_right.svg'); /* From https://commons.wikimedia.org/wiki/File:Chevron_right.svg, in the public domain */
+		background-repeat:no-repeat;
+		background-position: right center;
+		padding-right:1.75em;
+	}
+	a.go-to-navigate {
+		text-align:center;
+		font-size:110%;
+		padding-top:2em;
+	}
+	
 }
