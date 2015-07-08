@@ -1,20 +1,37 @@
-<Template name="graph">
-<h1>Navigate</h1>
+<template name="graph">
+<h1 class="page-header">Navigate</h1>
 
+<div class="row">
 
-<form id="navform">
-<input name="text" id="startpoint" placeholder="starting">
-<br>
-<input name="text" id="endpoint" placeholder="destination">
-<br>
-<button type="submit" id="search">Find the Shortest Path</button>
-<br>
-</form>
-<ul>
-{{#each stops}}
-<li>{{description}}</li>
-{{/each}}
-</ul>
+<div class="col-sm-6">
+	<form id="navform">
+		<div class="form-group">
+			<label for="startpoint">Start</label>
+			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location"}}
+			<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
+		</div>
+		<div class="form-group">
+			<label for="endpoint">End</label>
+			{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination"}}
+			<!--<input type="text" id="endpoint" class="form-control" placeholder="destination">-->
+		</div>
+		<button type="submit" id="search" class="btn btn-primary">Find the Shortest Path</button>
+		<br>
+	</form>
+</div>
 
-</Template>
+<div class="col-sm-6">
+	<ul>
+		{{#each stops}}
+		<li>{{description}}</li>
+		{{/each}}
+	</ul>
+</div>
 
+</div>
+
+</template>
+
+<template name="suggestions">
+	<span class="label">{{name}}</span>
+</template>

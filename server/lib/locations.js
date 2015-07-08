@@ -13,7 +13,8 @@ locations = [
 		"route": {"fellowsgarden": 2,
 					"bassine": 1,
 					"feldberg":1,},
-		"category":["science","classroom","offices"]
+		"category":["science","classroom","offices"],
+		"entrances":["volen_e01"]
 	},
 	{
 		"id":"scc",
