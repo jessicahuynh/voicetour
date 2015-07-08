@@ -10,8 +10,8 @@ locations_parking = [
 		"category":["parking"]
 	},
 	gymp2 = {
-		"name":"gosman parking lot",
-		"nickname":"gosman parking lot ",
+		"name":"Gosman parking lot",
+		"nickname":"Gosman parking lot ",
 		"coordinates":[
 			new Point(42.365056,-71.253832), 
 			new Point(42.364858,-71.253718), 
@@ -20,8 +20,8 @@ locations_parking = [
 		"category":["parking"]
 	},
 	gymp3 = {
-		"name":"linsey parking lot",
-		"nickname":"linsey parking lot ",
+		"name":"Linsey parking lot",
+		"nickname":"Linsey parking lot ",
 		"coordinates":[
 			new Point(42.365568,-71.254114), 
 			new Point(42.365449,-71.253988), 
