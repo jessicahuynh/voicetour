@@ -69,8 +69,7 @@ Template.graph.events({
 									nearestIntersection = intersection.id;
 									
 									route = getShortestRoute([nearestIntersection],Locations.findOne({"name":ends}).entrances);
-									// console.log("*" + route);
-									
+									//console.log("*" + route);
 									if (route != null) {
 										getRouteDescription(route);
 									}
@@ -95,12 +94,11 @@ Template.graph.events({
 	"click #getCurrentLoc":function(event) {
 		event.preventDefault();
 		
-		navigator.geolocation.getCurrentPosition(function(position) {
-			var current = new Point(position.coords.latitude, position.coords.longitude);
-			Session.set("currentLocation",current);
-			
-			document.getElementById("startpoint").value = "(" + current.x + ", " + current.y + ")";
-		});
+		document.getElementById("startpoint").value = "getting current location...";
+		
+				
+		document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
+
 		
 		Meteor.call("searchLocations",			
 			Session.get("currentLocation"),
@@ -123,6 +121,8 @@ function getShortestRoute(startEntrances,endEntrances) {
 	var shortestRoute = null;
 	if (startEntrances != undefined && endEntrances != undefined) {
 		shortestRoute = graph.findShortestPath(startEntrances[0],endEntrances[0]);
+		
+		//console.log(startEntrances[0] + " " + shortestRoute + " " + endEntrances[0]);
 		
 		var currentRouteDist = 0;
 	

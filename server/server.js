@@ -37,6 +37,7 @@ Meteor.methods({
 	/* Search through all locations to see where you are */
 	searchLocations: function(current) {
 		location = null;
+		locatedHere = null;
 
 		for (var i = 0; i < Locations.find().count(); i++) {
 			// if the given Point is in the location, return the location
@@ -49,31 +50,35 @@ Meteor.methods({
 						locatedHere = data;
 					}
 			});
-
+			
+			
 			if (locatedHere) {
-				location = [Locations.find().fetch()[i],"in"];
-				//console.log(location);
+				location = [Locations.find().fetch()[i], "in"];
 				break;
 			}
-		}
 
+
+		}
+						
 		// call getNearest
 		// pass current
 		//console.log(locatedHere);
 		if (!locatedHere) {
 			Meteor.call("getNearest",
-			current,
-			function(error,data) {
-				if (error) {
-					console.log(error);
-				}
-				else {
-					// console.log("got the nearest location: " + data.name);
-					location = [data[0],"near",data[1]];
-				}
-			});
+				current,
+				function (error, data) {
+					if (error) {
+						console.log(error);
+					}
+					else {
+						// console.log("got the nearest location: " + data.name);
+						location = [data[0], "near", data[1]];
+						
+						
+					}
+				});
 		}
-		//console.log(location);
+
 		return location;
 	},
 

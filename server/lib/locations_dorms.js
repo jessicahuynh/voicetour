@@ -158,7 +158,7 @@ locations_dorms = [
 			new Point(42.367238,-71.261668), 
 			new Point(42.3673,-71.261778)],
 		"category":["dorm"],
-		"entrances":["deroy_e01,deroy_e02"]
+		"entrances":["deroy_e01","deroy_e02"]
 		},
 	usen = {
 		"id":"usen",
