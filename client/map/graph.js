@@ -96,22 +96,27 @@ Template.graph.events({
 		
 		document.getElementById("startpoint").value = "getting current location...";
 		
-				
-		document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
-
-		
-		Meteor.call("searchLocations",			
+		navigator.geolocation.getCurrentPosition(function (position) {
+			var current = new Point(position.coords.latitude, position.coords.longitude);
+			Session.set("currentLocation", current);
+			
+			Meteor.call("searchLocations",			
 			Session.get("currentLocation"),
-			function(error, data) {
-				if (error) {
-					console.log(error);
+				function(error, data) {
+					if (error) {
+						console.log(error);
+					}
+					else {
+						Session.set("inLocation",data);
+						document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
+					}
 				}
-				else {
-					Session.set("inLocation",data);
-					// console.log(data);
-				}
-			}
-		);
+			);
+		});
+		
+				
+		// document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
+		
 	}
 
 });
