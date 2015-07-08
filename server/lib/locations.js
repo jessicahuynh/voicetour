@@ -13,7 +13,8 @@ locations = [
 		"route": {"fellowsgarden": 2,
 					"bassine": 1,
 					"feldberg":1,},
-		"category":["science","classroom","offices"]
+		"category":["science","classroom","offices"],
+		"entrances":["volen_e01"]
 	},
 	{
 		"id":"scc",
@@ -249,7 +250,8 @@ locations = [
 			new Point(42.368244,-71.260593), 
 			new Point(42.368082,-71.260705), 
 			new Point(42.368135,-71.26081)],
-		"category":["religious"]
+		"category":["religious"],
+		"entrances":["berlin_e01"]
 		},
 	bethlehem = {
 		"id":"bethlehem",
@@ -260,7 +262,8 @@ locations = [
 			new Point(42.368259,-71.259998), 
 			new Point(42.368196,-71.260047), 
 			new Point(42.368267,-71.260243)],
-		"category":["religious"]
+		"category":["religious"],
+		"entrances":["bethlehem_e01"]
 		},
 	harlan = {
 		"id":"harlan",
@@ -271,7 +274,8 @@ locations = [
 			new Point(42.368692,-71.260564), 
 			new Point(42.36865,-71.2606), 
 			new Point(42.368732,-71.260779)],
-		"category":["religious"]
+		"category":["religious"],
+		"entrances":["harlan_e01"]
 		},
 	chapelsField = {
 		"name":"Chapels Field",

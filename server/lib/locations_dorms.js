@@ -125,6 +125,7 @@ locations_dorms = [
 		"entrances":["rosiesouth_e01"]
 		},
 	shapiroDorm = {
+		"id":"shapirodorm",
 		"name":"Shapiro Hall",
 		"nickname":"Shapiro",
 		"coordinates":[
@@ -132,7 +133,11 @@ locations_dorms = [
 			new Point(42.367139,-71.261459), 
 			new Point(42.366469,-71.26103), 
 			new Point(42.366398,-71.261164)],
+<<<<<<< HEAD
 		"category":["dorm"]
+=======
+		"category":["dorm"],
+>>>>>>> 9f160a978c55082c5564119baa1fd076e140aac3
 		"entrances":["shapirodorm_e01","shapirodorm_e02","shapirodorm_e03","shapirodorm_e04"]
 		},
 	renfield = {
@@ -144,8 +149,13 @@ locations_dorms = [
 			new Point(42.367458,-71.262894), 
 			new Point(42.367373,-71.260839), 
 			new Point(42.367498,-71.261277)],
+<<<<<<< HEAD
 		"category":["dorm"]
 		"entrances":["renfield_e01"]
+=======
+		"category":["dorm"],
+		"entrances":["renfield_e01","renfield_e02"]
+>>>>>>> 9f160a978c55082c5564119baa1fd076e140aac3
 		},
 	deroy = {
 		"id":"deroy",
@@ -156,8 +166,13 @@ locations_dorms = [
 			new Point(42.367458,-71.261429), 
 			new Point(42.367238,-71.261668), 
 			new Point(42.3673,-71.261778)],
+<<<<<<< HEAD
 		"category":["dorm"]
 		"entrances":["deroy_e01,deroy_e02"]
+=======
+		"category":["dorm"],
+		"entrances":["deroy_e01","deroy_e02"]
+>>>>>>> 9f160a978c55082c5564119baa1fd076e140aac3
 		},
 	usen = {
 		"id":"usen",
@@ -168,10 +183,16 @@ locations_dorms = [
 			new Point(42.367351,-71.260477), 
 			new Point(42.367,-71.260499), 
 			new Point(42.367012,-71.26066)],
+<<<<<<< HEAD
 		"category":["dorm"]
 		"entrances":["usen_e01"]
+=======
+		"category":["dorm"],
+		"entrances":["usen_e01","usen_e02"]
+>>>>>>> 9f160a978c55082c5564119baa1fd076e140aac3
 		},
 	village = {
+		"id":"village",
 		"name":"Village Residence Hall",
 		"nickname":"the Village",
 		"coordinates":[

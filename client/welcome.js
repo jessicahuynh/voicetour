@@ -31,7 +31,6 @@ Template.welcome.helpers({
 		return Session.get("currentLocation");
 	},
 	inLocation: function() {
-		//console.log(Session.get("inLocation"));
 		var name = Locations.findOne({"name":Session.get("inLocation")[0].name}).name;
 		if (Session.get("inLocation")[1] == "in") {
 			return "You're in " + name;

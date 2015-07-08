@@ -1,19 +1,36 @@
-<Template name="graph">
-<h1>Graph</h1>
+<template name="graph">
+<h1 class="page-header">Navigate</h1>
 
+<div class="row">
 
+<div class="col-sm-6">
+	<form id="navform">
+		<div class="form-group">
+			<label for="startpoint">Start</label>
+			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location"}}
+			<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
+		</div>
+		<div class="form-group">
+			<label for="endpoint">End</label>
+			{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination"}}
+			<!--<input type="text" id="endpoint" class="form-control" placeholder="destination">-->
+		</div>
+		<button type="submit" id="searchButton" class="btn btn-primary">Go</button>
+	</form>
+</div>
 
-<textarea name="text" id="startpoint">{{starts}}</textarea>
-<br>
-<textarea name="text" id="endpoint">{{ends}}</textarea>
-<br>
-<button type="button" id="search">FindtheShortestPath</button>
-<br>
-{{stops}}
+<div class="col-sm-6">
+	<ul>
+		{{#each stops}}
+		<li>{{description}}</li>
+		{{/each}}
+	</ul>
+</div>
 
-<h2>List of Location</h2>
-<p>volen, scc, fellowsgarden, rose, bassine, feldberg</p>
-<p>(now you can only enter the names of the buildings exactly as listed above.)</p>
+</div>
 
-</Template>
+</template>
 
+<template name="suggestions">
+	<span class="label">{{name}}</span>
+</template>

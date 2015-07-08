@@ -68,7 +68,7 @@ Meteor.methods({
 					console.log(error);
 				}
 				else {
-					console.log("got the nearest location: " + data.name);
+					// console.log("got the nearest location: " + data.name);
 					location = [data[0],"near",data[1]];
 				}
 			});
@@ -120,7 +120,7 @@ Meteor.methods({
 		}
 		//console.log("nearest distance location:" + theNearestDistance + JSON.stringify(theNearest));
 		if (theNearestDistance < 10000000) {
-			console.log(JSON.stringify(theNearest));
+			// console.log(JSON.stringify(theNearest));
 			return [theNearest,theNearestDistance];
 		}
 		else {

@@ -5,3 +5,5 @@ Meteor.publish("theCornerPoints",function() {return CornerPoints.find()});
 Meteor.publish("theIntersections",function() {return Intersections.find()});
 
 Meteor.publish("thePaths",function() {return Paths.find()});
+
+Meteor.publish("theMap",function() {return Map.find()});
