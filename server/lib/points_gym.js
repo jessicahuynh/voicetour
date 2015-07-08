@@ -10,7 +10,7 @@ points_gym = [
 		"type":"crossing"
 	},
 	{
-		"id":"Athleticslot_e01",
+		"id":"athleticslot_e01",
 		"coordinate":new Point(42.365022,-71.255865),
 		"type":"entrance"
 	},
@@ -50,7 +50,7 @@ points_gym = [
 		"type":"entrance"
 	},
 	{
-		"id":"Linsey_c03",
+		"id":"linsey_c03",
 		"coordinate":new Point(42.365810,-71.253929),
 		"type":"crossing"
 	},
@@ -75,7 +75,7 @@ points_gym = [
 		"type":"entrance"
 	},
 	{
-		"id":"Linsey_c01",
+		"id":"linsey_c01",
 		"coordinate":new Point(42.365969,-71.254845),
 		"type":"crossing"
 	},
