@@ -1,5 +1,5 @@
 paths_science = [
-	{
+/*	{
 		"start":"volen_e01",
 		"end":"volen_c01",
 		"description":"Go out the main doors and to the center of the circular plaza."
@@ -38,17 +38,6 @@ paths_science = [
 		"start":"volen_c02",
 		"end":"pearlman_c01",
 		"description":"Walk up the hill."
-	},
-	// only for testing
-	{
-		"start":"pearlman_c01",
-		"end":"volen_c01",
-		"description":"Walk down the hill."
-	},
-	{
-		"start":"volen_c01",
-		"end":"pearlman_c01",
-		"description":"Walk up the hill."
-	},
+	},*/
 
 ]
