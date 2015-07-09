@@ -15,13 +15,19 @@ ul.-autocomplete-list {
 }
 
 #navform {
-	a#getCurrentLoc {
-		border:none;
-		color:@deis-blue;
+	div.getCurrentContainer {
+		padding-top:.5em;
 	}
 	
-	a:focus, a:hover, a:active {
+	a#getCurrentLoc {
+		border-bottom:none;
+		color:@deis-blue;
+		padding-bottom:.1em;
+	}
+	
+	a#getCurrentLoc:focus, a#getCurrentLoc:hover, a#getCurrentLoc:active {
 		background:transparent;
-		text-decoration:underline;
+		text-decoration:none;
+		border-bottom:1px dashed @deis-blue;
 	}
 }

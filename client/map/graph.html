@@ -9,9 +9,11 @@
 			<label for="startpoint">Start</label>
 			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location" }}
 			<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
-			<a id="getCurrentLoc" class="btn btn-default" href="#">
-				<span class="glyphicon glyphicon-record"></span>&nbsp;Use current location
-			</a>
+			<div class="getCurrentContainer">
+				<a id="getCurrentLoc" href="#">
+					<span class="glyphicon glyphicon-record"></span>&nbsp;Use current location
+				</a>
+			</div>
 		</div>
 		<div class="form-group">
 			<label for="endpoint">End</label>

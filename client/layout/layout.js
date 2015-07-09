@@ -1,5 +1,4 @@
-Session.setDefault("searchCategory", "All");
-
+Session.setDefault("searchTerm","");
 Template.layout.events({
     'submit #searchForm': function (event) {
         event.preventDefault();
@@ -11,6 +10,7 @@ Template.layout.events({
      'mouseenter #searchGlass': function(event) {
          var s = document.getElementById("searchBox");
          s.value = '';
+         Session.set("searchTerm","");
      },
      'focus #searchBox': function(event) {
          Router.go('/search');
@@ -33,6 +33,12 @@ Template.layout.events({
          }
      }
 });
+
+Template.layout.rendered = function() {
+    document.getElementById("searchBox").value = Session.get("searchTerm");
+    return Session.get("searchTerm");
+
+};
 
 // Adapted from http://jsbin.com/eHAfIhI/1/edit?html,css,js,output
 Template.layout.rendered = function () {
