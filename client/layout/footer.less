@@ -8,16 +8,41 @@ footer {
   /* Set the fixed height of the footer here */
   height: 80px;
   background-color:transparent;
-  z-index:500;
+  z-index:5000;
   
   #micBox {
     position:absolute;
     right:.5em;
-    bottom:1em;
+    bottom:0;
   }
   
   div#info {
     display:none;
+  }
+  
+  /* override mic styles */
+  .wit-microphone .mic {
+    border:none;
+    background:transparent;
+    color:#333;
+  }
+}
+@media (max-width:768px) {
+  footer {
+    background-color:@dark-blue;
+    height:60px;
+    color:#eee;
+    
+    #micBox {
+      margin:0;
+      padding:0;
+      right:0;
+      bottom:0;
+    }
+    
+    .wit-microphone .icon-wit-mic {
+      color:#eee;
+    }
   }
 }
 
@@ -48,9 +73,30 @@ footer {
 @font-face{font-family:microphone;src:url(/fonts/microphone.eot);src:url(/fonts/microphone.eot?#iefix) format("embedded-opentype"),url(/fonts/microphone.woff) format("woff"),url(/fonts/microphone.ttf) format("truetype"),url(/fonts/microphone.svg#microphone) format("svg");font-weight:400;font-style:normal}.icon-wit-mic{font-family:microphone;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-wit-mic:before{content:"\e600"}.wit-microphone{font-family:"Lucida Grande",Verdana,Tahoma,Helvetica,Arial,sans-serif;text-align:center;position:relative;height:64px;width:64px}.wit-microphone.active .mic{color:#FF3F4E;border-color:#FF3F4E}.mic-box{border:4px solid #b2b2b2;box-sizing:border-box;width:100%;height:100%}.mic-svg{position:absolute;top:0;left:0;border-color:transparent}.mic{background:#fff;border-radius:100%;color:#b2b2b2;display:inline-block;cursor:pointer;font-size:28px;line-height:64px;width:100%;height:100%;-moz-transition:border-color .5s,color .5s;-o-transition:border-color .5s,color .5s;-webkit-transition:border-color .5s,color .5s;transition:border-color .5s,color .5s}.mic-status{color:#ccc;display:block;font-size:60px;font-weight:700}
 div#microphone {cursor:pointer;}
 
-/* override mic styles */
-.wit-microphone .mic {
-  border:none;
-  background:transparent;
-  color:#333;
+/* CURRENT LOC BLOCK */
+#currentLoc {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:271px;
+    
+    a {
+      color:#eee;
+      display:block;
+      width:100%;
+      padding:1em;
+      
+      small {
+        color:#bbb;
+      }
+    }
+    a:hover, a:focus, a:active {
+      color:@dark-blue;
+      background-color:#eee;
+      text-decoration:none;
+      
+      small {
+        color:@deis-blue;
+      }
+    }
 }

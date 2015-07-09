@@ -193,6 +193,7 @@ form#searchForm {
 	input {
 		display:none;
 		width:100%;
+		border-radius:0;
 	}
 }
 button#searchGlass {
@@ -216,11 +217,15 @@ button#searchGlass {
 		max-width:100%;
 		min-width:96%;
 		width:100%;
-		margin-top:46px;
+		margin-top:50px;
 		background-color:@dark-blue;
 		
+		.form-group {
+			margin-bottom:12px;
+		}
+		
 		input#searchBox {
-			border-radius:none;
+			display:block;
 		}
 	}
 	button#searchGlass {
@@ -237,4 +242,15 @@ button#searchGlass {
 	nav.navbar .container .navbar-brand {
 		margin:0 auto;
 	}
+}
+
+/* PAGE HEADER */
+@media(max-width:768px) {
+	.page-header {
+		padding-top:9px;
+	}
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+	z-index:1000;
 }
