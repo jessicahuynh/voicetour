@@ -8,6 +8,12 @@ Template.graph.rendered = function () {
 		Session.set("navigateTo","");
 		document.getElementById("endpoint").value = navTo;
 	}
+	
+	var navFrom = Session.get("navigateFrom");
+	if (navFrom != "" && navFrom != null) {
+		Session.set("navigateFrom","");
+		document.getElementById("startpoint").value = navFrom;
+	}
 };
 
 Template.graph.helpers({
