@@ -7,6 +7,26 @@
 //    } 
 // });
 
+Template.footer.helpers({
+   inLocation:function() {
+       return this.name;
+   },
+   loc:function() {
+       return Locations.findOne({"name":Session.get("inLocation")[0].name});
+   },
+   inLocationId:function() {
+       return this._id;
+   },
+   inOrNear:function() {
+       if (Session.get("inLocation")[1] == "in") {
+           return "current location";
+       }
+       else {
+           return "about " + Math.floor(Session.get("inLocation")[2]) + "m away";
+       }
+   }
+});
+
 
 Template.footer.events({
     'mouseover .wit-microphone':function(event) {
@@ -157,24 +177,30 @@ function applyIntent(intent,entities) {
        }
        
        Session.set("searchTerm",searchTerm);
-        $("#searchBox").val(Session.get("searchTerm"));
+       document.getElementById("searchBox").value = Session.get("searchTerm");
         
-        $("#searchBox").show("slow");
+       $("#searchBox").show("slow");
         
-        $("#submitSearchForm").submit();
+       $("#searchBox").focus();
         
-        $("#searchBox").focus();
+       Router.go('/search');
+       
+       // document.getElementById("searchForm").submit(function(event){
+        //    event.preventDefault();
+        //    return false;
+       // });
+        
     }
     else if (intent == "navigate") {
         var r = "Navigating to ";
         console.log(entities);
         if (entities["end"] != undefined) {
            r += "<span class='said'>"+entities["end"].body+"</span>";
-           Session.set("navigateTo",entities["end"].body);
+           Session.set("navigateTo",entities["end"].value);
         }
         if (entities["start"] != undefined) {
             r += " from <span class='said'>"+entities["start"].body+"</span>";
-            Session.set("navigateTo",entities["start"].body);
+            Session.set("navigateTo",entities["start"].value);
         }
         
         $("#result").append("<p>"+r+"...</p>");

@@ -1,3 +1,4 @@
+
 Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
 	console.log(graph);	
@@ -171,7 +172,7 @@ function getRouteDescription(route) {
 	if (document.getElementById("startpoint").value[0] == "(") {
 			// if you're in a building, return that building and go on as before
 			if (Session.get("inLocation")[1] == "in") {
-				r.push("You're currently at " + document.getElementById("startpoint").value +", located in " + Session.get("inLocation")[0].name);
+				r.push("You're currently in " + Session.get("inLocation")[0].name);
 			}
 			else {
 				r.push("You're currently at " + document.getElementById("startpoint").value +", located near "+Session.get("inLocation")[0].name);

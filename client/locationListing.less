@@ -5,10 +5,16 @@
 	margin:0;
 	
 	a {
-		min-height:6em;
+		min-height:7em;
 		color:#111;
 		padding:1em;
 		margin:0;
+		
+		div.inside-location {
+			background-color:@dark-blue;
+			color:#ededed;
+			padding:1em 0;
+		}
 	}
 	a:hover {
 		text-decoration:none;
@@ -19,11 +25,15 @@
 		background-repeat:no-repeat;
 		background-position: right center;
 		padding-right:1.75em;
+		
+		div {
+			background:transparent;
+			color:#111;
+		}
 	}
 	a.go-to-navigate {
 		text-align:center;
 		font-size:110%;
-		padding-top:2em;
 	}
 	
 }

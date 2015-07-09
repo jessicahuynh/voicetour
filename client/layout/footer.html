@@ -1,6 +1,9 @@
 <template name="footer">
 <footer id="footer">
 	<div class="container">
+		{{#with loc}}
+		<div id="currentLoc"><a href="/viewLocation/{{inLocationId}}"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;{{inLocation}} <small>{{inOrNear}}</small></a></div>
+		{{/with}}
 		<div id="info" class="small pull-right"></div>
 		<div class="pull-right" id="micBox">
 			<div id="microphone"></div>
