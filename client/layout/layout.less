@@ -17,6 +17,10 @@ body.slide-active {
 #page-content.slide-active {
     padding-top: 0
 }
+nav div.container {
+	padding:0;
+}
+
 /* put toggle bars on the left :: not using button */
 #slide-nav .navbar-toggle {
     cursor: pointer;
@@ -53,11 +57,19 @@ body.slide-active {
 	border-color:@dark-blue;
 	color:#ffffff;
 	
+	ul.navbar-nav {
+		width:100%;
+	}
 	.navbar-brand {
 		color:#ffffff;
 	}
 	.navbar-nav li a {
 		color:#efefef;
+		display:block;
+		padding:1em;
+	}
+	.navbar-nav li:hover {
+		background-color:@deis-blue;
 	}
 }
 
@@ -83,6 +95,8 @@ body.slide-active {
 	    min-width: 0;
 	    position: absolute;
 	    padding-left: 0;
+		padding-right:0;
+		padding-top:58px;
 	    z-index: 2;
 	    top: -8px;
 	    margin: 0;
@@ -213,5 +227,14 @@ button#searchGlass {
 		color:#ffffff;
 		top:.4em;
 		right:.25em;
+	}
+}
+
+
+
+/* NAVBAR BRAND ON WEB */
+@media (min-width:768px) {
+	nav.navbar .container .navbar-brand {
+		margin:0 auto;
 	}
 }
