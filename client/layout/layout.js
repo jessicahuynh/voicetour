@@ -6,17 +6,31 @@ Template.layout.events({
         var s = document.getElementById("searchBox").value;
         Session.set("searchTerm", s);
 
-
-        Router.go('/search/' + Session.get("searchTerm"));
+        Router.go('/search');
      },
-     'click #searchBox': function(event) {
+     'mouseenter #searchGlass': function(event) {
          var s = document.getElementById("searchBox");
          s.value = '';
      },
+     'focus #searchBox': function(event) {
+         Router.go('/search');
+     },
      'click #searchGlass':function(event) {
          event.preventDefault();
-         $("#searchBox").toggle("searchBox");
-         $("#searchBox").focus();
+         
+         if ($(window).width() > 768) {
+             $("#searchBox").toggle(450);
+             $("#searchBox").focus();
+         }
+         else {
+             if ($("#searchBox").css("display") == "none") {
+                 $("#searchBox").slideDown();
+                 $("#searchBox").focus();
+             }
+             else {
+                 $("#searchBox").slideUp();
+             }
+         }
      }
 });
 

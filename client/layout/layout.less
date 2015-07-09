@@ -194,12 +194,20 @@ button#searchGlass {
 
 @media (max-width:768px) {
 	form#searchForm {
-		top:56px;
+		top:0;
 		right:0;
+		float:none;
 		margin:0 auto;
+		padding:0 1em;
 		max-width:100%;
 		min-width:96%;
 		width:100%;
+		margin-top:46px;
+		background-color:@dark-blue;
+		
+		input#searchBox {
+			border-radius:none;
+		}
 	}
 	button#searchGlass {
 		color:#ffffff;
