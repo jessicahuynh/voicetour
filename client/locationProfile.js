@@ -1,6 +1,8 @@
 Template.locationProfile.helpers({
 	location:function() {
-		return Locations.findOne({_id:Session.get("viewLocation")});
+		var thisLoc = Locations.findOne({_id:Session.get("viewLocation")});
+		Session.set("navigateTo",thisLoc.name);
+		return thisLoc;
 	},
 	categories:function() {
 		var c = "";

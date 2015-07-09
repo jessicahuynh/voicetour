@@ -7,13 +7,17 @@ Template.layout.events({
 
         Router.go('/search');
      },
+     'focus #searchBox': function (event) {
+        event.preventDefault();
+        var s = document.getElementById("searchBox").value;
+        Session.set("searchTerm", s);
+
+        Router.go('/search');
+     },
      'mouseenter #searchGlass': function(event) {
          var s = document.getElementById("searchBox");
          s.value = '';
          Session.set("searchTerm","");
-     },
-     'focus #searchBox': function(event) {
-         Router.go('/search');
      },
      'click #searchGlass':function(event) {
          event.preventDefault();

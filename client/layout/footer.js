@@ -157,13 +157,19 @@ function applyIntent(intent,entities) {
        }
        
        Session.set("searchTerm",searchTerm);
-        $("#searchBox").val(Session.get("searchTerm"));
+       document.getElementById("searchBox").value = Session.get("searchTerm");
         
-        $("#searchBox").show("slow");
+       $("#searchBox").show("slow");
         
-        $("#submitSearchForm").submit();
+       $("#searchBox").focus();
         
-        $("#searchBox").focus();
+       Router.go('/search');
+       
+       // document.getElementById("searchForm").submit(function(event){
+        //    event.preventDefault();
+        //    return false;
+       // });
+        
     }
     else if (intent == "navigate") {
         var r = "Navigating to ";
