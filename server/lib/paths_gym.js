@@ -160,14 +160,4 @@ paths_gym = [
 		"description":"Go down the stairs and across the bridge."
 	},
 
-
-
-
-
-
-
-
-
-
-
 ]

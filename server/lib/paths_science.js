@@ -28,5 +28,27 @@ paths_science = [
 		"start":"chapelsfield_c01",
 		"end":"volen_c02",
 		"description":"Walk on the short sidewalk, towards the science complex."
-	}
+	},
+	{
+		"start":"pearlman_c01",
+		"end":"volen_c02",
+		"description":"Walk down the hill."
+	},
+	{
+		"start":"volen_c02",
+		"end":"pearlman_c01",
+		"description":"Walk up the hill."
+	},
+	// only for testing
+	{
+		"start":"pearlman_c01",
+		"end":"volen_c01",
+		"description":"Walk down the hill."
+	},
+	{
+		"start":"volen_c01",
+		"end":"pearlman_c01",
+		"description":"Walk up the hill."
+	},
+
 ]

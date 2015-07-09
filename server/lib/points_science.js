@@ -13,7 +13,8 @@ points_science = [
 		"id":"volen_c02", /* directly outside volen, on the main path */
 		"coordinate":new Point(42.367215, -71.259050),
 		"type":"crossing"		
-	}
+	},
+
 ]
 
 function Point(x,y) {
