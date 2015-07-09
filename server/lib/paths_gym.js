@@ -189,6 +189,37 @@ paths_gym = [
 		"end":"mailman_c01",
 		"description":"Turn right."
 	},
+	{
+		"start":"castle_e02",
+		"end":"usdan_c01",
+		"description":"Walk toward the clump of trees on your right side."
+	},
+	{
+		"start":"usdan_c01",
+		"end":"castle_e02",
+		"description":"Walk toward the castle in front of you."
+	},
+	{
+		"start":"castle_e01",
+		"end":"usdan_c01",
+		"description":"Walk up the slope toward the clump of trees on your right side."
+	},
+	{
+		"start":"usdan_c01",
+		"end":"castle_e01",
+		"description":"Walk down the slope toward the castle in front of you."
+	},
+	{
+		"start":"healthcenter_c01",
+		"end":"police_e01",
+		"description":"Walk toward the parking lot near the buildings."
+	},
+	{
+		"start":"police_e01",
+		"end":"healthcenter_c01",
+		"description":"Exit the public safety building and walk toward the paking lot."
+	},
+
 
 
 ]

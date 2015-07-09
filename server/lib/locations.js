@@ -25,7 +25,7 @@ locations = [
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
 		"description":"green",
 		"category":["student center"],
-		"entrances":["scc_e01"/*,"scc_e02","scc_e03"*/]
+		"entrances":["scc_e01","scc_e02","scc_e03"]
 	},
 	{
 		"id":"fellowsgarden",
@@ -381,6 +381,7 @@ locations = [
 		"entrances":["ssc_e01"]
 		},
 	usdan = {
+		"id":"usdan",
 		"name":"Usdan Student Center",
 		"nickname":"Usdan",
 		"coordinates":[
@@ -392,6 +393,7 @@ locations = [
 		
 		},
 	gosman = {
+		"id":"gosman",
 		"name":"Gosman Sports and Convocation Center",
 		"nickname":"Gosman",
 		"coordinates":[
@@ -403,6 +405,7 @@ locations = [
 		"entrances":["gosman_e01","gosman_e02","gosman_e03","gosman_e04"],
 		},
 	linsey = {
+		"id":"linsey",
 		"name":"Joseph M. Linsey Sports Center",
 		"nickname":"Linsey",
 		"coordinates":[
@@ -414,6 +417,7 @@ locations = [
 		"entrances":["linsey_e01","linsey_e02"],
 	},
 	mailman = {
+		"id":"mailman",
 		"name":"Mailman House",
 		"nickname":"Mailman",
 		"coordinates":[
@@ -424,8 +428,19 @@ locations = [
 		"category":["health"],
 		"entrances":["mailman_e01"],
 	},
-
-
+	castle = {
+		"id":"castle",
+		"name":"Usen Castle",
+		"nickname":"Castle",
+		"coordinates":[
+			new Point(42.367726, -71.255875), 
+			new Point(42.367516, -71.256036), 
+			new Point(42.366953, -71.255936), 
+			new Point(42.366929, -71.255488),
+			new Point(42.367387, -71.255545)],
+		"category":["art"],
+		"entrances":["castle_e01","castle_e02"],
+	},
 
 ]
 

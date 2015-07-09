@@ -30,9 +30,9 @@ Meteor.startup(function() {
 		
 		pathFiles.forEach(function(pathFile) {
 			pathFile.forEach(function(path) {
-				console.log("path###############");
+/*				console.log("path###############");
 				console.log(Intersections.findOne({"id":path.start}));
-				console.log(Intersections.findOne({"id":path.end}));
+				console.log(Intersections.findOne({"id":path.end}));*/
 				Meteor.call("distance",
 					Intersections.findOne({"id":path.start}).coordinate,
 					Intersections.findOne({"id":path.end}).coordinate,

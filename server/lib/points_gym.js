@@ -1,3 +1,4 @@
+// points of gym, mailman, healthcenter and police station
 points_gym = [
 	{
 		"id":"gosman_c01",
@@ -112,6 +113,16 @@ points_gym = [
 		"coordinate":new Point(42.366250, -71.255440),
 		"type":"entrance"
 	},
+	{
+		"id":"castle_e01",
+		"coordinate":new Point(42.367034, -71.255943),
+		"type":"entrance"
+	},
+	{
+		"id":"castle_e02",
+		"coordinate":new Point(42.367427, -71.256041),
+		"type":"entrance"
+	},
 /*	{
 		"id":"superconducting_e01",
 		"coordinate":new Point(42.365910, -71.255390),
@@ -124,16 +135,7 @@ points_gym = [
 	},
 
 
-	{
-		"id":"castle_e01",
-		"coordinate":new Point(42.367034, -71.255943),
-		"type":"entrance"
-	},
-	{
-		"id":"castle_e02",
-		"coordinate":new Point(42.367427, -71.256041),
-		"type":"entrance"
-	},*/
+*/
 
 
 
