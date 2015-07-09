@@ -91,7 +91,11 @@ points_gym = [
 		"coordinate":new Point(42.365801,-71.255926),
 		"type":"entrance"
 	},
-
+	{
+    	"id": 'sstreet_c01',
+    	"coordinate":new Point( 42.365759, -71.255193),
+    	"type": 'crossing',
+	},
 
 	
 /*	{

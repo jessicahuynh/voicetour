@@ -216,7 +216,7 @@ points_southcampus = [
     "type": 'crossing',
 },
 {
-    "id": 'rosenstiel_c01',
+    "id": ,
     "coordinate":new Point( 42.366065, -71.256331),
     "type": 'crossing',
 },
@@ -336,86 +336,6 @@ points_southcampus = [
     "type": 'crossing',
 },
 {
-    "id": 'usdan_c05',
-    "coordinate":new Point( 42.368287, -71.256760),
-    "type": 'crossing',
-},
-{
-    "id": 'usdan_6',
-    "coordinate":new Point( 42.368434, -71.256266),
-    "type": 'crossing',
-},
-{
-    "id": 'usdan_7',
-    "coordinate":new Point( 42.368434, -71.256266),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_1',
-    "coordinate":new Point( 42.365743, -71.256094),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_2',
-    "coordinate":new Point( 42.365668, -71.256212),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_3',
-    "coordinate":new Point( 42.365402, -71.255933),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_4',
-    "coordinate":new Point( 42.365731, -71.255965),
-    "type": 'crossing',
-},
-{
-    "id": 'sstreet_1',
-    "coordinate":new Point( 42.365759, -71.255193),
-    "type": 'crossing',
-},
-{
-    "id": 'sstreet_2',
-    "coordinate":new Point( 42.366001, -71.254839),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_5',
-    "coordinate":new Point( 42.366282, -71.255075),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_6',
-    "coordinate":new Point( 42.366270, -71.255343),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_7',
-    "coordinate":new Point( 42.366329, -71.255386),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_8',
-    "coordinate":new Point( 42.366285, -71.255611),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_9',
-    "coordinate":new Point( 42.366202, -71.255761),
-    "type": 'crossing',
-},
-{
-    "id": 'safety_10',
-    "coordinate":new Point( 42.366055, -71.255933),
-    "type": 'crossing',
-},
-{
-    "id": '',
-    "coordinate":new Point( , ),
-    "type": '',
-},
-{
     "id": 'scc_e02',
     "coordinate":new Point( 42.365703, -71.259938),
     "type": 'entrance',
@@ -492,7 +412,93 @@ points_southcampus = [
 },
 {
     "id": 'admissions_c01',
-    "coordinate":new Point( '42.364743', '-71.260767'),
+    "coordinate":new Point( 42.364743, -71.260767),
     "type": 'crossing',
 },
+{
+    "id": 'mailman_c01',
+    "coordinate":new Point( 42.365743, -71.256094),
+    "type": 'crossing',
+},
+/* points that are not used
+{
+    "id": 'usdan_c05',
+    "coordinate":new Point( 42.368287, -71.256760),
+    "type": 'crossing',
+},
+{
+    "id": 'usdan_6',
+    "coordinate":new Point( 42.368434, -71.256266),
+    "type": 'crossing',
+},
+{
+    "id": 'usdan_7',
+    "coordinate":new Point( 42.368434, -71.256266),
+    "type": 'crossing',
+},
+
+{
+    "id": 'safety_2',
+    "coordinate":new Point( 42.365668, -71.256212),
+    "type": 'crossing',
+},
+// point have in gym
+{
+    "id": 'safety_3',
+    "coordinate":new Point( 42.365402, -71.255933),
+    "type": 'crossing',
+},
+{
+    "id": 'safety_4',
+    "coordinate":new Point( 42.365731, -71.255965),
+    "type": 'crossing',
+},
+// point have in gym
+{
+    "id": 'sstreet_1',
+    "coordinate":new Point( 42.365759, -71.255193),
+    "type": 'crossing',
+},
+// point have in gym
+{
+    "id": 'sstreet_2',
+    "coordinate":new Point( 42.366001, -71.254839),
+    "type": 'crossing',
+},
+{
+    "id": 'safety_5',
+    "coordinate":new Point( 42.366282, -71.255075),
+    "type": 'crossing',
+},
+{
+    "id": 'safety_6',
+    "coordinate":new Point( 42.366270, -71.255343),
+    "type": 'crossing',
+},
+{
+    "id": 'safety_7',
+    "coordinate":new Point( 42.366329, -71.255386),
+    "type": 'crossing',
+},
+{
+    "id": 'safety_8',
+    "coordinate":new Point( 42.366285, -71.255611),
+    "type": 'crossing',
+},
+{
+    "id": 'safety_9',
+    "coordinate":new Point( 42.366202, -71.255761),
+    "type": 'crossing',
+},
+{
+    "id": 'safety_10',
+    "coordinate":new Point( 42.366055, -71.255933),
+    "type": 'crossing',
+},
+{
+    "id": '',
+    "coordinate":new Point( , ),
+    "type": '',
+},
+*/
 ]

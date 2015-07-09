@@ -159,5 +159,36 @@ paths_gym = [
 		"end":"gosman_e01",
 		"description":"Go down the stairs and across the bridge."
 	},
+	{
+		"start":"mailman_c01",
+		"end":"rosenstiel_c01",
+		"description":"Go up the stairs to the loop road."
+	},
+	{
+		"start":"rosenstiel_c01",
+		"end":"mailman_c01",
+		"description":"Go down the stairs to little plate form."
+	},
+	{
+		"start":"mailman_e01",
+		"end":"sstreet_c01",
+		"description":"Go down the slope."
+	},
+	{
+		"start":"sstreet_e01",
+		"end":"mailman_c01",
+		"description":"Go up the slope."
+	},
+	{
+		"start":"mailman_c01",
+		"end":"mailman_e01",
+		"description":"Turn left."
+	},
+	{
+		"start":"mailman_e01",
+		"end":"mailman_c01",
+		"description":"Turn right."
+	},
+
 
 ]
