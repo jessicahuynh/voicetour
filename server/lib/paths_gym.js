@@ -175,7 +175,7 @@ paths_gym = [
 		"description":"Go down the slope."
 	},
 	{
-		"start":"sstreet_e01",
+		"start":"sstreet_c01",
 		"end":"mailman_c01",
 		"description":"Go up the slope."
 	},

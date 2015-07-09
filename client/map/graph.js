@@ -75,7 +75,7 @@ Template.graph.events({
 									nearestIntersection = intersection.id;
 									
 									route = getShortestRoute([nearestIntersection],Locations.findOne({"name":ends}).entrances);
-									//console.log("*" + route);
+									console.log("*" + route);
 									if (route != null) {
 										getRouteDescription(route);
 									}
@@ -133,7 +133,7 @@ function getShortestRoute(startEntrances,endEntrances) {
 	if (startEntrances != undefined && endEntrances != undefined) {
 		shortestRoute = graph.findShortestPath(startEntrances[0],endEntrances[0]);
 		
-		//console.log(startEntrances[0] + " " + shortestRoute + " " + endEntrances[0]);
+		console.log(startEntrances[0] + " " + shortestRoute + " " + endEntrances[0]);
 		
 		var currentRouteDist = 0;
 	

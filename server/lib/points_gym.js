@@ -1,7 +1,7 @@
 points_gym = [
 	{
 		"id":"gosman_c01",
-		"coordinate":new Point(42.365305,-71.256108),
+		"coordinate":new Point(42.365305, -71.256108),
 		"type":"crossing"
 	},
 	{
@@ -10,18 +10,19 @@ points_gym = [
 		"type":"crossing"
 	},
 	{
+	
 		"id":"athleticslot_e01",
-		"coordinate":new Point(42.365022,-71.255865),
+		"coordinate":new Point(42.365022, -71.255865),
 		"type":"entrance"
 	},
 	{
 		"id":"gosman_e01",
-		"coordinate":new Point(42.365142,-71.255437),
+		"coordinate":new Point(42.365142, -71.255437),
 		"type":"entrance"
 	},
 	{
 		"id":"gosman_e02",
-		"coordinate":new Point(42.365420,-71.254361),
+		"coordinate":new Point(42.365420, -71.254361),
 		"type":"entrance"
 	},
 	{
@@ -47,17 +48,17 @@ points_gym = [
 	
 	{
 		"id":"linsey_c01",
-		"coordinate":new Point(42.365969,-71.254845),
+		"coordinate":new Point(42.365969, -71.254845),
 		"type":"crossing"
 	},	
 	{
 		"id":"linsey_c02",
-		"coordinate":new Point(42.365553,-71.254355),
+		"coordinate":new Point(42.365553, -71.254355),
 		"type":"crossing"
 	},
 	{
 		"id":"linsey_c03",
-		"coordinate":new Point(42.365810,-71.253929),
+		"coordinate":new Point(42.365810, -71.253929),
 		"type":"crossing"
 	},
 	{
@@ -67,12 +68,12 @@ points_gym = [
 	},
 	{
 		"id":"linseyparkinglot_e01",
-		"coordinate":new Point(42.365682,-71.253661),
+		"coordinate":new Point(42.365682, -71.253661),
 		"type":"entrance"
 	},
 	{
 		"id":"gosmanparkinglot_e01",
-		"coordinate":new Point(42.364890,-71.253780),
+		"coordinate":new Point(42.364890, -71.253780),
 		"type":"entrance"
 	},
 	{
@@ -88,7 +89,7 @@ points_gym = [
 
 	{
 		"id":"mailman_e01",
-		"coordinate":new Point(42.365801,-71.255926),
+		"coordinate":new Point(42.365801, -71.255926),
 		"type":"entrance"
 	},
 	{
@@ -96,42 +97,41 @@ points_gym = [
     	"coordinate":new Point( 42.365759, -71.255193),
     	"type": 'crossing',
 	},
-
-	
-/*	{
-		"id":"superconducting_e01",
-		"coordinate":new Point(42.365910,-71.255390),
-		"type":"entrance"
-	},
-	{
-		"id":"stoneman_e01",
-		"coordinate":new Point(42.366141,-71.255637),
-		"type":"entrance"
-	},
-	{
-		"id":"healthcenter_e01",
-		"coordinate":new Point(42.366189,-71.255242),
-		"type":"entrance"
-	},
 	{
 		"id":"healthcenter_c01",
 		"coordinate":new Point(42.366295, -71.255105),
 		"type":"crossing"
 	},
-
 	{
-		"id":"police_e01",
-		"coordinate":new Point(42.366250,-71.255440),
+		"id":"healthcenter_e01",
+		"coordinate":new Point(42.366189, -71.255242),
 		"type":"entrance"
 	},
 	{
+		"id":"police_e01",
+		"coordinate":new Point(42.366250, -71.255440),
+		"type":"entrance"
+	},
+/*	{
+		"id":"superconducting_e01",
+		"coordinate":new Point(42.365910, -71.255390),
+		"type":"entrance"
+	},
+	{
+		"id":"stoneman_e01",
+		"coordinate":new Point(42.366141, -71.255637),
+		"type":"entrance"
+	},
+
+
+	{
 		"id":"castle_e01",
-		"coordinate":new Point(42.367034,-71.255943),
+		"coordinate":new Point(42.367034, -71.255943),
 		"type":"entrance"
 	},
 	{
 		"id":"castle_e02",
-		"coordinate":new Point(42.367427,-71.256041),
+		"coordinate":new Point(42.367427, -71.256041),
 		"type":"entrance"
 	},*/
 

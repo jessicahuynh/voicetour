@@ -10,9 +10,6 @@ locations = [
 			new Point(42.366783,-71.258614)],
 		"function": "Volen is home to Brandeis' computer science and linguistics departments.",
 		"description": "A longer description",
-		"route": {"fellowsgarden": 2,
-					"bassine": 1,
-					"feldberg":1,},
 		"category":["science","classroom","offices"],
 		"entrances":["volen_e01"]
 	},
@@ -27,9 +24,8 @@ locations = [
 			new Point(42.365522,-71.260561)],
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
 		"description":"green",
-		"route": {"fellowsgarden": 1,
-					"rose" : 2,},
-		"category":["student center"]
+		"category":["student center"],
+		"entrances":["scc_e01"/*,"scc_e02","scc_e03"*/]
 	},
 	{
 		"id":"fellowsgarden",
@@ -43,9 +39,21 @@ locations = [
 		"function": "Fellows Garden is a nice place to hangout with friends in nice weather",
 		"description":"Nobody knows the name",
 		"category":["art"],
-		"route": {"volen": 2,
-					"scc" : 1,
-					"feldberg" : 3,}
+		"entrances":['fellowsgarden_c01','fellowsgarden_c02','fellowsgarden_c03']
+	},
+	{
+		"id":"greatlawn",
+		"name": "The Great Lawn",
+		"nickname": "Great Lawn",
+		"coordinates": [
+			new Point(42.365256, -71.260295),
+			new Point(42.364860, -71.260703),
+			new Point(42.365428, -71.260770),
+			new Point(42.365101, -71.261341)],
+		"function": "Great Lawn is a nice place to hangout with friends in nice weather",
+		"description":"",
+		"category":["lawn"],
+		"entrances":['scc_c07','scc_c08','scc_c09','scc_c10']
 	},
 	{
 		"id":"roseart",
@@ -58,7 +66,6 @@ locations = [
 			new Point(42.365902,-71.262218)],
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Museum",
-		"route": {"scc": 2,},
 		"category":["art"]
 	},
 
@@ -73,8 +80,6 @@ locations = [
 			new Point(42.366656,-71.257562)],
 		"function": "Bassine Science Building has many bio lab?",
 		"description":"Lab",
-		"route": {"volen": 1,
-					"feldberg": 1,},
 		"category":["science","classroom"]
 
 	},
@@ -89,9 +94,6 @@ locations = [
 			new Point(42.366546,-71.258833),
 			new Point(42.366751,-71.259269)],
 		"function":"Feldberg contains offices and is home to Library and Technology Services.",
-		"route": {"volen": 1,
-					"fellowsgarden": 3,
-					"bassine":2,},
 		"category":["science","offices"]
 	},
 	
@@ -375,7 +377,8 @@ locations = [
 			new Point(42.366115,-71.257734), 
 			new Point(42.365759,-71.258559), 
 			new Point(42.365894,-71.257864)],
-		"category":["science","classroom","student center"]
+		"category":["science","classroom","student center"],
+		"entrances":["ssc_e01"]
 		},
 	usdan = {
 		"name":"Usdan Student Center",
@@ -385,7 +388,8 @@ locations = [
 			new Point(42.367852,-71.256794), 
 			new Point(42.367777,-71.256451), 
 			new Point(42.368243,-71.256259)],
-		"category":["student center","dining"]
+		"category":["student center","dining"],
+		
 		},
 	gosman = {
 		"name":"Gosman Sports and Convocation Center",
@@ -395,7 +399,8 @@ locations = [
 			new Point(42.365761,-71.25482), 
 			new Point(42.364998,-71.253952), 
 			new Point(42.364449,-71.254864)],
-		"category":["athletics"]
+		"category":["athletics"],
+		"entrances":["gosman_e01","gosman_e02","gosman_e03","gosman_e04"],
 		},
 	linsey = {
 		"name":"Joseph M. Linsey Sports Center",
@@ -405,8 +410,21 @@ locations = [
 			new Point(42.365863, -71.254620), 
 			new Point(42.365844, -71.254032), 
 			new Point(42.365636, -71.254366)],
-		"category":["athletics"]
+		"category":["athletics"],
+		"entrances":["linsey_e01","linsey_e02"],
 	},
+	mailman = {
+		"name":"Mailman House",
+		"nickname":"Mailman",
+		"coordinates":[
+			new Point(42.365936, -71.255702), 
+			new Point(42.365895, -71.255935), 
+			new Point(42.365809, -71.255654), 
+			new Point(42.365766, -71.255962)],
+		"category":["health"],
+		"entrances":["mailman_e01"],
+	},
+
 
 
 ]
