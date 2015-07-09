@@ -6,7 +6,7 @@ points_gym = [
 	},
 	{
 		"id":"gosman_c02",
-		"coordinate":new Point(42.365022,-71.255821),
+		"coordinate":new Point(42.364255, -71.254864),
 		"type":"crossing"
 	},
 	{
@@ -25,29 +25,35 @@ points_gym = [
 		"type":"entrance"
 	},
 	{
-		"id":"Linsey_c02",
-		"coordinate":new Point(42.365553,-71.254355),
-		"type":"crossing"
-	},
-	{
 		"id":"gosman_e03",
-		"coordinate":new Point(42.365513,-71.254510),
+		"coordinate":new Point(42.364945, -71.254048),
 		"type":"entrance"
 	},
 	{
 		"id":"gosman_e04",
-		"coordinate":new Point(42.365747,-71.254770),
+		"coordinate":new Point(42.365713, -71.254695),
 		"type":"entrance"
-	},
+	},	
 	{
 		"id":"linsey_e01",
-		"coordinate":new Point(42.365826,-71.254011),
+		"coordinate":new Point(42.365797, -71.254562),
 		"type":"entrance"
 	},
 	{
 		"id":"linsey_e02",
-		"coordinate":new Point(42.365625,-71.254379),
+		"coordinate":new Point(42.365980, -71.254454),
 		"type":"entrance"
+	},
+	
+	{
+		"id":"linsey_c01",
+		"coordinate":new Point(42.365969,-71.254845),
+		"type":"crossing"
+	},	
+	{
+		"id":"linsey_c02",
+		"coordinate":new Point(42.365553,-71.254355),
+		"type":"crossing"
 	},
 	{
 		"id":"linsey_c03",
@@ -55,13 +61,13 @@ points_gym = [
 		"type":"crossing"
 	},
 	{
-		"id":"linseyparkinglot_e01",
-		"coordinate":new Point(42.365682,-71.253661),
-		"type":"entrance"
+		"id":"linsey_c04",
+		"coordinate":new Point(42.366118, -71.254608),
+		"type":"crossing"
 	},
 	{
-		"id":"linseyparkinglot_e02",
-		"coordinate":new Point(42.365738,-71.253813),
+		"id":"linseyparkinglot_e01",
+		"coordinate":new Point(42.365682,-71.253661),
 		"type":"entrance"
 	},
 	{
@@ -71,20 +77,24 @@ points_gym = [
 	},
 	{
 		"id":"gosmanparkinglot_e02",
-		"coordinate":new Point(42.365017,-71.253815),
+		"coordinate":new Point(42.365364, -71.253399),
 		"type":"entrance"
 	},
 	{
-		"id":"linsey_c01",
-		"coordinate":new Point(42.365969,-71.254845),
+		"id":"mods_c01",
+		"coordinate":new Point(42.366051, -71.253886),
 		"type":"crossing"
 	},
+
 	{
 		"id":"mailman_e01",
 		"coordinate":new Point(42.365801,-71.255926),
 		"type":"entrance"
 	},
-	{
+
+
+	
+/*	{
 		"id":"superconducting_e01",
 		"coordinate":new Point(42.365910,-71.255390),
 		"type":"entrance"
@@ -100,6 +110,12 @@ points_gym = [
 		"type":"entrance"
 	},
 	{
+		"id":"healthcenter_c01",
+		"coordinate":new Point(42.366295, -71.255105),
+		"type":"crossing"
+	},
+
+	{
 		"id":"police_e01",
 		"coordinate":new Point(42.366250,-71.255440),
 		"type":"entrance"
@@ -113,7 +129,7 @@ points_gym = [
 		"id":"castle_e02",
 		"coordinate":new Point(42.367427,-71.256041),
 		"type":"entrance"
-	},
+	},*/
 
 
 

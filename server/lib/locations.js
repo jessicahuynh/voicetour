@@ -396,7 +396,18 @@ locations = [
 			new Point(42.364998,-71.253952), 
 			new Point(42.364449,-71.254864)],
 		"category":["athletics"]
-		}
+		},
+	linsey = {
+		"name":"Joseph M. Linsey Sports Center",
+		"nickname":"Linsey",
+		"coordinates":[
+			new Point(42.366071, -71.254290), 
+			new Point(42.365863, -71.254620), 
+			new Point(42.365844, -71.254032), 
+			new Point(42.365636, -71.254366)],
+		"category":["athletics"]
+	},
+
 
 ]
 
