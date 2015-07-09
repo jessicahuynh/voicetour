@@ -165,4 +165,20 @@ function applyIntent(intent,entities) {
         
         $("#searchBox").focus();
     }
+    else if (intent == "navigate") {
+        var r = "Navigating to ";
+        console.log(entities);
+        if (entities["end"] != undefined) {
+           r += "<span class='said'>"+entities["end"].body+"</span>";
+           Session.set("navigateTo",entities["end"].body);
+        }
+        if (entities["start"] != undefined) {
+            r += " from <span class='said'>"+entities["start"].body+"</span>";
+            Session.set("navigateTo",entities["start"].body);
+        }
+        
+        $("#result").append("<p>"+r+"...</p>");
+        
+        Router.go('/navigate');
+    }
 }
