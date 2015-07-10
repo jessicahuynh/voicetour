@@ -240,6 +240,15 @@ paths_gym = [
 		"end":"castle_e01",
 		"description":"Waking up the slope with Castle on your right side."
 	},
-
+	{
+		"start":"rosenstiel_c03",
+		"end":"healthcenter_c01",
+		"description":"Waking down the slope toward the building in front of you."
+	},
+	{
+		"start":"healthcenter_c01",
+		"end":"rosenstiel_c03",
+		"description":"Waking up the slope toward the Loop Road."
+	},
 
 ]

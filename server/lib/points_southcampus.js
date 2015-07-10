@@ -156,6 +156,11 @@ points_southcampus = [
     "type": "crossing",
 },
 {
+    "id": "rosenstiel_e01",
+    "coordinate":new Point(42.365757, -71.257192),
+    "type": "entrance",
+},
+{
     "id": "rosenstiel_c01",
     "coordinate":new Point(42.366065, -71.256331),
     "type": "crossing",

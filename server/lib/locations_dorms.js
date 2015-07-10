@@ -210,6 +210,49 @@ locations_dorms = [
 			new Point(42.363215,-71.261112)],
 		"category":["dorm"]
 		},
+	eastShapiro = {
+		"name":"Shapiro Brothers Residence Hall",
+		"coordinates":[
+			new Point(42.367660, -71.254624), 
+			new Point(42.367675, -71.254487), 
+			new Point(42.367912, -71.254631), 
+			new Point(42.368023, -71.254770),
+			new Point(42.367949, -71.254845),
+			new Point(42.367840, -71.254738),],
+		"category":["dorm"]
+		},
+	eastRubenstein = {
+		"name":"Rubenstein-Pomerantz Residence Hall",
+		"coordinates":[
+			new Point(42.367674, -71.254822), 
+			new Point(42.367690, -71.254675), 
+			new Point(42.367574, -71.254671), 
+			new Point(42.367492, -71.254699),
+			new Point(42.367367, -71.254766),
+			new Point(42.367370, -71.254793),
+			new Point(42.367315, -71.254804),
+			new Point(42.367225, -71.254787),
+			new Point(42.367210, -71.254906),
+			new Point(42.367331, -71.254930),
+			new Point(42.367476, -71.254854),
+			new Point(42.367581, -71.254801),
+			new Point(42.367581, -71.254801),],
+		"category":["dorm"]
+		},
+	eastHassenfeld = {
+		"name":"Hassenfeld-Krivoff Residence Hall",
+		"coordinates":[
+			new Point(42.368023, -71.254770),
+			new Point(42.367949, -71.254845),
+			new Point(42.368088, -71.254948), 
+			new Point(42.368194, -71.255178), 
+			new Point(42.368133, -71.255269), 
+			new Point(42.368049, -71.255182),
+			new Point(42.367987, -71.255001),],
+		"category":["dorm"]
+		},
+	
+
 ]
 
 function Point(x,y) {

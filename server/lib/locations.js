@@ -364,7 +364,8 @@ locations = [
 			new Point(42.365901,-71.257013), 
 			new Point(42.365724,-71.257239), 
 			new Point(42.365884,-71.257585)],
-		"category":["science"]
+		"category":["science"],
+		"entrances":["rosenstiel_e01"]
 		},
 	schwartz = {
 		"name":"Schwartz Hall",
@@ -448,6 +449,18 @@ locations = [
 			new Point(42.367387, -71.255545)],
 		"category":["art"],
 		"entrances":["castle_e01","castle_e02"],
+	},
+	icc = {
+		"id":"icc",
+		"name":"Intercultural Center",
+		"nickname":"ICC",
+		"coordinates":[
+			new Point(42.367807, -71.254980), 
+			new Point(42.367790, -71.255139), 
+			new Point(42.367576, -71.255094), 
+			new Point(42.367591, -71.254939),],
+		"category":["art"],
+		"entrances":[],
 	},
 
 ]
