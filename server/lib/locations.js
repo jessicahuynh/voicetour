@@ -315,10 +315,10 @@ locations = [
 		"name":"Horace W. Goldsmith Mathematics Building",
 		"nickname":"Goldsmith",
 		"coordinates":[
-			new Point(42.367263,-71.258512), 
-			new Point(42.365328,-71.26243), 
-			new Point(42.367122,-71.258208), 
-			new Point(42.366997,-71.258307)],
+			new Point(42.366987, -71.258249), 
+			new Point(42.367149, -71.258613), 
+			new Point(42.367281, -71.258526), 
+			new Point(42.367103, -71.258148)],
 		"function":"Goldsmith is home to the mathematics department.",
 		"category":["science","classroom"],
 		"entrances":["goldsmith_e01","goldsmith_e02"]
