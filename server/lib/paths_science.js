@@ -121,7 +121,7 @@ paths_science = [
 	},
 	{
 		"start":"goldsmith_e01",
-		"end":"goldsmith_ei02",
+		"end":"goldsmith_ie02",
 		"description":"Head up three flights of stairs and then walk to a set of glass doors. Enter these doors and then take a right to the skywalk."
 	},
 	{

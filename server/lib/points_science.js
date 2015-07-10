@@ -7,17 +7,17 @@ points_science = [
 	{
 		"id":"volen_ie02", //skywalk entrance
 		"coordinate":new Point(42.366859, -71.258420),
-		"type":"entrance"
+		"type":"ientrance"
 	},
 	{
 		"id":"volen_ic02", //doors that lead into hallway
 		"coordinate":new Point(42.367011, -71.258687),
-		"type":"crossing"
+		"type":"icrossing"
 	},
 	{
 		"id":"volen_ie03", // doors from volen to gzang
 		"coordinate":new Point(42.366798, -71.258406),
-		"type":"entrance"
+		"type":"ientrance"
 	},
 	{
 		"id":"volen_c01", // the circle 
@@ -37,7 +37,7 @@ points_science = [
 	{
 		"id":"gzang_ie01",
 		"coordinate":new Point(42.366213, -71.258016),
-		"type":"entrance"
+		"type":"ientrance"
 	},
 	{
 		"id":"goldsmith_e01",
@@ -47,7 +47,7 @@ points_science = [
 	{
 		"id":"goldsmith_ie02",
 		"coordinate":new Point(42.367002, -71.258280),
-		"type":"entrance"
+		"type":"ientrance"
 	},
 	{
 	    "id": "goldsmith_c01", // in front of goldsmith
@@ -92,12 +92,12 @@ points_science = [
 	{
 		"id":"ssc_ie01", // shapiro side of walkway
 		"coordinate":new Point(42.366147, -71.257976),
-		"type":"entrance"
+		"type":"ientrance"
 	},
 	{
 		"id":"ssc_ic02", // branch between shapiro entrances on stairs and ground
 		"coordinate":new Point(42.365982, -71.258543),
-		"type":"crossing"
+		"type":"icrossing"
 	}
 
 ]
