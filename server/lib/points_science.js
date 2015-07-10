@@ -75,6 +75,31 @@ points_science = [
 	    "type": "crossing",
 	},
 	{
+	    "id": "edison_c03", // entrance to parking lot on south street side
+	    "coordinate":new Point(42.366507, -71.256861),
+	    "type": "crossing",
+	},
+	{
+	    "id": "bassine_e01", // entrance to bassine
+	    "coordinate":new Point(42.366746, -71.257508),
+	    "type": "entrance",
+	},
+	{
+	    "id": "bassine_c01", // entrance to parking lot near bassine
+	    "coordinate":new Point(42.366589, -71.257094),
+	    "type": "crossing",
+	},
+	{
+	    "id": "bassine_c02", // entrance to parking lot on stairs
+	    "coordinate":new Point(42.366740, -71.257299),
+	    "type": "crossing",
+	},
+	{
+	    "id": "bassine_c03", // stair on the side road
+	    "coordinate":new Point(42.366838, -71.257486),
+	    "type": "crossing",
+	},
+	{
 	    "id": "ssc_e01", // on the stairs
 	    "coordinate":new Point(42.365944, -71.258682),
 	    "type": "entrance",

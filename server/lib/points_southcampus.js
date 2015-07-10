@@ -67,7 +67,7 @@ points_southcampus = [
 },
 {
     "id": "library_c02",
-    "coordinate":new Point(42.367792, -71.257733),
+    "coordinate":new Point(42.367713, -71.257816),
     "type": "crossing",
 },
 {
@@ -80,6 +80,12 @@ points_southcampus = [
     "coordinate":new Point(42.368813, -71.257312),
     "type": "crossing",
 },
+{
+    "id": "schwartz_c01",
+    "coordinate":new Point(42.367527, -71.257568),
+    "type": "crossing",
+},
+
 {
     "id": "rabb_e01",
     "coordinate":new Point(42.369108, -71.257294),
@@ -161,6 +167,11 @@ points_southcampus = [
     "type": "entrance",
 },
 {
+    "id": "rosenstiel_e02",
+    "coordinate":new Point(42.365975, -71.257645),
+    "type": "entrance",
+},
+{
     "id": "rosenstiel_c01",
     "coordinate":new Point(42.366065, -71.256331),
     "type": "crossing",
@@ -173,6 +184,11 @@ points_southcampus = [
 {
     "id": "rosenstiel_c03",
     "coordinate":new Point(42.366770, -71.256020),
+    "type": "crossing",
+},
+{
+    "id": "rosenstiel_c04",
+    "coordinate":new Point(42.365660, -71.257254),
     "type": "crossing",
 },
 {

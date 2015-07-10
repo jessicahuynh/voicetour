@@ -756,5 +756,26 @@ paths_southcampus=[
     "end":"usdan_c04",
     "description": "Walk left passed the statue and under the overhead building bridge to Usdan",
 },
+{
+    "start":"rosenstiel_e01",
+    "end":"rosenstiel_c04",
+    "description": "Walk toward the samll path.",
+},
+{
+    "start":"rosenstiel_c04",
+    "end":"rosenstiel_e01",
+    "description": "Walk toward the building on yout left.",
+},
+{
+    "start":"ssc_e03",
+    "end":"rosenstiel_e02",
+    "description": "Exit the double glass door.",
+},
+{
+    "start":"rosenstiel_e02",
+    "end":"ssc_e03",
+    "description": "Exit Rosenstiel.",
+},
+
 
 ]

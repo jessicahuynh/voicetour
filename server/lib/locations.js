@@ -80,7 +80,8 @@ locations = [
 			new Point(42.366656,-71.257562)],
 		"function": "Bassine Science Building has many bio lab?",
 		"description":"Lab",
-		"category":["science","classroom"]
+		"category":["science","classroom"],
+		"entrances":["bassine_e01"]
 
 	},
 
@@ -365,7 +366,7 @@ locations = [
 			new Point(42.365724,-71.257239), 
 			new Point(42.365884,-71.257585)],
 		"category":["science"],
-		"entrances":["rosenstiel_e01"]
+		"entrances":["rosenstiel_e01","rosenstiel_e02"]
 		},
 	schwartz = {
 		"name":"Schwartz Hall",
