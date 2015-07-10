@@ -4,9 +4,12 @@ Template.about.helpers({
 			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
 			return {
 				center: new google.maps.LatLng(42.367014, -71.258943), // somewhere in Volen
-				zoom:16
+				zoom:17
 			};
 		}
+	},
+	loc: function() {
+		return Locations.find({"entrances":undefined}).fetch();
 	}
 });
 
@@ -22,6 +25,8 @@ Template.about.onCreated(function() {
 				title:point.id,
 				icon:'/GoogleMapsMarkers/red_MarkerC.png'
 			});
+			
+			putIMarker(point,map,marker);
 		});
 		
 		var outsideEntrances = Intersections.find({"type":"entrance"}).fetch();
@@ -32,6 +37,8 @@ Template.about.onCreated(function() {
 				title:point.id,
 				icon:'/GoogleMapsMarkers/red_MarkerE.png'
 			});
+			
+			putIMarker(point,map,marker);
 		});
 		
 		var insideCrossings = Intersections.find({"type":"icrossing"}).fetch();
@@ -42,6 +49,8 @@ Template.about.onCreated(function() {
 				title:point.id,
 				icon:'/GoogleMapsMarkers/yellow_MarkerC.png'
 			});
+			
+			putIMarker(point,map,marker);
 		});
 		
 		var insideEntrances = Intersections.find({"type":"ientrance"}).fetch();
@@ -52,6 +61,8 @@ Template.about.onCreated(function() {
 				title:point.id,
 				icon:'/GoogleMapsMarkers/yellow_MarkerE.png'
 			});
+			
+			putIMarker(point,map,marker);
 		});
 		
 		/* ROUTING */
@@ -63,48 +74,89 @@ Template.about.onCreated(function() {
 				new google.maps.LatLng(start.coordinate.x,start.coordinate.y),
 				new google.maps.LatLng(end.coordinate.x,end.coordinate.y)	
 			];
+			
+			var contentString = "<b>" + path.start + "</b> to <b>" + path.end+"</b>: "+path.description+"<br>";
+			var reverse = Paths.findOne({"start":path.end,"end":path.start});
+			if (reverse != undefined) {
+				contentString+="<b>" + path.end + "</b> to <b>" + path.start+"</b>: "+reverse.description;
+			}
+			
 			var route = new google.maps.Polyline({
 				path:theRoute,
 				geodesic:true,
 				strokeColor: '#00FF00',
 			    strokeOpacity: 1.0,
-			    strokeWeight: 3,
-				popUpText:new String("Starting from " + path.start + " to " + path.end+": "+path.description)
+			    strokeWeight: 4
 			});
 			
 			route.setMap(map.instance);
 			
-			google.maps.event.addListener(route, 'click', function (event) {
-			  alert(this.popUpText);
+			google.maps.event.addListener(route, 'click', function () {
+			  new google.maps.InfoWindow({
+			      content: contentString,
+			      maxWidth: 200,
+				  position:new google.maps.LatLng(start.coordinate.x,start.coordinate.y)
+			  }).open(map.instance,this);
 			});  
 		});
 		
 		/* BUILDINGS */
 		var theLocs = Locations.find().fetch();
 		for (var i = 0; i < theLocs.length; i++) {
-			var coords = [];
-			var locCoords = theLocs[i].coordinates;
-			locCoords.forEach(function(coord) {
-				coords.push(new google.maps.LatLng(coord.x,coord.y));
-			});
-			// repeat the first to close it up
-			coords.push(new google.maps.LatLng(locCoords[0].x,locCoords[0].y));
-			
-			var polygon = new google.maps.Polygon({
-				paths: coords,
-			    strokeColor: '#0000FF',
-			    strokeOpacity: 0.8,
-			    strokeWeight: 3,
-			    fillColor: '#0000FF',
-			    fillOpacity: 0.35,
-				name:theLocs[i].name
-			});
-			
-			polygon.setMap(map.instance);
-			
-			google.maps.event.addListener(polygon, 'click', function (event) {
-			  alert(this.name);
-			});  
+			if (theLocs[i].coordinates.length > 1) {
+				var coords = [];
+				var locCoords = theLocs[i].coordinates;
+				locCoords.forEach(function(coord) {
+					coords.push(new google.maps.LatLng(coord.x,coord.y));
+				});
+				// repeat the first to close it up
+				coords.push(new google.maps.LatLng(locCoords[0].x,locCoords[0].y));
+				
+				var polygon = new google.maps.Polygon({
+					paths: coords,
+				    strokeColor: '#0000FF',
+				    strokeOpacity: 0.8,
+				    strokeWeight: 3,
+				    fillColor: '#0000FF',
+				    fillOpacity: 0.35,
+					index:i
+				});
+				
+				polygon.setMap(map.instance);
+				
+				google.maps.event.addListener(polygon, 'click', function () {
+					new google.maps.InfoWindow({
+				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")",
+				      maxWidth: 200,
+					  position:new google.maps.LatLng(theLocs[this.index].coordinates[0].x,theLocs[this.index].coordinates[0].y)
+				  }).open(map.instance,this);
+				});  
+			}
+			else {
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(theLocs[i].coordinates[0].x,theLocs[i].coordinates[0].y),
+					map:map.instance,
+					title:theLocs[i].name,
+					index:i,
+					icon:'/GoogleMapsMarkers/blue_MarkerL.png'
+				});
+				
+				google.maps.event.addListener(marker, 'click',function() {
+					new google.maps.InfoWindow({
+				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")",
+				      maxWidth: 200,
+				  }).open(map.instance,marker);
+				});
+			}
 		}
 	});
 });
+
+function putIMarker(point,map,marker) {
+	google.maps.event.addListener(marker, 'click',function() {
+		new google.maps.InfoWindow({
+	      content: "ID: <b>" + point.id+"</b><br>Type: " + point.type,
+	      maxWidth: 200,
+	  }).open(map.instance,marker);
+	});
+}

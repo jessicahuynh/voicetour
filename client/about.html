@@ -3,9 +3,17 @@
 <p>Discover Deis was made by Jessica Huynh, Tianci Zhong, and Ziyu Qiu.</p>
 
 <div class="row">
+	<h2>Map Debugger</h2>
 	<div id="map-container" style="height:650px; width:650px">
 		{{> googleMap name="dataMap" options=dataMapOptions}}
 	</div>
 	<p>The map markers are from <a>http://www.benjaminkeen.com/google-maps-coloured-markers/</a>.</p>
+	
+	<h2>Locations without entrances assigned</h2>
+	<ul>
+		{{#each loc}}
+		<li>{{name}}</li>
+		{{/each}}
+	</ul>
 </div>
 </template>
