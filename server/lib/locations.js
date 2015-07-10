@@ -11,7 +11,7 @@ locations = [
 		"function": "Volen is home to Brandeis' computer science and linguistics departments.",
 		"description": "A longer description",
 		"category":["science","classroom","offices"],
-		"entrances":["volen_e01"]
+		"entrances":["volen_e01","volen_e02"]
 	},
 	{
 		"id":"scc",
@@ -299,16 +299,6 @@ locations = [
 			new Point(42.367266,-71.257265)],
 		"category":["classroom"]
 		},
-	edison = {
-		"name":"Edison-Lecks Science Building",
-		"nickname":"Edison-Lecks",
-		"coordinates":[
-			new Point(42.36652,-71.25835), 
-			new Point(42.366312,-71.25788), 
-			new Point(42.366168,-71.258001), 
-			new Point(42.366374,-71.258462)],
-		"category":["science","classroom"]
-		},
 	farber = {
 		"name":"Farber Library",
 		"nickname":"Farber",
@@ -320,6 +310,7 @@ locations = [
 		"category":["library"]
 		},
 	goldsmith = {
+		"id":"goldsmith",
 		"name":"Horace W. Goldsmith Mathematics Building",
 		"nickname":"Goldsmith",
 		"coordinates":[
@@ -329,7 +320,22 @@ locations = [
 			new Point(42.366997,-71.258307)],
 		"function":"Goldsmith is home to the mathematics department.",
 		"category":["science","classroom"],
+		"entrances":["goldsmith_e01","goldsmith_e02"]
 		},
+	{
+		"id":"edison",
+		"name":"Edison-Lecks Science Building",
+		"nickname":"Edison",
+		"coordinates":[
+			new Point(42.366392, -71.258480),
+			new Point(42.366531, -71.258364),
+			new Point(42.366321, -71.257893),
+			new Point(42.366182, -71.258006)
+		],
+		"function":"",
+		"category":["science","classroom"],
+		"entrances":["edison_e01"]
+	},
 	heller = {
 		"name":"Heller-Brown Building",
 		"nickname":"Heller",
@@ -370,6 +376,7 @@ locations = [
 		"category":["classroom"]
 		},
 	scienceCenter = {
+		"id":"ssc",
 		"name":"Carl J. Shapiro Science Center",
 		"nickname":"Science Center",
 		"coordinates":[
@@ -378,7 +385,7 @@ locations = [
 			new Point(42.365759,-71.258559), 
 			new Point(42.365894,-71.257864)],
 		"category":["science","classroom","student center"],
-		"entrances":["ssc_e01"]
+		"entrances":["ssc_e01","ssc_e02","ssc_e03"]
 		},
 	usdan = {
 		"id":"usdan",

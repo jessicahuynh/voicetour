@@ -16,7 +16,7 @@ Meteor.startup(function() {
 	}
 	
 	if (Intersections.find().count() == 0) {
-		var intersectFiles = [points_massellchapels,points_southcampus,points_gym];
+		var intersectFiles = [points_massellchapels,points_southcampus,points_gym,points_science];
 		
 		intersectFiles.forEach(function(intersectFile) {
 			intersectFile.forEach(function(point) {
@@ -26,13 +26,13 @@ Meteor.startup(function() {
 	}
 	
 	if (Paths.find().count() == 0) {
-		var pathFiles = [paths_massellchapels,paths_southcampus,paths_gym];
+		var pathFiles = [paths_massellchapels,paths_southcampus,paths_gym,paths_science];
 		
 		pathFiles.forEach(function(pathFile) {
 			pathFile.forEach(function(path) {
-/*				console.log("path###############");
+				console.log("path###############");
 				console.log(Intersections.findOne({"id":path.start}));
-				console.log(Intersections.findOne({"id":path.end}));*/
+				console.log(Intersections.findOne({"id":path.end}));
 				Meteor.call("distance",
 					Intersections.findOne({"id":path.start}).coordinate,
 					Intersections.findOne({"id":path.end}).coordinate,

@@ -23,7 +23,7 @@ locations_parking = [
 	},
 	gymp3 = {
 		"name":"Linsey parking lot",
-		"nickname":"Linsey parking lot ",
+		"nickname":"Linsey parking lot",
 		"coordinates":[
 			new Point(42.365568,-71.254114), 
 			new Point(42.365449,-71.253988), 

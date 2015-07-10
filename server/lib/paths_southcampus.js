@@ -1,15 +1,6 @@
 /*most of south campus, data from brandeisgps*/
 paths_southcampus=[
-{
-    "start":"ssc_e01",
-    "end":"fellowsgarden_c01",
-    "description": "Exit SSC and go down stairs",
-},
-{
-    "start":"ssc_e02",
-    "end":"fellowsgarden_c01",
-    "description": "Exit SSC and go to the road in front of you",
-},
+
 {
     "start":"fellowsgarden_c01",
     "end":"fellowsgarden_c02",
@@ -21,31 +12,6 @@ paths_southcampus=[
     "description": "Walk along the Fellows Garden",
 },
 {
-    "start":"fellowsgarden_c03",
-    "end":"volen_c01",
-    "description": "Climb up the hill toward Volen",
-},
-{
-    "start":"volen_c01",
-    "end":"volen_c02",
-    "description": "Volen is on your right. Walk a little closer to Volen",
-},
-{
-    "start":"volen_c02",
-    "end":"volen_e01",
-    "description": "Entrance to Volen is right ahead",
-},
-{
-    "start":"fellowsgarden_c01",
-    "end":"ssc_e01",
-    "description": "Climb up the stairs and SSC is right ahead",
-},
-{
-    "start":"fellowsgarden_c01",
-    "end":"ssc_e02",
-    "description": "Don't go up, entrance to SSC is on the right of the stairs.",
-},
-{
     "start":"fellowsgarden_c02",
     "end":"fellowsgarden_c01",
     "description": "Walk pass the physics building and SSC will be on your left",
@@ -54,26 +20,6 @@ paths_southcampus=[
     "start":"fellowsgarden_c03",
     "end":"fellowsgarden_c02",
     "description": "Walk along the Fellows Garden",
-},
-{
-    "start":"volen_c01",
-    "end":"fellowsgarden_c03",
-    "description": "Walk down the hill, facing the blue building",
-},
-{
-    "start":"volen_c02",
-    "end":"volen_c01",
-    "description": "Walk toward the down path once you have left the building",
-},
-{
-    "start":"volen_e01",
-    "end":"volen_c02",
-    "description": "Exit Volen",
-},
-{
-    "start":"volen_c04",
-    "end":"library_c01",
-    "description": "Walk along the road in front of you",
 },
 {
     "start":"library_c01",
@@ -229,11 +175,6 @@ paths_southcampus=[
     "start":"library_e01",
     "end":"library_c01",
     "description": "Exit Libray and walk along the red brick to the road",
-},
-{
-    "start":"library_c01",
-    "end":"volen_c04",
-    "description": "Walk along the raod towards the stairs",
 },
 {
     "start":"rabb_c01",
@@ -441,46 +382,6 @@ paths_southcampus=[
     "description": "Walk towards the blue building",
 },
 {
-    "start":"volen_c02",
-    "end":"volen_c03",
-    "description": "Walk to the stairs",
-},
-{
-    "start":"volen_c03",
-    "end":"volen_c02",
-    "description": "Walk down the stairs",
-},
-{
-    "start":"volen_c03",
-    "end":"volen_c04",
-    "description": "Walk up the stairs",
-},
-{
-    "start":"volen_c04",
-    "end":"volen_c03",
-    "description": "Walk down stairs",
-},
-{
-    "start":"volen_c04",
-    "end":"volen_c01",
-    "description": "Walk pass Volen, down the road",
-},
-{
-    "start":"volen_c01",
-    "end":"volen_c04",
-    "description": "Walk up the road, pass Volen which is on your right",
-},
-{
-    "start":"volen_c02",
-    "end":"gzang_e01",
-    "description": "Walk to the entrance between the two buildings",
-},
-{
-    "start":"gzang_e01",
-    "end":"volen_c02",
-    "description": "Exit Gzang and walk to the road outside Volen",
-},
-{
     "start":"fellowsgarden_c03",
     "end":"scc_c01",
     "description": "Walk across Fellows Garden",
@@ -629,36 +530,6 @@ paths_southcampus=[
     "start":"scc_c08",
     "end":"scc_c10",
     "description": "Walk along Loop Road",
-},
-{
-    "start":"edison_e01",
-    "end":"edison_c01",
-    "description": "Exit Edison",
-},
-{
-    "start":"edison_c01",
-    "end":"edison_e01",
-    "description": "Entrance to Edison is right ahead",
-},
-{
-    "start":"edison_c01",
-    "end":"edison_c02",
-    "description": "Walk towards the parking lot",
-},
-{
-    "start":"edison_c02",
-    "end":"edison_c01",
-    "description": "Go through the trail",
-},
-{
-    "start":"edison_c02",
-    "end":"ssc_e03",
-    "description": "Walk Straight and Entrance to SSC on right",
-},
-{
-    "start":"ssc_e03",
-    "end":"edison_c02",
-    "description": "Walk towards the parking lot",
 },
 {
     "start":"scc_e03",
