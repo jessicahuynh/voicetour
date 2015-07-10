@@ -250,5 +250,26 @@ paths_gym = [
 		"end":"rosenstiel_c03",
 		"description":"Waking up the slope toward the Loop Road."
 	},
+	{
+		"start":"gosman_e01",
+		"end":"gosman_e04",
+		"description":"null"
+	},
+	{
+		"start":"gosman_e04",
+		"end":"gosman_e01",
+		"description":"null"
+	},
+	{
+		"start":"gosmanparkinglot_e02",
+		"end":"gosmanparkinglot_e01",
+		"description":"Pass through the parking lot."
+	},
+	{
+		"start":"gosmanparkinglot_e01",
+		"end":"gosmanparkinglot_e02",
+		"description":"Pass through the parking lot."
+	},
+
 
 ]

@@ -776,6 +776,61 @@ paths_southcampus=[
     "end":"ssc_e03",
     "description": "Exit Rosenstiel.",
 },
+{
+    "start":"library_c05",
+    "end":"library_c02",
+    "description": "Continue Straight.",
+},
+{
+    "start":"library_c02",
+    "end":"library_c05",
+    "description": "Continue Straight.",
+},
+{
+    "start":"library_c03",
+    "end":"library_c05",
+    "description": "Turn slightly right at the small triangle graden.",
+},
+{
+    "start":"library_c05",
+    "end":"library_c03",
+    "description": "Turn slightly left at the small triangular graden.",
+},
+{
+    "start":"library_c05",
+    "end":"usdan_c03",
+    "description": "Continue straight.",
+},
+{
+    "start":"usdan_c03",
+    "end":"library_c05",
+    "description": "Continue straight.",
+},
+{
+    "start":"schwartz_c01",
+    "end":"library_c02",
+    "description": "Walk toward the small parking area.",
+},
+{
+    "start":"library_c02",
+    "end":"schwartz_c01",
+    "description": "Walk toward the small parking area.",
+},
+{
+    "start":"schwartz_c01",
+    "end":"library_c02",
+    "description": "Walk toward the little triangular graden.",
+},
+{
+    "start":"library_c05",
+    "end":"schwartz_c01",
+    "description": "Walk toward the small parking area.",
+},
+{
+    "start":"schwartz_c01",
+    "end":"library_c05",
+    "description": "Walk toward the little triangular graden.",
+},
 
 
 ]

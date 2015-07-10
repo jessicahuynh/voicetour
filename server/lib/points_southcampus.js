@@ -81,6 +81,11 @@ points_southcampus = [
     "type": "crossing",
 },
 {
+    "id": "library_c05",
+    "coordinate":new Point(42.367712, -71.257475),
+    "type": "crossing",
+},
+{
     "id": "schwartz_c01",
     "coordinate":new Point(42.367527, -71.257568),
     "type": "crossing",

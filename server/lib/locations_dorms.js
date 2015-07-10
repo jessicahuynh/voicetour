@@ -242,8 +242,8 @@ locations_dorms = [
 	eastHassenfeld = {
 		"name":"Hassenfeld-Krivoff Residence Hall",
 		"coordinates":[
-			new Point(42.368023, -71.254770),
 			new Point(42.367949, -71.254845),
+			new Point(42.368023, -71.254770),
 			new Point(42.368088, -71.254948), 
 			new Point(42.368194, -71.255178), 
 			new Point(42.368133, -71.255269), 
