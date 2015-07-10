@@ -330,6 +330,36 @@ paths_science = [
 	    "end":"bassine_c03",
 	    "description": "Walk along the path and go down the stairs.",
 	},
+	{
+	    "start":"edison_c03",
+	    "end":"rosenstiel_c02",
+	    "description": "Walk down the samll slope.",
+	},
+	{
+	    "start":"rosenstiel_c02",
+	    "end":"edison_c03",
+	    "description": "Walk up the samll slope toward the buildings.",
+	},
+	{
+	    "start":"bassine_c03",
+	    "end":"goldsmith_c02",
+	    "description": "Walk along the small path.",
+	},
+	{
+	    "start":"goldsmith_c02",
+	    "end":"bassine_c03",
+	    "description": "Walk along the small path.",
+	},
+	{
+	    "start":"bassine_c03",
+	    "end":"bassine_e01",
+	    "description": "The entrance is right in front of you.",
+	},
+	{
+	    "start":"bassine_e01",
+	    "end":"bassine_c03",
+	    "description": "Exit the buidling, turn left and walk toward the stairs.",
+	},
 
 
 

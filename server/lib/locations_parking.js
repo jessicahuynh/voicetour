@@ -4,9 +4,9 @@ locations_parking = [
 		"nickname":"Athletics lot",
 		"coordinates":[
 			new Point(42.365088,-71.256173), 
-			new Point(42.364914,-71.256057), 
-			new Point(42.364422,-71.257879), 
-			new Point(42.364272,-71.257766)],
+			new Point(42.364422,-71.257879),
+			new Point(42.364272,-71.257766),
+			new Point(42.364914,-71.256057), ],
 		"category":["parking"],
 		"entrances":["athleticslot_e01"]
 	},
@@ -15,9 +15,9 @@ locations_parking = [
 		"nickname":"Gosman parking lot ",
 		"coordinates":[
 			new Point(42.365056,-71.253832), 
-			new Point(42.364858,-71.253718), 
-			new Point(42.365541,-71.252837), 
-			new Point(42.365393,-71.252676)],
+			new Point(42.365541,-71.252837),
+			new Point(42.365393,-71.252676),
+			new Point(42.364858,-71.253718), ],
 		"category":["parking"],
 		"entrances":["gosmanparkinglot_e01","gosmanparkinglot_e02"]
 	},
