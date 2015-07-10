@@ -1,3 +1,4 @@
+// include gym, mailman, health center, public safty and castle
 paths_gym = [
 	{
 		"start":"gosman_c01",
@@ -95,6 +96,11 @@ paths_gym = [
 		"description":"Go up stairs and walk pass the bridge."
 	},
 	{
+		"start":"linsey_e01",
+		"end":"gosman_e04",
+		"description":"Walk pass the bridge and go down the stairs."
+	},
+	{
 		"start":"gosman_e04",
 		"end":"linsey_c04",
 		"description":"Exit Linsey Pool and go forward."
@@ -108,6 +114,11 @@ paths_gym = [
 		"start":"linsey_c04",
 		"end":"linsey_c01",
 		"description":"Continue walk along South Street."
+	},
+	{
+		"start":"linsey_e02",
+		"end":"linsey_c04",
+		"description":"Walk toward the South Street."
 	},
 	{
 		"start":"linsey_c01",
@@ -219,7 +230,16 @@ paths_gym = [
 		"end":"healthcenter_c01",
 		"description":"Exit the public safety building and walk toward the paking lot."
 	},
-
+	{
+		"start":"castle_e01",
+		"end":"rosenstiel_c03",
+		"description":"Waking down the slope with Castle on your left side."
+	},
+	{
+		"start":"rosenstiel_c03",
+		"end":"castle_e01",
+		"description":"Waking up the slope with Castle on your right side."
+	},
 
 
 ]
