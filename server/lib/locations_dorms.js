@@ -141,10 +141,10 @@ locations_dorms = [
 		"name":"Anna Renfield Hall",
 		"nickname":"Renfield",
 		"coordinates":[
-			new Point(42.367591,-71.261234), 
-			new Point(42.367458,-71.262894), 
-			new Point(42.367373,-71.260839), 
-			new Point(42.367498,-71.261277)],
+			new Point(42.367591, -71.261244), 
+			new Point(42.367490, -71.261294), 
+			new Point(42.367369, -71.260839), 
+			new Point(42.367471, -71.260789)],
 		"category":["dorm"],
 		"entrances":["renfield_e01","renfield_e02"]
 		},

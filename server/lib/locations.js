@@ -48,8 +48,8 @@ locations = [
 		"coordinates": [
 			new Point(42.365256, -71.260295),
 			new Point(42.364860, -71.260703),
-			new Point(42.365428, -71.260770),
-			new Point(42.365101, -71.261341)],
+			new Point(42.365101, -71.261341),
+			new Point(42.365428, -71.260770),],
 		"function": "Great Lawn is a nice place to hangout with friends in nice weather",
 		"description":"",
 		"category":["lawn"],
@@ -76,8 +76,8 @@ locations = [
 		"coordinates": [
 			new Point(42.367122,-71.258208),
 			new Point(42.366997,-71.258307),
-			new Point(42.366782,-71.257457),
-			new Point(42.366656,-71.257562)],
+			new Point(42.366656,-71.257562),
+			new Point(42.366782,-71.257457), ],
 		"function": "Bassine Science Building has many bio lab?",
 		"description":"Lab",
 		"category":["science","classroom"],
@@ -209,10 +209,12 @@ locations = [
 		"name":"Carl and Ruth Shapiro Admissions Center",
 		"nickname":"Admissions",
 		"coordinates":[
-			new Point(42.36615,-71.260189), 
-			new Point(42.365803,-71.259658), 
-			new Point(42.365546,-71.259934), 
-			new Point(42.36552,-71.260634)],
+			new Point(42.364604, -71.260664), 
+			new Point(42.364611, -71.260819),
+			new Point(42.364489, -71.260878), 
+			new Point(42.364150, -71.261231), 
+			new Point(42.364074, -71.261022),
+			new Point(42.364386, -71.260705),],
 		"category":["offices","informational"]
 		},	
 	slosberg = {
@@ -385,8 +387,8 @@ locations = [
 		"coordinates":[
 			new Point(42.36595,-71.258617), 
 			new Point(42.366115,-71.257734), 
-			new Point(42.365759,-71.258559), 
-			new Point(42.365894,-71.257864)],
+			new Point(42.365894,-71.257864),
+			new Point(42.365759,-71.258559), ],
 		"category":["science","classroom","student center"],
 		"entrances":["ssc_e01","ssc_e02","ssc_e03"]
 		},
@@ -421,8 +423,8 @@ locations = [
 		"coordinates":[
 			new Point(42.366071, -71.254290), 
 			new Point(42.365863, -71.254620), 
-			new Point(42.365844, -71.254032), 
-			new Point(42.365636, -71.254366)],
+			new Point(42.365636, -71.254366),
+			new Point(42.365844, -71.254032), ],
 		"category":["athletics"],
 		"entrances":["linsey_e01","linsey_e02"],
 	},
@@ -433,8 +435,8 @@ locations = [
 		"coordinates":[
 			new Point(42.365936, -71.255702), 
 			new Point(42.365895, -71.255935), 
-			new Point(42.365809, -71.255654), 
-			new Point(42.365766, -71.255962)],
+			new Point(42.365766, -71.255962),
+			new Point(42.365809, -71.255654), ],
 		"category":["health"],
 		"entrances":["mailman_e01"],
 	},
