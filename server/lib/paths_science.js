@@ -20,6 +20,36 @@ paths_science = [
 		"description":"Go towards the circular plaza."
 	},
 	{
+		"start":"volen_e01",
+		"end":"volen_ic02",
+		"description":"Turn left towards the wooden double doors."	
+	},
+	{
+		"start":"volen_ic02",
+		"end":"volen_e01",
+		"description":"Turn right towards the main entrance of Volen."	
+	},
+	{
+		"start":"volen_ic02",
+		"end":"volen_ie03",
+		"description":"Open the doors and walk down the hallway."
+	},
+	{
+		"start":"volen_ie03",
+		"end":"volen_ic02",
+		"description":"Open the doors and follow the hallway."	
+	},
+	{
+		"start":"volen_ie03",
+		"end":"gzang_e01",
+		"description":"Turn left and exit through the entrance of Gerstenzang."	
+	},
+	{
+		"start":"gzang_e01",
+		"end":"volen_ie03",
+		"description":"Enter Gzang. Turn immediately right and go through the wooden double doors."
+	},
+	{
 		"start":"chapelsfield_c01",
 		"end":"volen_c02",
 		"description":"Walk on the short sidewalk, towards the science complex."
@@ -91,32 +121,32 @@ paths_science = [
 	},
 	{
 		"start":"goldsmith_e01",
-		"end":"goldsmith_e02",
+		"end":"goldsmith_ei02",
 		"description":"Head up three flights of stairs and then walk to a set of glass doors. Enter these doors and then take a right to the skywalk."
 	},
 	{
-		"start":"goldsmith_e02",
+		"start":"goldsmith_ie02",
 		"end":"goldsmith_e01",
 		"description":"Turn left through two sets of double doors and head down three flights of stairs."
 	},
 	{
 		"start":"volen_e01",
-		"end":"volen_e02",
+		"end":"volen_ie02",
 		"description":"Head right and walk up two flights of stairs. Turn to your left and head all the way to the end, then head up half a flight of stairs and turn left to the skywalk."
 	},
 	{
-		"start":"volen_e02",
+		"start":"volen_ie02",
 		"end":"volen_e01",
 		"description":"Turn right and head down half a flight of stairs. Go straight along this corridor until you reach the doors to the staircase at the end, and then head down two flights."
 	},
 	{
-		"start":"volen_e02",
-		"end":"goldsmith_e02",
+		"start":"volen_ie02",
+		"end":"goldsmith_ie02",
 		"description":"Walk along the skywalk."
 	},
 	{
-		"start":"goldsmith_e02",
-		"end":"volen_e02",
+		"start":"goldsmith_ie02",
+		"end":"volen_ie02",
 		"description":"Walk along the skywalk."	
 	},
 	{
@@ -132,62 +162,62 @@ paths_science = [
 	/* shapiro science, oh god */
 	{
 		"start":"edison_e01",
-		"end":"gzang_i01",
-		"description":"Walk through the doors."
+		"end":"gzang_e01",
+		"description":"Walk to where Edison, Gzang, and the Shapiro Science Center all meet."
 	},
 	{
-		"start":"gzang_i01",
+		"start":"gzang_e01",
 		"end":"edison_e01",
 		"description":"Walk through the set of doors that lead outside to the parking lot."
 	},
 	{
-		"start":"ssc_i01",
-		"end":"gzang_i01",
+		"start":"ssc_ie01",
+		"end":"gzang_ie01",
 		"description":"Open the doors and head through the covered walkway."
 	},
 	{
-		"start":"gzang_i01",
-		"end":"ssc_i01",
+		"start":"gzang_ie01",
+		"end":"ssc_ie01",
 		"description":"Open the doors that lead through the covered walkway and head through."
 	},
 	{
-		"start":"ssc_i01",
+		"start":"ssc_ie01",
 		"end":"ssc_e03",
 		"description":"Turn left and head out the doors leading to the parking lot."
 	},
 	{
 		"start":"ssc_e03",
-		"end":"ssc_i01",
+		"end":"ssc_ie01",
 		"description":"Open the doors and turn right. Open the set of double doors leading to the covered walkway."	
 	},
 	{
-		"start":"ssc_i01",
-		"end":"ssc_i02",
+		"start":"ssc_ie01",
+		"end":"ssc_ic02",
 		"description":"Walk straight past the stairs and then turn right."
 	},
 	{
-		"start":"ssc_i02",
-		"end":"ssc_i01",
+		"start":"ssc_ic02",
+		"end":"ssc_ie01",
 		"description":"Walk straight and then turn left towards a set of white double doors."
 	},
 	{
-		"start":"ssc_i02",
+		"start":"ssc_ic02",
 		"end":"ssc_e02",
 		"description":"Walk down the stairs towards the exit."
 	},
 	{
 		"start":"ssc_e02",
-		"end":"ssc_i02",
+		"end":"ssc_ic02",
 		"description":"Enter and walk up the stairs."
 	},
 	{
-		"start":"ssc_i02",
+		"start":"ssc_ic02",
 		"end":"ssc_e01",
 		"description":"Veer slightly left towards the exit."
 	},
 	{
 		"start":"ssc_e01",
-		"end":"ssc_i02",
+		"end":"ssc_ic02",
 		"description":"Open the dooors and head straight."
 	},
 	{

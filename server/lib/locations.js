@@ -1,7 +1,7 @@
 locations = [
 	{
 		"id":"volen",
-		"name": "The Volen National Center for Complex Systems",
+		"name": "Benjamin and Mae Volen National Center for Complex Systems",
 		"nickname": "Volen",
 		"coordinates": [
 			new Point(42.367036,-71.259186), 
@@ -58,7 +58,7 @@ locations = [
 	{
 		"id":"roseart",
 		"name": "The Rose Art Museum",
-		"nickname": "the Rose",
+		"nickname": "The Rose",
 		"coordinates": [
 			new Point(42.366033,-71.262631),
 			new Point(42.365498,-71.262948),
@@ -99,6 +99,7 @@ locations = [
 	
 	turner = {
 		"id":"turner",
+		"nickname":"Turner",
 		"name":"60 Turner Street",
 		"coordinates":[
 			new Point(42.362028,-71.264118), 

@@ -175,7 +175,7 @@ locations_dorms = [
 	village = {
 		"id":"village",
 		"name":"Village Residence Hall",
-		"nickname":"the Village",
+		"nickname":"The Village",
 		"coordinates":[
 			new Point(42.363835,-71.260165), 
 			new Point(42.363763,-71.259809), 

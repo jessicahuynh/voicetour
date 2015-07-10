@@ -3,37 +3,52 @@
 
 .locationListing {
 	margin:0;
+	margin-bottom:.5em;
+	height:6em;
 	
 	a {
-		min-height:7em;
 		color:#111;
-		padding:1em;
+		padding:0;
 		margin:0;
+		height:6em;
+		display:block;
+		
+		div {
+			padding:1em;
+			width:100%;
+			min-height:6em;
+		}
+		
+		div.inside-info {
+			background-image: url('/Chevron_right.svg'); /* From https://commons.wikimedia.org/wiki/File:Chevron_right.svg, in the public domain */
+			background-repeat:no-repeat;
+			background-position: right center;
+			padding-right:1.75em;
+			color:#111;
+		}
 		
 		div.inside-location {
 			background-color:@dark-blue;
 			color:#ededed;
-			padding:1em 0;
+			padding-top:1.5em;
 		}
 	}
 	a:hover {
 		text-decoration:none;
-		background-color:#ededed;
-	}
-	a.go-to-location {
-		background-image: url('/Chevron_right.svg'); /* From https://commons.wikimedia.org/wiki/File:Chevron_right.svg, in the public domain */
-		background-repeat:no-repeat;
-		background-position: right center;
-		padding-right:1.75em;
 		
-		div {
-			background:transparent;
+		
+		div.inside-info {
+			background-color:#ededed;
+		}
+		
+		div.inside-location {
+			background-color:#ededed;
 			color:#111;
 		}
 	}
 	a.go-to-navigate {
 		text-align:center;
-		font-size:110%;
+		font-size:100%;
 	}
 	
 }
