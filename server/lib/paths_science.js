@@ -270,5 +270,67 @@ paths_science = [
 	    "end":"edison_c02",
 	    "description": "Walk towards the parking lot.",
 	},
+	{
+	    "start":"edison_c02",
+	    "end":"edison_c03",
+	    "description": "Walk towards the parking lot.",
+	},
+	{
+	    "start":"edison_c03",
+	    "end":"edison_c02",
+	    "description": "Pass through the parking lot.",
+	},
+	{
+	    "start":"edison_c03",
+	    "end":"bassine_c01",
+	    "description": "Contniue walking up the slope.",
+	},
+	{
+	    "start":"bassine_c01",
+	    "end":"edison_c03",
+	    "description": "Walk along the small path toward the Loop Road.",
+	},
+	{
+	    "start":"bassine_c01",
+	    "end":"bassine_c02",
+	    "description": "Walk up the stairs.",
+	},
+	{
+	    "start":"bassine_c02",
+	    "end":"bassine_c01",
+	    "description": "Walk down the stairs.",
+	},
+	{
+	    "start":"bassine_c02",
+	    "end":"bassine_e01",
+	    "description": "Walk toward the building on your left side.",
+	},
+	{
+	    "start":"bassine_e01",
+	    "end":"bassine_c02",
+	    "description": "Walk toward the stairs in front of you.",
+	},
+	{
+	    "start":"bassine_c03",
+	    "end":"bassine_c02",
+	    "description": "Walk toward the stairs on your left.",
+	},
+	{
+	    "start":"bassine_c02",
+	    "end":"bassine_c03",
+	    "description": "Walk toward the stairs on your right.",
+	},
+	{
+	    "start":"bassine_c03",
+	    "end":"schwartz_c01",
+	    "description": "Go up the stairs and walk along the path.",
+	},
+	{
+	    "start":"schwartz_c01",
+	    "end":"bassine_c03",
+	    "description": "Walk along the path and go down the stairs.",
+	},
+
+
 
 ]
