@@ -251,7 +251,18 @@ locations_dorms = [
 			new Point(42.367987, -71.255001),],
 		"category":["dorm"]
 		},
-	
+	cable = {
+		"id":"cable",
+		"name":"Cable Residence Hall",
+		"nickname":"cable",
+		"coordinates":[
+			new Point(42.369467, -71.255238), 
+			new Point(42.369426, -71.255096), 
+			new Point(42.368930, -71.255345), 
+			new Point(42.368966, -71.255485)],
+		"category":["dorm"],
+		"entrances":[],
+	},
 
 ]
 
