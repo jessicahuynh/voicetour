@@ -861,5 +861,15 @@ paths_southcampus=[
     "end":"kutz_c05",
     "description": "Get off the Loop Road and walk along the samller road.",
 },
+{
+    "start":"usdan_e01",
+    "end":"usdan_c04",
+    "description": "Exit Usdan and turn left.",
+},
+{
+    "start":"usdan_e01",
+    "end":"usdan_c04",
+    "description": "The entance is on your right.",
+},
 
 ]

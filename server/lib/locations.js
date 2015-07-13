@@ -9,7 +9,11 @@ locations = [
 			new Point(42.366944,-71.258458),
 			new Point(42.366783,-71.258614)],
 		"function": "Volen is home to Brandeis' computer science and linguistics departments.",
-		"description": "A longer description",
+		"description": "The Volen Center, or National Center for Complex Systems, in which faculty \
+						and students study the brain and intelligence. This center’s staff specialize \
+						in artificial intelligence, cognitive science, and various neuroscience topics \
+						(examples include experimental psychology, computational neuroscience, and cellular \
+						and molecular neurobiology).",
 		"category":["science","classroom","offices"],
 		"entrances":["volen_e01","volen_e02"]
 	},
@@ -165,10 +169,10 @@ locations = [
 		"id":"sachar",
 		"name":"Sachar International Center",
 		"coordinates":[
-			new Point(42.365064,-71.25997), 
-			new Point(42.365424,-71.259121), 
-			new Point(42.365279,-71.258993), 
-			new Point(42.364897,-71.25983)],
+			new Point(42.365140, -71.264641), 
+			new Point(42.364938, -71.265223), 
+			new Point(42.364750, -71.265070), 
+			new Point(42.364833, -71.264872)],
 		"category":["classroom","graduate"]
 		},
 	irving = {
@@ -418,6 +422,7 @@ locations = [
 			new Point(42.367777,-71.256451), 
 			new Point(42.368243,-71.256259)],
 		"category":["student center","dining"],
+		"entrances":["usdan_e01"]
 		
 		},
 	gosman = {
@@ -529,8 +534,18 @@ locations = [
 			new Point(42.369607, -71.257813),
 			new Point(42.369629, -71.257896),
 			new Point(42.369663, -71.257879),],
+		"function": "Mandel is home to Brandeis' humanities and languages departments.",
+		"description": "The Mandel Center for the Humanities was created as an interdisciplinary building \
+						that specifically combines subjects in order for students to have a better understanding \
+						of the major themes of the human experience. The Center’s courses include languages, \
+						literature, philosophy, history, anthropology, sociology, and are \
+						intended for undergraduate students, graduate students, faculty, and visitors. This \
+						building regularly hosts an interdisciplinary seminar taught by several professors from \
+						different areas of study. Classes in this building are taught in a round-table setting \
+						as well as in lecture halls.",
 		"category":["classroom"],
 		"entrances":["mandel_e01"],
+		"nearby":["olinsang","golding","rabbGrad", "heller"],
 	},
 	golding = {
 		"id":"golding",

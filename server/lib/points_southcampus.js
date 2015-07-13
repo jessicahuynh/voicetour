@@ -297,6 +297,11 @@ points_southcampus = [
     "type": "crossing",
 },
 {
+    "id": "usdan_e01",
+    "coordinate":new Point(42.368067, -71.256704),
+    "type": "entrance",
+},
+{
     "id": "usdan_c01",
     "coordinate":new Point(42.367368, -71.256159),
     "type": "crossing",

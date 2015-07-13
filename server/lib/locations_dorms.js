@@ -288,7 +288,7 @@ locations_dorms = [
 	reitman = {
 		"id":"reitman",
 		"name":"Reitman Residence Hall",
-		"nickname":"Gordon",
+		"nickname":"Reitman",
 		"coordinates":[
 			new Point(42.369828, -71.255653),
 			new Point(42.369732, -71.255706),
