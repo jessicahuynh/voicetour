@@ -22,6 +22,10 @@
 		</div>
 		<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Go</button>
 	</form>
+	
+	<div id="map-nav" style="width:400px; height:400px">
+		{{> googleMap name="navMap" options=navMapOptions}}
+	</div>
 </div>
 
 <div class="col-sm-6">
@@ -34,8 +38,17 @@
 
 </div>
 
+
 </template>
 
 <template name="suggestions">
 	<span class="label">{{name}}</span>
 </template>
+<!-- 
+<template name="mapNav">
+	<div class="row">
+		<div id="map-nav" style="height:500px; width:500px">
+			{{> googleMap name="navMap" options=navMapOptions}}
+		</div>
+	</div>
+</template> -->
