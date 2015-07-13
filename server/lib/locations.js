@@ -481,6 +481,7 @@ locations = [
 		"category":["art"],
 		"entrances":[],
 	},
+
 	kutz = {
 		"id":"kutz",
 		"name":"Kutz Hall",
@@ -498,7 +499,7 @@ locations = [
 			new Point(42.369151, -71.255997),
 			new Point(42.369151, -71.256053),
 			new Point(42.369131, -71.256053),],
-		"category":["offices"],
+		"category":["offices","administrative"],
 		"entrances":["kutz_e01","Kutz_e02"],
 	},
 	mandel = {
@@ -586,8 +587,31 @@ locations = [
 		"category":["classroom"],
 		"description": "A longer description",
 		"entrances":["goldfarb_e01"],
+	},	
+	gerstenzang = {
+		"id":"gerstenzang",
+		"name":"Gerstenzang Science Library",
+		"nickname":"Gzang",
+		"coordinates":[
+			new Point(42.366974, -71.258330), 
+			new Point(42.366653, -71.257549), 
+			new Point(42.366304, -71.257812), 
+			new Point(42.366647, -71.258526)],
+		"category":["library","classroom"],
+		"entrances":[],
 	},
-
+	pearlman = {
+		"id":"pearlman",
+		"name":"Pearlman Hall",
+		"nickname":"pearlman",
+		"coordinates":[
+			new Point(42.367619, -71.258118), 
+			new Point(42.367577, -71.257855), 
+			new Point(42.367302, -71.257938), 
+			new Point(42.367367, -71.258206)],
+		"category":["classroom"],
+		"entrances":[],
+	},
 
 
 ]

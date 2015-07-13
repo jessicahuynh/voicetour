@@ -4,10 +4,10 @@
 <div class="row">
 
 <div class="col-sm-6">
-	<form id="navform">
+	<form id="navform" name="navform">
 		<div class="form-group">
 			<label for="startpoint">Start</label>
-			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location" }}
+			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location" value=startLoc }}
 			<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
 			<div class="getCurrentContainer">
 				<a id="getCurrentLoc" href="#">
@@ -17,11 +17,15 @@
 		</div>
 		<div class="form-group">
 			<label for="endpoint">End</label>
-			{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination"}}
+			{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination" value=endLoc}}
 			<!--<input type="text" id="endpoint" class="form-control" placeholder="destination">-->
 		</div>
-		<button type="submit" id="searchButton" class="btn btn-primary">Go</button>
+		<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Go</button>
 	</form>
+	
+	<div id="map-nav" style="width:400px; height:400px">
+		{{> googleMap name="navMap" options=navMapOptions}}
+	</div>
 </div>
 
 <div class="col-sm-6">
@@ -34,8 +38,17 @@
 
 </div>
 
+
 </template>
 
 <template name="suggestions">
 	<span class="label">{{name}}</span>
 </template>
+<!-- 
+<template name="mapNav">
+	<div class="row">
+		<div id="map-nav" style="height:500px; width:500px">
+			{{> googleMap name="navMap" options=navMapOptions}}
+		</div>
+	</div>
+</template> -->

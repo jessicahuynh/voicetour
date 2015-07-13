@@ -1,25 +1,38 @@
-
 Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
 	console.log(graph);	
 	
 	var navTo = Session.get("navigateTo");
-	console.log(navTo);
 	if (navTo != "" && navTo != null) {
-		Session.set("navigateTo","");
 		document.getElementById("endpoint").value = navTo;
 	}
 	
 	var navFrom = Session.get("navigateFrom");
 	if (navFrom != "" && navFrom != null) {
-		Session.set("navigateFrom","");
 		document.getElementById("startpoint").value = navFrom;
+	}
+	
+	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
+		$("#navform").submit()
+	}
+	else {
+		if (navTo != "" && navTo != null) {
+			Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+			$("#navform").submit();
+			console.log("submitted");
+		}
 	}
 };
 
 Template.graph.helpers({
 	stops: function() {
 		return Session.get("routeToTake");
+	},
+	startLoc:function() {
+		return Session.get("navigateFrom");	
+	},
+	endLoc: function() {
+		return Session.get("navigateTo");	
 	},
 	settings:function() {
 		return {
@@ -35,16 +48,36 @@ Template.graph.helpers({
 	},
 	stopDescription:function() {
 		return this;
+	},
+	navMapOptions: function() {
+		if (GoogleMaps.loaded()) {
+			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
+			return {
+				center: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
+				zoom:17
+			};
+		}
 	}
+});
+
+Template.graph.onCreated(function() {
+	GoogleMaps.load();
+	GoogleMaps.ready('navMap',function(map) {
+		var marker = new google.maps.Marker({
+			position: map.options.center,
+			map: map.instance
+		});
+	});
 });
 
 Template.graph.events({
 	"submit #navform": function(event){
-
 		event.preventDefault();
 		
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
+		console.log("start " + starts);
+		console.log("end "+ ends);
 		var route = null;
 		
 		// if it starts with a (, it's your current location
@@ -91,9 +124,9 @@ Template.graph.events({
 		else {
 			route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
 		}
-
-		
 		getRouteDescription(route);
+		addMarkers(route);
+		addRoutes(route);
 	},
 	"click input":function(event) {
 		event.target.value = '';
@@ -119,9 +152,7 @@ Template.graph.events({
 					}
 				}
 			);
-		});
-		
-				
+		});			
 		// document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
 		
 	}
@@ -133,8 +164,6 @@ function getShortestRoute(startEntrances,endEntrances) {
 	var shortestRoute = null;
 	if (startEntrances != undefined && endEntrances != undefined) {
 		shortestRoute = graph.findShortestPath(startEntrances[0],endEntrances[0]);
-		
-		console.log(startEntrances[0] + " " + shortestRoute + " " + endEntrances[0]);
 		
 		var currentRouteDist = 0;
 	
@@ -163,7 +192,66 @@ function getShortestRoute(startEntrances,endEntrances) {
 		}
 	}
 
+	console.log(shortestRoute);
 	return shortestRoute;
+}
+
+function addMarkers(route){
+	var all_points=Intersections.find().fetch();
+	function findId(data, idToLookFor) {
+	    for (var i = 0; i < all_points.length; i++) {
+	        if (all_points[i].id == idToLookFor) {
+	            return(all_points[i].coordinate);
+	        }
+	    }
+	}
+
+	route.forEach(
+		function(stop) {
+			var stopLoc=findId(all_points,stop);
+			GoogleMaps.load();
+			GoogleMaps.ready('navMap',function(map) {
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
+					map:map.instance
+				});
+			})
+		}
+	);
+}
+
+function addRoutes(route){
+	var all_points=Intersections.find().fetch();
+	function findId(data, idToLookFor) {
+	    for (var i = 0; i < all_points.length; i++) {
+	        if (all_points[i].id == idToLookFor) {
+	            return(all_points[i].coordinate);
+	        }
+	    }
+	}
+
+	GoogleMaps.ready('navMap',function(map){
+		for(var j = 0; j<route.length; j++){
+			var start= findId(all_points,route[j]);
+			var end = findId(all_points,route[j+1]);
+			var theRoute = [
+				new google.maps.LatLng(start.x,start.y),
+				new google.maps.LatLng(end.x,end.y),
+			];
+			// var contentString = "<b>" + start + "</b> to <b>" + end+"</b>: "+description+"<br>";
+
+			var r = new google.maps.Polyline({
+				path:theRoute,
+				geodesic:true,
+				strokeColor: '#00FF00',
+			    strokeOpacity: 1.0,
+			    strokeWeight: 4
+			});
+				
+			r.setMap(map.instance);
+		}
+	})
+
 }
 
 function getRouteDescription(route) {
@@ -186,7 +274,6 @@ function getRouteDescription(route) {
 		for (var i = 0; i < route.length - 1; i++) {
 			var thePath = Paths.findOne({"start":route[i],"end":route[i+1]});
 			r.push(thePath.description);
-		
 		}
 	}
 	else {

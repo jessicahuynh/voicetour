@@ -336,7 +336,6 @@ locations_dorms = [
 		"category":["dorm"],
 		"entrances":["scheffres_e01"]
 	},
-	
 
 ]
 
