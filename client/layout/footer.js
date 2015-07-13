@@ -208,9 +208,13 @@ function applyIntent(intent,entities) {
             r += " from <span class='said'>"+entities["start"].body+"</span>";
             Session.set("navigateFrom",entities["start"].value);
         }
+        else {
+            Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+        }
         
         $("#result").append("<p>"+r+"...</p>");
         
         Router.go('/navigate');
+        $("#navform").submit();
     }
 }
