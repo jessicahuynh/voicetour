@@ -147,7 +147,7 @@ Template.footer.rendered = function() {
     
         mic.connect("ANATOUXNLPGVGPTGWPN7RXQHFYYSPGPP");
         // mic.start();
-        // mic.stop();
+        mic.stop();
     
         function kv(k, v) {
             if (toString.call(v) !== "[object String]") {
@@ -198,9 +198,15 @@ function applyIntent(intent,entities) {
            r += "<span class='said'>"+entities["end"].body+"</span>";
            Session.set("navigateTo",entities["end"].value);
         }
+        else {
+            if (entities["deis_loc"] != undefined) {
+                 r += "<span class='said'>"+entities["deis_loc"].body+"</span>";
+           Session.set("navigateTo",entities["deis_loc"].value);
+            }
+        }
         if (entities["start"] != undefined) {
             r += " from <span class='said'>"+entities["start"].body+"</span>";
-            Session.set("navigateTo",entities["start"].value);
+            Session.set("navigateFrom",entities["start"].value);
         }
         
         $("#result").append("<p>"+r+"...</p>");

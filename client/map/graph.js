@@ -4,22 +4,37 @@ Template.graph.rendered = function () {
 	console.log(graph);	
 	
 	var navTo = Session.get("navigateTo");
-	console.log(navTo);
 	if (navTo != "" && navTo != null) {
-		Session.set("navigateTo","");
 		document.getElementById("endpoint").value = navTo;
 	}
 	
 	var navFrom = Session.get("navigateFrom");
 	if (navFrom != "" && navFrom != null) {
-		Session.set("navigateFrom","");
 		document.getElementById("startpoint").value = navFrom;
+	}
+	
+	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
+		document.getElementById("routeButton").click();
+	}
+	else {
+		if (navTo != "" && navTo != null) {
+			$("#getCurrentLoc").click();
+			console.log(document.getElementById("endpoint").value);
+			$("#navform").submit();
+			console.log("submitted");
+		}
 	}
 };
 
 Template.graph.helpers({
 	stops: function() {
 		return Session.get("routeToTake");
+	},
+	startLoc:function() {
+		return Session.get("navigateFrom");	
+	},
+	endLoc: function() {
+		return Session.get("navigateTo");	
 	},
 	settings:function() {
 		return {
@@ -40,7 +55,6 @@ Template.graph.helpers({
 
 Template.graph.events({
 	"submit #navform": function(event){
-
 		event.preventDefault();
 		
 		var starts = document.getElementById("startpoint").value;
