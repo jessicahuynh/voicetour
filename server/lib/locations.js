@@ -15,7 +15,7 @@ locations = [
 						(examples include experimental psychology, computational neuroscience, and cellular \
 						and molecular neurobiology).",
 		"category":["science","classroom","offices"],
-		"entrances":["volen_e01","volen_e02"]
+		"entrances":["volen_e01","volen_ie02"]
 	},
 	{
 		"id":"scc",
@@ -343,7 +343,7 @@ locations = [
 			new Point(42.367103, -71.258148)],
 		"function":"Goldsmith is home to the mathematics department.",
 		"category":["science","classroom"],
-		"entrances":["goldsmith_e01","goldsmith_e02"]
+		"entrances":["goldsmith_e01","goldsmith_ie02"]
 		},
 	{
 		"id":"edison",
@@ -410,7 +410,7 @@ locations = [
 			new Point(42.365894,-71.257864),
 			new Point(42.365759,-71.258559), ],
 		"category":["science","classroom","student center"],
-		"entrances":["ssc_e01","ssc_e02","ssc_e03"]
+		"entrances":["ssc_e01","ssc_e02","ssc_e03","ssc_ie01"]
 		},
 	usdan = {
 		"id":"usdan",
@@ -613,7 +613,7 @@ locations = [
 			new Point(42.366304, -71.257812), 
 			new Point(42.366647, -71.258526)],
 		"category":["library","classroom"],
-		"entrances":[],
+		"entrances":["gzang_e01","gzang_ie01"],
 	},
 	pearlman = {
 		"id":"pearlman",
