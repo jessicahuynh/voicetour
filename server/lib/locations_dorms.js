@@ -1,5 +1,6 @@
 locations_dorms = [
 	ss567 = {
+		"id":"ss567",
 		"name":"567 South Street Apartments",
 		"nickname":"567",
 		"coordinates":[
@@ -10,6 +11,7 @@ locations_dorms = [
 		"category":["dorm"]
 	},
 	coffman = {
+		"id":"coffman",
 		"name":"Coffman Residence Hall",
 		"nickname":"Coffman",
 		"coordinates":[
@@ -20,6 +22,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	cohen = {
+		"id":"cohen",
 		"name":"Cohen Residence Hall",
 		"nickname":"Cohen",
 		"coordinates":[
@@ -30,6 +33,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	lewis = {
+		"id":"lewis",
 		"name":"Lewis Residence Hall",
 		"nickname":"Lewis",
 		"coordinates":[
@@ -40,6 +44,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	may = {
+		"id":"may",
 		"name":"May Residence Hall",
 		"nickname":"May",
 		"coordinates":[
@@ -50,6 +55,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	mazer = {
+		"id":"mazer",
 		"name":"Mazer Residence Hall",
 		"nickname":"Mazer",
 		"coordinates":[
@@ -60,6 +66,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	ridgewoodA = {
+		"id":"ridgewoodA",
 		"name":"Ridgewood Residence Hall A",
 		"nickname":"Ridgewood A",
 		"coordinates":[
@@ -70,6 +77,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	ridgewoodB = {
+		"id":"ridgewoodB",
 		"name":"Ridgewood Residence Hall B",
 		"nickname":"Ridgewood B",
 		"coordinates":[
@@ -79,6 +87,7 @@ locations_dorms = [
 			new Point(42.363788,-71.261432)]
 		},
 	ridgewoodC = {
+		"id":"ridgewoodC",
 		"name":"Ridgewood Residence Hall C",
 		"nickname":"Ridgewood C",
 		"coordinates":[
@@ -184,6 +193,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	zivA = {
+		"id":"zivA",
 		"name":"Ziv Residence Hall A",
 		"coordinates":[
 			new Point(42.363537,-71.261639), 
@@ -193,6 +203,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	zivB = {
+		"id":"zivB",
 		"name":"Ziv Residence Hall B",
 		"coordinates":[
 			new Point(42.363197,-71.261606), 
@@ -202,6 +213,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	zivD = {
+		"id":"zivD",
 		"name":"Ziv Residence Hall D",
 		"coordinates":[
 			new Point(42.363419,-71.261034), 
@@ -211,6 +223,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	eastShapiro = {
+		"id":"eastShapiro",
 		"name":"Shapiro Brothers Residence Hall",
 		"coordinates":[
 			new Point(42.367660, -71.254624), 
@@ -222,6 +235,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	eastRubenstein = {
+		"id":"eastRubenstein",
 		"name":"Rubenstein-Pomerantz Residence Hall",
 		"coordinates":[
 			new Point(42.367674, -71.254822), 
@@ -240,6 +254,7 @@ locations_dorms = [
 		"category":["dorm"]
 		},
 	eastHassenfeld = {
+		"id":"eastHassenfeld",
 		"name":"Hassenfeld-Krivoff Residence Hall",
 		"coordinates":[
 			new Point(42.367949, -71.254845),
@@ -251,6 +266,76 @@ locations_dorms = [
 			new Point(42.367987, -71.255001),],
 		"category":["dorm"]
 		},
+	gordon = {
+		"id":"gordon",
+		"name":"Gordon Residence Hall",
+		"nickname":"Gordon",
+		"coordinates":[
+			new Point(42.369957, -71.255900),
+			new Point(42.369748, -71.256009),
+			new Point(42.369755, -71.256049), 
+			new Point(42.369677, -71.256090), 
+			new Point(42.369671, -71.256048), 
+			new Point(42.369415, -71.256188),
+			new Point(42.369371, -71.256014),
+			new Point(42.369503, -71.255945),
+			new Point(42.369515, -71.255983),
+			new Point(42.369921, -71.255774),],
+		"description": "North Quad",
+		"category":["dorm"],
+		"entrances":["gordon_e01","gordon_e02"]
+	},
+	reitman = {
+		"id":"reitman",
+		"name":"Reitman Residence Hall",
+		"nickname":"Gordon",
+		"coordinates":[
+			new Point(42.369828, -71.255653),
+			new Point(42.369732, -71.255706),
+			new Point(42.369525, -71.254981), 
+			new Point(42.369618, -71.254926), 
+			new Point(42.369709, -71.255244), 
+			new Point(42.369740, -71.255230),
+			new Point(42.369783, -71.255377),
+			new Point(42.369757, -71.255393),],
+		"description": "North Quad",
+		"category":["dorm"],
+		"entrances":["reitman_e01","reitman_e02"]
+	},
+	cable = {
+		"id":"cable",
+		"name":"Cable Residence Hall",
+		"nickname":"Cable",
+		"coordinates":[
+			new Point(42.369470, -71.255235),
+			new Point(42.368966, -71.255482),
+			new Point(42.368935, -71.255353), 
+			new Point(42.369157, -71.255244), 
+			new Point(42.369148, -71.255206), 
+			new Point(42.369263, -71.255150),
+			new Point(42.369272, -71.255185),
+			new Point(42.369430, -71.255103),],
+		"description": "North Quad",
+		"category":["dorm"],
+		"entrances":["cable_e01","cable_e02"]
+	},
+	scheffres = {
+		"id":"scheffres",
+		"name":"Scheffres Residence Hall",
+		"nickname":"Scheffres",
+		"coordinates":[
+			new Point(42.369447, -71.256173),
+			new Point(42.369482, -71.256295),
+			new Point(42.369348, -71.256366), 
+			new Point(42.369358, -71.256408), 
+			new Point(42.369282, -71.256449), 
+			new Point(42.369268, -71.256409),
+			new Point(42.369061, -71.256518),
+			new Point(42.369023, -71.256391),],
+		"description": "North Quad",
+		"category":["dorm"],
+		"entrances":["scheffres_e01"]
+	},
 	
 
 ]

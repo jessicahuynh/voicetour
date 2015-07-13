@@ -23,7 +23,7 @@ paths_southcampus=[
 },
 {
     "start":"library_c01",
-    "end":"library_e01",
+    "end":"goldfarb_e01",
     "description": "Walk along the red brick towards the entrance and here is Libray",
 },
 {
@@ -172,7 +172,7 @@ paths_southcampus=[
     "description": "Walk along the raod on your right side",
 },
 {
-    "start":"library_e01",
+    "start":"goldfarb_e01",
     "end":"library_c01",
     "description": "Exit Libray and walk along the red brick to the road",
 },
@@ -831,6 +831,35 @@ paths_southcampus=[
     "end":"library_c05",
     "description": "Walk toward the little triangular graden.",
 },
-
+{
+    "start":"rosenstiel_c04",
+    "end":"rosenstiel_c01",
+    "description": "Walk up the slope on Loop Road.",
+},
+{
+    "start":"rosenstiel_c01",
+    "end":"rosenstiel_c04",
+    "description": "Walk down the slope on Loop Road.",
+},
+{
+    "start":"kutz_c05",
+    "end":"rubenstein_c16",
+    "description": "Walk along the Loop Road.",
+},
+{
+    "start":"rubenstein_c16",
+    "end":"kutz_c05",
+    "description": "Walk along the Loop Road.",
+},
+{
+    "start":"kutz_c05",
+    "end":"cable_c01",
+    "description": "Get off the Loop Road and walk along the samller road.",
+},
+{
+    "start":"cable_c01",
+    "end":"kutz_c05",
+    "description": "Get off the Loop Road and walk along the samller road.",
+},
 
 ]

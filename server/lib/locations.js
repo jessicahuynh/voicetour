@@ -131,7 +131,8 @@ locations = [
 			new Point(42.362204,-71.261671)],
 		"category":["classroom","offices"]
 		},
-	facultyCenter = {
+	facultycenter = {
+		"id":"facultycenter",
 		"name":"Faculty Center",
 		"coordinates":[
 			new Point(42.36569,-71.261466), 
@@ -141,6 +142,7 @@ locations = [
 		"category":["dining"]
 		},
 	goldman = {
+		"id":"goldman",
 		"name":"Goldman-Schwartz Fine Arts",
 		"coordinates":[
 			new Point(42.365001,-71.263157), 
@@ -150,6 +152,7 @@ locations = [
 		"category":["art"]
 		},
 	gryzmish = {
+		"id":"gryzmish",
 		"name":"Gryzmish Center",
 		"coordinates":[
 			new Point(42.365593,-71.259553), 
@@ -159,6 +162,7 @@ locations = [
 		"category":["administrative"]
 		},
 	sachar = {
+		"id":"sachar",
 		"name":"Sachar International Center",
 		"coordinates":[
 			new Point(42.365064,-71.25997), 
@@ -168,6 +172,7 @@ locations = [
 		"category":["classroom","graduate"]
 		},
 	irving = {
+		"id":"irving",
 		"name":"Irving Presidential Enclave",
 		"coordinates":[
 			new Point(42.365209,-71.259623), 
@@ -177,16 +182,19 @@ locations = [
 		"category":["administrative"]
 		},
 	info = {
+		"id":"info",
 		"name":"Information Booth",
 		"nickname":"Info Booth",
 		"coordinates":[
 			new Point(42.365015,-71.258721), 
 			new Point(42.365046,-71.258676), 
+			new Point(42.365007,-71.258634),
 			new Point(42.364978,-71.258681), 
-			new Point(42.365007,-71.258634)],
+			],
 		"category":["informational"]
 		},
 	pollack = {
+		"id":"pollack",
 		"name":"Pollack Fine Arts Teaching Center",
 		"coordinates":[
 			new Point(42.365328,-71.26243), 
@@ -196,16 +204,18 @@ locations = [
 		"category":["art","classroom"]
 		},
 	rabbSchool = {
+		"id":"rabbSchool",
 		"name":"The Rabb School of Continuing Studies",
 		"coordinates":[
-			new Point(42.36298,-71.25929), 
-			new Point(42.363061,-71.258924), 
-			new Point(42.362961,-71.258887), 
-			new Point(42.362872,-71.259233)],
+			new Point(42.363061,-71.258924),
+			new Point(42.36298,-71.25929),  
+			new Point(42.362872,-71.259233),
+			new Point(42.362961,-71.258887),],
 		"function":"The Rabb School is home to",
 		"category":["graduate"]
 		},
 	admissions = {
+		"id":"admissions",
 		"name":"Carl and Ruth Shapiro Admissions Center",
 		"nickname":"Admissions",
 		"coordinates":[
@@ -218,6 +228,7 @@ locations = [
 		"category":["offices","informational"]
 		},	
 	slosberg = {
+		"id":"slosberg",
 		"name":"Slosberg Music Center",
 		"nickname":"Slosberg",
 		"coordinates":[
@@ -228,6 +239,7 @@ locations = [
 		"category":["art","classroom"]
 		},
 	spingold = {
+		"id":"spingold",
 		"name":"Spingold Theater Center",
 		"nickname":"Spingold",
 		"coordinates":[
@@ -238,6 +250,7 @@ locations = [
 		"category":["art"]
 		},
 	abelson = {
+		"id":"abelson",
 		"name":"Abelson-Bass-Yalem",
 		"nickname":"Abelson",
 		"coordinates":[
@@ -284,6 +297,7 @@ locations = [
 		"entrances":["harlan_e01"]
 		},
 	chapelsField = {
+		"id":"chapelsField",
 		"name":"Chapels Field",
 		"nickname":"Chapels Field",
 		"coordinates":[
@@ -294,6 +308,7 @@ locations = [
 		"category":["lawn"]
 		},
 	brown = {
+		"id":"brown",
 		"name":"Brown Social Science Center",
 		"nickname":"Brown",
 		"coordinates":[
@@ -356,8 +371,9 @@ locations = [
 		"coordinates":[
 			new Point(42.369289,-71.25762), 
 			new Point(42.369127,-71.256792), 
+			new Point(42.368996,-71.256845),
 			new Point(42.36915,-71.257674), 
-			new Point(42.368996,-71.256845)],
+			],
 		"category":["graduate"]
 		},
 	roseMedical = {
@@ -465,6 +481,114 @@ locations = [
 		"category":["art"],
 		"entrances":[],
 	},
+	kutz = {
+		"id":"kutz",
+		"name":"Kutz Hall",
+		"nickname":"Kutz",
+		"coordinates":[
+			new Point(42.369162, -71.256163), 
+			new Point(42.369043, -71.256226), 
+			new Point(42.369012, -71.256130), 
+			new Point(42.368903, -71.256184),
+			new Point(42.368807, -71.255841),
+			new Point(42.368912, -71.255787),
+			new Point(42.368880, -71.255647),
+			new Point(42.368997, -71.255590),
+			new Point(42.369113, -71.256013),
+			new Point(42.369151, -71.255997),
+			new Point(42.369151, -71.256053),
+			new Point(42.369131, -71.256053),],
+		"category":["offices"],
+		"entrances":["kutz_e01","Kutz_e02"],
+	},
+	mandel = {
+		"id":"mandel",
+		"name":"Mandel Center for the Humanities",
+		"nickname":"Mandel",
+		"coordinates":[
+			new Point(42.369854, -71.258567), 
+			new Point(42.369817, -71.258603), 
+			new Point(42.369811, -71.258588), 
+			new Point(42.369757, -71.258614),
+			new Point(42.369751, -71.258594),
+			new Point(42.369739, -71.258596),
+			new Point(42.369728, -71.258563),
+			new Point(42.369705, -71.258573),
+			new Point(42.369575, -71.258092),
+			new Point(42.369444, -71.258020),
+			new Point(42.369496, -71.257939),
+			new Point(42.369476, -71.257872),
+			new Point(42.369467, -71.257794),
+			new Point(42.369479, -71.257751),
+			new Point(42.369491, -71.257723),
+			new Point(42.369513, -71.257705),
+			new Point(42.369535, -71.257709),
+			new Point(42.369570, -71.257757),
+			new Point(42.369589, -71.257849),
+			new Point(42.369607, -71.257813),
+			new Point(42.369629, -71.257896),
+			new Point(42.369663, -71.257879),],
+		"category":["classroom"],
+		"entrances":["mandel_e01"],
+	},
+	golding = {
+		"id":"golding",
+		"name":"Golding Judaic Center",
+		"nickname":"Golding",
+		"coordinates":[
+			new Point(42.370371, -71.257649), 
+			new Point(42.370013, -71.258116), 
+			new Point(42.369876, -71.257926), 
+			new Point(42.370232, -71.257451),],
+		"category":["classroom"],
+		"entrances":["golding_e01"],
+	},
+	shiffman = {
+		"id":"shiffman",
+		"name":"Shiffman Humanities Center",
+		"nickname":"Shiffman",
+		"coordinates":[
+			new Point(42.369937, -71.257230), 
+			new Point(42.369831, -71.257372), 
+			new Point(42.369475, -71.256876), 
+			new Point(42.369583, -71.256729),],
+		"category":["classroom"],
+		"entrances":["shiffman_e01"],
+	},
+	olinsang = {
+		"id":"olin-sang",
+		"name":"Olin-Sang American Civilization Center",
+		"nickname":"Olin-Sang",
+		"coordinates":[
+			new Point(42.369899, -71.257850), 
+			new Point(42.369778, -71.258012), 
+			new Point(42.369392, -71.257481), 
+			new Point(42.369507, -71.257322),],
+		"category":["classroom"],
+		"entrances":["olin-sang_e01"],
+	},
+	goldfarb = {
+		"id":"goldfarb",
+		"name":"Goldfarb Library",
+		"nickname":"Goldfarb",
+		"coordinates":[
+			new Point(42.368789, -71.258209), 
+			new Point(42.368123, -71.258451), 
+			new Point(42.367935, -71.258283), 
+			new Point(42.367945, -71.258188),
+			new Point(42.367892, -71.258129),
+			new Point(42.367823, -71.258152),
+			new Point(42.367790, -71.257981),
+			new Point(42.367993, -71.257914), 
+			new Point(42.368135, -71.257891),
+			new Point(42.368118, -71.257811),
+			new Point(42.368674, -71.257622),],
+		"category":["classroom"],
+		"description": "A longer description",
+		"entrances":["goldfarb_e01"],
+	},
+
+
 
 ]
 
