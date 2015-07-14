@@ -50,8 +50,14 @@ function applyIntent(intent,entities,mic) {
         if (entities["start"] != undefined) {
             var disStart = disambiguate(entities["start"].value);
             if (!disStart) {
-                 r += " from <span class='said'>"+entities["start"].body+"</span>";
-                 Session.set("navigateFrom",entities["start"].value);
+                 if (entities["start"] == "this_loc") {
+                     r+= " from <span class='said'>this location</span>";
+                     Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+                 }
+                 else {
+                    r += " from <span class='said'>"+entities["start"].body+"</span>";
+                    Session.set("navigateFrom",entities["start"].value);
+                 }                 
             }
         }
         else {
@@ -64,7 +70,7 @@ function applyIntent(intent,entities,mic) {
         else {
             $("#result").append("<p>"+r+"...</p>");
             Router.go('/navigate');
-            $("#navform").submit();
+            
         }
     }
     else if (intent == "app_help") {

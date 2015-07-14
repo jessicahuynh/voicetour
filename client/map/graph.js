@@ -9,7 +9,12 @@ Template.graph.rendered = function () {
 	
 	var navFrom = Session.get("navigateFrom");
 	if (navFrom != "" && navFrom != null) {
-		document.getElementById("startpoint").value = navFrom;
+		if (navFrom == "this_loc") {
+			document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x +", "+Session.get("currentLocation").y+")";
+		}
+		else {
+			document.getElementById("startpoint").value = navFrom;
+		}
 	}
 	
 	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
