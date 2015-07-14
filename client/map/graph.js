@@ -122,62 +122,6 @@ Template.graph.events({
 });
 
 
-<<<<<<< HEAD
-=======
-			var r = new google.maps.Polyline({
-				path:theRoute,
-				geodesic:true,
-				strokeColor: '#000000',
-			    strokeOpacity: 1.0,
-			    strokeWeight: 4
-			});
-				
-			r.setMap(map.instance);
-
-			// google.maps.event.addListener(route, 'click', function () {
-			//   	new google.maps.InfoWindow({
-			//       	content: "description",
-			//       	maxWidth: 200,
-			// 	  	position:new google.maps.LatLng(start.x,start.y)
-			//   	}).open(map.instance,this);
-			// });  
-		}
-	})
-
-}
-
-function getRouteDescription(route) {
-	var r = [];
-	
-	if (document.getElementById("startpoint").value[0] == "(") {
-			// if you're in a building, return that building and go on as before
-			if (Session.get("inLocation")[1] == "in") {
-				r.push("You're currently in " + Session.get("inLocation")[0].name);
-			}
-			else {
-				r.push("You're currently at " + document.getElementById("startpoint").value +", located near "+Session.get("inLocation")[0].name);
-			}
-	}
-	else {
-		r.push("You're starting from " + document.getElementById("startpoint").value);
-	}
-		
-	if (route != null && route != undefined) {
-		for (var i = 0; i < route.length - 1; i++) {
-			var thePath = Paths.findOne({"start":route[i],"end":route[i+1]});
-			r.push(thePath.description);
-		}
-	}
-	else {
-		r.push("We don't seem to be able to find the routing data!");
-	}
-	
-	r.push("Your ending location is " + document.getElementById("endpoint").value);
-	
-	Session.set("routeToTake",r);
-}
->>>>>>> d9a261f839da7a582ac178603226372a92568527
-
 function Point(x,y) {
 	this.x = x;
 	this.y = y;
