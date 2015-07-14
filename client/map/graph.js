@@ -242,12 +242,20 @@ function addRoutes(route){
 			var r = new google.maps.Polyline({
 				path:theRoute,
 				geodesic:true,
-				strokeColor: '#00FF00',
+				strokeColor: '#000000',
 			    strokeOpacity: 1.0,
 			    strokeWeight: 4
 			});
 				
 			r.setMap(map.instance);
+
+			// google.maps.event.addListener(route, 'click', function () {
+			//   	new google.maps.InfoWindow({
+			//       	content: "description",
+			//       	maxWidth: 200,
+			// 	  	position:new google.maps.LatLng(start.x,start.y)
+			//   	}).open(map.instance,this);
+			// });  
 		}
 	})
 
