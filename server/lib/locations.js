@@ -560,6 +560,7 @@ locations = [
 			new Point(42.370232, -71.257451),],
 		"category":["classroom"],
 		"entrances":["golding_e01"],
+		"nearby":["olin-sang","mandel","lown","shiffman"]
 	},
 	shiffman = {
 		"id":"shiffman",
@@ -629,6 +630,16 @@ locations = [
 		"category":["classroom"],
 		"entrances":[],
 	},
+	{
+		"id":"lemberg",
+		"nickname":"Lemberg",
+		"name":"Lemberg Children's Center",
+		"coordinates":[
+			
+		],
+		"category":["classroom"],
+		"nearby":["rabbSchool"]
+	}
 
 
 ]
