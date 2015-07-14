@@ -67,6 +67,23 @@ function applyIntent(intent,entities,mic) {
             $("#navform").submit();
         }
     }
+    else if (intent == "app_help") {
+        r = "";
+        r += "<p>So you need <span class='said'>help</span>? Here are some commands you can try:</p><ul>";
+        
+        r+= "<li>Search for <span class='arg'>science</span></li>";
+        r+= "<li>How do I get to <span class='arg'>Admissions</span> from <span class='arg'>here</span>?</li>";
+        r+= "<li>Take me to <span class='arg'>the SCC</span></li>";
+        r+= "<li>Tell me about <span class='arg'>Volen</span></li>";
+        r+= "<li>When is <span class='arg'>the Faculty Club</span> open?</li>";
+        r+= "<li>Start a <span class='arg'>self-guided tour</span></li>";
+        r+= "<li>Open settings and <span class='arg'>switch to U.S. customary units</span></li>";
+        r+= "<li>Where am I?</li>";
+        
+        r+= "</ul>";
+        
+        $("#result").append(r);
+    }
 }
 
 function disambiguate(entity) {
