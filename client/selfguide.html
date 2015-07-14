@@ -10,10 +10,17 @@
 <p>{{function}}</p>
 
 <table class="table table-hover table-striped">
+  <caption>Nearby locations</caption>
+  <thead>
+    <tr>
+      <th>Name</th><th>Distance</th>
+    </tr>
+  </thead>
   <tbody>
   {{#each nearby}}
   <tr>
     <td><a href="/viewLocation/{{nearbyId}}">{{nearbyName}}</a></td>
+    <td>0.0m</td>
   </tr>
   {{/each}}
   </tbody>
