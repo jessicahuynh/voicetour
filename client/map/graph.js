@@ -84,51 +84,9 @@ Template.graph.events({
 		console.log("start " + starts);
 		console.log("end "+ ends);
 		var route = null;
-		
-		// if it starts with a (, it's your current location
-		if (starts[0] == "(") {
-			// if you're in a building, return that building and go on as before
-			if (Session.get("inLocation")[1] == "in") {
-				starts = Locations.findOne({"name":Session.get("inLocation")[0].name}).name;
-				console.log(starts);
-				
-				route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
-			}
-			// else, go from the nearest intersection
-			else {
-				var nearestIntersection = null;
-				var distNearestIntersection = 1000000000;
-				
-				var i = Intersections.find().fetch();
-				i.forEach(function(intersection) {
-					Meteor.call("distance",
-						Session.get("currentLocation"),
-						intersection.coordinate,
-						function(error,data) {
-							if (error) {
-								console.log(error);
-							}
-							else {
-								if (data < distNearestIntersection) {
-									distNearestIntersection = data;
-									nearestIntersection = intersection.id;
-									
-									route = getShortestRoute([nearestIntersection],Locations.findOne({"name":ends}).entrances);
-									console.log("*" + route);
-									if (route != null) {
-										getRouteDescription(route);
-									}
-								}
-							}
-						});
-				});				
-				
-			}
-		}
-		// a location searched for
-		else {
-			route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
-		}
+		route = getRoute(starts, ends);
+
+		Session.set("route",route);
 		getRouteDescription(route);
 		addMarkers(route);
 		addRoutes(route);
@@ -160,91 +118,12 @@ Template.graph.events({
 		});			
 		// document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
 		
-	}
-
+	},
 });
 
-function getShortestRoute(startEntrances,endEntrances) {
-	var theShortestDist = 1000000000;
-	var shortestRoute = null;
-	if (startEntrances != undefined && endEntrances != undefined) {
-		shortestRoute = graph.findShortestPath(startEntrances[0],endEntrances[0]);
-		
-		var currentRouteDist = 0;
-	
-		if (startEntrances.length > 0 && endEntrances.length > 0) {
-			startEntrances.forEach(function (startEntrance) {
-				endEntrances.forEach(function (endEntrance) {
-					var currentRoute = graph.findShortestPath(startEntrance, endEntrance);
-	
-					// if there's no route between the entrances, skip
-					if (currentRoute != null) {
-						for (var i = 0; i < currentRoute.length - 2; i++) {
-							currentRouteDist += Paths.findOne({ "start": currentRoute[i], "end": currentRoute[i + 1] }).distance;
-						}
-		
-						// console.log(currentRoute + " " + currentRouteDist);
-		
-						if (currentRouteDist < theShortestDist) {
-							theShortestDist = currentRouteDist;
-							shortestRoute = currentRoute;
-						}
-					}
-	
-					currentRouteDist = 0;
-				});
-			});
-		}
-	}
 
-	console.log(shortestRoute);
-	return shortestRoute;
-}
-
-function addMarkers(route){
-	var all_points=Intersections.find().fetch();
-	function findId(data, idToLookFor) {
-	    for (var i = 0; i < all_points.length; i++) {
-	        if (all_points[i].id == idToLookFor) {
-	            return(all_points[i].coordinate);
-	        }
-	    }
-	}
-
-	route.forEach(
-		function(stop) {
-			var stopLoc=findId(all_points,stop);
-			GoogleMaps.load();
-			GoogleMaps.ready('navMap',function(map) {
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
-					map:map.instance
-				});
-			})
-		}
-	);
-}
-
-function addRoutes(route){
-	var all_points=Intersections.find().fetch();
-	function findId(data, idToLookFor) {
-	    for (var i = 0; i < all_points.length; i++) {
-	        if (all_points[i].id == idToLookFor) {
-	            return(all_points[i].coordinate);
-	        }
-	    }
-	}
-
-	GoogleMaps.ready('navMap',function(map){
-		for(var j = 0; j<route.length; j++){
-			var start= findId(all_points,route[j]);
-			var end = findId(all_points,route[j+1]);
-			var theRoute = [
-				new google.maps.LatLng(start.x,start.y),
-				new google.maps.LatLng(end.x,end.y),
-			];
-			// var contentString = "<b>" + start + "</b> to <b>" + end+"</b>: "+description+"<br>";
-
+<<<<<<< HEAD
+=======
 			var r = new google.maps.Polyline({
 				path:theRoute,
 				geodesic:true,
@@ -297,6 +176,7 @@ function getRouteDescription(route) {
 	
 	Session.set("routeToTake",r);
 }
+>>>>>>> d9a261f839da7a582ac178603226372a92568527
 
 function Point(x,y) {
 	this.x = x;

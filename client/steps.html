@@ -1,0 +1,30 @@
+<template name="steps">
+<h1 class="page-header">Navigate</h1>
+
+<div class="row">
+
+<div class="col-sm-6">
+	<form id="navstepform" name="navstepform">
+		<div class="form-group">
+			<label for="endpoint">Destination</label>
+			{{end}}
+		</div>
+	</form>
+	
+	<div id="map-nav" style="width:400px; height:400px">
+		{{> googleMap name="navMap" options=navMapOptions}}
+	</div>
+</div>
+
+<!-- <div class="col-sm-6">
+	<ul>
+		{{#each stops}}
+		<li>{{stopDescription}}</li>
+		{{/each}}
+	</ul>
+</div> -->
+
+</div>
+
+
+</template>
