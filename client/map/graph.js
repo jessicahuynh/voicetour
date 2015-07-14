@@ -1,3 +1,17 @@
+// Tracker.autorun(function (){
+// 	var startLoc = Session.get("navigateFrom");
+// 	var endLoc = Session.get("navigateTo");
+// 	GoogleMaps.load();
+// 	GoogleMaps.ready('navMap',function(map) {
+// 		var marker = new google.maps.Marker({
+// 			position: map.options.center,
+// 			map: map.instance
+// 		});
+// 	});
+// 	$("#navform").submit();
+
+// })
+
 Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
 	console.log(graph);	
