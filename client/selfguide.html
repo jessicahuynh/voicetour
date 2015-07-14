@@ -1,13 +1,24 @@
 <template name="selfguide">
-<h1 class="page-header">Self-Guided Tour</h1>
+  {{#with currentLoc}}
+<h1 class="page-header">{{name}}</h1>
 
 <div class="alert alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Welcome to the self-guided tour!</strong> Feel free to walk around campus and watch information flow past your screen.
 </div>
 
-{{#with currentLoc}}
-{{name}}
+<p>{{function}}</p>
+
+<table class="table table-hover table-striped">
+  <tbody>
+  {{#each nearby}}
+  <tr>
+    <td><a href="/viewLocation/{{nearbyId}}">{{nearbyName}}</a></td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
+
 {{/with}}
 
 </template>
