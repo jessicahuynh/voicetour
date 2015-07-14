@@ -23,7 +23,7 @@ paths_southcampus=[
 },
 {
     "start":"library_c01",
-    "end":"library_e01",
+    "end":"goldfarb_e01",
     "description": "Walk along the red brick towards the entrance and here is Libray",
 },
 {
@@ -172,7 +172,7 @@ paths_southcampus=[
     "description": "Walk along the raod on your right side",
 },
 {
-    "start":"library_e01",
+    "start":"goldfarb_e01",
     "end":"library_c01",
     "description": "Exit Libray and walk along the red brick to the road",
 },
@@ -728,8 +728,18 @@ paths_southcampus=[
 },
 {
     "start":"usdan_c01",
+    "end":"rosenstiel_c03",
+    "description":"Keeping the castle on your left, walk down the main road."  
+},
+{
+    "start":"usdan_c01",
     "end":"usdan_c02",
     "description": "Take either the left road, or the stairs straight ahead to Usdan",
+},
+{
+    "start":"usdan_c02",
+    "end":"usdan_c01",
+    "description":"Keep Usdan behind you on your left and walk along the main road downhill in the direction of the castle."
 },
 {
     "start":"rubenstein_c16",
@@ -739,22 +749,37 @@ paths_southcampus=[
 {
     "start":"usdan_c01",
     "end":"rubenstein_c16",
-    "description": "With the castle on your right, continue up to the next intersection with loop road",
+    "description": "With the castle on your right, continue up to the next intersection with loop road.",
 },
 {
     "start":"usdan_c02",
     "end":"usdan_c03",
-    "description": "Continue walking with Usdan on your right",
+    "description": "Continue walking with Usdan on your right.",
+},
+{
+    "start":"usdan_c03",
+    "end":"usdan_c02",
+    "description":"Continue walking with Usdan on your left."    
 },
 {
     "start":"usdan_c03",
     "end":"usdan_c04",
-    "description": "Walk right passed the statue and under the overhead building bridge to Usdan",
+    "description": "Walk past the statue and under the overhead building bridge to Usdan.",
+},
+{
+    "start":'usdan_c04',
+    "end":"usdan_c03",
+    "description":"Go right under the overhead building bridge, keeping right and going past the gray statue."
 },
 {
     "start":"usdan_c02",
     "end":"usdan_c04",
-    "description": "Walk left passed the statue and under the overhead building bridge to Usdan",
+    "description": "Walk left past the statue and under the overhead building bridge to Usdan",
+},
+{
+    "start":"usdan_c04",
+    "end":"usdan_c02",
+    "description":"Keep left, walking under the overhead building bridge and past the statue."    
 },
 {
     "start":"rosenstiel_e01",
@@ -831,6 +856,45 @@ paths_southcampus=[
     "end":"library_c05",
     "description": "Walk toward the little triangular graden.",
 },
-
+{
+    "start":"rosenstiel_c04",
+    "end":"rosenstiel_c01",
+    "description": "Walk up the slope on Loop Road.",
+},
+{
+    "start":"rosenstiel_c01",
+    "end":"rosenstiel_c04",
+    "description": "Walk down the slope on Loop Road.",
+},
+{
+    "start":"kutz_c05",
+    "end":"rubenstein_c16",
+    "description": "Walk along the Loop Road.",
+},
+{
+    "start":"rubenstein_c16",
+    "end":"kutz_c05",
+    "description": "Walk along the Loop Road.",
+},
+{
+    "start":"kutz_c05",
+    "end":"cable_c01",
+    "description": "Get off the Loop Road and walk along the samller road.",
+},
+{
+    "start":"cable_c01",
+    "end":"kutz_c05",
+    "description": "Get off the Loop Road and walk along the samller road.",
+},
+{
+    "start":"usdan_e01",
+    "end":"usdan_c04",
+    "description": "Exit Usdan and turn left.",
+},
+{
+    "start":"usdan_e01",
+    "end":"usdan_c04",
+    "description": "The entance is on your right.",
+},
 
 ]

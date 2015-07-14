@@ -56,7 +56,12 @@ points_southcampus = [
     "type": "entrance",
 },
 {
-    "id": "library_e01",
+    "id": "mandel_e02",
+    "coordinate":new Point(42.369723, -71.258568),
+    "type": "entrance",
+},
+{
+    "id": "goldfarb_e01",
     "coordinate":new Point(42.367939, -71.258273 ),
     "type": "entrance",
 },
@@ -117,6 +122,11 @@ points_southcampus = [
     "type": "entrance",
 },
 {
+    "id": "kutz_e02",
+    "coordinate":new Point(42.368952, -71.255629),
+    "type": "entrance",
+},
+{
     "id": "kutz_c01",
     "coordinate":new Point(42.368811, -71.256215),
     "type": "crossing",
@@ -128,8 +138,18 @@ points_southcampus = [
 },
 {
     "id": "kutz_c03",
-    "coordinate":new Point(42.368649, -71.256749),
+    "coordinate":new Point(42.368711, -71.256959),
     "type": "crossing",
+},
+{
+    "id":"kutz_c04",
+    "coordinate":new Point(42.368973, -71.256367),
+    "type":"crossing"
+},
+{
+    "id":"kutz_c05",
+    "coordinate":new Point(42.368438, -71.256215),
+    "type":"crossing"
 },
 {
     "id": "olin-sang_e01",
@@ -275,6 +295,11 @@ points_southcampus = [
     "id": "rubenstein_c16",
     "coordinate":new Point(42.368093, -71.255947),
     "type": "crossing",
+},
+{
+    "id": "usdan_e01",
+    "coordinate":new Point(42.368067, -71.256704),
+    "type": "entrance",
 },
 {
     "id": "usdan_c01",

@@ -13,12 +13,11 @@ Template.graph.rendered = function () {
 	}
 	
 	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
-		document.getElementById("routeButton").click();
+		$("#navform").submit()
 	}
 	else {
 		if (navTo != "" && navTo != null) {
-			$("#getCurrentLoc").click();
-			console.log(document.getElementById("endpoint").value);
+			Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 			$("#navform").submit();
 			console.log("submitted");
 		}
@@ -77,6 +76,8 @@ Template.graph.events({
 		
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
+		console.log("start " + starts);
+		console.log("end "+ ends);
 		var route = null;
 		
 		// if it starts with a (, it's your current location
