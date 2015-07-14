@@ -47,6 +47,10 @@ Template.footer.events({
         else {
             $(".mic").css("color","#333333");
         }
+    },
+    'click #close-popover':function(event) {
+        event.preventDefault();
+        $("#speechText").toggle();
     }
     // 'click #voiceInputButton':function(event) {
     //     navigator.getUserMedia = (navigator.getUserMedia || 

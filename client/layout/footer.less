@@ -52,11 +52,11 @@ footer {
     display:none;
     position:fixed;
     right:20px;
-    bottom:80px;
+    bottom:75px;
     width:320px;
     min-height:6em;
     border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 6px;
+    border-radius: 0;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     z-index:450;
@@ -64,11 +64,29 @@ footer {
     color:#eee;
     
     span.said {
-      color:#FF3F4E
+      color:#FF3F4E;
+    }
+    
+    span.arg {
+      color:#FF8906;
+    }
+    
+    #close-popover {
+      color:#eee;
+      font-size:150%;
+      border:0;
+      background-color:transparent;
+      padding:.25em;
     }
 }
 
-
+@media (max-width:768px) {
+    #speechText {
+      right:0;
+      bottom:65px;
+      width:100%;
+    }
+}
   
 
 /* microphone.css 0.7.0 */
