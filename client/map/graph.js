@@ -122,30 +122,6 @@ Template.graph.events({
 });
 
 
-<<<<<<< HEAD
-=======
-			var r = new google.maps.Polyline({
-				path:theRoute,
-				geodesic:true,
-				strokeColor: '#000000',
-			    strokeOpacity: 1.0,
-			    strokeWeight: 4
-			});
-				
-			r.setMap(map.instance);
-
-			// google.maps.event.addListener(route, 'click', function () {
-			//   	new google.maps.InfoWindow({
-			//       	content: "description",
-			//       	maxWidth: 200,
-			// 	  	position:new google.maps.LatLng(start.x,start.y)
-			//   	}).open(map.instance,this);
-			// });  
-		}
-	})
-
-}
-
 function getRouteDescription(route) {
 	var r = [];
 	
@@ -176,7 +152,6 @@ function getRouteDescription(route) {
 	
 	Session.set("routeToTake",r);
 }
->>>>>>> d9a261f839da7a582ac178603226372a92568527
 
 function Point(x,y) {
 	this.x = x;
