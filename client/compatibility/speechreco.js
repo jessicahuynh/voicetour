@@ -85,6 +85,8 @@ function applyIntent(intent,entities,mic) {
         r+= "<li>Start a <span class='arg'>self-guided tour</span></li>";
         r+= "<li>Open settings and <span class='arg'>switch to U.S. customary units</span></li>";
         r+= "<li>Where am I?</li>";
+        r+= "<li>What's nearby?</li>";
+        r+= "<li>What's happening <span class='arg'>here</span>?</li>";
         
         r+= "</ul>";
         
