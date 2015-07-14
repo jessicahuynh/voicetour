@@ -15,7 +15,7 @@ locations = [
 						(examples include experimental psychology, computational neuroscience, and cellular \
 						and molecular neurobiology).",
 		"category":["science","classroom","offices"],
-		"entrances":["volen_e01","volen_ie02"]
+		"entrances":["volen_e01","volen_ie02","volen_ie03"]
 	},
 	{
 		"id":"scc",
