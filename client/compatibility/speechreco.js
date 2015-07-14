@@ -84,6 +84,18 @@ function applyIntent(intent,entities,mic) {
         
         $("#result").append(r);
     }
+    else if (intent == "get_current_loc") {
+        r = "";
+        
+        r += "<p>You're currently at <span class='arg'>"+Session.get("inLocation")[0].name+"</span>.</p>";
+        r += "<p>Welcome!</p>";
+        
+        $("#result").append(r);
+        
+        var loc = Locations.findOne({"name":Session.get("inLocation")[0].name});
+        Session.setPersistent("viewLocation",loc._id);
+        Router.go('/viewLocation/'+loc._id);
+    }
 }
 
 function disambiguate(entity) {
