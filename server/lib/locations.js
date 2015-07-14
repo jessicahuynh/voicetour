@@ -618,7 +618,7 @@ locations = [
 	pearlman = {
 		"id":"pearlman",
 		"name":"Pearlman Hall",
-		"nickname":"pearlman",
+		"nickname":"Pearlman",
 		"coordinates":[
 			new Point(42.367619, -71.258118), 
 			new Point(42.367577, -71.257855), 
