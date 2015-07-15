@@ -36,13 +36,16 @@ Template.steps.rendered = function () {
 		
 
 	Session.set("current","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+	
+	
+	var navFrom = Session.get("current");
 	route = Session.get("route");
 	console.log(route);
-	var navFrom = Session.get("current");
-/*	var navFrom = route[0];*/
-	var navTo = route[route.length - 1];
+	var navTo = Session.get("destination");
+	route = getRoute(navFrom, navTo);
+	console.log(route);
 	console.log("from "+navFrom+" to "+navTo);
-	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
+	if (navTo != "" && navTo != null && navFrom != null && navFrom != "" && route != null) {
 		getRouteDescription(route);
 		addMarkers(route);
 		addRoutes(route);
@@ -60,6 +63,16 @@ Template.steps.onCreated(function() {
 		});
 	});
 });
+
+/*Tracker.autorun(function (c) {
+  if (! Session.equals("shouldStop", true)){
+
+  }
+    return;
+
+  c.stop();
+  alert("Oh no!");
+});*/
 
 function getRouteDescription(route) {
 	var r = [];
