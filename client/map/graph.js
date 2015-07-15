@@ -12,6 +12,7 @@
 
 // })
 
+
 Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/
@@ -106,6 +107,7 @@ Template.graph.events({
 		getRouteDescription(route);
 		addMarkers(route);
 		addRoutes(route);
+
 	},
 	"click input":function(event) {
 		event.target.value = '';

@@ -437,7 +437,7 @@ locations = [
 			new Point(42.364998,-71.253952), 
 			new Point(42.364449,-71.254864)],
 		"category":["athletics"],
-		"entrances":["gosman_e01","gosman_e02","gosman_e03","gosman_e04"],
+		"entrances":["gosman_e01"],
 		},
 	linsey = {
 		"id":"linsey",
