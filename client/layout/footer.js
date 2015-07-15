@@ -50,7 +50,7 @@ Template.footer.events({
     },
     'click #close-popover':function(event) {
         event.preventDefault();
-        $("#speechText").toggle();
+        $("#speechText").toggle("slow");
     }
     // 'click #voiceInputButton':function(event) {
     //     navigator.getUserMedia = (navigator.getUserMedia || 

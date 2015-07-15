@@ -6,7 +6,8 @@
 	<div>
 		<div id="locations">
 			{{#ifEsInputIsEmpty index="locations" id="searchBox"}}
-			<p>Search for something!</p>
+			<p id="searchForSomething">Search for something!</p>
+				{{> voiceResults}}
 			{{/ifEsInputIsEmpty}}
 
 			{{#ifEsIsSearching index="locations" id="searchBox"}}
@@ -25,4 +26,10 @@
 		</div>
 	</div>
 </div>
+</template>
+
+<template name="voiceResults">
+{{#each vresults}}
+	{{> locationListing}}
+{{/each}}
 </template>
