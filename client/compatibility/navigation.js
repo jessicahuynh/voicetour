@@ -119,9 +119,10 @@ function addRoutes(route){
 	}
 
 	GoogleMaps.ready('navMap',function(map){
-		for(var j = 0; j<route.length; j++){
+		for(var j = 0; j<route.length - 1; j++){
 			var start= findId(all_points,route[j]);
 			var end = findId(all_points,route[j+1]);
+
 			var theRoute = [
 				new google.maps.LatLng(start.x,start.y),
 				new google.maps.LatLng(end.x,end.y),

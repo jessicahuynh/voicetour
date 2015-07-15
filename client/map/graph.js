@@ -14,7 +14,7 @@
 
 Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
-	console.log(graph);	
+	/*console.log(graph);	*/
 	
 	var navTo = Session.get("navigateTo");
 	if (navTo != "" && navTo != null) {
@@ -31,18 +31,13 @@ Template.graph.rendered = function () {
 		}
 	}
 	
-	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
-		
+	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {	
 		$("#navform").submit();
-		Session.set("end", navTo);
-		Session.set("start",navFrom);
 	}
 	else {
 		if (navTo != "" && navTo != null) {
 			Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 			$("#navform").submit();
-			Session.set("end", navTo);
-			Session.set("start",navFrom);
 			console.log("submitted");
 		}
 	}
@@ -106,6 +101,8 @@ Template.graph.events({
 		route = getRoute(starts, ends);
 
 		Session.set("route",route);
+		Session.set("destination", ends);
+		
 		getRouteDescription(route);
 		addMarkers(route);
 		addRoutes(route);

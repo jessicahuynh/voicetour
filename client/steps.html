@@ -7,13 +7,16 @@
 	<form id="navstepform" name="navstepform">
 		<div class="form-group">
 			<label for="endpoint">Destination</label>
-			{{end}}
+			{{destination}}
+			<br/>
+			{{step}}
 		</div>
 	</form>
 	
 	<div id="map-nav" style="width:400px; height:400px">
 		{{> googleMap name="navMap" options=navMapOptions}}
 	</div>
+	<button type="click" id="refreshMap" name="refreshMap" class="btn btn-primary">Refresh</button>
 </div>
 
 <!-- <div class="col-sm-6">

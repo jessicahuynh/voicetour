@@ -1,9 +1,8 @@
 
 
 Template.steps.helpers({
-	end: function() {
-		console.log(Session.get("end"));
-		return Session.get("end");
+	destination: function() {
+		return Session.get("destination");
 	},
 	navMapOptions: function() {
 		if (GoogleMaps.loaded()) {
@@ -13,18 +12,36 @@ Template.steps.helpers({
 				zoom:17
 			};
 		}
+	},
+	step: function() {
+		return Session.get("step");
+	}
+});
+
+Template.steps.events({
+	"click #refreshMap" : function(event) {
+		if (GoogleMaps.loaded()) {
+			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
+			return {
+				center: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
+				zoom:17
+			};
+		}
+		google.maps.event.trigger(map, 'resize');
 	}
 });
 
 Template.steps.rendered = function () {
 	graph = new Graph(Map.findOne());
-	console.log(graph);	
+		
 
 	Session.set("current","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
-	var navTo = Session.get("end");
-	var navFrom = Session.get("start");
-/*	var navFrom = Session.get("current");*/
-	route = getRoute(navTo, navFrom);
+	route = Session.get("route");
+	console.log(route);
+	var navFrom = Session.get("current");
+/*	var navFrom = route[0];*/
+	var navTo = route[route.length - 1];
+	console.log("from "+navFrom+" to "+navTo);
 	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
 		getRouteDescription(route);
 		addMarkers(route);
@@ -55,7 +72,5 @@ function getRouteDescription(route) {
 		r.push("We don't seem to be able to find the routing data!");
 	}
 	
-	r.push("Your ending location is " + document.getElementById("endpoint").value);
-	
-	Session.set("routeToTake",r);
+	Session.set("step",r);
 }
