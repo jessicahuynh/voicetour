@@ -28,7 +28,6 @@ function displayVoiceSearchResults() {
 					console.log(err);
 				}
 				else {
-					$("#searchForSomething").css({"display":"none"});
 					console.log(data.results);
 					Session.set("vresults",data.results);
 				}

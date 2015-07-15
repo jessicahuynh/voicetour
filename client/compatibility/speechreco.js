@@ -122,6 +122,17 @@ function applyIntent(intent,entities,mic) {
         Session.setPersistent("viewLocation",loc._id);
         Router.go('/viewLocation/'+loc._id);
     }
+    else if (intent == "start_tour") {
+        if (entities["tour_type"] != undefined) {
+            if (entities["tour_type"].value = "self") {
+                r += "<p>Starting up the <span class='said'>self-guided</span> tour...</p>";
+                
+                $("#result").append(r);
+                
+                Router.go('/selfguide');
+            }
+        }
+    }
 }
 
 function disambiguate(entity) {
