@@ -6,7 +6,6 @@ offCampus = {
 
 Template.welcome.helpers({
 	currentLocation: function () {
-		
 		return Session.get("currentLocation");
 
 	},
@@ -35,22 +34,43 @@ Template.welcome.helpers({
 		if (GoogleMaps.loaded()) {
 			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
 			return {
-				center: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
-				zoom:16
-			};
+				center:new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
+				zoom:16	
+			}
+			
 		}
 	}
 });
 
-Template.welcome.onCreated(function() {
+Template.welcome.rendered = function() {
 	GoogleMaps.load();
+// 	GoogleMaps.ready('locationMap',function(map) {
+// 		marker = new google.maps.Marker({
+// 			position: map.options.center,
+// 			map: map.instance
+// 		})
+// 		Tracker.autorun(function(map,marker){
+// 	var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
+// 	marker.setPosition(theLatLng);
+// 	map.setCenter(theLatLng);
+// });
+	
+	
 	GoogleMaps.ready('locationMap',function(map) {
 		var marker = new google.maps.Marker({
 			position: map.options.center,
 			map: map.instance
+		});
+		Tracker.autorun(function() {
+			var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
+			
+			map.instance.setCenter(theLatLng);
+			
+			marker.setPosition(theLatLng);
 		})
 	});
-});
+	
+}
 
 Template.welcome.events({
 	'click #whereAmI': function(event) {
@@ -108,9 +128,3 @@ Template.welcome.events({
 		}
 	}
 });
-
-
-function Point(x,y) {
-	this.x = x;
-	this.y = y;
-}
