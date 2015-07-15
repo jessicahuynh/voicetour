@@ -1,0 +1,17 @@
+<template name="nearbyLocs">
+<table class="table table-hover table-striped" id="nearbylocs">
+  <thead>
+    <tr>
+      <th>Name</th><th>Distance</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each nearby}}
+    <tr>
+      <td><a href="#" class="visitnearby">{{nearbyname}}</a></td>
+      <td class="{{nearbyindex}}">{{dist}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</template>

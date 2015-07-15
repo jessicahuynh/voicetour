@@ -15,7 +15,8 @@ locations = [
 						(examples include experimental psychology, computational neuroscience, and cellular \
 						and molecular neurobiology).",
 		"category":["science","classroom","offices"],
-		"entrances":["volen_e01","volen_ie02","volen_ie03"]
+		"entrances":["volen_e01","volen_ie02","volen_ie03"],
+		"nearby":["feldberg","gzang","goldsmith","chapelsfield"]
 	},
 	{
 		"id":"scc",
@@ -216,7 +217,8 @@ locations = [
 			new Point(42.362872,-71.259233),
 			new Point(42.362961,-71.258887),],
 		"function":"The Rabb School is home to",
-		"category":["graduate"]
+		"category":["graduate"],
+		"nearby":["lemberg"]
 		},
 	admissions = {
 		"id":"admissions",
@@ -545,7 +547,7 @@ locations = [
 						as well as in lecture halls.",
 		"category":["classroom"],
 		"entrances":["mandel_e01"],
-		"nearby":["olinsang","golding","rabbGrad", "heller"],
+		"nearby":["olin-sang","golding","rabbGrad", "heller"],
 	},
 	golding = {
 		"id":"golding",
@@ -558,6 +560,7 @@ locations = [
 			new Point(42.370232, -71.257451),],
 		"category":["classroom"],
 		"entrances":["golding_e01"],
+		"nearby":["olin-sang","mandel","lown","shiffman"]
 	},
 	shiffman = {
 		"id":"shiffman",
@@ -627,6 +630,16 @@ locations = [
 		"category":["classroom"],
 		"entrances":[],
 	},
+	{
+		"id":"lemberg",
+		"nickname":"Lemberg",
+		"name":"Lemberg Children's Center",
+		"coordinates":[
+			
+		],
+		"category":["classroom"],
+		"nearby":["rabbSchool"]
+	}
 
 
 ]
