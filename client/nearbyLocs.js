@@ -23,7 +23,7 @@ Template.nearbyLocs.helpers({
 					}
 					else {
 						var classname = ".nearbydist"+loc.id;
-						$(classname).append("about "+ Math.floor(data)+"m");
+						$(classname).html("about "+ Math.floor(data)+"m");
 						return "about "+ Math.floor(data)+"m";
 					}
 				});

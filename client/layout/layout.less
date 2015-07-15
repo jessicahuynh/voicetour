@@ -1,7 +1,7 @@
 @deis-blue: #0070FF;
 @dark-blue: #003e8c;
 
-a, input {
+a, input,button {
 	font-family:"Trebuchet MS", Helvetica, Arial, sans-serif;
 }
 /* adjust body when menu is open */
@@ -32,7 +32,7 @@ nav div.container {
 /* put toggle bars on the left :: not using button */
 #slide-nav .navbar-toggle {
     cursor: pointer;
-    position: relative;
+    position: fixed;
     line-height: 0;
     float: left;
     margin: 0;
@@ -54,11 +54,11 @@ nav div.container {
     background: #ffffff;
 }
 .navbar-header {
-    position: relative
+    position: fixed;
 }
 /* fix the navbar when active so that all the menu items are accessible */
 .navbar.navbar-fixed-top.slide-active {
-    position: relative
+    position: fixed;
 }
 .navbar-inverse {
 	background:@dark-blue;
@@ -67,6 +67,7 @@ nav div.container {
 	
 	ul.navbar-nav {
 		width:100%;
+		margin-top:3em;
 	}
 	.navbar-brand {
 		color:#ffffff;
@@ -81,7 +82,8 @@ nav div.container {
 	}
 }
 
-@media (max-width:767px) { 
+
+@media (max-width:768px) { 
 	#slide-nav .container {
 	    margin: 0;
 	    padding: 0!important;
@@ -89,6 +91,10 @@ nav div.container {
 	#slide-nav .navbar-header {
 	    margin: 0 auto;
 	    padding: 0 15px;
+		
+		.navbar-brand {
+			padding-left:2.5em;
+		}
 	}
 	#slide-nav .navbar.slide-active {
 	    position: absolute;
@@ -101,7 +107,7 @@ nav div.container {
 	    left: -100%;
 	    width: 60%;
 	    min-width: 0;
-	    position: absolute;
+	    position: fixed;
 	    padding-left: 0;
 		padding-right:0;
 		padding-top:58px;
@@ -166,7 +172,7 @@ nav div.container {
 	    position: fixed
 	}
 	.navbar-header {
-	    left: 0!important
+	    left: 0!important;
 	}
 	/* fix widths and make a sidebar */
 	#slide-nav {
