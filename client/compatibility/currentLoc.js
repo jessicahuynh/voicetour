@@ -1,4 +1,4 @@
-navigator.geolocation.getCurrentPosition(function (position) {
+navigator.geolocation.watchPosition(function (position) {
 			var current = new Point(position.coords.latitude, position.coords.longitude);
 			Session.set("currentLocation", current);
 			
