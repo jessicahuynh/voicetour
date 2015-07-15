@@ -2,36 +2,47 @@
 
 Template.steps.helpers({
 	end: function() {
-		return Session.get("navigateTo");
+		console.log(Session.get("end"));
+		return Session.get("end");
 	},
+	navMapOptions: function() {
+		if (GoogleMaps.loaded()) {
+			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
+			return {
+				center: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
+				zoom:17
+			};
+		}
+	}
 });
 
-Template.graph.rendered = function () {
+Template.steps.rendered = function () {
 	graph = new Graph(Map.findOne());
 	console.log(graph);	
 
-	route = Seesion.get("route");
-	var navTo = Session.get("navigateTo");
-	if (navTo != "" && navTo != null) {
-		document.getElementById("endpoint").value = navTo;
-	}
-	
-	var navFrom = Session.get("navigateFrom");
-	if (navFrom != "" && navFrom != null) {
-		document.getElementById("startpoint").value = navFrom;
-	}
-	
+	Session.set("current","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+	var navTo = Session.get("end");
+	var navFrom = Session.get("start");
+/*	var navFrom = Session.get("current");*/
+	route = getRoute(navTo, navFrom);
 	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
-		$("#navform").submit()
-	}
-	else {
-		if (navTo != "" && navTo != null) {
-			Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
-			$("#navform").submit();
-			console.log("submitted");
-		}
+		getRouteDescription(route);
+		addMarkers(route);
+		addRoutes(route);
+	}else {
+		alert("please enter the destination!");
 	}
 };
+
+Template.steps.onCreated(function() {
+	GoogleMaps.load();
+	GoogleMaps.ready('navMap',function(map) {
+		var marker = new google.maps.Marker({
+			position: map.options.center,
+			map: map.instance
+		});
+	});
+});
 
 function getRouteDescription(route) {
 	var r = [];

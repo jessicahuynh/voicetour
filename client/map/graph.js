@@ -18,12 +18,17 @@ Template.graph.rendered = function () {
 	}
 	
 	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
-		$("#navform").submit()
+		
+		$("#navform").submit();
+		Session.set("end", navTo);
+		Session.set("start",navFrom);
 	}
 	else {
 		if (navTo != "" && navTo != null) {
 			Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 			$("#navform").submit();
+			Session.set("end", navTo);
+			Session.set("start",navFrom);
 			console.log("submitted");
 		}
 	}
@@ -118,6 +123,10 @@ Template.graph.events({
 		});			
 		// document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
 		
+	},
+	"click #stepsButton":function(event) {
+		event.preventDefault();
+		Router.go('/steps');
 	},
 });
 
