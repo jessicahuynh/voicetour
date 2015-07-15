@@ -1,6 +1,7 @@
 var disambiguationChoices = [];
 
 function applyIntent(intent,entities,mic) {
+    var r = "";
     if (intent == "search_for_loc") {
        var searchTerm;
        if (entities["deis_loc"] != undefined) {
@@ -28,7 +29,7 @@ function applyIntent(intent,entities,mic) {
        Router.go('/search');
     }
     else if (intent == "navigate") {
-        var r = "Navigating to ";
+        r += "Navigating to ";
         var disDestination = "";
         if (entities["end"] != undefined) {
            disDestination = disambiguate(entities["end"].value);
@@ -74,26 +75,25 @@ function applyIntent(intent,entities,mic) {
         }
     }
     else if (intent == "app_help") {
-        r = "";
+       
         r += "<p>So you need <span class='said'>help</span>? Here are some commands you can try:</p><ul>";
         
         r+= "<li>Search for <span class='arg'>science</span></li>";
         r+= "<li>How do I get to <span class='arg'>Admissions</span> from <span class='arg'>here</span>?</li>";
         r+= "<li>Take me to <span class='arg'>the SCC</span></li>";
         r+= "<li>Tell me about <span class='arg'>Volen</span></li>";
-        r+= "<li>When is <span class='arg'>the Faculty Club</span> open?</li>";
-        r+= "<li>Start a <span class='arg'>self-guided tour</span></li>";
-        r+= "<li>Open settings and <span class='arg'>switch to U.S. customary units</span></li>";
+        //r+= "<li>When is <span class='arg'>the Faculty Club</span> open?</li>";
+        //r+= "<li>Start a <span class='arg'>self-guided tour</span></li>";
+        //r+= "<li>Open settings and <span class='arg'>switch to U.S. customary units</span></li>";
         r+= "<li>Where am I?</li>";
-        r+= "<li>What's nearby?</li>";
-        r+= "<li>What's happening <span class='arg'>here</span>?</li>";
+        //r+= "<li>What's nearby?</li>";
+        //r+= "<li>What's happening <span class='arg'>here</span>?</li>";
         
         r+= "</ul>";
         
         $("#result").append(r);
     }
     else if (intent == "get_current_loc") {
-        r = "";
         
         r += "<p>You're currently at <span class='arg'>"+Session.get("inLocation")[0].name+"</span>.</p>";
         r += "<p>Welcome!</p>";
@@ -101,6 +101,24 @@ function applyIntent(intent,entities,mic) {
         $("#result").append(r);
         
         var loc = Locations.findOne({"name":Session.get("inLocation")[0].name});
+        Session.setPersistent("viewLocation",loc._id);
+        Router.go('/viewLocation/'+loc._id);
+    }
+    else if (intent == "get_info_about_loc") {
+        var loc = null;
+        if (entities["deis_loc"].value == "this_loc") {
+            loc = Locations.findOne({"name":Session.get("inLocation")[0].name});
+            console.log(loc);
+        }
+        else {
+            loc = Locations.findOne({"name":entities["deis_loc"].value});
+        }
+        
+        r += "<p>"+loc.function+"</p>";
+        r += "<p>And here's more info for your perusal.";
+        
+        $("#result").append(r);
+        
         Session.setPersistent("viewLocation",loc._id);
         Router.go('/viewLocation/'+loc._id);
     }

@@ -45,7 +45,12 @@ Template.footer.events({
             $(".mic").css("color","#FF3F4E");
         }
         else {
-            $(".mic").css("color","#333333");
+            if ($(window).width() > 768) {
+                $(".mic").css("color","#333333");
+            }
+            else {
+                $(".mic").css("color","#eeeeee");
+            }
         }
     },
     'click #close-popover':function(event) {
