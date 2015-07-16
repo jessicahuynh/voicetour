@@ -77,15 +77,6 @@ Template.graph.helpers({
 	}
 });
 
-// Template.graph.onCreated(function() {
-// 	GoogleMaps.load();
-// 	GoogleMaps.ready('navMap',function(map) {
-// 		var marker = new google.maps.Marker({
-// 			position: map.options.center,
-// 			map: map.instance
-// 		});
-// 	});
-// });
 
 Template.graph.events({
 	"submit #navform": function(event){
