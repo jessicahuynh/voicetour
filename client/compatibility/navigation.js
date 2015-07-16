@@ -95,21 +95,26 @@ function addMarkers(route,mapOpt){
 	            return(all_points[i].coordinate);
 	        }
 	    }
-	}
+	};
 	console.log(route);
-	route.forEach(
-		function(stop) {
-			var stopLoc=findId(stop);
-			GoogleMaps.load();
-			GoogleMaps.ready(mapOpt,function(map) {
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
-					map:map.instance
-				});
-				markers.push(marker);
-			})
-		}
-	);
+
+
+	var startLoc= findId(route[0]);
+	var stopLoc=findId(route[route.length-1]);
+	GoogleMaps.load();
+	GoogleMaps.ready(mapOpt,function(map) {
+		var markerA = new google.maps.Marker({
+			position: new google.maps.LatLng(startLoc.x,startLoc.y),
+			map:map.instance
+		});
+		var markerB = new google.maps.Marker({
+			position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
+			map:map.instance
+		});
+		markers.push(markerA);
+		markers.push(markerB);
+	})
+
 }
 
 var routes = [];
