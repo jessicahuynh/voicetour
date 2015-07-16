@@ -1,18 +1,3 @@
-// Tracker.autorun(function (){
-// 	var startLoc = Session.get("navigateFrom");
-// 	var endLoc = Session.get("navigateTo");
-// 	GoogleMaps.load();
-// 	GoogleMaps.ready('navMap',function(map) {
-// 		var marker = new google.maps.Marker({
-// 			position: map.options.center,
-// 			map: map.instance
-// 		});
-// 	});
-// 	$("#navform").submit();
-
-// })
-
-
 Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/
@@ -42,6 +27,18 @@ Template.graph.rendered = function () {
 			console.log("submitted");
 		}
 	}
+
+	GoogleMaps.load();
+	GoogleMaps.ready('navMap',function(map) {
+		var marker = new google.maps.Marker({
+			position: map.options.center,
+			map: map.instance
+		});
+		markers[0] = marker;
+	});
+
+
+
 };
 
 Template.graph.helpers({
@@ -80,20 +77,22 @@ Template.graph.helpers({
 	}
 });
 
-Template.graph.onCreated(function() {
-	GoogleMaps.load();
-	GoogleMaps.ready('navMap',function(map) {
-		var marker = new google.maps.Marker({
-			position: map.options.center,
-			map: map.instance
-		});
-	});
-});
+// Template.graph.onCreated(function() {
+// 	GoogleMaps.load();
+// 	GoogleMaps.ready('navMap',function(map) {
+// 		var marker = new google.maps.Marker({
+// 			position: map.options.center,
+// 			map: map.instance
+// 		});
+// 	});
+// });
 
 Template.graph.events({
 	"submit #navform": function(event){
 		event.preventDefault();
 		
+
+
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
 		console.log("start " + starts);
@@ -104,10 +103,18 @@ Template.graph.events({
 		Session.set("route",route);
 		Session.set("destination", ends);
 		
-		getRouteDescription(route);
-		addMarkers(route);
-		addRoutes(route);
+		GoogleMaps.ready('navMap',function(map){
 
+			for(var i=0;i<markers.length;i++){
+				markers[i].setMap(null);
+			}
+			for(var j=0;j<routes.length;j++){
+				routes[j].setMap(null);
+			}
+			getRouteDescription(route);
+			addMarkers(route,'navMap');
+			addRoutes(route,'navMap');
+		});
 	},
 	"click input":function(event) {
 		event.target.value = '';
