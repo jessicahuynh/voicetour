@@ -84,8 +84,14 @@ function applyIntent(intent,entities,mic) {
             }
             else {
                 $("#result").append("<p>"+r+"...</p>");
-                Router.go('/navigate');
-                
+                if (Router.current().route.path() == "/navigate") {
+                    document.getElementById("startpoint").value = Session.get("navigateFrom");
+                    document.getElementById("endpoint").value = Session.get("navigateTo");
+                    $("#navform").submit();
+                }
+                else {
+                     Router.go('/navigate');
+                }  
             }
         }
         else if (intent == "app_help") {
