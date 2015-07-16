@@ -1,4 +1,4 @@
-
+markers = [];
 
 Template.steps.helpers({
 	destination: function() {
@@ -43,6 +43,8 @@ Template.steps.rendered = function () {
 	console.log(route);
 	var navTo = Session.get("destination");
 	route = getRoute(navFrom, navTo);
+	firststep = route[0];
+	secondstep = route[1];
 	console.log(route);
 	console.log("from "+navFrom+" to "+navTo);
 	if (navTo != "" && navTo != null && navFrom != null && navFrom != "" && route != null) {
@@ -86,4 +88,28 @@ function getRouteDescription(route) {
 	}
 	
 	Session.set("step",r);
+}
+
+function findId(data, idToLookFor) {
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].id == idToLookFor) {
+            return(data[i].coordinate);
+        }
+    }
+}
+
+function addMarkers(route){
+	var all_points=Intersections.find().fetch();
+	route.forEach(
+		function(stop) {
+			var stopLoc=findId(all_points,stop);
+			GoogleMaps.load();
+			GoogleMaps.ready('navMap',function(map) {
+				var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
+					map:map.instance
+				});
+			})
+		}
+	);
 }
