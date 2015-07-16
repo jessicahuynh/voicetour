@@ -46,27 +46,6 @@ Template.layout.rendered = function() {
    
    slide();
    
-   if (window.location.pathname.indexOf("viewLocation") > -1) {
-       $("#back").css({
-			"font-size":"2em",
-			"display":"block",
-			"float":"left",
-			"width":"30px",
-			"height":"100%",
-			"padding-top":"5px",
-			"padding-left":"8px",
-			"color":"#eeeeee"
-		});
-		var boxWidth = $(window).width()-90;
-		$("#searchBox").css({
-			"display":"block",
-			"width":JSON.stringify(boxWidth),
-			"float":"left",
-			"margin-left":"12px"
-		});
-		$("#clearBack").css("display","block");
-   }
-   
    document.getElementById("searchBox").value = Session.get("searchTerm");
 };
 
