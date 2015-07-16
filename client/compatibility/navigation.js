@@ -84,33 +84,40 @@ function getShortestRoute(startEntrances,endEntrances) {
 	return shortestRoute;
 }
 
-function addMarkers(route){
+var markers = [];
+
+function addMarkers(route,mapOpt){
+	// markers=route;
 	var all_points=Intersections.find().fetch();
-	function findId(data, idToLookFor) {
+	function findId(idToLookFor) {
 	    for (var i = 0; i < all_points.length; i++) {
 	        if (all_points[i].id == idToLookFor) {
 	            return(all_points[i].coordinate);
 	        }
 	    }
 	}
-
+	console.log(route);
 	route.forEach(
 		function(stop) {
-			var stopLoc=findId(all_points,stop);
+			var stopLoc=findId(stop);
 			GoogleMaps.load();
-			GoogleMaps.ready('navMap',function(map) {
+			GoogleMaps.ready(mapOpt,function(map) {
 				var marker = new google.maps.Marker({
 					position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
 					map:map.instance
 				});
+				markers.push(marker);
 			})
 		}
 	);
 }
 
-function addRoutes(route){
+var routes = [];
+
+function addRoutes(route,mapOpt){
+
 	var all_points=Intersections.find().fetch();
-	function findId(data, idToLookFor) {
+	function findId(idToLookFor) {
 	    for (var i = 0; i < all_points.length; i++) {
 	        if (all_points[i].id == idToLookFor) {
 	            return(all_points[i].coordinate);
@@ -118,10 +125,10 @@ function addRoutes(route){
 	    }
 	}
 
-	GoogleMaps.ready('navMap',function(map){
+	GoogleMaps.ready(mapOpt,function(map){
 		for(var j = 0; j<route.length - 1; j++){
-			var start= findId(all_points,route[j]);
-			var end = findId(all_points,route[j+1]);
+			var start= findId(route[j]);
+			var end = findId(route[j+1]);
 
 			var theRoute = [
 				new google.maps.LatLng(start.x,start.y),
@@ -132,10 +139,11 @@ function addRoutes(route){
 			var r = new google.maps.Polyline({
 				path:theRoute,
 				geodesic:true,
-				strokeColor: '#00FF00',
+				strokeColor: '#000000',
 			    strokeOpacity: 1.0,
 			    strokeWeight: 4
 			});
+			routes.push(r);
 				
 			r.setMap(map.instance);
 		}
