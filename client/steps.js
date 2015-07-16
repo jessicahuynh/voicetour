@@ -1,4 +1,6 @@
-markers = [];
+
+
+
 
 Template.steps.helpers({
 	destination: function() {
@@ -20,37 +22,44 @@ Template.steps.helpers({
 
 Template.steps.events({
 	"click #refreshMap" : function(event) {
-		if (GoogleMaps.loaded()) {
-			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
-			return {
-				center: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
-				zoom:17
-			};
-		}
-		google.maps.event.trigger(map, 'resize');
+		GoogleMaps.ready('navMap',function(map){
+
+			deleteMarkers();
+			deleteRoutes();
+
+			addMarkers(route[0],'navMap');
+			addMarkers(route[route.length-1],'navMap');
+			for(var j = 0; j<route.length - 1; j++){
+				addRoutes(route[j],route[j+1],'navMap');
+			}
+			
+		});
+
 	}
 });
 
 Template.steps.rendered = function () {
 	graph = new Graph(Map.findOne());
-		
+
+	route = Session.get("route");
+	laststop = route[route.length - 1];	
 
 	Session.set("current","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 	
 	
 	var navFrom = Session.get("current");
-	route = Session.get("route");
-	console.log(route);
 	var navTo = Session.get("destination");
 	route = getRoute(navFrom, navTo);
 	firststep = route[0];
 	secondstep = route[1];
 	console.log(route);
 	console.log("from "+navFrom+" to "+navTo);
-	if (navTo != "" && navTo != null && navFrom != null && navFrom != "" && route != null) {
+	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
 		getRouteDescription(route);
-		addMarkers(route);
-		addRoutes(route);
+		deleteMarkers();
+		deleteRoutes();
+		addMarkers(route, "navMap");
+		addRoutes(route, "navMap");
 	}else {
 		alert("please enter the destination!");
 	}
@@ -67,14 +76,14 @@ Template.steps.onCreated(function() {
 });
 
 /*Tracker.autorun(function (c) {
-  if (! Session.equals("shouldStop", true)){
+  if (secondstep != laststop){
 
   }
-    return;
 
   c.stop();
-  alert("Oh no!");
-});*/
+  alert("Get there!");
+});
+*/
 
 function getRouteDescription(route) {
 	var r = [];
@@ -90,26 +99,3 @@ function getRouteDescription(route) {
 	Session.set("step",r);
 }
 
-function findId(data, idToLookFor) {
-    for (var i = 0; i < data.length; i++) {
-        if (data[i].id == idToLookFor) {
-            return(data[i].coordinate);
-        }
-    }
-}
-
-function addMarkers(route){
-	var all_points=Intersections.find().fetch();
-	route.forEach(
-		function(stop) {
-			var stopLoc=findId(all_points,stop);
-			GoogleMaps.load();
-			GoogleMaps.ready('navMap',function(map) {
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
-					map:map.instance
-				});
-			})
-		}
-	);
-}

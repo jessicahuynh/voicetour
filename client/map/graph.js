@@ -93,18 +93,19 @@ Template.graph.events({
 
 		Session.set("route",route);
 		Session.set("destination", ends);
-		
+
+		getRouteDescription(route);
 		GoogleMaps.ready('navMap',function(map){
 
-			for(var i=0;i<markers.length;i++){
-				markers[i].setMap(null);
+			deleteMarkers();
+			deleteRoutes();
+
+			addMarkers(route[0],'navMap');
+			addMarkers(route[route.length-1],'navMap');
+			for(var j = 0; j<route.length - 1; j++){
+				addRoutes(route[j],route[j+1],'navMap','#000000');
 			}
-			for(var j=0;j<routes.length;j++){
-				routes[j].setMap(null);
-			}
-			getRouteDescription(route);
-			addMarkers(route,'navMap');
-			addRoutes(route,'navMap');
+			
 		});
 	},
 	"click input":function(event) {
