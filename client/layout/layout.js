@@ -35,17 +35,43 @@ Template.layout.events({
                  $("#searchBox").slideUp();
              }
          }
+     },
+     'click #back':function(event) {
+         event.preventDefault();
+         history.back();
      }
 });
 
 Template.layout.rendered = function() {
-    document.getElementById("searchBox").value = Session.get("searchTerm");
-    return Session.get("searchTerm");
-
+   
+   slide();
+   
+   if (window.location.pathname.indexOf("viewLocation") > -1) {
+       $("#back").css({
+			"font-size":"2em",
+			"display":"block",
+			"float":"left",
+			"width":"30px",
+			"height":"100%",
+			"padding-top":"5px",
+			"padding-left":"8px",
+			"color":"#eeeeee"
+		});
+		var boxWidth = $(window).width()-90;
+		$("#searchBox").css({
+			"display":"block",
+			"width":JSON.stringify(boxWidth),
+			"float":"left",
+			"margin-left":"12px"
+		});
+		$("#clearBack").css("display","block");
+   }
+   
+   document.getElementById("searchBox").value = Session.get("searchTerm");
 };
 
 // Adapted from http://jsbin.com/eHAfIhI/1/edit?html,css,js,output
-Template.layout.rendered = function () {
+function slide() {
     //stick in the fixed 100% height behind the navbar but don't wrap it
     $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
 
@@ -104,4 +130,3 @@ Template.layout.rendered = function () {
 
     });
 }
-

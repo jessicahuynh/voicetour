@@ -19,6 +19,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="navbar-collapse" id="navbar-hamburger">
 		      	<ul class="nav navbar-nav">
+					<li id="homeLink"><a href="{{pathFor 'welcome'}}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
 					<li><a href="{{pathFor 'about'}}"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;About</a></li>
 					<li><a href="{{pathFor 'locationList'}}"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Locations @ Brandeis</a></li>
 					<li><a href="{{pathFor 'graph'}}"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Navigate</a></li>
@@ -40,9 +41,11 @@
 		
 			<form role="search" id="searchForm" class="form-inline">
 			    	<div class="form-group">
+						<a href="#" id="back"><span class="glyphicon glyphicon-menu-left"></span></a>
 			        	<!-- <input type="text" class="form-control" placeholder="Search" id="searchBox" name="searchBox"> -->
 			        	{{> esInput index="locations" placeholder="Search" id="searchBox" class="form-control input-lg" value=searchTerm}}
 					</div>
+					<span class="clear" id="clearBack">&nbsp;</span>
 			</form>
 			<button class="btn btn-default btn-lg" id="searchGlass">
 				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>

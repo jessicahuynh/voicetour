@@ -1,5 +1,4 @@
-@deis-blue: #0070FF;
-@dark-blue: #003e8c;
+@import url('colors.less');
 
 div.go-to-navigate {	
 	margin-bottom:1em;
@@ -9,7 +8,7 @@ div.go-to-navigate {
 		padding:1em;
 		display:block;
 		width:100%;
-		color:#FFFFFF;
+		color:@off-white;
 		text-decoration:none;
 		background-color:@dark-blue;
 	}
@@ -18,3 +17,17 @@ div.go-to-navigate {
 		color:#111;
 	}
 }
+
+.page-header {
+	#returnToList {
+		font-size:1.1em;
+		display:block;
+		height:100%;
+		float:left;
+		margin-right:0.25em;
+	}
+	small {
+		clear:both;
+	}
+}
+
