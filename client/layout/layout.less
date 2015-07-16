@@ -1,9 +1,24 @@
-@deis-blue: #0070FF;
-@dark-blue: #003e8c;
+@import url('../colors.less');
 
-a, input,button {
+a, input, button, textarea, select, option, label {
 	font-family:"Trebuchet MS", Helvetica, Arial, sans-serif;
+	border-radius:0;
 }
+.btn {
+	border-radius:0;
+	text-transform:uppercase;
+}
+.form-control {
+	border-radius:0;
+	border:2px solid @dark-blue;
+	box-shadow: none;
+}
+
+.form-group.required label:after {
+  content:" *";
+  color:@reddish;
+}
+
 /* adjust body when menu is open */
 body.slide-active {
     overflow-x: hidden
@@ -93,7 +108,10 @@ nav div.container {
 	    padding: 0 15px;
 		
 		.navbar-brand {
-			padding-left:2.5em;
+			margin-left:1.5em;
+			padding-right:0;
+			height:2em;
+			overflow:hidden;
 		}
 	}
 	#slide-nav .navbar.slide-active {
