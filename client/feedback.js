@@ -13,6 +13,7 @@ Template.feedback.events({
 		});
 		
 		$(".modal-body").html('<p>Thanks for your feedback!</p>');
+		$("#submitFeedback").hide();
 	}
 });
 
