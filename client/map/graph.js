@@ -105,6 +105,9 @@ Template.graph.events({
 			for(var j = 0; j<route.length - 1; j++){
 				addRoutes(route[j],route[j+1],'navMap','#000000');
 			}
+			var center = findId(route[0]);
+			var theLatLng = new google.maps.LatLng(center.x,center.y);
+			map.instance.setCenter(theLatLng);
 			
 		});
 	},

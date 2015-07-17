@@ -84,21 +84,20 @@ function getShortestRoute(startEntrances,endEntrances) {
 	return shortestRoute;
 }
 
+
+function findId(idToLookFor) {
+	var all_points=Intersections.find().fetch();
+    for (var i = 0; i < all_points.length; i++) {
+        if (all_points[i].id == idToLookFor) {
+            return(all_points[i].coordinate);
+        }
+    }
+}
+
 var markers = [];
 
-
-
-
 function addMarkers(loc,mapOpt){
-	var all_points = Intersections.find().fetch();
-	function findId(idToLookFor) {
-		var i;
-		for (i = 0; i < all_points.length; i++) {
-	        if (all_points[i].id == idToLookFor) {
-	            return (all_points[i].coordinate);
-	        }
-		}
-	};
+	
 	var point = findId(loc);
 	GoogleMaps.ready(mapOpt,function(map) {
 		var marker = new google.maps.Marker({
@@ -118,16 +117,12 @@ function deleteMarkers(){
 
 var routes = [];
 
+
+
 function addRoutes(startloc, endloc, mapOpt, lineColor){
 
-	var all_points=Intersections.find().fetch();
-	function findId(idToLookFor) {
-	    for (var i = 0; i < all_points.length; i++) {
-	        if (all_points[i].id == idToLookFor) {
-	            return(all_points[i].coordinate);
-	        }
-	    }
-	}			
+	
+			
 	var start= findId(startloc);
 	var end = findId(endloc);
 

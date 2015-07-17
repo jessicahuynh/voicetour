@@ -1,12 +1,12 @@
 
-
+count = 0;
 
 
 Template.steps.helpers({
 	destination: function() {
 		return Session.get("destination");
 	},
-	navMapOptions: function() {
+	stepMapOptions: function() {
 		if (GoogleMaps.loaded()) {
 			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
 			return {
@@ -22,18 +22,27 @@ Template.steps.helpers({
 
 Template.steps.events({
 	"click #refreshMap" : function(event) {
-		GoogleMaps.ready('navMap',function(map){
+		if (count < route.length){
+			GoogleMaps.ready('stepMap',function(map){
 
-			deleteMarkers();
-			deleteRoutes();
+/*				deleteMarkers();*/
+				deleteRoutes();
 
-			addMarkers(route[0],'navMap');
-			addMarkers(route[route.length-1],'navMap');
-			for(var j = 0; j<route.length - 1; j++){
-				addRoutes(route[j],route[j+1],'navMap');
-			}
-			
-		});
+				addMarkers(route[count],'stepMap');
+				addMarkers(route[count + 1],'stepMap');
+				/*addMarkers(route[route.length-1],'stepMap');*/
+				for(var j = 0; j<route.length - 1; j++){
+					addRoutes(route[j],route[j+1],'stepMap');
+				}
+				var center = findId(route[count]);
+				var theLatLng = new google.maps.LatLng(center.x,center.y);
+				map.instance.setCenter(theLatLng);
+			});
+			count ++;
+
+		} else {
+			alert("you reached your destination.");
+		}
 
 	}
 });
@@ -56,10 +65,23 @@ Template.steps.rendered = function () {
 	console.log("from "+navFrom+" to "+navTo);
 	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
 		getRouteDescription(route);
-		deleteMarkers();
-		deleteRoutes();
-		addMarkers(route, "navMap");
-		addRoutes(route, "navMap");
+		GoogleMaps.ready('stepMap',function(map){
+
+			deleteMarkers();
+			deleteRoutes();
+
+			addMarkers(route[count],'stepMap');
+			/*addMarkers(route[count + 1],'stepMap');*/
+			addMarkers(route[route.length-1],'stepMap');
+			for(var j = 0; j<route.length - 1; j++){
+				addRoutes(route[j],route[j+1],'stepMap', '#000000');
+			}
+			var idofFirststep = findId(firststep);
+			var theLatLng = new google.maps.LatLng(idofFirststep.x,idofFirststep.y);
+			map.instance.setCenter(theLatLng);
+			
+		});
+
 	}else {
 		alert("please enter the destination!");
 	}
@@ -67,7 +89,7 @@ Template.steps.rendered = function () {
 
 Template.steps.onCreated(function() {
 	GoogleMaps.load();
-	GoogleMaps.ready('navMap',function(map) {
+	GoogleMaps.ready('stepMap',function(map) {
 		var marker = new google.maps.Marker({
 			position: map.options.center,
 			map: map.instance
