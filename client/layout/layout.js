@@ -35,17 +35,22 @@ Template.layout.events({
                  $("#searchBox").slideUp();
              }
          }
+     },
+     'click #back':function(event) {
+         event.preventDefault();
+         history.back();
      }
 });
 
 Template.layout.rendered = function() {
-    document.getElementById("searchBox").value = Session.get("searchTerm");
-    return Session.get("searchTerm");
-
+   
+   slide();
+   
+   document.getElementById("searchBox").value = Session.get("searchTerm");
 };
 
 // Adapted from http://jsbin.com/eHAfIhI/1/edit?html,css,js,output
-Template.layout.rendered = function () {
+function slide() {
     //stick in the fixed 100% height behind the navbar but don't wrap it
     $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
 
@@ -104,4 +109,3 @@ Template.layout.rendered = function () {
 
     });
 }
-

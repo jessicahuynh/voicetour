@@ -128,10 +128,11 @@ nav div.container {
 	    position: fixed;
 	    padding-left: 0;
 		padding-right:0;
-		padding-top:58px;
+		// padding-top:58px;
 	    z-index: 2;
 	    top: -8px;
 	    margin: 0;
+		
 	}
 	#slide-nav #navbar-hamburger .navbar-nav {
 	    min-width: 0;
@@ -207,10 +208,18 @@ nav div.container {
 			float:none;
 		}
 	}	
+	#homeLink {
+		display:none;
+	}
 }
 @media (max-width:768px) {
 	#page-content {
 		padding-top:72px;
+	}
+	
+	#homeLink {
+		display:block;
+		padding-top:3px;
 	}
 }
 
@@ -227,6 +236,7 @@ form#searchForm {
 		width:100%;
 		border-radius:0;
 	}
+	a#back,#clearBack{display:none}
 }
 button#searchGlass {
 	border:0;
@@ -256,9 +266,10 @@ button#searchGlass {
 			margin-bottom:12px;
 		}
 		
-		input#searchBox {
-			display:block;
+		input#searchBox { 
+			display:block; 
 		}
+		
 	}
 	button#searchGlass {
 		color:#ffffff;
