@@ -96,18 +96,31 @@ function findId(idToLookFor) {
 
 var markers = [];
 
-function addMarkers(loc,mapOpt){
+function addMarkers(loc,mapOpt, map){
 	
 	var point = findId(loc);
-	GoogleMaps.ready(mapOpt,function(map) {
+	//GoogleMaps.ready(mapOpt,function(map) {
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(point.x,point.y),
 			map:map.instance
 		});
 		markers.push(marker);
-	})
+	//})
 
 }
+
+/*function moveMarkers(loc, mapOpt, map){
+	
+	var point = findId(loc);
+	//GoogleMaps.ready(mapOpt,function(map) {
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(point.x,point.y),
+			map:map.instance
+		});
+		markers.push(marker);
+	//})
+
+}*/
 
 function deleteMarkers(){
 	for(var i=0;i<markers.length;i++){
@@ -119,14 +132,11 @@ var routes = [];
 
 
 
-function addRoutes(startloc, endloc, mapOpt, lineColor){
-
-	
-			
+function addRoutes(startloc, endloc, mapOpt, map, lineColor){		
 	var start= findId(startloc);
 	var end = findId(endloc);
 
-	GoogleMaps.ready(mapOpt,function(map){
+	//GoogleMaps.ready(mapOpt,function(map){
 			var theRoute = [
 				new google.maps.LatLng(start.x,start.y),
 				new google.maps.LatLng(end.x,end.y),
@@ -142,7 +152,7 @@ function addRoutes(startloc, endloc, mapOpt, lineColor){
 			    map: map.instance
 			});
 			routes.push(drawr);
-	})
+	//})
 
 }
 
@@ -183,3 +193,7 @@ function getRouteDescription(route) {
 	Session.set("routeToTake",r);
 }
 
+function Point(x,y) {
+	this.x = x;
+	this.y = y;
+}

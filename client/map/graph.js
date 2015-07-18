@@ -29,17 +29,51 @@ Template.graph.rendered = function () {
 	}
 
 	GoogleMaps.load();
+
+	Session.set("centerPoint", Session.get("currentLocation"));
+	
+// Tracker.autorun(function() {
+	// var center = findId(Session.get("centerPoint"));
 	GoogleMaps.ready('navMap',function(map) {
-		var marker = new google.maps.Marker({
+		centerMarker = new google.maps.Marker({
 			position: map.options.center,
 			map: map.instance
 		});
-		markers[0] = marker;
-	});
+		//markers[0] = marker;
+		// console.log("test google map ready");
+	
+		
+		// 	console.log("test tracker in rendered");
+		// 	deleteMarkers();
+		// 	deleteRoutes();
+
+		// 	addMarkers(Session.get("centerPoint"),'navMap', map);
+		
+			
+		// 	var theLatLng = new google.maps.LatLng(center.x,center.y);
+		// 	map.instance.setCenter(theLatLng);
+		// 	map.instance.setZoom(15);
+		// 	centerMarker.setPosition(theLatLng);
+		// 	console.log("test run autorun in rendered");
+		
+		// 	addMarkers(route[route.length-1],'navMap', map);
+		// 	for(var j = 0; j<route.length - 1; j++){
+		// 		addRoutes(route[j],route[j+1],'navMap', map,'#000000');
+		// 	}
+
+	})	
+
+// });
+
 
 
 
 };
+
+// Template.graph.onCreated(function () {
+// 	Session.set("centerPoint", Point(0,0));
+
+// });
 
 Template.graph.helpers({
 	stops: function() {
@@ -95,21 +129,35 @@ Template.graph.events({
 		Session.set("destination", ends);
 
 		getRouteDescription(route);
-		GoogleMaps.ready('navMap',function(map){
+		Session.set("stepCenterPoint",route[0]);
 
+		
+		GoogleMaps.load();
+		GoogleMaps.ready('navMap',function(map){
+			console.log("test google map ready");
 			deleteMarkers();
 			deleteRoutes();
 
-			addMarkers(route[0],'navMap');
-			addMarkers(route[route.length-1],'navMap');
+			addMarkers(Session.get("stepCenterPoint"),'navMap', map);
+
+
+		Tracker.autorun(function() {	
+				var center = findId(Session.get("stepCenterPoint"));
+				var theLatLng = new google.maps.LatLng(center.x,center.y);
+				map.instance.setCenter(theLatLng);
+				centerMarker.setPosition(theLatLng);
+				map.instance.setZoom(15);
+				console.log("test run autorun");
+		})	
+
+			addMarkers(route[route.length-1],'navMap', map);
 			for(var j = 0; j<route.length - 1; j++){
-				addRoutes(route[j],route[j+1],'navMap','#000000');
+				addRoutes(route[j],route[j+1],'navMap', map,'#000000');
 			}
-			var center = findId(route[0]);
-			var theLatLng = new google.maps.LatLng(center.x,center.y);
-			map.instance.setCenter(theLatLng);
-			
+
+		google.maps.event.addDomListener(window, 'load', initialize);	
 		});
+	
 	},
 	"click input":function(event) {
 		event.target.value = '';
@@ -145,7 +193,3 @@ Template.graph.events({
 	},
 });
 
-function Point(x,y) {
-	this.x = x;
-	this.y = y;
-}

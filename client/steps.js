@@ -24,19 +24,28 @@ Template.steps.events({
 	"click #refreshMap" : function(event) {
 		if (count < route.length){
 			GoogleMaps.ready('stepMap',function(map){
-
+				Session.set("stepCenterPoint",route[count]);
 /*				deleteMarkers();*/
 				deleteRoutes();
 
-				addMarkers(route[count],'stepMap');
-				addMarkers(route[count + 1],'stepMap');
+				// addMarkers(route[count],'stepMap', map);
+				
+				Tracker.autorun(function() {	
+					var center = findId(Session.get("stepCenterPoint"));
+					var theLatLng = new google.maps.LatLng(center.x,center.y);
+					map.instance.setCenter(theLatLng);
+					centerMarker.setPosition(theLatLng);
+					map.instance.setZoom(20);
+					console.log("test run autorun");
+				})	
+				// var center = findId(route[count]);
+				// var theLatLng = new google.maps.LatLng(center.x,center.y);
+				// map.instance.setCenter(theLatLng);
+				addMarkers(route[count + 1],'stepMap', map);
 				/*addMarkers(route[route.length-1],'stepMap');*/
 				for(var j = 0; j<route.length - 1; j++){
-					addRoutes(route[j],route[j+1],'stepMap');
+					addRoutes(route[j],route[j+1],'stepMap', map, '#000000');
 				}
-				var center = findId(route[count]);
-				var theLatLng = new google.maps.LatLng(center.x,center.y);
-				map.instance.setCenter(theLatLng);
 			});
 			count ++;
 
@@ -63,28 +72,28 @@ Template.steps.rendered = function () {
 	secondstep = route[1];
 	console.log(route);
 	console.log("from "+navFrom+" to "+navTo);
-	if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
-		getRouteDescription(route);
-		GoogleMaps.ready('stepMap',function(map){
+	// if (navTo != "" && navTo != null && navFrom != null && navFrom != "") {
+	// 	getRouteDescription(route);
+	// 	GoogleMaps.ready('stepMap',function(map){
 
-			deleteMarkers();
-			deleteRoutes();
+	// 		deleteMarkers();
+	// 		deleteRoutes();
 
-			addMarkers(route[count],'stepMap');
-			/*addMarkers(route[count + 1],'stepMap');*/
-			addMarkers(route[route.length-1],'stepMap');
-			for(var j = 0; j<route.length - 1; j++){
-				addRoutes(route[j],route[j+1],'stepMap', '#000000');
-			}
-			var idofFirststep = findId(firststep);
-			var theLatLng = new google.maps.LatLng(idofFirststep.x,idofFirststep.y);
-			map.instance.setCenter(theLatLng);
+	// 		addMarkers(route[count],'stepMap', map);
+	// 		/*addMarkers(route[count + 1],'stepMap');*/
+	// 		addMarkers(route[route.length-1],'stepMap', map);
+	// 		for(var j = 0; j<route.length - 1; j++){
+	// 			addRoutes(route[j],route[j+1],'stepMap', map, '#000000');
+	// 		}
+	// 		var idofFirststep = findId(firststep);
+	// 		var theLatLng = new google.maps.LatLng(idofFirststep.x,idofFirststep.y);
+	// 		map.instance.setCenter(theLatLng);
 			
-		});
+	// 	});
 
-	}else {
-		alert("please enter the destination!");
-	}
+	// }else {
+	// 	alert("please enter the destination!");
+	// }
 };
 
 Template.steps.onCreated(function() {
