@@ -5,6 +5,7 @@ offCampus = {
 }
 
 Template.welcome.helpers({
+
 	currentLocation: function () {
 		return Session.get("currentLocation");
 
@@ -128,3 +129,54 @@ Template.welcome.events({
 		}
 	}
 });
+
+Template.compass.helpers({
+    byId: function (id) {
+        return document.getElementById(id);
+    },
+    text: function (id, value) {
+        byId(id).innerHTML = value;
+    },
+    transform: function (id, commands) {
+        var props = ['transform', 'webkitTransform', 'mozTransform',
+                     'msTransform', 'oTransform'];
+        var node  = byId(id);
+        for (var i = 0; i < props.length; i ++) {
+          	if ( typeof(node.style[props[i]]) != 'undefined' ) {
+            	node.style[props[i]] = commands;
+            	break;
+          	}
+        }
+    },
+    round: function (value) {
+        return Math.round(value * 100) / 100;
+    }
+})
+
+    Compass.noSupport(function () {
+        text('text', 'no support');
+    })
+    .needGPS(function () {
+        text('text', 'need GPS');
+    })
+    .needMove(function () {
+        text('text', 'need move');
+    })
+    .init(function (method) {
+        if ( method == 'orientationAndGPS' ) {
+          	text('meta', 'GPS diff: ' + round(Compass._gpsDiff));
+        }
+    })
+    .watch(function (heading) {
+        text('text', round(heading));
+        transform('compass', 'rotate(' + (-heading) + 'deg)');
+    });
+    
+    Compass.watch(function (heading) {
+	  $('.degrees').text(heading);
+	  $('.compass').css('transform', 'rotate(' + (-heading) + 'deg)');
+	});
+	Compass.init(function (method) {
+	  console.log('Compass heading by ' + method);
+	});
+
