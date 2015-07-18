@@ -5,6 +5,11 @@ points_northrabb = [
 		"type":"entrance"
 	},
 	{
+		"id":"scheffres_e02",
+		"coordinate":new Point(42.369466, -71.256239),
+		"type":"entrance"
+	},
+	{
 		"id":"scheffres_c01",
 		"coordinate":new Point(42.369330, -71.255962),
 		"type":"crossing"
@@ -60,10 +65,52 @@ points_northrabb = [
 		"type":"entrance"
 	},
 	{
+		"id":"reitman_e03",
+		"coordinate":new Point(42.369564, -71.255098),
+		"type":"entrance"
+	},
+	{
 		"id":"reitman_c01",
 		"coordinate":new Point(42.370021, -71.255610),
 		"type":"crossing"
 	},
+	{
+		"id":"abraham_e01",
+		"coordinate":new Point(42.369650, -71.259241),
+		"type":"entrance"
+	},
+	{
+		"id":"mandelJewish_e01",
+		"coordinate":new Point(42.369592, -71.259345),
+		"type":"entrance"
+	},
+	{
+		"id":"schneider_e01",
+		"coordinate":new Point(42.369297, -71.259199),
+		"type":"entrance"
+	},
+	{
+		"id":"heller_e02",
+		"coordinate":new Point(42.369275, -71.258761),
+		"type":"entrance"
+	},
+	{
+		"id":"towerlot_e01",
+		"coordinate":new Point(42.369904, -71.258679),
+		"type":"entrance"
+	},
+	{
+		"id":"kutzlot_e01",
+		"coordinate":new Point(42.368793, -71.256466),
+		"type":"entrance"
+	},
+	{
+		"id":"northquadlot_e01",
+		"coordinate":new Point(42.369641, -71.254727),
+		"type":"entrance"
+	},
+
+
 ]
 
 function Point(x,y) {

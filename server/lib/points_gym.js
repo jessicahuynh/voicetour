@@ -128,14 +128,6 @@ points_gym = [
 		"coordinate":new Point(42.365910, -71.255390),
 		"type":"entrance"
 	},
-/*	{
-		"id":"stoneman_e01",
-		"coordinate":new Point(42.366141, -71.255637),
-		"type":"entrance"
-	},
-
-
-*/
 
 
 

@@ -1,7 +1,8 @@
 locations_parking = [
-	gymp1 = {
-		"name":"Athletics lot",
-		"nickname":"Athletics lot",
+	{
+		"id":"athleticslot",
+		"name":"Athletics Parking Lot",
+		"nickname":"Athletics Lot",
 		"coordinates":[
 			new Point(42.365088,-71.256173), 
 			new Point(42.364422,-71.257879),
@@ -10,9 +11,10 @@ locations_parking = [
 		"category":["parking"],
 		"entrances":["athleticslot_e01"]
 	},
-	gymp2 = {
-		"name":"Gosman parking lot",
-		"nickname":"Gosman parking lot ",
+	{
+		"id":"gosmanparkinglot",
+		"name":"Gosman Parking Lot",
+		"nickname":"Gosman Lot ",
 		"coordinates":[
 			new Point(42.365056,-71.253832), 
 			new Point(42.365541,-71.252837),
@@ -21,9 +23,10 @@ locations_parking = [
 		"category":["parking"],
 		"entrances":["gosmanparkinglot_e01","gosmanparkinglot_e02"]
 	},
-	gymp3 = {
-		"name":"Linsey parking lot",
-		"nickname":"Linsey parking lot",
+	{
+		"id":"linseyparkinglot",
+		"name":"Linsey Parking lot",
+		"nickname":"Linsey Lot",
 		"coordinates":[
 			new Point(42.365568,-71.254114), 
 			new Point(42.365449,-71.253988), 
@@ -32,7 +35,117 @@ locations_parking = [
 		"category":["parking"],
 		"entrances":["linseyparkinglot_e01"]
 	},
+	{
+		"id":"towerlot",
+		"name":"Tower Parking lot",
+		"nickname":"Tower lot",
+		"coordinates":[
+			new Point(42.370790, -71.258274), 
+			new Point(42.370909, -71.258726), 
+			new Point(42.370091, -71.259134), 
+			new Point(42.369904, -71.258646)],
+		"category":["parking"],
+		"entrances":["towerlot_e01"]
+	},
+	{
+		"id":"librarylot",
+		"name":"Library Parking lot",
+		"nickname":"Library Lot",
+		"coordinates":[
+			new Point(42.369333, -71.258163), 
+			new Point(42.369143, -71.258346), 
+			new Point(42.368845, -71.257814), 
+			new Point(42.368924, -71.257598)],
+		"category":["parking"],
+		"entrances":["librarylot_e01"]
+	},
+	{
+		"id":"kutzlot",
+		"name":"Kutz Parking Lot",
+		"nickname":"Kutz Lot",
+		"coordinates":[
+			new Point(42.368797, -71.256007), 
+			new Point(42.368885, -71.256314), 
+			new Point(42.368675, -71.256459), 
+			new Point(42.368580, -71.256135)],
+		"category":["parking"],
+		"entrances":["kutzlot_e01"]
+	},
+	{
+		"id":"northquadlot",
+		"name":"North Quad Parking Lot",
+		"nickname":"North Quad Parking Lot",
+		"coordinates":[
+			new Point(42.370431, -71.256786), 
+			new Point(42.370211, -71.256866), 
+			new Point(42.369640, -71.254723), 
+			new Point(42.369763, -71.254697)],
+		"category":["parking"],
+		"entrances":["northquadlot_e01"]
+	},
+	{
+		"id":"sciencevisitorlot",
+		"name":"Science Visitor Parking Lot",
+		"nickname":"Science Visitor Parking Lot",
+		"coordinates":[
+			new Point(42.366635, -71.257073), 
+			new Point(42.366314, -71.257357), 
+			new Point(42.366187, -71.257086), 
+			new Point(42.366530, -71.256810)],
+		"category":["parking"],
+		"entrances":["sciencevisitorlot_e01"]
+	},
+	{
+		"id":"sciencespeciallot",
+		"name":"Science Special Access Parking Lot",
+		"nickname":"Science Special Access Parking Lot",
+		"coordinates":[
+			new Point(42.366639, -71.257279), 
+			new Point(42.366364, -71.257566), 
+			new Point(42.366308, -71.257368), 
+			new Point(42.366636, -71.257060)],
+		"category":["parking"],
+		"entrances":["sciencespeciallot_e01"]
+	},
+	{
+		"id":"sciencelot",
+		"name":"Science Parking Lot",
+		"nickname":"Science Parking Lot",
+		"coordinates":[
+			new Point(42.366284, -71.256297), 
+			new Point(42.366137, -71.256153), 
+			new Point(42.366481, -71.255527), 
+			new Point(42.366629, -71.255677)],
+		"category":["parking"],
+		"entrances":["sciencelot_e01","sciencelot_e02"]
+	},
+	{
+		"id":"stonemanlot",
+		"name":"Stoneman Parking Lot",
+		"nickname":"Stoneman Parking Lot",
+		"coordinates":[
+			new Point(42.366284, -71.254980), 
+			new Point(42.366829, -71.254753), 
+			new Point(42.366836, -71.254822), 
+			new Point(42.366331, -71.255020)],
+		"category":["parking"],
+		"entrances":["stonemanlot_e01"]
+	},
+	{
+		"id":"eastquadlot",
+		"name":"East Quad Parking Lot",
+		"nickname":"East Quad Parking Lot",
+		"coordinates":[
+			new Point(42.367559, -71.254144), 
+			new Point(42.367339, -71.254362), 
+			new Point(42.367139, -71.254406), 
+			new Point(42.366950, -71.254004),
+			new Point(42.367311, -71.253783),],
+		"category":["parking"],
+		"entrances":["eastquadlot_e01","eastquadlot_e02"]
+	},
 ]
+
 function Point(x,y) {
 	this.x = x;
 	this.y = y;

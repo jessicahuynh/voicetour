@@ -272,16 +272,6 @@ points_southcampus = [
     "type": "crossing",
 },
 {
-    "id": "rubenstein_c12",
-    "coordinate":new Point(42.367895, -71.254960),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c13",
-    "coordinate":new Point(42.368038, -71.255271),
-    "type": "crossing",
-},
-{
     "id": "rubenstein_c14",
     "coordinate":new Point(42.368113, -71.255625),
     "type": "crossing",
@@ -295,6 +285,26 @@ points_southcampus = [
     "id": "rubenstein_c16",
     "coordinate":new Point(42.368093, -71.255947),
     "type": "crossing",
+},
+{
+    "id": "eastHassenfeld_e02",
+    "coordinate":new Point(42.367977, -71.254876),
+    "type": "entrance",
+},
+{
+    "id": "eastHassenfeld_e01",
+    "coordinate":new Point(42.368089, -71.255218),
+    "type": "entrance",
+},
+{
+    "id": "eastShapiro_e01",
+    "coordinate":new Point(42.367677, -71.254632),
+    "type": "entrance",
+},
+{
+    "id": "eastRubenstein_e01",
+    "coordinate":new Point(42.367268, -71.254913),
+    "type": "entrance",
 },
 {
     "id": "usdan_e01",
@@ -406,6 +416,108 @@ points_southcampus = [
     "coordinate":new Point(42.365743, -71.256094),
     "type": "crossing",
 },
+{
+    "id":"levin_e01",
+    "coordinate":new Point(42.368117, -71.256926),
+    "type":"entrance"
+},
+{
+    "id":"levin_e02",
+    "coordinate":new Point(42.367992, -71.256964),
+    "type":"entrance"
+},
+{
+    "id":"farber_e01",
+    "coordinate":new Point(42.367832, -71.258425),
+    "type":"entrance"
+},
+{
+    "id":"schwartz_e01",
+    "coordinate":new Point(42.367605, -71.257126),
+    "type":"entrance"
+},
+{
+    "id":"pearlman_e01",
+    "coordinate":new Point(42.367498, -71.257879),
+    "type":"entrance"
+},
+{
+    "id":"pearlman_e02",
+    "coordinate":new Point(42.367492, -71.258030),
+    "type":"entrance"
+},
+{
+    "id":"brown_e01",
+    "coordinate":new Point(42.367286, -71.257305),
+    "type":"entrance"
+},
+{
+    "id":"goldfarb_e02",
+    "coordinate":new Point(42.368090, -71.257938),
+    "type":"entrance"
+},
+{
+    "id":"rosensweig_e01",
+    "coordinate":new Point(42.366297, -71.256813),
+    "type":"entrance"
+},
+{
+    "id":"rosensweig_e02",
+    "coordinate":new Point(42.365988, -71.257097),
+    "type":"entrance"
+},
+{
+    "id":"rosensweig_e03",
+    "coordinate":new Point(42.365926, -71.257011),
+    "type":"entrance"
+},
+{
+    "id":"foster_e01",
+    "coordinate":new Point(42.366195, -71.256540),
+    "type":"entrance"
+},
+{
+    "id":"sciencevisitorlot_e01",
+    "coordinate":new Point(42.366509, -71.256858),
+    "type":"entrance"
+},
+{
+    "id":"sciencespeciallot_e01",
+    "coordinate":new Point(42.366592, -71.257097),
+    "type":"entrance"
+},
+{
+    "id":"icc_e01",
+    "coordinate":new Point(42.367677, -71.254950),
+    "type":"entrance"
+},
+{
+    "id":"sciencelot_e01",
+    "coordinate":new Point(42.366189, -71.256172),
+    "type":"entrance"
+},
+{
+    "id":"sciencelot_e02",
+    "coordinate":new Point(42.366522, -71.255577),
+    "type":"entrance"
+},
+{
+    "id":"stonemanlot_e01",
+    "coordinate":new Point(42.366425, -71.254895),
+    "type":"entrance"
+},
+{
+    "id":"eastquadlot_e01",
+    "coordinate":new Point(42.367252, -71.254341),
+    "type":"entrance"
+},
+{
+    "id":"eastquadlot_e02",
+    "coordinate":new Point(42.367176, -71.254374),
+    "type":"entrance"
+},
+
+
 ]
 
 function Point(x,y) {

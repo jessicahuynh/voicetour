@@ -86,7 +86,7 @@ locations = [
 		"function": "Bassine Science Building has many bio lab?",
 		"description":"Lab",
 		"category":["science","classroom"],
-		"entrances":["bassine_e01"]
+		"entrances":["bassine_e01","bassine_e02","bassine_e03"]
 
 	},
 
@@ -322,9 +322,11 @@ locations = [
 			new Point(42.36728,-71.256666), 
 			new Point(42.367169,-71.256718), 
 			new Point(42.367266,-71.257265)],
-		"category":["classroom"]
+		"category":["classroom"],
+		"entrances":["brown_e01"],
 		},
 	farber = {
+		"id":"farber",
 		"name":"Farber Library",
 		"nickname":"Farber",
 		"coordinates":[
@@ -332,7 +334,8 @@ locations = [
 			new Point(42.368046,-71.25855), 
 			new Point(42.367823,-71.258354), 
 			new Point(42.367688,-71.25867)],
-		"category":["library"]
+		"category":["library"],
+		"entrances":["farber_e01"],
 		},
 	goldsmith = {
 		"id":"goldsmith",
@@ -362,6 +365,7 @@ locations = [
 		"entrances":["edison_e01"]
 	},
 	heller = {
+		"id":"heller",
 		"name":"Heller-Brown Building",
 		"nickname":"Heller",
 		"coordinates":[
@@ -370,9 +374,11 @@ locations = [
 			new Point(42.369025,-71.258474), 
 			new Point(42.369158,-71.259171)],
 		"function":"Heller-Brown is home to the Heller School for Social Policy and Management, one of the top ten schools of social policy in the United States and one of the eight approved U.S. training institutions for World Bank Scholars.",
-		"category":["classroom","graduate"]
+		"category":["classroom","graduate"],
+		"entrances":["heller_e01"],
 		},
-	rabbGrad = {
+	rabb = {
+		"id":"rabb",
 		"name":"Rabb Graduate Center",
 		"coordinates":[
 			new Point(42.369289,-71.25762), 
@@ -380,9 +386,11 @@ locations = [
 			new Point(42.368996,-71.256845),
 			new Point(42.36915,-71.257674), 
 			],
-		"category":["graduate"]
+		"category":["graduate"],
+		"entrances":["rabb_e01"]
 		},
 	roseMedical = {
+		"id":"roseMedical",
 		"name":"Rosenstiel Basic Medical Sciences Research Center",
 		"coordinates":[
 			new Point(42.366103,-71.257429), 
@@ -393,6 +401,7 @@ locations = [
 		"entrances":["rosenstiel_e01","rosenstiel_e02"]
 		},
 	schwartz = {
+		"id":"schwartz",
 		"name":"Schwartz Hall",
 		"nickname":"Schwartz",
 		"coordinates":[
@@ -400,7 +409,8 @@ locations = [
 			new Point(42.367563,-71.257024), 
 			new Point(42.367418,-71.257072), 
 			new Point(42.367494,-71.257484)],
-		"category":["classroom"]
+		"category":["classroom"],
+		"entrances":["schwartz_e01"]
 		},
 	scienceCenter = {
 		"id":"ssc",
@@ -486,7 +496,7 @@ locations = [
 			new Point(42.367576, -71.255094), 
 			new Point(42.367591, -71.254939),],
 		"category":["art"],
-		"entrances":[],
+		"entrances":["icc_e01"],
 	},
 
 	kutz = {
@@ -604,7 +614,7 @@ locations = [
 			new Point(42.368674, -71.257622),],
 		"category":["classroom"],
 		"description": "A longer description",
-		"entrances":["goldfarb_e01"],
+		"entrances":["goldfarb_e01","goldfarb_e02"],
 	},	
 	gerstenzang = {
 		"id":"gerstenzang",
@@ -628,18 +638,176 @@ locations = [
 			new Point(42.367302, -71.257938), 
 			new Point(42.367367, -71.258206)],
 		"category":["classroom"],
-		"entrances":[],
+		"entrances":["pearlman_e01","pearlman_e02"],
+	},
+
+	{
+		"id":"abraham",
+		"name":"Abraham Shapiro Academic Complex",
+		"coordinates":[
+			new Point(42.369827, -71.259680), 
+			new Point(42.369761, -71.259332), 
+			new Point(42.369684, -71.259351),
+			new Point(42.369666, -71.259279),  
+			new Point(42.369609, -71.259300),
+			new Point(42.369722, -71.259721),],
+		"category":["offices"],
+		"entrances":["abraham_e01"],
 	},
 	{
-		"id":"lemberg",
-		"nickname":"Lemberg",
-		"name":"Lemberg Children's Center",
+		"id":"mandelJewish",
+		"name":"Mandel Center for Studies in Jewish Education",
 		"coordinates":[
-			
-		],
+			new Point(42.369615, -71.259750), 
+			new Point(42.369553, -71.259402), 
+			new Point(42.369590, -71.259387),
+			new Point(42.369577, -71.259318),
+			new Point(42.369605, -71.259309),  
+			new Point(42.369609, -71.259300),
+			new Point(42.369722, -71.259721),],
+		"category":["offices"],
+		"entrances":["mandelJewish_e01"],
+	},
+	{
+		"id":"schneider",
+		"name":"The Heller School for Social Policy and Management, Schneider Building",
+		"nickname":"Schneider Building",
+		"coordinates":[
+			new Point(42.369303, -71.259773), 
+			new Point(42.369452, -71.259208), 
+			new Point(42.369298, -71.259200),
+			new Point(42.369289, -71.259155),
+			new Point(42.369278, -71.259090),  
+			new Point(42.369169, -71.259145),
+			new Point(42.369148, -71.259343),
+			new Point(42.369258, -71.259346),
+			new Point(42.369166, -71.259735),],
+		"category":["offices"],
+		"entrances":["schneider_e01"],
+	},
+	{
+		"id":"lown",
+		"name":"Lown School of Near Eastern and Judaic Studies",
+		"nickname":"Lown Building",
+		"coordinates":[
+			new Point(42.370321, -71.257312), 
+			new Point(42.370185, -71.257497), 
+			new Point(42.369941, -71.257161),
+			new Point(42.370076, -71.256976),],
 		"category":["classroom"],
-		"nearby":["rabbSchool"]
-	}
+		"entrances":["lown_e01"],
+	},
+	{
+		"id":"levin",
+		"name":"Levin Ballroom",
+		"coordinates":[
+			new Point(42.368350, -71.256863), 
+			new Point(42.368408, -71.257168), 
+			new Point(42.368260, -71.257223),
+			new Point(42.368273, -71.257331),
+			new Point(42.368280, -71.257333),
+			new Point(42.368109, -71.257388),
+			new Point(42.368090, -71.257274),
+			new Point(42.367938, -71.257330),
+			new Point(42.367883, -71.257026),],
+		"category":[],
+		"entrances":["levin_e01","levin_e02",],
+	},
+	{
+		"id":"rosensweig",
+		"name":"Kosow-Wolfson-Rosensweig",
+		"nickname":"Rosensweig",
+		"coordinates":[
+			new Point(42.366323, -71.256866), 
+			new Point(42.366046, -71.257092), 
+			new Point(42.366027, -71.257055),
+			new Point(42.365949, -71.257121),
+			new Point(42.365901, -71.257018),
+			new Point(42.365947, -71.256925),
+			new Point(42.366248, -71.256689),],
+		"category":["lab"],
+		"entrances":["rosensweig_e01","rosensweig_e02","rosensweig_e03"],
+	},
+	{
+		"id":"foster",
+		"name":"Henry and Lois Foster Bio-Medical Research Center",
+		"coordinates":[
+			new Point(42.366149, -71.256427), 
+			new Point(42.365998, -71.256557), 
+			new Point(42.366021, -71.256622),
+			new Point(42.365893, -71.256732),
+			new Point(42.365884, -71.256773),
+			new Point(42.365947, -71.256925),
+			new Point(42.366274, -71.256662),],
+		"category":["lab"],
+		"entrances":["foster_e01"],
+	},
+	{
+		"id":"safety",
+		"name":"Stoneman Infirmary and Public Safety",
+		"coordinates":[
+			new Point(42.366291, -71.255616), 
+			new Point(42.366332, -71.255391), 
+			new Point(42.366273, -71.255372),
+			new Point(42.366256, -71.255452),
+			new Point(42.366163, -71.255420),
+			new Point(42.366194, -71.255245),
+			new Point(42.366161, -71.255235),
+			new Point(42.366148, -71.255283),
+			new Point(42.366087, -71.255263),
+			new Point(42.365993, -71.255795),
+			new Point(42.366084, -71.255826),
+			new Point(42.366143, -71.255511),
+			new Point(42.366241, -71.255544),
+			new Point(42.366228, -71.255598),],
+		"category":[],
+		"entrances":["police_e01"],
+	},
+	{
+		"id":"healthcenter",
+		"name":"Golding Health Center",
+		"coordinates":[
+			new Point(42.366174, -71.255160), 
+			new Point(42.366151, -71.255285), 
+			new Point(42.366057, -71.255249),
+			new Point(42.366043, -71.255312),
+			new Point(42.365981, -71.255289),
+			new Point(42.366011, -71.255133),
+			new Point(42.366046, -71.255147),
+			new Point(42.366054, -71.255118),],
+		"category":[],
+		"entrances":["healthcenter_e01"],
+	},
+	{
+		"id":"superconducting",
+		"name":"Landsman Research Facility",
+		"coordinates":[
+			new Point(42.366049, -71.255343), 
+			new Point(42.366031, -71.255433), 
+			new Point(42.365898, -71.255424),
+			new Point(42.365927, -71.255305),],
+		"category":["lab"],
+		"entrances":["superconducting_e01"],
+	},
+	{
+		"id":"mandelpeacegarden",
+		"name":"Mandel Peace Garden",
+		"coordinates":[
+			new Point(42.367868, -71.257631), 
+			new Point(42.367728, -71.257779), 
+			new Point(42.367751, -71.257513),],
+		"category":["garden"],
+	},
+	// {
+	// 	"id":"lemberg",
+	// 	"nickname":"Lemberg",
+	// 	"name":"Lemberg Children's Center",
+	// 	"coordinates":[
+			
+	// 	],
+	// 	"category":["classroom"],
+	// 	"nearby":["rabbSchool"]
+	// },
 
 
 ]

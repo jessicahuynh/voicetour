@@ -232,7 +232,8 @@ locations_dorms = [
 			new Point(42.368023, -71.254770),
 			new Point(42.367949, -71.254845),
 			new Point(42.367840, -71.254738),],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["eastHassenfeld_e02","eastShapiro_e01"]
 		},
 	eastRubenstein = {
 		"id":"eastRubenstein",
@@ -251,7 +252,8 @@ locations_dorms = [
 			new Point(42.367476, -71.254854),
 			new Point(42.367581, -71.254801),
 			new Point(42.367581, -71.254801),],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["eastRubenstein_e01"]
 		},
 	eastHassenfeld = {
 		"id":"eastHassenfeld",
@@ -264,7 +266,8 @@ locations_dorms = [
 			new Point(42.368133, -71.255269), 
 			new Point(42.368049, -71.255182),
 			new Point(42.367987, -71.255001),],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["eastHassenfeld_e01","eastHassenfeld_e02"]
 		},
 	gordon = {
 		"id":"gordon",

@@ -123,6 +123,16 @@ points_science = [
 		"id":"ssc_ic02", // branch between shapiro entrances on stairs and ground
 		"coordinate":new Point(42.365982, -71.258543),
 		"type":"icrossing"
+	},
+	{
+		"id":"bassine_e02", 
+		"coordinate":new Point(42.366043, -71.258960),
+		"type":"entrance"
+	},
+	{
+		"id":"bassine_e03", 
+		"coordinate":new Point(42.366210, -71.258851),
+		"type":"entrance"
 	}
 
 ]

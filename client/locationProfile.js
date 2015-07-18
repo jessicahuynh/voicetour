@@ -14,3 +14,16 @@ Template.locationProfile.helpers({
 		return c;
 	}
 });
+
+Template.locationProfile.rendered = function() {
+	if ($(window).width() > 768) {
+		$(".page-header").prepend("<a href='#' id='returnToList'><span class='glyphicon glyphicon-menu-left'></span></a>");
+	}
+}
+
+Template.locationProfile.events({
+	'click #returnToList':function(event) {
+		event.preventDefault();
+		history.back();
+	}
+});

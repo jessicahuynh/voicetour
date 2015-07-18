@@ -84,76 +84,82 @@ function getShortestRoute(startEntrances,endEntrances) {
 	return shortestRoute;
 }
 
+
+function findId(idToLookFor) {
+	var all_points=Intersections.find().fetch();
+    for (var i = 0; i < all_points.length; i++) {
+        if (all_points[i].id == idToLookFor) {
+            return(all_points[i].coordinate);
+        }
+    }
+}
+
 var markers = [];
 
-function addMarkers(route,mapOpt){
-	// markers=route;
-	var all_points=Intersections.find().fetch();
-	function findId(idToLookFor) {
-	    for (var i = 0; i < all_points.length; i++) {
-	        if (all_points[i].id == idToLookFor) {
-	            return(all_points[i].coordinate);
-	        }
-	    }
-	};
-	console.log(route);
-
-
-	var startLoc= findId(route[0]);
-	var stopLoc=findId(route[route.length-1]);
-	GoogleMaps.load();
-	GoogleMaps.ready(mapOpt,function(map) {
-		var markerA = new google.maps.Marker({
-			position: new google.maps.LatLng(startLoc.x,startLoc.y),
+function addMarkers(loc,mapOpt, map){
+	
+	var point = findId(loc);
+	//GoogleMaps.ready(mapOpt,function(map) {
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(point.x,point.y),
 			map:map.instance
 		});
-		var markerB = new google.maps.Marker({
-			position: new google.maps.LatLng(stopLoc.x,stopLoc.y),
+		markers.push(marker);
+	//})
+
+}
+
+/*function moveMarkers(loc, mapOpt, map){
+	
+	var point = findId(loc);
+	//GoogleMaps.ready(mapOpt,function(map) {
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(point.x,point.y),
 			map:map.instance
 		});
-		markers.push(markerA);
-		markers.push(markerB);
-	})
+		markers.push(marker);
+	//})
 
+}*/
+
+function deleteMarkers(){
+	for(var i=0;i<markers.length;i++){
+		markers[i].setMap(null);
+	}
 }
 
 var routes = [];
 
-function addRoutes(route,mapOpt){
 
-	var all_points=Intersections.find().fetch();
-	function findId(idToLookFor) {
-	    for (var i = 0; i < all_points.length; i++) {
-	        if (all_points[i].id == idToLookFor) {
-	            return(all_points[i].coordinate);
-	        }
-	    }
-	}
 
-	GoogleMaps.ready(mapOpt,function(map){
-		for(var j = 0; j<route.length - 1; j++){
-			var start= findId(route[j]);
-			var end = findId(route[j+1]);
+function addRoutes(startloc, endloc, mapOpt, map, lineColor){		
+	var start= findId(startloc);
+	var end = findId(endloc);
 
+	//GoogleMaps.ready(mapOpt,function(map){
 			var theRoute = [
 				new google.maps.LatLng(start.x,start.y),
 				new google.maps.LatLng(end.x,end.y),
 			];
 			// var contentString = "<b>" + start + "</b> to <b>" + end+"</b>: "+description+"<br>";
 
-			var r = new google.maps.Polyline({
+			var drawr = new google.maps.Polyline({
 				path:theRoute,
 				geodesic:true,
-				strokeColor: '#000000',
+				strokeColor: lineColor,
 			    strokeOpacity: 1.0,
-			    strokeWeight: 4
+			    strokeWeight: 4,
+			    map: map.instance
 			});
-			routes.push(r);
-				
-			r.setMap(map.instance);
-		}
-	})
+			routes.push(drawr);
+	//})
 
+}
+
+function deleteRoutes(){
+	for(var j=0;j<routes.length;j++){
+		routes[j].setMap(null);
+	}
 }
 
 function getRouteDescription(route) {
@@ -187,3 +193,7 @@ function getRouteDescription(route) {
 	Session.set("routeToTake",r);
 }
 
+function Point(x,y) {
+	this.x = x;
+	this.y = y;
+}
