@@ -40,20 +40,31 @@ Template.footer.events({
     'click #listen':function(event) {
         event.preventDefault();
         
-        var urlParams = "appId="+"NMDPTRIAL_jhuynh37_brandeis_edu20150715174130"+
-            "&appKey="+"0577e997323eb999dfebfc826efbe3a796469a473745048dc95945bdf2b721f72e0b8e614947fa2832f6aba1f28e4888d4e2d00c27d499f12ddeae1f95cf16c4"+
-            "&id="+Session.get("uuid")+
-            "&ttsLang="+"en-US";
+        var msg = new SpeechSynthesisUtterance();
+        
+        msg.text = Session.get("listenTo");
+        console.log(Session.get("listenTo"));
+        msg.lang = 'en-US';
+        
+        msg.onend = function(e) {
+          console.log('Finished in ' + event.elapsedTime + ' seconds.');
+        };
+        window.speechSynthesis.speak(msg);
+        
+        // var urlParams = "appId="+"NMDPTRIAL_jhuynh37_brandeis_edu20150715174130"+
+        //     "&appKey="+"0577e997323eb999dfebfc826efbe3a796469a473745048dc95945bdf2b721f72e0b8e614947fa2832f6aba1f28e4888d4e2d00c27d499f12ddeae1f95cf16c4"+
+        //     "&id="+Session.get("uuid")+
+        //     "&ttsLang="+"en-US";
 
-        $.ajax({
-           type:"POST",         
-           url:"http://sandbox.nmdp.nuancemobility.net:443/NMDPTTSCmdServlet/tts?"+urlParams,
-           data:"Hello! Volen is great!",
-           headers:{
-               "Content-Type":"text/plain",
-               "Accept":"audio-xwav"
-           }
-        });
+        // $.ajax({
+        //    type:"POST",         
+        //    url:"http://sandbox.nmdp.nuancemobility.net:443/NMDPTTSCmdServlet/tts?"+urlParams,
+        //    data:"Hello! Volen is great!",
+        //    headers:{
+        //        "Content-Type":"text/plain",
+        //        "Accept":"audio-xwav"
+        //    }
+        // });
     },
     'mouseover .wit-microphone':function(event) {
        $(".mic").css("color","#FF3F4E");
@@ -125,5 +136,14 @@ Template.footer.events({
 
 Template.footer.rendered = function() {
     startAudio();
+    
+    if (window.SpeechSynthesisUtterance === undefined) {
+        $("#listenBox").css("display","none");
+        console.log("no");
+    }
+    else {
+        $("#listenBox").css("display","block");
+        console.log("yay");
+    }
 }
 

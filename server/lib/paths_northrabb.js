@@ -154,6 +154,56 @@ paths_northrabb = [
 		"end":"cable_c01",
 		"description":"Walk up the slope on the larger road."
 	},
+	{
+	    "start":"rabb_c01",
+	    "end":"kutz_c03",
+	    "description": "Walk down the road to the first stairs you see on your left side",
+	},
+	{
+	    "start":"kutz_c03",
+	    "end":"rabb_c01",
+	    "description": "Walk up to the first crossroads as well as the sideway",
+	},
+	{
+	    "start":"kutz_c03",
+	    "end":"kutz_c02",
+	    "description": "Walk up the stairs",
+	},
+	{
+	    "start":"kutz_c02",
+	    "end":"kutz_c01",
+	    "description": "Walk through the parking lot",
+	},
+	{
+	    "start":"kutz_c01",
+	    "end":"kutz_e01",
+	    "description": "Walk straight to the building and here Kutz Hall is",
+	},
+	{
+	    "start":"kutz_c02",
+	    "end":"kutz_c03",
+	    "description": "Walk down the stairs to the road",
+	},
+	{
+	    "start":"kutz_c01",
+	    "end":"kutz_c02",
+	    "description": "Walk through the parking lot to the stairs",
+	},
+	{
+	    "start":"kutz_e01",
+	    "end":"kutz_c01",
+	    "description": "Walk out of the building and go straight to the parking lot",
+	},
+	{
+	    "start":"kutz_c05",
+	    "end":"cable_c01",
+	    "description": "Get off the Loop Road and walk along the samller road.",
+	},
+	{
+	    "start":"cable_c01",
+	    "end":"kutz_c05",
+	    "description": "Get off the Loop Road and walk along the samller road.",
+	},
 	
 
 ]
