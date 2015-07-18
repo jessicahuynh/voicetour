@@ -5,8 +5,13 @@
 		<div id="currentLoc"><a href="/viewLocation/{{inLocationId}}" id="currentLocLink"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;{{inLocation}} <small>{{inOrNear}}</small></a></div>
 		{{/with}}
 		<div id="info" class="small pull-right"></div>
-		<div class="pull-right" id="micBox">
-			<div id="microphone"></div>
+		<div class="pull-right">
+			<div id="listenBox">
+				<a href="#" class="btn btn-default btn-lg" id="listen"><span class="glyphicon glyphicon-volume-up"></span></a>
+			</div>
+			<div id="micBox">
+				<div id="microphone"></div>
+			</div>
 		</div>
 	</div>
 </footer>
