@@ -179,5 +179,36 @@ paths_grad = [
 		"start":"turner_c03",
 		"end":"epstein_c04",
 		"description":"Cross the street towards South Street Market and the train tracks."
+	},
+	// grad
+	{
+		"start":"clot_e01",
+		"end":"clot_e02",
+		"description":"Turn left and head towards Angleside Road."
+	},
+	{
+		"start":"clot_e02",
+		"end":"clot_e01",
+		"description":"Head into the parking lot, following the fence until you reach the gap leading to Grad."
+	},
+	{
+		"start":"clot_e01",
+		"end":"clot_e03",
+		"description":"Head straight, towards the parking lots for the offices."
+	},
+	{
+		"start":"clot_e03",
+		"end":"clot_e01",
+		"description":"Head straight for the fence, to the gap that leads to the Charles River Apartments."
+	},
+	{
+		"start":"clot_e02",
+		"end":"clot_e03",
+		"description":"Veer to your left, aiming for the office parking lots."
+	},
+	{
+		"start":"clot_e03",
+		"end":"clot_e02",
+		"description":"Veer right, heading for Angelside Road."
 	}
 ]

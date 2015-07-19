@@ -378,6 +378,11 @@ points_grad = [
 		"coordinate":new Point(42.360288, -71.258456),
 		"type":"entrance",
 		"getTo":"Head for the the connection between C-Lot and the office parking lots."
+	},
+	{
+		"id":"clot_c01", //angleside and sawyer
+		"coordinate": new Point(42.359312, -71.258427),
+		"type":"crossing"
 	}
 ]
 

@@ -12,7 +12,7 @@ locations_transport = [
 		"id":"stop_c-lot",
 		"name":"Charles River Lot Shuttle Stop",
 		"nickname":"C-Lot stop",
-		"coordinates":[new Point(42.359311, -71.258416)],
+		"coordinates":[new Point(42.359316, -71.258342)],
 		"function":"The C-Lot stop services the campus BranVan.",
 		"category":["transportation"]
 	},

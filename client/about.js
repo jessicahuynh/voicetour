@@ -141,12 +141,13 @@ Template.about.onCreated(function() {
 					icon:'/GoogleMapsMarkers/blue_MarkerL.png'
 				});
 				
-				google.maps.event.addListener(marker, 'click',function() {
+				google.maps.event.addListener(marker, 'click', function () {
 					new google.maps.InfoWindow({
 				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")<br>Entrances: "+theLocs[this.index].entrances,
 				      maxWidth: 200,
-				  }).open(map.instance,marker);
-				});
+					  position:new google.maps.LatLng(theLocs[this.index].coordinates[0].x,theLocs[this.index].coordinates[0].y)
+				  }).open(map.instance,this);
+				});  
 			}
 		}
 	});
