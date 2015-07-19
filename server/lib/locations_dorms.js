@@ -23,7 +23,7 @@ locations_dorms = [
 			new Point(42.359111,-71.257282), 
 			new Point(42.359074,-71.257394)],
 		"category":["dorm"],
-		"entrances":["grad111_e01","grad111_e02","grad111_e03","grad111_e04","grad111_e05","grad111_e06","grad111_e07","grad111_e08","grad111_e09","grad111_e010","grad111_e11","grad111_e12","grad111_e13","grad111_e14",]
+		"entrances":["grad111_e01","grad111_e02","grad111_e03","grad111_e04","grad111_e05","grad111_e06","grad111_e07","grad111_e08","grad111_e09","grad111_e010","grad111_e11","grad111_e12","grad111_e13","grad111_e14"]
 	},
 	{
 		"id":"charlesrivercommons",
@@ -50,7 +50,8 @@ locations_dorms = [
 			new Point(42.359965, -71.257495), 
 			new Point(42.360005, -71.257378), 
 			new Point(42.359567, -71.256964)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["grad112_e01","grad112_e02","grad112_e03","grad112_e04","grad112_e05","grad112_e06","grad112_e07","grad112_e08","grad112_e09","grad112_e010"]
 	},
 	{
 		"id":"grad113",
@@ -62,7 +63,8 @@ locations_dorms = [
 			new Point(42.359815,-71.256402), 
 			new Point(42.359742,-71.25648), 
 			new Point(42.36013,-71.257177)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["grad113_e01","grad113_e02","grad113_e03","grad113_e04","grad113_e05","grad113_e06","grad113_e07","grad113_e08","grad113_e09","grad113_e010"]
 		},
 	{
 		"id":"grad114",
@@ -74,8 +76,9 @@ locations_dorms = [
 			new Point(42.360223,-71.256167), 
 			new Point(42.36015,-71.256216), 
 			new Point(42.360431,-71.256994)],
-		"category":["dorm"]
-		},
+		"category":["dorm"],
+		"entrances":["grad114_e01","grad114_e02","grad114_e03","grad114_e04","grad114_e05","grad114_e06","grad114_e07","grad114_e08","grad114_e09","grad114_e010"]
+	},
 	mazer = {
 		"id":"mazer",
 		"name":"Mazer Residence Hall",

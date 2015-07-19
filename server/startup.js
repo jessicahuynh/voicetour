@@ -1,7 +1,7 @@
 Meteor.startup(function() {
 	if (Locations.find().count() == 0) {
 		// list of all of the files containing location data
-		var locFiles = [locations,locations_artinstallations,locations_dorms,locations_parking];
+		var locFiles = [locations,locations_artinstallations,locations_dorms,locations_parking,locations_transport];
 		
 		locFiles.forEach(function(locFile) {
 			locFile.forEach(function(location) {

@@ -359,6 +359,25 @@ points_grad = [
 		"coordinate":new Point(42.360277, -71.256289),
 		"type":"entrance",
 		"getTo":"Head to the entrance of Grad 114, stairwell J."
+	},
+	// c-lot
+	{
+		"id":"clot_e01", // the shortcut
+		"coordinate":new Point(42.359920, -71.257899),
+		"type":"entrance",
+		"getTo":"Head for the hole in the fence that leads to the Charles River Apartments."
+	},
+	{
+		"id":"clot_e02", // to angleside
+		"coordinate":new Point(42.359346, -71.258619),
+		"type":"entrance",
+		"getTo":"Head for the connection between C-Lot and Angleside Road."
+	},
+	{
+		"id":"clot_e03", //to the offices
+		"coordinate":new Point(42.360288, -71.258456),
+		"type":"entrance",
+		"getTo":"Head for the the connection between C-Lot and the office parking lots."
 	}
 ]
 
