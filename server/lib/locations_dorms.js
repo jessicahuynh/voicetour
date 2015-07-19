@@ -10,7 +10,8 @@ locations_dorms = [
 			new Point(42.361165,-71.261552), 
 			new Point(42.36124,-71.261714)],
 		"category":["dorm"],
-		"entrances":["ss567_e01","ss567_e02","ss567_e03"]
+		"entrances":["ss567_e01","ss567_e02","ss567_e03"],
+		"nearby":["turner","commuterrail","epstein"]
 	},
 	{
 		"id":"grad111",
@@ -23,7 +24,8 @@ locations_dorms = [
 			new Point(42.359111,-71.257282), 
 			new Point(42.359074,-71.257394)],
 		"category":["dorm"],
-		"entrances":["grad111_e01","grad111_e02","grad111_e03","grad111_e04","grad111_e05","grad111_e06","grad111_e07","grad111_e08","grad111_e09","grad111_e010","grad111_e11","grad111_e12","grad111_e13","grad111_e14"]
+		"entrances":["grad111_e01","grad111_e02","grad111_e03","grad111_e04","grad111_e05","grad111_e06","grad111_e07","grad111_e08","grad111_e09","grad111_e010","grad111_e11","grad111_e12","grad111_e13","grad111_e14"],
+		"nearby":["commuterrail,","grad112","grad113","grad114","charlesrivercommons"]
 	},
 	{
 		"id":"charlesrivercommons",
@@ -38,7 +40,8 @@ locations_dorms = [
 			new Point(42.359560, -71.256919)
 		],
 		"category":["lounge"],
-		"entrances":["charlesrivercommons_e01","charlesrivercommons_e02"]
+		"entrances":["charlesrivercommons_e01","charlesrivercommons_e02"],
+		"nearby":["commuterrail,","grad111","grad112","grad113","grad114"]
 	},
 	{
 		"id":"grad112",
@@ -51,7 +54,8 @@ locations_dorms = [
 			new Point(42.360005, -71.257378), 
 			new Point(42.359567, -71.256964)],
 		"category":["dorm"],
-		"entrances":["grad112_e01","grad112_e02","grad112_e03","grad112_e04","grad112_e05","grad112_e06","grad112_e07","grad112_e08","grad112_e09","grad112_e010"]
+		"entrances":["grad112_e01","grad112_e02","grad112_e03","grad112_e04","grad112_e05","grad112_e06","grad112_e07","grad112_e08","grad112_e09","grad112_e010"],
+		"nearby":["commuterrail,","grad111","grad113","grad114","charlesrivercommons"]
 	},
 	{
 		"id":"grad113",
@@ -64,7 +68,8 @@ locations_dorms = [
 			new Point(42.359742,-71.25648), 
 			new Point(42.36013,-71.257177)],
 		"category":["dorm"],
-		"entrances":["grad113_e01","grad113_e02","grad113_e03","grad113_e04","grad113_e05","grad113_e06","grad113_e07","grad113_e08","grad113_e09","grad113_e010"]
+		"entrances":["grad113_e01","grad113_e02","grad113_e03","grad113_e04","grad113_e05","grad113_e06","grad113_e07","grad113_e08","grad113_e09","grad113_e010"],
+		"nearby":["commuterrail,","grad111","grad112","grad114","charlesrivercommons"]
 		},
 	{
 		"id":"grad114",
@@ -77,7 +82,8 @@ locations_dorms = [
 			new Point(42.36015,-71.256216), 
 			new Point(42.360431,-71.256994)],
 		"category":["dorm"],
-		"entrances":["grad114_e01","grad114_e02","grad114_e03","grad114_e04","grad114_e05","grad114_e06","grad114_e07","grad114_e08","grad114_e09","grad114_e010"]
+		"entrances":["grad114_e01","grad114_e02","grad114_e03","grad114_e04","grad114_e05","grad114_e06","grad114_e07","grad114_e08","grad114_e09","grad114_e010"],
+		"nearby":["commuterrail,","grad111","grad112","grad113","charlesrivercommons"]
 	},
 	mazer = {
 		"id":"mazer",

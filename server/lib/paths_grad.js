@@ -341,6 +341,16 @@ paths_grad = [
 		"end":"clot_c10",
 		"description":"Walk past Grad 114."
 	},
+	{
+		"start":"clot_c03",
+		"end":"clot_e01",
+		"description":"Leave Sawyer through the gap in the fence."	
+	},
+	{
+		"start":"clot_e01",
+		"end":"clot_c03",
+		'description':"Step out onto Sawyer Road."	
+	},
 	// entrances for grad 111
 	{
 		"start":"clot_c04",

@@ -46,7 +46,8 @@ locations_transport = [
 		"function":"Brandeis/Roberts station is on the Fitchburg line and is in MBTA fare zone 2.",
 		"description":"The inbound platform towards Boston is on the side furthest from campus. Outbound is on the side closest to campus.",
 		"category":["transportation"],
-		"entrances":["commuterrail_e01","commuterrail_e02"]
+		"entrances":["commuterrail_e01","commuterrail_e02"],
+		"nearby":["epstein","ss567","grad111","grad112","grad113","grad114"]
 	}
 ]
 

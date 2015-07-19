@@ -219,10 +219,11 @@ locations = [
 			new Point(42.363061,-71.258924),
 			new Point(42.36298,-71.25929),  
 			new Point(42.362872,-71.259233),
-			new Point(42.362961,-71.258887),],
-		"function":"The Rabb School is home to",
+			new Point(42.362961,-71.258887)],
+		"function":"The Rabb School is home to continuing education, graduate and professional programs, OLLI @ Brandeis, and summer programs, including the Justice Brandeis Semester (JBS).",
 		"category":["graduate"],
-		"nearby":["lemberg"]
+		"nearby":["lemberg","slosberg"],
+		"entrances":["rabbSchool_e01","rabbSchool_e02","rabbSchool_e03"]
 		},
 	admissions = {
 		"id":"admissions",
@@ -234,8 +235,11 @@ locations = [
 			new Point(42.364489, -71.260878), 
 			new Point(42.364150, -71.261231), 
 			new Point(42.364074, -71.261022),
-			new Point(42.364386, -71.260705),],
-		"category":["offices","informational"]
+			new Point(42.364386, -71.260705)],
+		"function":"Admissions hosts tours and provides information about Brandeis to any interested parties.",
+		"category":["offices","informational"],
+		"entrances":["admissions_e01","admissions_e02"],
+		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC"]
 		},	
 	slosberg = {
 		"id":"slosberg",
@@ -246,7 +250,11 @@ locations = [
 			new Point(42.364319,-71.2594), 
 			new Point(42.363891,-71.259666), 
 			new Point(42.363985,-71.259942)],
-		"category":["art","classroom"]
+		"function":"Slosberg is home to the Brandeis Concert Series.",
+		"description":"The Brandeis Concert Series features about 50-70 student and professional concerts each year.",
+		"category":["art","classroom"],
+		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
+		"nearby":["admissions","bernstein-marcus","lemberg"]
 		},
 	spingold = {
 		"id":"spingold",
@@ -819,7 +827,8 @@ locations = [
 			new Point(42.363630, -71.258806)
 		],
 		"category":["classroom"],
-		"nearby":["rabbSchool"]
+		"nearby":["rabbSchool","slosberg"],
+		"entrances":["lemberg_e01"]
 	},
 
 

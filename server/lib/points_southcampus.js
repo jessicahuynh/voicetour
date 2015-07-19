@@ -110,12 +110,69 @@ points_southcampus = [
     "coordinate":new Point(42.364019, -71.261467),
     "type": "crossing",
 },
+// admissions
 {
     "id": "admissions_c01",
     "coordinate":new Point(42.364743, -71.260767),
     "type": "crossing",
 },
-
+{
+    "id":"admissions_e01", // the main one
+    "coordinate": new Point(42.364413, -71.260716),
+    "type":"entrance",
+    "getTo":"Head to the main entrance of Admissions."
+},
+{
+    "id":"admissions_e02", // secondary
+    "coordinate":new Point(42.364535, -71.260677),
+    "type":"entrance",
+    "getTo":"Head to Admissions's smaller entrance, in the area with the displays."
+},
+//slosberg
+{
+    "id":"slosberg_e01", // main
+    "coordinate":new Point(42.364098, -71.259915),
+    "type":"entrance",
+    "getTo":"Head to Slosberg's main entrance."
+},
+{
+    "id":"slosberg_e02", //side entrance closest to admissions
+    "coordinate":new Point(42.364428, -71.259636),
+    "type":"entrance"
+},
+{
+    "id":"slosberg_e03", //other side entrance
+    "coordinate":new Point(42.364369, -71.259453),
+    "type":"entrance"
+},
+{
+    "id":"slosberg_e04", //back entrance
+    "coordinate":new Point(42.364191, -71.259483),
+    "type":"entrance"
+},
+//lemberg
+{
+    "id":"lemberg_e01", //main
+    "coordinate":new Point(42.363525, -71.258831),
+    "type":"entrance",
+    "getTo":"Head to Lemberg's main entrance."
+},
+//rabb school
+{
+    "id":"rabbSchool_e01", //main
+    "coordinate":new Point(42.362924, -71.259146),
+    "type":"entrance",
+},
+{
+    "id":"rabbSchool_e02", //grad
+    "coordinate":new Point(42.362937, -71.259009),
+    "type":"entrance"
+},
+{
+    "id":"rabbSchool_e03", //ide
+    "coordinate":new Point(42.363010, -71.258962),
+    "type":"entrance"
+}
 
 ]
 
