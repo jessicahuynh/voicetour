@@ -25,3 +25,8 @@ locations_transport = [
 		"category":["transportation"]
 	}
 ]
+
+function Point(x,y) {
+	this.x = x;
+	this.y = y;
+}
