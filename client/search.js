@@ -14,6 +14,10 @@ Template.search.helpers({
 	}
 });
 
+Template.search.rendered = function() {
+	$("#searchBox").css("display","block").focus();
+}
+
 Template.voiceResults.helpers({
 	vresults:function() {
 		console.log(Session.get("vresults"));

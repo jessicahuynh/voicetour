@@ -14,17 +14,11 @@ Template.layout.events({
 
         Router.go('/search');
      },
-     'mouseenter #searchGlass': function(event) {
-         var s = document.getElementById("searchBox");
-         s.value = '';
-         Session.set("searchTerm","");
-     },
      'click #searchGlass':function(event) {
          event.preventDefault();
          
          if ($(window).width() > 768) {
-             $("#searchBox").toggle(450);
-             $("#searchBox").focus();
+             $("#searchBox").toggle(450).focus();
          }
          else {
              if ($("#searchBox").css("display") == "none") {
@@ -39,6 +33,9 @@ Template.layout.events({
      'click #back':function(event) {
          event.preventDefault();
          history.back();
+     },
+     'click .nav-link':function(event) {
+         slideNav();
      }
 });
 
@@ -54,46 +51,10 @@ function slide() {
     //stick in the fixed 100% height behind the navbar but don't wrap it
     $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
 
-    // Enter your ids or classes
+
     var toggler = '.navbar-toggle';
-    var pagewrapper = '#page-content';
-    var navigationwrapper = '.navbar-header';
-    var slidewidth = '60%';
-    var menuneg = '-100%';
-    var slideneg = '-60%';
-
-
     $("#slide-nav").on("click", toggler, function (e) {
-
-        $("#searchGlass").toggle("searchGlass");
-        $("#searchForm").toggle("searchForm");
-        
-        var selected = $(this).hasClass('slide-active');
-
-        $('#navbar-hamburger').stop().animate({
-            left: selected ? menuneg : '0px'
-        });
-
-        $('#navbar-height-col').stop().animate({
-            left: selected ? slideneg : '0px'
-        });
-
-        $(pagewrapper).stop().animate({
-            left: selected ? '0px' : slidewidth
-        });
-
-        $(navigationwrapper).stop().animate({
-            left: selected ? '0px' : slidewidth
-        });
-
-
-        $(this).toggleClass('slide-active', !selected);
-        $('#navbar-hamburger').toggleClass('slide-active');
-
-
-        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
-
-
+        slideNav();
     });
 
 
@@ -102,10 +63,46 @@ function slide() {
 
     $(window).on("resize", function () {
 
-        if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
+        if ($(window).width() > 768 && $('.navbar-toggle').is(':hidden')) {
             $(selected).removeClass('slide-active');
         }
 
 
     });
+}
+
+function slideNav() {
+    var pagewrapper = '#page-content';
+    var navigationwrapper = '.navbar-header';
+    var slidewidth = '60%';
+    var menuneg = '-100%';
+    var slideneg = '-60%';
+    
+    $("#searchGlass").toggle("searchGlass");
+    $("#searchForm").toggle("searchForm");
+    
+    var selected = $(".navbar-header").hasClass('slide-active');
+
+    $('#navbar-hamburger').stop().animate({
+        left: selected ? menuneg : '0px'
+    });
+
+    $('#navbar-height-col').stop().animate({
+        left: selected ? slideneg : '0px'
+    });
+
+    $(pagewrapper).stop().animate({
+        left: selected ? '0px' : slidewidth
+    });
+
+    $(navigationwrapper).stop().animate({
+        left: selected ? '0px' : slidewidth
+    });
+
+
+    $(this).toggleClass('slide-active', !selected);
+    $('#navbar-hamburger').toggleClass('slide-active');
+
+
+    $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
 }
