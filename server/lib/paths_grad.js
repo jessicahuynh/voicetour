@@ -210,5 +210,25 @@ paths_grad = [
 		"start":"clot_e03",
 		"end":"clot_e02",
 		"description":"Veer right, heading for Angelside Road."
+	},
+	{
+		"start":"clot_c01",
+		"end":"clot_e02",
+		"description":"Turn right onto Angleside Road."
+	},
+	{
+		"start":"clot_e02",
+		"end":"clot_c01",
+		"description":"Turn left onto Angleside and then make an immediate left again onto Sawyer."
+	},
+	{
+		"start":"clot_c01",
+		"end":"clot_c02",
+		"description":"Continue along Sawyer Road."
+	},
+	{
+		"start":"clot_c02",
+		"end":"clot_c01",
+		"description":"Continue along Sawyer Road until you meet Angleside."
 	}
 ]

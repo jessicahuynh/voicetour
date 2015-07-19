@@ -383,6 +383,56 @@ points_grad = [
 		"id":"clot_c01", //angleside and sawyer
 		"coordinate": new Point(42.359312, -71.258427),
 		"type":"crossing"
+	},
+	{
+		"id":"clot_c02", //the small parking lot
+		"coordinate":new Point(42.359483, -71.258334),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c03", // across from fence gap
+		"coordinate":new Point(42.359918, -71.257790),
+		"type":"crossing"	
+	},
+	{
+		"id":"clot_c04", //near side of 111
+		"coordinate":new Point(42.359891, -71.257851),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c05", //top of stairs between 111 and 112
+		"coordinate":new Point(42.359975, -71.257618),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c06", //bottom of stairs
+		"coordinate":new Point(42.359860, -71.257554),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c07", //far side of 112
+		"coordinate":new Point(42.360029, -71.257336),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c08", //near side of 113
+		"coordinate":new Point(42.360130, -71.257190),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c09", // far side of 112
+		"coordinate":new Point(42.360238, -71.257101),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c10", //near side of 114
+		"coordinate":new Point(42.360424, -71.257001),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c11", //far side of 114
+		"coordinate":new Point(42.360544, -71.256921),
+		"type":"crossing"
 	}
 ]
 
