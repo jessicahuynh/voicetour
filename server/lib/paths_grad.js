@@ -40,13 +40,13 @@ paths_grad = [
 		"description":"Veer left behind Cappy's."
 	},
 	{
-		"start":"turner_e02",
+		"start":"turner_c02",
 		"end":"ss567_c02",
 		"description":"Turn right and head towards South Street."
 	},
 	{
 		"start":"ss567_c02",
-		"end":"turner_e02",
+		"end":"turner_c02",
 		"description":"Head between 567 and Cappy's and enter the side entrance of 567."
 	},
 	{
