@@ -230,5 +230,199 @@ paths_grad = [
 		"start":"clot_c02",
 		"end":"clot_c01",
 		"description":"Continue along Sawyer Road until you meet Angleside."
+	},
+	{
+		"start":"clot_c02",
+		"end":"clot_c03",
+		"description":"Continue down Saywer Road to the gap in the fence."
+	},
+	{
+		"start":"clot_c03",
+		"end":"clot_c02",
+		"description":"Follow Sawyer Road past the garbage and recycling bins towards Angleside."
+	},
+	{
+		"start":"clot_c02",
+		"end":"clot_c12",
+		"description":"Turn right and follow Angleside for a bit until you reach a small sidewalk leading downhill."
+	},
+	{
+		"start":"clot_c12",
+		"end":"clot_c02",
+		"description":"Turn left and follow Angleside for a bit until you reach the parking lot."
+	},
+	{
+		"start":"clot_c03",
+		"end":"clot_c12",
+		"description":"Veer slightly right towards the sidewalk headed downhill."
+	},
+	{
+		"start":"clot_c12",
+		"end":"clot_c03",
+		"description":"Head for the gap in the fence directly in front of you."
+	},
+	{
+		"start":"clot_c03",
+		"end":"clot_c04",
+		"description":"Continue along Sawyer to Grad 111."
+	},
+	{
+		"start":"clot_c04",
+		"end":"clot_c03",
+		"description":"Walk along Sawyer in the direction of Angleside and the parking lots."
+	},
+	{
+		"start":"clot_c04",
+		"end":"clot_c05",
+		"description":"Pass Grad 111 to the other side where the stairs leading down are."
+	},
+	{
+		"start":"clot_c05",
+		"end":"clot_c04",
+		"description":"Get to the other side of Grad 111."
+	},
+	{
+		"start":"clot_c05",
+		"end":"clot_c06",
+		"description":"Head down the stairs."
+	},
+	{
+		"start":"clot_c06",
+		"end":"clot_c05",
+		"description":"Head up the stairs."
+	},
+	{
+		"start":"clot_c05",
+		"end":"clot_c07",
+		"description":"Walk to the other side of Grad 112."
+	},
+	{
+		"start":"clot_c07",
+		"end":"clot_c05",
+		"description":"Walk to the stairs on the other side of Grad 112."
+	},
+	{
+		"start":"clot_c07",
+		"end":"clot_c08",
+		"description":"Walk along Sawyer over to Grad 113."
+	},
+	{
+		"start":"clot_c08",
+		"end":"clot_c07",
+		"description":"Walk along Sawyer over to Grad 112."
+	},
+	{
+		"start":"clot_c08",
+		"end":"clot_c09",
+		"description":"Walk past Grad 113."
+	},
+	{
+		"start":"clot_c09",
+		"end":"clot_c08",
+		"description":"Walk to the other side of Grad 113."
+	},
+	{
+		"start":"clot_c09",
+		"end":"clot_c10",
+		"description":"Walk over to Grad 114."
+	},
+	{
+		"start":"clot_c10",
+		"end":"clot_c09",
+		"description":"Walk along Sawyer to Grad 113."
+	},
+	{
+		"start":"clot_c10",
+		"end":"clot_c11",
+		"description":"Walk to the other side of Grad 114."
+	},
+	{
+		"start":"clot_c11",
+		"end":"clot_c10",
+		"description":"Walk past Grad 114."
+	},
+	// entrances for grad 111
+	{
+		"start":"clot_c04",
+		"end":"grad111_e07",
+		"description":"Walk down one flight of stairs and turn left for Grad 111, stairwell G."
+	},
+	{
+		"start":"grad111_e07",
+		"end":"clot_c04",
+		"description":"Exit and turn right. Go up the stairs."
+	},
+	{
+		"start":"clot_c06",
+		"end":"grad111_e08",
+		"description":"Turn right and enter the entrance for Grad 111, stairwell H."
+	},
+	{
+		"start":"grad111_e08",
+		"end":"clot_c06",
+		"description":"Go straight ahead to the foot of the stairs."
+	},
+	// entrances for grad 112
+	{
+		"start":"clot_c06",
+		"end":"grad112_e05",
+		"description":"Turn left and enter the entrance for Grad 112, stairwell E."
+	},
+	{
+		"start":"grad112_e05",
+		"end":"clot_c06",
+		"description":"Exit and go straight ahead to the foot of the stairs."
+	},
+	{
+		"start":"clot_c07",
+		"end":"grad112_e06",
+		"description":"Go down one flight of stairs and turn right for the entrance to Grad 112, stairwell F."
+	},
+	{
+		"start":"grad112_e06",
+		"end":"clot_c07",
+		"description":"Turn right and head to the top of the stairs."
+	},
+	// entrances for grad 113
+	{
+		"start":"clot_c08",
+		"end":"grad113_e05",
+		"description":"Go down one flight of stairs and turn left for the entrance to Grad 113, stairwell E."
+	},
+	{
+		"start":"grad113_e05",
+		"end":"clot_c08",
+		"description":"Exit and turn right. Head to the top of the stairs."
+	},
+	{
+		"start":"clot_c09",
+		"end":"grad113_e06",
+		"description":"Head down one flight of stairs and turn right for the entrance to Grad 113, stairwell F."
+	},
+	{
+		"start":"grad113_e06",
+		"end":"clot_c09",
+		"description":"Turn left and head to the top of the stairs."
+	},
+	// entrances for grad 114
+	{
+		"start":"clot_c10",
+		"end":"grad114_e05",
+		"description":"Head down the stairs and turn left for the entrance to Grad 114, stairwell E."
+	},
+	{
+		"start":"grad114_e05",
+		"end":"clot_c10",
+		"description":"Turn right and head to the top of the stairs."
+	},
+	{
+		"start":"clot_c11",
+		"end":"grad114_e06",
+		"description":"Head down one flight of stairs and turn right for the entrance to Grad 114, stairwell F."
+	},
+	{
+		"start":"grad114_e06",
+		"end":"clot_c11",
+		"description":"Turn left and head to the top of the flight of stairs."
 	}
 ]

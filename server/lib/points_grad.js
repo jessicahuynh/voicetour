@@ -391,7 +391,7 @@ points_grad = [
 	},
 	{
 		"id":"clot_c03", // across from fence gap
-		"coordinate":new Point(42.359918, -71.257790),
+		"coordinate":new Point(42.359852, -71.257957),
 		"type":"crossing"	
 	},
 	{
@@ -420,7 +420,7 @@ points_grad = [
 		"type":"crossing"
 	},
 	{
-		"id":"clot_c09", // far side of 112
+		"id":"clot_c09", // far side of 113
 		"coordinate":new Point(42.360238, -71.257101),
 		"type":"crossing"
 	},
@@ -432,6 +432,11 @@ points_grad = [
 	{
 		"id":"clot_c11", //far side of 114
 		"coordinate":new Point(42.360544, -71.256921),
+		"type":"crossing"
+	},
+	{
+		"id":"clot_c12", //side path next to gap and 111 leading down to E/F
+		"coordinate":new Point(42.359797, -71.258038),
 		"type":"crossing"
 	}
 ]
