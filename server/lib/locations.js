@@ -107,12 +107,14 @@ locations = [
 		"id":"turner",
 		"nickname":"Turner",
 		"name":"60 Turner Street",
+		"function":"Turner is home to the classrooms for the Osher Lifelong Learning Institute at Brandeis.",
 		"coordinates":[
-			new Point(42.362028,-71.264118), 
-			new Point(42.361976,-71.263828),
-			new Point(42.361834,-71.26386),
-			new Point(42.361889,-71.264187)],
-		"category":["administrative"]
+			new Point(42.362090, -71.264160), 
+			new Point(42.362017, -71.263813),
+			new Point(42.361845, -71.263886),
+			new Point(42.361886, -71.264220)],
+		"category":["administrative","classroom"],
+		"entrances":["turner_e01"]
 	},
 	bernstein = {
 		"id":"bernstein-marcus",
@@ -765,6 +767,7 @@ locations = [
 	},
 	{
 		"id":"healthcenter",
+		"nickname":"Health Center",
 		"name":"Golding Health Center",
 		"coordinates":[
 			new Point(42.366174, -71.255160), 
@@ -775,11 +778,12 @@ locations = [
 			new Point(42.366011, -71.255133),
 			new Point(42.366046, -71.255147),
 			new Point(42.366054, -71.255118),],
-		"category":[],
+		"category":["health"],
 		"entrances":["healthcenter_e01"],
 	},
 	{
 		"id":"superconducting",
+		"nickname":"Landsman",
 		"name":"Landsman Research Facility",
 		"coordinates":[
 			new Point(42.366049, -71.255343), 
@@ -791,6 +795,7 @@ locations = [
 	},
 	{
 		"id":"mandelpeacegarden",
+		"nickname":"Peace Circle",
 		"name":"Mandel Peace Garden",
 		"coordinates":[
 			new Point(42.367868, -71.257631), 
@@ -798,16 +803,22 @@ locations = [
 			new Point(42.367751, -71.257513),],
 		"category":["garden"],
 	},
-	// {
-	// 	"id":"lemberg",
-	// 	"nickname":"Lemberg",
-	// 	"name":"Lemberg Children's Center",
-	// 	"coordinates":[
-			
-	// 	],
-	// 	"category":["classroom"],
-	// 	"nearby":["rabbSchool"]
-	// },
+	{
+		"id":"lemberg",
+		"nickname":"Lemberg",
+		"name":"Gersh and Sarah Lemberg Children's Center",
+		"function":"Lemberg offers childcare for children under age seven. Brandeis students majoring in education can work and teach here.",
+		"coordinates":[
+			new Point(42.363665, -71.258979),
+			new Point(42.363665, -71.259105),
+			new Point(42.363508, -71.259228),
+			new Point(42.363443, -71.259073),
+			new Point(42.363404, -71.258886),
+			new Point(42.363630, -71.258806)
+		],
+		"category":["classroom"],
+		"nearby":["rabbSchool"]
+	},
 
 
 ]

@@ -3,6 +3,7 @@ locations_dorms = [
 		"id":"ss567",
 		"name":"567 South Street Apartments",
 		"nickname":"567",
+		"function":"The 567 Apartments provide two-person suite living for sophoomres.",
 		"coordinates":[
 			new Point(42.36141,-71.261572), 
 			new Point(42.361333,-71.261402), 
@@ -10,32 +11,35 @@ locations_dorms = [
 			new Point(42.36124,-71.261714)],
 		"category":["dorm"]
 	},
-	coffman = {
-		"id":"coffman",
-		"name":"Coffman Residence Hall",
-		"nickname":"Coffman",
-		"coordinates":[
-			new Point(42.359936,-71.257469), 
-			new Point(42.359989,-71.257373), 
-			new Point(42.359397,-71.25678), 
-			new Point(42.359327,-71.256919)],
-		"category":["dorm"]
-		},
-	cohen = {
-		"id":"cohen",
-		"name":"Cohen Residence Hall",
-		"nickname":"Cohen",
+	{
+		"id":"grad111",
+		"name":"Ollie and Eleanore Cohen Building",
+		"nickname":"Grad 111",
+		"function":"Located at 110 Angleside Rd., Grad 111 provides suite-style living for upperclassmen.",
 		"coordinates":[
 			new Point(42.359859,-71.257805), 
 			new Point(42.359894,-71.257695), 
 			new Point(42.359111,-71.257282), 
 			new Point(42.359074,-71.257394)],
 		"category":["dorm"]
-		},
-	lewis = {
-		"id":"lewis",
-		"name":"Lewis Residence Hall",
-		"nickname":"Lewis",
+	},
+	{
+		"id":"grad112",
+		"name":"Max and Ann Coffman Building",
+		"nickname":"Grad 112",
+		"function":"Located at 150 Charles River Rd., Grad 112 provides suite-style living for upperclassmen.",
+		"coordinates":[
+			new Point(42.359936,-71.257469), 
+			new Point(42.359989,-71.257373), 
+			new Point(42.359397,-71.25678), 
+			new Point(42.359327,-71.256919)],
+		"category":["dorm"]
+	},
+	{
+		"id":"grad113",
+		"name":"The George L. and Minnie Lewis Building",
+		"nickname":"Grad 113",
+		"function":"Located at 164 Charles River Rd., Grad 113 provides suite-style living for upperclassmen.",
 		"coordinates":[
 			new Point(42.360203,-71.257102), 
 			new Point(42.359815,-71.256402), 
@@ -43,10 +47,11 @@ locations_dorms = [
 			new Point(42.36013,-71.257177)],
 		"category":["dorm"]
 		},
-	may = {
-		"id":"may",
-		"name":"May Residence Hall",
-		"nickname":"May",
+	{
+		"id":"grad114",
+		"name":"Morton May Building",
+		"nickname":"Grad 114",
+		"function":"Located at 178 Charles River Rd., Grad 114 provides suite-style living for upperclassmen.",
 		"coordinates":[
 			new Point(42.360515,-71.25694), 
 			new Point(42.360223,-71.256167), 
