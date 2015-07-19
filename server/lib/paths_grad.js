@@ -424,5 +424,46 @@ paths_grad = [
 		"start":"grad114_e06",
 		"end":"clot_c11",
 		"description":"Turn left and head to the top of the flight of stairs."
+	},
+	// train station
+	{
+		"start":"clot_e03",
+		"end":"commuterrail_e01",
+		"description":"Cut across the office park parking lots until you reach the commuter rail platform."
+	},
+	{
+		"start":"commuterrail_e01",
+		"end":"clot_e03",
+		"description":"Cut across the parking lots until you reach C-Lot."
+	},
+	{
+		"start":"commuterrail_e01",
+		"end":"commuterrail_e02",
+		"description":"Cross the tracks."
+	},
+	{
+		"start":"commuterrail_e02",
+		"end":"commuterrail_e01",
+		"description":"Cross the tracks."
+	},
+	{
+		"start":"commuterrail_e02",
+		"end":"commuterrail_c01",
+		"description":"Cut across the parking lot towards the sidewalk."
+	},
+	{
+		"start":"commuterrail_c01",
+		"end":"commuterrail_e02",
+		"description":"Cut across the parking lot towards the train station's platform."
+	},
+	{
+		"start":"commuterrail_c01",
+		"end":"epstein_c01",
+		"description":"Cross South Street."
+	},
+	{
+		"start":"epstein_c01",
+		"end":"commuterrail_c01",
+		"description":"Cross South Street."
 	}
 ]

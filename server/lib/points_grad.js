@@ -438,6 +438,24 @@ points_grad = [
 		"id":"clot_c12", //side path next to gap and 111 leading down to E/F
 		"coordinate":new Point(42.359797, -71.258038),
 		"type":"crossing"
+	},
+	// train station
+	{
+		"id":"commuterrail_e01", //sawyer
+		"coordinate":new Point(42.361845, -71.259708),
+		"type":"entrance",
+		"getTo":"Head to the commuter rail ramp on Sawyer Road."
+	},
+	{
+		"id":"commuterrail_e02", //parking lot
+		"coordinate":new Point(42.361990, -71.259728),
+		"type":"entrance",
+		"getTo":"Head to the commuter rail ramp next to the parking lot across from Epstein."
+	},
+	{
+		"id":"commuterrail_c01", // sidewalk next to parking lot
+		"coordinate":new Point(42.362313, -71.260269),
+		"type":"crossing"
 	}
 ]
 
