@@ -79,6 +79,286 @@ points_grad = [
 		"id":"epstein_c04", // right outside south street cafe
 		"coordinate":new Point(42.361674, -71.261063),
 		"type":"crossing"
+	},
+	// grad 111
+	{
+		"id":"grad111_e01", //stair A
+		"coordinate":new Point(42.359167, -71.257450),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell A."
+	},
+	{
+		"id":"grad111_e02", // B
+		"coordinate":new Point(42.359275, -71.257526),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell B."
+	},
+	{
+		"id":"grad111_e03", //C
+		"coordinate":new Point(42.359390, -71.257582),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell C."
+	},
+	{
+		"id":"grad111_e04", // D
+		"coordinate":new Point(42.359497, -71.257624),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell D."
+	},
+	{
+		"id":"grad111_e05", //E
+		"coordinate":new Point(42.359615, -71.257685),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell E."
+	},
+	{
+		"id":"grad111_e06", //F
+		"coordinate":new Point(42.359715, -71.257743),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell F."
+	},
+	{
+		"id":"grad111_e07", //G
+		"coordinate":new Point(42.359811, -71.257797),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell G."
+	},
+	{
+		"id":"grad111_e08", //H
+		"coordinate":new Point(42.359834, -71.257672),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell H."
+	},
+	{
+		"id":"grad111_e09",//I
+		"coordinate":new Point(42.359736, -71.257631),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell I."
+	},
+	{
+		"id":"grad111_e10", //J
+		"coordinate":new Point(42.359633, -71.257567),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell J."
+	},
+	{
+		"id":"grad111_e11", //K
+		"coordinate":new Point(42.359514, -71.257504),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell K."
+	},
+	{
+		"id":"grad111_e12", //L
+		"coordinate":new Point(42.359415, -71.257465),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell L."
+	},
+	{
+		"id":"grad111_e13", //M
+		"coordinate":new Point(42.359313, -71.257408),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell M."
+	},
+	{
+		"id":"grad111_e14", //N
+		"coordinate":new Point(42.359188, -71.257330),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 111, stairwell N."
+	},
+	// grad 112
+	{
+		"id":"charlesrivercommons_e01",
+		"coordinate":new Point(42.359456, -71.257033),
+		"type":"entrance",
+		"getTo":"Head out the entrance facing Grad 111 and away from the bus stop."
+	},
+	{
+		"id":"charlesrivercommons_e02",
+		"coordinate":new Point(42.359539, -71.256890),
+		"type":"entrance",
+		"getTo":"Head out the entrance facing Grad 113, on the side with the bus stop."
+	},
+	{
+		"id":"grad112_e01", //A
+		"coordinate":new Point(42.359517, -71.257061),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell A."
+	},
+	{
+		"id":"grad112_e02", //B
+		"coordinate":new Point(42.359620, -71.257156),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell B."
+	},
+	{
+		"id":"grad112_e03", //C
+		"coordinate":new Point(42.359712, -71.257245),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell C."
+	},
+	{
+		"id":"grad112_e04", //D
+		"coordinate":new Point(42.359824, -71.257344),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell D."
+	},
+	{
+		"id":"grad112_e05", //E
+		"coordinate":new Point(42.359901, -71.257426),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell E."
+	},
+	{
+		"id":"grad112_e06", //F
+		"coordinate":new Point(42.359944, -71.257319),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell F."
+	},
+	{
+		"id":"grad112_e07", //G
+		"coordinate": new Point(42.359856, -71.257241),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell G."
+	},
+	{
+		"id":"grad112_e08", //H
+		"coordinate":new Point(42.359748, -71.257144),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell H."
+	},
+	{
+		"id":"grad112_e09", //I
+		"coordinate":new Point(42.359661, -71.257052),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell I."
+	},
+	{
+		"id":"grad112_e10", //J
+		"coordinate":new Point(42.359559, -71.256961),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 112, stairwell J."
+	},
+	// grad 113
+	{
+		"id":"grad113_e01", //A
+		"coordinate":new Point(42.359820, -71.256601),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell A."
+	},
+	{
+		"id":"grad113_e02", //B
+		"coordinate":new Point(42.359886, -71.256722),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell B."
+	},
+	{
+		"id":"grad113_e03", //C
+		"coordinate":new Point(42.359949, -71.256834),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell C."
+	},
+	{
+		"id":"grad113_e04",//D
+		"coordinate":new Point(42.360018, -71.256973),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell D."
+	},
+	{
+		"id":"grad113_e05", //E
+		"coordinate":new Point(42.360106, -71.257110),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell E."
+	},
+	{
+		"id":"grad113_e06", //F
+		"coordinate":new Point(42.360168, -71.257036),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell F."
+	},
+	{
+		"id":"grad113_e07", //G
+		"coordinate":new Point(42.360089, -71.256898),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell G."
+	},
+	{
+		"id":"grad113_e08", //H
+		"coordinate":new Point(42.360018, -71.256792),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell H."
+	},
+	{
+		"id":"grad113_e09", //I
+		"coordinate":new Point(42.359945, -71.256646),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell I."
+	},
+	{
+		"id":"grad113_e10", //J
+		"coordinate":new Point(42.359878, -71.256520),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 113, stairwell J."
+	},
+	// grad 114
+	{
+		"id":"grad114_e01", //A
+		"coordinate":new Point(42.360206, -71.256353),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell A."
+	},
+	{
+		"id":"grad114_e02", //B
+		"coordinate":new Point(42.360243, -71.256473),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell B."
+	},
+	{
+		"id":"grad114_e03", //C
+		"coordinate":new Point(42.360323, -71.256656),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell C."
+	},
+	{
+		"id":"grad114_e04", //D
+		"coordinate":new Point(42.360370, -71.256797),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell D."
+	},
+	{
+		"id":"grad114_e05", //E
+		"coordinate":new Point(42.360423, -71.256910),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell E."
+	},
+	{
+		"id":"grad114_e06", //F
+		"coordinate":new Point(42.360493, -71.256865),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell F."
+	},
+	{
+		"id":"grad114_e07", //G
+		"coordinate":new Point(42.360440, -71.256738),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell G."
+	},
+	{
+		"id":"grad114_e08", //H
+		"coordinate":new Point(42.360398, -71.256608),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell H."
+	},
+	{
+		"id":"grad114_e09", //I
+		"coordinate":new Point(42.360337, -71.256455),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell I."
+	},
+	{
+		"id":"grad114_e10", //J
+		"coordinate":new Point(42.360277, -71.256289),
+		"type":"entrance",
+		"getTo":"Head to the entrance of Grad 114, stairwell J."
 	}
 ]
 

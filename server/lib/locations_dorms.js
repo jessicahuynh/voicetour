@@ -22,7 +22,23 @@ locations_dorms = [
 			new Point(42.359894,-71.257695), 
 			new Point(42.359111,-71.257282), 
 			new Point(42.359074,-71.257394)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["grad111_e01","grad111_e02","grad111_e03","grad111_e04","grad111_e05","grad111_e06","grad111_e07","grad111_e08","grad111_e09","grad111_e010","grad111_e11","grad111_e12","grad111_e13","grad111_e14",]
+	},
+	{
+		"id":"charlesrivercommons",
+		"name":"Charles River Commons",
+		"nickname":"Charles River Commons",
+		"function":"The Charles River Common is available for student and club use.",
+		"description":"The room has a large, flat-screen TV, a variety of gaming tables, a kitchen area, and cardio equipment. The Area Coordinator of both Charles River and the Foster Mods holds regular office hours here.",
+		"coordinates":[
+			new Point(42.359485, -71.257064),
+			new Point(42.359356, -71.256937),
+			new Point(42.359424, -71.256795),
+			new Point(42.359560, -71.256919)
+		],
+		"category":["lounge"],
+		"entrances":["charlesrivercommons_e01","charlesrivercommons_e02"]
 	},
 	{
 		"id":"grad112",
@@ -30,10 +46,10 @@ locations_dorms = [
 		"nickname":"Grad 112",
 		"function":"Located at 150 Charles River Rd., Grad 112 provides suite-style living for upperclassmen.",
 		"coordinates":[
-			new Point(42.359936,-71.257469), 
-			new Point(42.359989,-71.257373), 
-			new Point(42.359397,-71.25678), 
-			new Point(42.359327,-71.256919)],
+			new Point(42.359506, -71.257059), 
+			new Point(42.359965, -71.257495), 
+			new Point(42.360005, -71.257378), 
+			new Point(42.359567, -71.256964)],
 		"category":["dorm"]
 	},
 	{

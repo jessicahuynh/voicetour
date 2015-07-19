@@ -126,7 +126,7 @@ Template.about.onCreated(function() {
 				
 				google.maps.event.addListener(polygon, 'click', function () {
 					new google.maps.InfoWindow({
-				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")",
+				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")<br>Entrances: "+theLocs[this.index].entrances,
 				      maxWidth: 200,
 					  position:new google.maps.LatLng(theLocs[this.index].coordinates[0].x,theLocs[this.index].coordinates[0].y)
 				  }).open(map.instance,this);
@@ -143,7 +143,7 @@ Template.about.onCreated(function() {
 				
 				google.maps.event.addListener(marker, 'click',function() {
 					new google.maps.InfoWindow({
-				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")",
+				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")<br>Entrances: "+theLocs[this.index].entrances,
 				      maxWidth: 200,
 				  }).open(map.instance,marker);
 				});
@@ -155,7 +155,7 @@ Template.about.onCreated(function() {
 function putIMarker(point,map,marker) {
 	google.maps.event.addListener(marker, 'click',function() {
 		new google.maps.InfoWindow({
-	      content: "ID: <b>" + point.id+"</b><br>Type: " + point.type,
+	      content: "ID: <b>" + point.id+"</b><br>Type: " + point.type+"<br>getTo: " + point.getTo,
 	      maxWidth: 200,
 	  }).open(map.instance,marker);
 	});
