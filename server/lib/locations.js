@@ -129,14 +129,16 @@ locations = [
 		},
 	epstein = {
 		"id":"epstein",
-		"name":"Epstein Building",
+		"name":"Rubin and Ethel Epstein Center for Campus Services",
 		"nickname":"Epstein",
+		"function":"Epstein is home to facilities, the Women's Studies Research Center, and the Kniznick Gallery.",
 		"coordinates":[
 			new Point(42.362457,-71.261636), 
 			new Point(42.362374,-71.260823), 
 			new Point(42.362134,-71.260864), 
 			new Point(42.362204,-71.261671)],
-		"category":["classroom","offices"]
+		"category":["classroom","offices"],
+		"entrances":["epstein_e01","epstein_e02"]
 		},
 	facultycenter = {
 		"id":"facultycenter",

@@ -98,5 +98,86 @@ paths_grad = [
 		"start":"ss567_c01",
 		"end":"ss567_e03",
 		"description":"Veer left to the side entrance of 567 and enter."
+	},
+	{
+		"start":"ss567_e01",
+		"end":"ss567_c01",
+		"description":"Walk from the main entrance of 567 to the crosswalk."
+	},
+	{
+		"start":"ss567_c01",
+		"end":"ss567_e01",
+		"description":"Walk to the main entrance of 567."
+	},
+	// epstein
+	{
+		"start":"epstein_e02",
+		"end":"epstein_c01",
+		"description":"Turn right and head towards South Street."
+	},
+	{
+		"start":"epstein_c01",
+		"end":"epstein_e02",
+		"description":"Head past the statue towards the purple facade entitled Women's Studies Research Center and enter."
+	},
+	{
+		"start":"epstein_c01",
+		"end":"epstein_c02",
+		"description":"Continue along South Street away from the main campus."
+	},
+	{
+		"start":"epstein_c02",
+		"end":"epstein_c01",
+		"description":"Walk along South Street away from the train station and towards the crooswalk."
+	},
+	{
+		"start":"epstein_c02",
+		"end":"epstein_e01",
+		"description":"Head towards Epstein, veering left to the facilities entrance."
+	},
+	{
+		"start":"epstein_e01",
+		"end":"epstein_c02",
+		"description":"Turn immediately left once you exit and walk down the sidewalk towards South Street."
+	},
+	{
+		"start":"epstein_c02",
+		"end":"epstein_c03",
+		"description":"Continue along South Street, away from campus."
+	},
+	{
+		"start":"epstein_c03",
+		"end":"epstein_c02",
+		"description":"Walk along the sidewalk parallel to South Street, away from the train station."
+	},
+	{
+		"start":"epstein_c03",
+		"end":"epstein_e01",
+		"description":"Veer left under the trees to find the facilities entrance of Epstein."
+	},
+	{
+		"start":"epstein_e01",
+		"end":"epstein_c03",
+		"description":"Pass underneath the trees and veer left towards the train tracks."
+	},
+	{
+		"start":"epstein_c03",
+		"end":"epstein_c04",
+		"description":"Continue along South Street, passing over the train tracks and South Street Market until you reach the crossing."
+	},
+	{
+		"start":"epstein_c04",
+		"end":"epstein_c03",
+		"description":"Pass South Street Market and the train tracks, staying on the sidewalk."
+	},
+	{
+		"start":"epstein_c04",
+		"end":"turner_c03",
+		"description":"Cross the street towards Cappy's."
+	},
+	{
+		"start":"turner_c03",
+		"end":"epstein_c04",
+		"description":"Cross the street towards South Street Market and the train tracks."
 	}
 ]

@@ -3,13 +3,14 @@ locations_dorms = [
 		"id":"ss567",
 		"name":"567 South Street Apartments",
 		"nickname":"567",
-		"function":"The 567 Apartments provide two-person suite living for sophoomres.",
+		"function":"The 567 Apartments provide two-person suite living for sophomores.",
 		"coordinates":[
 			new Point(42.36141,-71.261572), 
 			new Point(42.361333,-71.261402), 
 			new Point(42.361165,-71.261552), 
 			new Point(42.36124,-71.261714)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"entrances":["ss567_e01","ss567_e02","ss567_e03"]
 	},
 	{
 		"id":"grad111",
