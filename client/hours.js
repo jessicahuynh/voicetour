@@ -22,7 +22,7 @@ Template.hours.helpers({
 	period: function(){
 		var loc = Locations.findOne({"id":JSON.stringify(this).replace(/"([^"]+(?="))"/g, '$1')});
 		if(loc.hour){
-			var x;
+			x=[];
 			if(d==0){
 				x=loc.Sun;
 			} else if (d==1){
@@ -41,7 +41,7 @@ Template.hours.helpers({
 			var startH=x[0];
 			var startMin=x[1];
 			var endH=x[2];
-			var endMin=x[4];
+			var endMin=x[3];
 			var openPeriod=d+startH+":"+startMin+"-"+endH+":"+endMin;
 			return openPeriod;
 		} else {
@@ -50,7 +50,15 @@ Template.hours.helpers({
 		return loc;
 	},
 	status: function(){
+		if(x.length==4){
 
+		}
+		else if(x.length==8){
+
+		}
+		else if(x.length==12){
+
+		}
 	},
 	now: function(){
 		hour=new Date().getHours();

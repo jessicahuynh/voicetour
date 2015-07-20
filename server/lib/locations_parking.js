@@ -210,6 +210,22 @@ locations_parking = [
 		"category":["parking"],
 		"nearby":["slosberg","admissions","bernstein-marcus","stop_admissions","ridgewoodA"],
 		"entrances":["slosberg_c02","slosberg_c03"]
+	},
+	{
+		"id":"theaterparking",
+		"name":"Theater Lot",
+		"nickname":"theater lot",
+		"coordinates":[
+			new Point(42.364363, -71.263228),
+			new Point(42.363935, -71.261710),
+			new Point(42.363467, -71.261968),
+			new Point(42.363715, -71.263009),
+			new Point(42.363438, -71.263228),
+			new Point(42.363594, -71.263761),
+		],
+		"category":["parking"],
+		"nearby":["spingold,,ridgewoodB,zivB,zivA,lemberg,goldman"],
+		"entrances":[]
 	}
 ]
 
