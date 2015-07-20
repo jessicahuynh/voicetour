@@ -65,10 +65,17 @@ locations = [
 		"name": "The Rose Art Museum",
 		"nickname": "The Rose",
 		"coordinates": [
-			new Point(42.366033,-71.262631),
-			new Point(42.365498,-71.262948),
-			new Point(42.365442,-71.262288),
-			new Point(42.365902,-71.262218)],
+			new Point(42.365986, -71.262427),
+			new Point(42.365909, -71.262201),
+			new Point(42.365627, -71.262362),
+			new Point(42.365555, -71.262220),
+			new Point(42.365439, -71.262283),
+			new Point(42.365561, -71.262668),
+			new Point(42.365437, -71.262762),
+			new Point(42.365498, -71.262956),
+			new Point(42.365797, -71.262774),
+			new Point(42.365739, -71.262582),
+			],
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Museum",
 		"category":["art"]
@@ -174,10 +181,26 @@ locations = [
 		"id":"sachar",
 		"name":"Sachar International Center",
 		"coordinates":[
-			new Point(42.365140, -71.264641), 
-			new Point(42.364938, -71.265223), 
-			new Point(42.364750, -71.265070), 
-			new Point(42.364833, -71.264872)],
+			new Point(42.364940, -71.265213), 
+			new Point(42.364988, -71.265133), 
+			new Point(42.365075, -71.265113), 
+			new Point(42.365050, -71.264948), 
+			new Point(42.365147, -71.264620), 
+			new Point(42.365073, -71.264599), 
+			new Point(42.364803, -71.264665), 
+			new Point(42.364779, -71.264563), 
+			new Point(42.364743, -71.264578), 
+			new Point(42.364693, -71.264507), 
+			new Point(42.364559, -71.264563), 
+			new Point(42.364617, -71.264655), 
+			new Point(42.364649, -71.264635), 
+			new Point(42.364673, -71.264697), 
+			new Point(42.364633, -71.264735), 
+			new Point(42.364695, -71.264800), 
+			new Point(42.364764, -71.264757), 
+			new Point(42.364810, -71.264904), 
+			new Point(42.364738, -71.265078), 
+		],
 		"category":["classroom","graduate"]
 		},
 	irving = {
@@ -219,10 +242,11 @@ locations = [
 			new Point(42.363061,-71.258924),
 			new Point(42.36298,-71.25929),  
 			new Point(42.362872,-71.259233),
-			new Point(42.362961,-71.258887),],
-		"function":"The Rabb School is home to",
+			new Point(42.362961,-71.258887)],
+		"function":"The Rabb School is home to continuing education, graduate and professional programs, OLLI @ Brandeis, and summer programs, including the Justice Brandeis Semester (JBS).",
 		"category":["graduate"],
-		"nearby":["lemberg"]
+		"nearby":["lemberg","slosberg"],
+		"entrances":["rabbSchool_e01","rabbSchool_e02","rabbSchool_e03"]
 		},
 	admissions = {
 		"id":"admissions",
@@ -234,8 +258,11 @@ locations = [
 			new Point(42.364489, -71.260878), 
 			new Point(42.364150, -71.261231), 
 			new Point(42.364074, -71.261022),
-			new Point(42.364386, -71.260705),],
-		"category":["offices","informational"]
+			new Point(42.364386, -71.260705)],
+		"function":"Admissions hosts tours and provides information about Brandeis to any interested parties.",
+		"category":["offices","informational"],
+		"entrances":["admissions_e01","admissions_e02"],
+		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC","village"]
 		},	
 	slosberg = {
 		"id":"slosberg",
@@ -246,17 +273,28 @@ locations = [
 			new Point(42.364319,-71.2594), 
 			new Point(42.363891,-71.259666), 
 			new Point(42.363985,-71.259942)],
-		"category":["art","classroom"]
+		"function":"Slosberg is home to the Brandeis Concert Series.",
+		"description":"The Brandeis Concert Series features about 50-70 student and professional concerts each year.",
+		"category":["art","classroom"],
+		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
+		"nearby":["admissions","bernstein-marcus","lemberg","village"]
 		},
 	spingold = {
 		"id":"spingold",
 		"name":"Spingold Theater Center",
 		"nickname":"Spingold",
 		"coordinates":[
-			new Point(42.364788,-71.262031), 
-			new Point(42.364612,-71.261474), 
-			new Point(42.364008,-71.261774), 
-			new Point(42.364194,-71.262415)],
+			new Point(42.364733, -71.261736), 
+			new Point(42.364701, -71.261636), 
+			new Point(42.364564, -71.261727), 
+			new Point(42.364437, -71.261598),
+			new Point(42.364222, -71.261593),
+			new Point(42.364060, -71.261870),
+			new Point(42.364113, -71.262185),
+			new Point(42.364328, -71.262309),
+			new Point(42.364550, -71.262137),
+			new Point(42.364589, -71.261813),
+			],
 		"category":["art"]
 		},
 	abelson = {
@@ -619,6 +657,7 @@ locations = [
 		"category":["classroom"],
 		"description": "A longer description",
 		"entrances":["goldfarb_e01","goldfarb_e02"],
+		"hours":["hour_library"],
 	},	
 	gerstenzang = {
 		"id":"gerstenzang",
@@ -819,7 +858,8 @@ locations = [
 			new Point(42.363630, -71.258806)
 		],
 		"category":["classroom"],
-		"nearby":["rabbSchool"]
+		"nearby":["rabbSchool","slosberg"],
+		"entrances":["lemberg_e01"]
 	},
 
 

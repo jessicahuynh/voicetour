@@ -167,6 +167,65 @@ locations_parking = [
 		],
 		"category":["parking"],
 		"entrances":["clot_e01","clot_e02","clot_e03"]
+	},
+	{
+		"id":"bernsteinparkinglot",
+		"name":"Bernstein-Marcus Parking Lot",
+		"nickname":"Bernstein Marcus parking lot",
+		"coordinates":[
+			new Point(42.364969, -71.260228),
+			new Point(42.364806, -71.260081),
+			new Point(42.364895, -71.259868),
+			new Point(42.365064, -71.260004)
+		],
+		"category":["parking"],
+		"nearby":["bernstein-marcus","stop_admissions","greatlawn","slosberg"]
+	},
+	{
+		"id":"hlot",
+		"name":"Hassenfeld Parking Lot",
+		"nickname":"H-Lot",
+		"coordinates":[
+			new Point(42.366973, -71.261853),
+			new Point(42.366777, -71.262181),
+			new Point(42.366365, -71.262398),
+			new Point(42.366215, -71.262355),
+			new Point(42.366190, -71.262189),
+			new Point(42.366453, -71.261501)
+		],
+		"category":["parking"],
+		"nearby":["shapirodorm"]
+	},
+	{
+		"id":"admissionsvisitorparking",
+		"name":"Admissions Visitor Parking Lot",
+		"nickname":"Admissions visitor parking",
+		"coordinates":[
+			new Point(42.364566, -71.260030),
+			new Point(42.364576, -71.260094),
+			new Point(42.364164, -71.260265),
+			new Point(42.364085, -71.260076),
+			new Point(42.364454, -71.259875)
+		],
+		"category":["parking"],
+		"nearby":["slosberg","admissions","bernstein-marcus","stop_admissions","ridgewoodA"],
+		"entrances":["slosberg_c02","slosberg_c03"]
+	},
+	{
+		"id":"theaterparking",
+		"name":"Theater Lot",
+		"nickname":"theater lot",
+		"coordinates":[
+			new Point(42.364363, -71.263228),
+			new Point(42.363935, -71.261710),
+			new Point(42.363467, -71.261968),
+			new Point(42.363715, -71.263009),
+			new Point(42.363438, -71.263228),
+			new Point(42.363594, -71.263761),
+		],
+		"category":["parking"],
+		"nearby":["spingold,,ridgewoodB,zivB,zivA,lemberg,goldman"],
+		"entrances":[]
 	}
 ]
 

@@ -10,6 +10,27 @@ Template.about.helpers({
 	},
 	loc: function() {
 		return Locations.find({"entrances":undefined}).fetch();
+	},
+	numPoints: function() {
+		return Intersections.find().count();
+	},
+	numEntrances: function() {
+		return Intersections.find({"type":"entrance"}).count()+Intersections.find({"type":"ientrance"}).count();
+	},
+	numIEntrances: function() {
+		return Intersections.find({"type":"ientrance"}).count();
+	},
+	numCrossings:function() {
+		return Intersections.find({"type":"crossing"}).count()+Intersections.find({"type":"icrossing"}).count();
+	},
+	numICrossings:function() {
+		return Intersections.find({"type":"icrossing"}).count();
+	},
+	numLocs:function() {
+		return Locations.find().count();
+	},
+	numPaths:function() {
+		return Paths.find().count();
 	}
 });
 

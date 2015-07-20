@@ -10,7 +10,8 @@ locations_dorms = [
 			new Point(42.361165,-71.261552), 
 			new Point(42.36124,-71.261714)],
 		"category":["dorm"],
-		"entrances":["ss567_e01","ss567_e02","ss567_e03"]
+		"entrances":["ss567_e01","ss567_e02","ss567_e03"],
+		"nearby":["turner","commuterrail","epstein"]
 	},
 	{
 		"id":"grad111",
@@ -23,7 +24,8 @@ locations_dorms = [
 			new Point(42.359111,-71.257282), 
 			new Point(42.359074,-71.257394)],
 		"category":["dorm"],
-		"entrances":["grad111_e01","grad111_e02","grad111_e03","grad111_e04","grad111_e05","grad111_e06","grad111_e07","grad111_e08","grad111_e09","grad111_e010","grad111_e11","grad111_e12","grad111_e13","grad111_e14"]
+		"entrances":["grad111_e01","grad111_e02","grad111_e03","grad111_e04","grad111_e05","grad111_e06","grad111_e07","grad111_e08","grad111_e09","grad111_e010","grad111_e11","grad111_e12","grad111_e13","grad111_e14"],
+		"nearby":["commuterrail,","grad112","grad113","grad114","charlesrivercommons"]
 	},
 	{
 		"id":"charlesrivercommons",
@@ -38,7 +40,8 @@ locations_dorms = [
 			new Point(42.359560, -71.256919)
 		],
 		"category":["lounge"],
-		"entrances":["charlesrivercommons_e01","charlesrivercommons_e02"]
+		"entrances":["charlesrivercommons_e01","charlesrivercommons_e02"],
+		"nearby":["commuterrail,","grad111","grad112","grad113","grad114"]
 	},
 	{
 		"id":"grad112",
@@ -51,7 +54,8 @@ locations_dorms = [
 			new Point(42.360005, -71.257378), 
 			new Point(42.359567, -71.256964)],
 		"category":["dorm"],
-		"entrances":["grad112_e01","grad112_e02","grad112_e03","grad112_e04","grad112_e05","grad112_e06","grad112_e07","grad112_e08","grad112_e09","grad112_e010"]
+		"entrances":["grad112_e01","grad112_e02","grad112_e03","grad112_e04","grad112_e05","grad112_e06","grad112_e07","grad112_e08","grad112_e09","grad112_e010"],
+		"nearby":["commuterrail,","grad111","grad113","grad114","charlesrivercommons"]
 	},
 	{
 		"id":"grad113",
@@ -64,7 +68,8 @@ locations_dorms = [
 			new Point(42.359742,-71.25648), 
 			new Point(42.36013,-71.257177)],
 		"category":["dorm"],
-		"entrances":["grad113_e01","grad113_e02","grad113_e03","grad113_e04","grad113_e05","grad113_e06","grad113_e07","grad113_e08","grad113_e09","grad113_e010"]
+		"entrances":["grad113_e01","grad113_e02","grad113_e03","grad113_e04","grad113_e05","grad113_e06","grad113_e07","grad113_e08","grad113_e09","grad113_e010"],
+		"nearby":["commuterrail,","grad111","grad112","grad114","charlesrivercommons"]
 		},
 	{
 		"id":"grad114",
@@ -77,50 +82,50 @@ locations_dorms = [
 			new Point(42.36015,-71.256216), 
 			new Point(42.360431,-71.256994)],
 		"category":["dorm"],
-		"entrances":["grad114_e01","grad114_e02","grad114_e03","grad114_e04","grad114_e05","grad114_e06","grad114_e07","grad114_e08","grad114_e09","grad114_e010"]
+		"entrances":["grad114_e01","grad114_e02","grad114_e03","grad114_e04","grad114_e05","grad114_e06","grad114_e07","grad114_e08","grad114_e09","grad114_e010"],
+		"nearby":["commuterrail,","grad111","grad112","grad113","charlesrivercommons"]
 	},
-	mazer = {
-		"id":"mazer",
-		"name":"Mazer Residence Hall",
-		"nickname":"Mazer",
-		"coordinates":[
-			new Point(42.36312,-71.261151), 
-			new Point(42.363011,-71.260811), 
-			new Point(42.362781,-71.260933), 
-			new Point(42.362912,-71.261273)],
-		"category":["dorm"]
-		},
 	ridgewoodA = {
 		"id":"ridgewoodA",
-		"name":"Ridgewood Residence Hall A",
+		"name":"Jehuda Reinharz Residence Hall",
 		"nickname":"Ridgewood A",
+		"function":"Ridgewood A provides suite-style living for upperclassmen.",
 		"coordinates":[
 			new Point(42.364163,-71.260638), 
 			new Point(42.364036,-71.260324), 
 			new Point(42.363893,-71.260338), 
 			new Point(42.364028,-71.260729)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"nearby":["ridgewoodB","ridgewoodC","admissions","village"],
+		"entrances":["ridgewoodA_e01","ridgewoodA_e02","ridgewoodA_e03","ridgewoodA_e04","ridgewoodA_e05"]
 		},
 	ridgewoodB = {
 		"id":"ridgewoodB",
 		"name":"Ridgewood Residence Hall B",
 		"nickname":"Ridgewood B",
+		"function":"Ridgewood B provides suite-style living for upperclassmen.",
 		"coordinates":[
 			new Point(42.363939,-71.261456), 
 			new Point(42.363978,-71.260872), 
 			new Point(42.363844,-71.260957), 
-			new Point(42.363788,-71.261432)]
+			new Point(42.363788,-71.261432)],
+		"category":["dorm"],
+		"nearby":["ridgewoodA","ridgewoodC","admissions","village"],
+		"entrances":["ridgewoodB_e01","ridgewoodB_e02"]
 		},
 	ridgewoodC = {
 		"id":"ridgewoodC",
 		"name":"Ridgewood Residence Hall C",
 		"nickname":"Ridgewood C",
+		"function":"Ridgewood C provides suite-style living for upperclassmen.",
 		"coordinates":[
 			new Point(42.363691,-71.260904), 
 			new Point(42.363562,-71.260466), 
 			new Point(42.363425,-71.260566), 
 			new Point(42.363584,-71.261043)],
-		"category":["dorm"]
+		"category":["dorm"],
+		"nearby":["ridgewoodA","ridgewoodB","admissions","village"],
+		"entrances":["ridgewoodC_e01","ridgewoodC_e02"]
 		},
 	rosieEast = {
 		"id":"rosieeast",
@@ -206,47 +211,178 @@ locations_dorms = [
 		"category":["dorm"],
 		"entrances":["usen_e01","usen_e02"]
 		},
-	village = {
+	{
 		"id":"village",
 		"name":"Village Residence Hall",
 		"nickname":"The Village",
+		"function":"The Village houses sophomores, mid-years, and students going abroad.",
 		"coordinates":[
-			new Point(42.363835,-71.260165), 
-			new Point(42.363763,-71.259809), 
-			new Point(42.362819,-71.260465), 
-			new Point(42.362911,-71.260755)],
-		"category":["dorm"]
-		},
-	zivA = {
-		"id":"zivA",
+			new Point(42.363419, -71.260057), 
+			new Point(42.363532, -71.260042), 
+			new Point(42.363519, -71.259851), 
+			new Point(42.363774, -71.259797),
+			new Point(42.363842, -71.260157),
+			new Point(42.363718, -71.260141),
+			new Point(42.363684, -71.260017),
+			new Point(42.363627, -71.260030),
+			new Point(42.363633, -71.260146),
+			new Point(42.363458, -71.260160),
+			
+			new Point(42.363493, -71.260282), //front village B
+			new Point(42.363393, -71.260298),
+			new Point(42.363364, -71.260212),
+			new Point(42.363297, -71.260257),
+			new Point(42.363326, -71.260355),
+			new Point(42.363176, -71.260446),
+			
+			new Point(42.363165, -71.260623), // village C
+			new Point(42.362910, -71.260777),
+			new Point(42.362855, -71.260649),
+			new Point(42.363021, -71.260550),
+			new Point(42.363038, -71.260459),
+			new Point(42.362955, -71.260427),
+			new Point(42.362958, -71.260298),
+			
+			new Point(42.363142, -71.260352), //back village B
+			new Point(42.363209, -71.260303),
+			new Point(42.363160, -71.260133),
+			new Point(42.363388, -71.259976)],
+		"category":["dorm"],
+		"entrances":["villageA_e01","villageA_e02","villageA_e03","villageA_e04","villageA_e05","villageB_e01","villageB_e02","villageC_e01"],
+		"nearby":["slosberg","ridgewoodC","ridgewoodA","ziv129","ziv130","lemberg","rabbSchool"]
+	},
+	{
+		"id":"villageA",
+		"name":"Lorraine and Jack N. Friedman House",
+		"nickname":"Village A House",
+		"function":"Village A houses sophomores, mid-years, and students going abroad.",
+		"coordinates":[
+			new Point(42.363419, -71.260057), 
+			new Point(42.363532, -71.260042), 
+			new Point(42.363519, -71.259851), 
+			new Point(42.363774, -71.259797),
+			new Point(42.363842, -71.260157),
+			new Point(42.363718, -71.260141),
+			new Point(42.363684, -71.260017),
+			new Point(42.363627, -71.260030),
+			new Point(42.363633, -71.260146),
+			new Point(42.363458, -71.260160)],
+		"category":["dorm"],
+		"entrances":["villageA_e01","villageA_e02","villageA_e03","villageA_e04","villageA_e05","villageA_ie01"],
+		"nearby":["slosberg","ridgewoodC","ridgewoodA","ziv129","ziv130","lemberg","rabbSchool"]
+	},
+	{
+		"id":"villageB",
+		"name":"Melvin and Gale Nessel House",
+		"nickname":"Village B House",
+		"function":"Village B houses sophomores, mid-years, and students going abroad.",
+		"coordinates":[
+			new Point(42.363493, -71.260282),
+			new Point(42.363393, -71.260298),
+			new Point(42.363364, -71.260212),
+			new Point(42.363297, -71.260257),
+			new Point(42.363326, -71.260355),
+			new Point(42.363176, -71.260446),
+			new Point(42.363142, -71.260352),
+			new Point(42.363209, -71.260303),
+			new Point(42.363160, -71.260133),
+			new Point(42.363388, -71.259976)],
+		"category":["dorm"],
+		"entrances":["villageB_e01","villageB_e02","villageA_ie01","villageB_ie01"],
+		"nearby":["slosberg","ridgewoodC","ridgewoodA","ziv129","ziv130","lemberg","rabbSchool"]
+	},
+	{
+		"id":"villageC",
+		"name":"Village C House",
+		"nickname":"Village C House",
+		"function":"Village C houses sophomores, mid-years, and students going abroad.",
+		"coordinates":[
+			new Point(42.363142, -71.260352),
+			new Point(42.363176, -71.260446),
+			new Point(42.363165, -71.260623),
+			new Point(42.362910, -71.260777),
+			new Point(42.362855, -71.260649),
+			new Point(42.363021, -71.260550),
+			new Point(42.363038, -71.260459),
+			new Point(42.362955, -71.260427),
+			new Point(42.362958, -71.260298),
+		],
+		"category":["dorm"],
+		"entrances":["villageC_e01","villageB_ie01"],
+		"nearby":["slosberg","ridgewoodC","ridgewoodA","ziv129","ziv130","lemberg","rabbSchool"]
+	},
+	{
+		"id":"ziv127",
 		"name":"Ziv Residence Hall A",
+		"nickname":"Ziv 127",
+		"function":"Ziv 127 provides suite-style living for upperclassmen and students going abroad.",
 		"coordinates":[
-			new Point(42.363537,-71.261639), 
-			new Point(42.363459,-71.261421), 
-			new Point(42.363227,-71.261566), 
-			new Point(42.363294,-71.261831)],
-		"category":["dorm"]
-		},
-	zivB = {
-		"id":"zivB",
+			new Point(42.363544, -71.261652), 
+			new Point(42.363305, -71.261828), 
+			new Point(42.363262, -71.261713), 
+			new Point(42.363335, -71.261663),
+			new Point(42.363279, -71.261475),
+			new Point(42.363352, -71.261420),
+			new Point(42.363411, -71.261610),
+			new Point(42.363510, -71.261544)],
+		"category":["dorm"],
+		"nearby":["ridgewoodB","ridgewoodC","ziv128","ziv129","ziv130","epstein"],
+		"entrances":["ziv127_e01","ziv127_e02","ziv127_e03"]
+	},
+	{
+		"id":"ziv128",
 		"name":"Ziv Residence Hall B",
+		"nickname":"Ziv 128",
+		"function":"Ziv 128 provides suite-style living for upperclassmen and students going abroad.",
 		"coordinates":[
-			new Point(42.363197,-71.261606), 
-			new Point(42.363108,-71.261305), 
-			new Point(42.362904,-71.261391), 
-			new Point(42.363009,-71.26174)],
-		"category":["dorm"]
-		},
-	zivD = {
-		"id":"zivD",
+			new Point(42.363091, -71.261695), 
+			new Point(42.363010, -71.261744), 
+			new Point(42.362902, -71.261382), 
+			new Point(42.362986, -71.261328),
+			new Point(42.363034, -71.261469),
+			new Point(42.363161, -71.261381),
+			new Point(42.363201, -71.261489),
+			new Point(42.363054, -71.261590)],
+		"category":["dorm"],
+		"nearby":["ridgewoodB","ridgewoodC","ziv127","ziv129","ziv130","epstein"],
+		"entrances":["ziv128_e01","ziv128_e02","ziv128_e03"]
+	},
+	{
+		"id":"ziv129",
+		"name":"William and Helen Mazer Residence Hall",
+		"nickname":"Ziv 129",
+		"function":"Ziv 129, sometimes called Ziv C, provides suite-style living for upperclassmen and students going abroad.",
+		"coordinates":[
+			new Point(42.362989, -71.261231), 
+			new Point(42.362919, -71.261275), 
+			new Point(42.362781, -71.260929), 
+			new Point(42.362859, -71.260880),
+			new Point(42.362903, -71.260992),
+			new Point(42.363042, -71.260905),
+			new Point(42.363087, -71.261010),
+			new Point(42.362955, -71.261101)],
+		"category":["dorm"],
+		"nearby":["ridgewoodB","ridgewoodC","ziv127","ziv128","ziv130","epstein"],
+		"entrances":["ziv129_e01","ziv129_e02","ziv129_e03","village"]
+	},
+	{
+		"id":"ziv130",
 		"name":"Ziv Residence Hall D",
+		"nickname":"Ziv 130",
+		"function":"Ziv 130 provides suite-style living for upperclassmen and students going abroad.",
 		"coordinates":[
-			new Point(42.363419,-71.261034), 
-			new Point(42.36331,-71.260694), 
-			new Point(42.363126,-71.260815), 
-			new Point(42.363215,-71.261112)],
-		"category":["dorm"]
-		},
+			new Point(42.363353, -71.261089), 
+			new Point(42.363300, -71.260968), 
+			new Point(42.363179, -71.261039), 
+			new Point(42.363141, -71.260940),
+			new Point(42.363283, -71.260844),
+			new Point(42.363249, -71.260732),
+			new Point(42.363317, -71.260689),
+			new Point(42.363425, -71.261041)],
+		"category":["dorm"],
+		"nearby":["ridgewoodB","ridgewoodC","ziv127","ziv128","ziv129","epstein"],
+		"entrances":["ziv130_e01","ziv130_e02","ziv130_e03","village"]
+	},
 	eastShapiro = {
 		"id":"eastShapiro",
 		"name":"Shapiro Brothers Residence Hall",
