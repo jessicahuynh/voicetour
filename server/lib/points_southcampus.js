@@ -110,46 +110,6 @@ points_southcampus = [
     "coordinate":new Point(42.364019, -71.261467),
     "type": "crossing",
 },
-// admissions
-{
-    "id": "admissions_c01",
-    "coordinate":new Point(42.364743, -71.260767),
-    "type": "crossing",
-},
-{
-    "id":"admissions_e01", // the main one
-    "coordinate": new Point(42.364413, -71.260716),
-    "type":"entrance",
-    "getTo":"Head to the main entrance of Admissions."
-},
-{
-    "id":"admissions_e02", // secondary
-    "coordinate":new Point(42.364535, -71.260677),
-    "type":"entrance",
-    "getTo":"Head to Admissions's smaller entrance, in the area with the displays."
-},
-//slosberg
-{
-    "id":"slosberg_e01", // main
-    "coordinate":new Point(42.364098, -71.259915),
-    "type":"entrance",
-    "getTo":"Head to Slosberg's main entrance."
-},
-{
-    "id":"slosberg_e02", //side entrance closest to admissions
-    "coordinate":new Point(42.364428, -71.259636),
-    "type":"entrance"
-},
-{
-    "id":"slosberg_e03", //other side entrance
-    "coordinate":new Point(42.364369, -71.259453),
-    "type":"entrance"
-},
-{
-    "id":"slosberg_e04", //back entrance
-    "coordinate":new Point(42.364191, -71.259483),
-    "type":"entrance"
-},
 //lemberg
 {
     "id":"lemberg_e01", //main
@@ -345,8 +305,130 @@ points_southcampus = [
     "coordinate":new Point(42.363150, -71.260377),
     "type":"entrance",
     "getTo":"Head to the entrance of Village C next to Dunkin Donuts."
+},
+// admissions
+{
+    "id": "admissions_c01", //back corner near great lawn
+    "coordinate":new Point(42.364743, -71.260767),
+    "type": "crossing",
+},
+{
+    "id":"admissions_e01", // the main one
+    "coordinate": new Point(42.364413, -71.260716),
+    "type":"entrance",
+    "getTo":"Head to the main entrance of Admissions."
+},
+{
+    "id":"admissions_e02", // secondary
+    "coordinate":new Point(42.364535, -71.260677),
+    "type":"entrance",
+    "getTo":"Head to Admissions's smaller entrance, in the area with the displays."
+},
+//slosberg
+{
+    "id":"slosberg_e01", // main
+    "coordinate":new Point(42.364098, -71.259915),
+    "type":"entrance",
+    "getTo":"Head to Slosberg's main entrance."
+},
+{
+    "id":"slosberg_e02", //side entrance closest to admissions
+    "coordinate":new Point(42.364428, -71.259636),
+    "type":"entrance"
+},
+{
+    "id":"slosberg_e03", //other side entrance
+    "coordinate":new Point(42.364369, -71.259453),
+    "type":"entrance"
+},
+{
+    "id":"slosberg_e04", //back entrance
+    "coordinate":new Point(42.364191, -71.259483),
+    "type":"entrance"
+},
+// crossings in front of admissions-slosberg
+{
+    "id":"admissions_c02", //front,
+    "coordinate":new Point(42.364417, -71.260673),
+    "type":"crossing"
+},
+{
+    "id":"admissions_c03", //front near small path
+    "coordinate":new Point(42.364571, -71.260588),
+    "type":"crossing"
+},
+{
+    "id":"admissions_c04", //loop road meets admissions path
+    "coordinate":new Point(42.364696, -71.260409),
+    "type":"crossing"
+},
+{
+    "id":"admissions_c05", //loop road across from admissions
+    "coordinate":new Point(42.364798, -71.260408),
+    "type":"crossing"
+},
+{
+    "id":"admissions_c06", //crossroads at foot of steps
+    "coordinate":new Point(42.364400, -71.260579),
+    "type":"crossing"
+},
+{
+    "id":"admissions_c07", //between admissions and ridgewood A
+    "coordinate":new Point(42.364143, -71.260737),
+    "type":"crossing"
+},
+{
+    "id":"admissions_c08", //between admissions and ridgewood B
+    "coordinate":new Point(42.364069, -71.261048),
+    "type":"crossing"
+},
+{
+    "id":"slosberg_c01", // middle of the intersections
+    "coordinate":new Point(42.364379, -71.260385),
+    "type":"crossing"
+},
+{
+    "id":"slosberg_c02", // middle intersection in front of parking lot
+    "coordinate":new Point(42.364352, -71.260179),
+    "type":'crossing'
+},
+{
+    "id":"slosberg_c03", //between Ridgewood A and slosberg
+    "coordinate":new Point(42.364177, -71.260290),
+    "type":"crossing"
+},
+//ridgewood crossings
+{
+    "id":"ridgewoodA_c01",
+    "coordinate":new Point(42.364193, -71.260578),
+    "type":"crossing"
+},
+{
+    "id":"ridgewoodA_c02", //front of main entrance
+    "coordinate":new Point(42.364145, -71.260441),
+    "type":"crossing"
+},
+{
+    "id":"ridgewoodB_c01", //4-way between B and A
+    "coordinate":new Point(42.364020, -71.260814),
+    "type":"crossing"
+},
+{
+    "id":"ridgewoodB_c02", //near to main entrance of B
+    "coordinate":new Point(42.363756, -71.261008),
+    "type":"crossing"
+},
+{
+    "id":"ridgewoodC_c01", //big intersection between Ridgewoods
+    "coordinate":new Point(42.363753, -71.260399),
+    "type":"crossing"
+},
+// village crossings
+{
+    "id":"village_c01", 
+    "coordinate":new Point(42.363798, -71.260246),
+    "type":"crossing"
 }
-
 ]
 
 function Point(x,y) {

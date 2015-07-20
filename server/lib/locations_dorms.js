@@ -248,7 +248,7 @@ locations_dorms = [
 			new Point(42.363160, -71.260133),
 			new Point(42.363388, -71.259976)],
 		"category":["dorm"],
-		"entrances":["villageA_e01","villageA_e02","villageA_e03","villageA_e04","villageA_e05","villageB_e01","villageB_e02","villageC_e01","villageA_ie01","villageB_ie01"],
+		"entrances":["villageA_e01","villageA_e02","villageA_e03","villageA_e04","villageA_e05","villageB_e01","villageB_e02","villageC_e01"],
 		"nearby":["slosberg","ridgewoodC","ridgewoodA","ziv129","ziv130","lemberg","rabbSchool"]
 	},
 	{
