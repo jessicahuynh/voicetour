@@ -8,6 +8,8 @@
 		<div class="form-group">
 			<label for="endpoint">Destination</label>
 			{{destination}}
+			<label>Current Location</label>
+			({{curren.x}}, {{current.y}})
 			<br/>
 			{{step}}
 		</div>
@@ -16,7 +18,11 @@
 	<div id="map-nav" style="width:500px; height:500px">
 		{{> googleMap name="stepMap" options=stepMapOptions}}
 	</div>
+	<br/>
+	<div class="form-group">
 	<button type="click" id="refreshMap" name="refreshMap" class="btn btn-primary">Refresh</button>
+	<button type="click" id="recalMap" name="recalMap" class="btn btn-primary">Recalculate</button>
+	</div>
 </div>
 
 <!-- <div class="col-sm-6">

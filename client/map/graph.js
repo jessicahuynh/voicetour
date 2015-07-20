@@ -125,11 +125,14 @@ Template.graph.events({
 		var route = null;
 		route = getRoute(starts, ends);
 
+
+		// session variable for steps.js
 		Session.set("route",route);
 		Session.set("destination", ends);
+		Session.set("stepCenterPoint",route[0]);
 
 		getRouteDescription(route);
-		Session.set("stepCenterPoint",route[0]);
+		
 
 		
 		GoogleMaps.load();
@@ -155,7 +158,7 @@ Template.graph.events({
 				addRoutes(route[j],route[j+1],'navMap', map,'#000000');
 			}
 
-		google.maps.event.addDomListener(window, 'load', initialize);	
+		//google.maps.event.addDomListener(window, 'load', initialize);	
 		});
 	
 	},
@@ -192,4 +195,6 @@ Template.graph.events({
 		Router.go('/steps');
 	},
 });
+
+
 
