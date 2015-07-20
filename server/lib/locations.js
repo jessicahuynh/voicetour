@@ -615,6 +615,7 @@ locations = [
 		"category":["classroom"],
 		"description": "A longer description",
 		"entrances":["goldfarb_e01","goldfarb_e02"],
+		"hours":["hour_library"],
 	},	
 	gerstenzang = {
 		"id":"gerstenzang",
