@@ -239,7 +239,7 @@ locations = [
 		"function":"Admissions hosts tours and provides information about Brandeis to any interested parties.",
 		"category":["offices","informational"],
 		"entrances":["admissions_e01","admissions_e02"],
-		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC"]
+		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC","village"]
 		},	
 	slosberg = {
 		"id":"slosberg",
@@ -254,7 +254,7 @@ locations = [
 		"description":"The Brandeis Concert Series features about 50-70 student and professional concerts each year.",
 		"category":["art","classroom"],
 		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
-		"nearby":["admissions","bernstein-marcus","lemberg"]
+		"nearby":["admissions","bernstein-marcus","lemberg","village"]
 		},
 	spingold = {
 		"id":"spingold",
