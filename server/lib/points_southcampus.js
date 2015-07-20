@@ -425,8 +425,29 @@ points_southcampus = [
 },
 // village crossings
 {
-    "id":"village_c01", 
+    "id":"village_c01", //outside A
     "coordinate":new Point(42.363798, -71.260246),
+    "type":"crossing"
+},
+{
+    "id":"village_c02", //outside B
+    "coordinate":new Point(42.363583, -71.260288),
+    "type":'crossing'
+},
+{
+    "id":"village_c03", //bottom of stairs next to ziv
+    "coordinate":new Point(42.363284, -71.260549),
+    "type":"crossing"
+},
+{
+    "id":"village_c04", //south entrance
+    "coordinate":new Point(42.363010, -71.259947),
+    "type":"crossing",
+    "getTo":"Head to the driveway next to the Village's overhead walkway and the Dunkin' Donuts."
+},
+{
+    "id":"village_c05", //next to inspiration statue
+    "coordinate":new Point(42.362443, -71.260404),
     "type":"crossing"
 }
 ]

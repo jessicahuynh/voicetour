@@ -677,6 +677,66 @@ paths_southcampus = [
     "start":"village_c01",
     "end":"ridgewoodC_c01",
     "description":"Take the sidewalk through the gap in the fence towards the four-way intersection."
+},
+{
+    "start":"village_c01",
+    "end":"village_c02",
+    "description":"Continue down the path adjacent to the Village."
+},
+{
+    "start":"village_c02",
+    "end":"village_c01",
+    "description":"Continue up the path adjacent to the Village."
+},
+{
+    "start":"ridgewoodC_c01",
+    "end":"village_c02",
+    "description":"Walk along the sidewalk through the gap in the fence, headed downhill towards the steps."
+},
+{
+    "start":"village_c02",
+    "end":"ridgewoodC_c01",
+    "description":"Take the sidewalk through the gap in the fence towards the four-way intersection."
+},
+{
+    "start":"village_c02",
+    "end":"village_c03",
+    "description":"Go down the path adjacent to the Village and down the steps."
+},
+{
+    "start":"village_c03",
+    "end":"village_c02",
+    "description":"Go up the stairs and then continue up the path adjacent to the Village."
+},
+{
+    "start":"village_c03",
+    "end":"village_c04",
+    "description":"Head under the Village's overhead walkway to South Street."
+},
+{
+    "start":"village_c04",
+    "end":"village_c03",
+    "description":"Head under the overhead walkway to the foot of the steps."
+},
+{
+    "start":"village_c04",
+    "end":"village_c05",
+    "description":"Walk downhill down South Street towards Epstein and the train station."
+},
+{
+    "start":"village_c05",
+    "end":"village_c04",
+    "description":"Walk uphill to the driveway next to the overhead walkway."
+},
+{
+    "start":"village_c05",
+    "end":"epstein_c01",
+    "description":"Cross the driveway, downhill."
+},
+{
+    "start":"epstein_c01",
+    "end":"village_c05",
+    "description":"Cross the driveway, uphill."
 }
 
 ]
