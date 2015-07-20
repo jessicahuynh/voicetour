@@ -125,11 +125,14 @@ Template.graph.events({
 		var route = null;
 		route = getRoute(starts, ends);
 
+
+		// session variable for steps.js
 		Session.set("route",route);
 		Session.set("destination", ends);
+		Session.set("stepCenterPoint",route[0]);
 
 		getRouteDescription(route);
-		Session.set("stepCenterPoint",route[0]);
+		
 
 		
 		GoogleMaps.load();
@@ -141,21 +144,21 @@ Template.graph.events({
 			addMarkers(Session.get("stepCenterPoint"),'navMap', map);
 
 
-		Tracker.autorun(function() {	
+		//Tracker.autorun(function() {	
 				var center = findId(Session.get("stepCenterPoint"));
 				var theLatLng = new google.maps.LatLng(center.x,center.y);
 				map.instance.setCenter(theLatLng);
 				centerMarker.setPosition(theLatLng);
 				map.instance.setZoom(15);
 				console.log("test run autorun");
-		})	
+		//})	
 
 			addMarkers(route[route.length-1],'navMap', map);
 			for(var j = 0; j<route.length - 1; j++){
 				addRoutes(route[j],route[j+1],'navMap', map,'#000000');
 			}
 
-		google.maps.event.addDomListener(window, 'load', initialize);	
+		//google.maps.event.addDomListener(window, 'load', initialize);	
 		});
 	
 	},
@@ -192,4 +195,6 @@ Template.graph.events({
 		Router.go('/steps');
 	},
 });
+
+
 
