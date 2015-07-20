@@ -126,6 +126,7 @@ function deleteMarkers(){
 	for(var i=0;i<markers.length;i++){
 		markers[i].setMap(null);
 	}
+	markers= [];
 }
 
 var routes = [];
@@ -160,6 +161,7 @@ function deleteRoutes(){
 	for(var j=0;j<routes.length;j++){
 		routes[j].setMap(null);
 	}
+	routes = [];
 }
 
 function getRouteDescription(route) {

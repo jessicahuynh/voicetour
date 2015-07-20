@@ -144,14 +144,14 @@ Template.graph.events({
 			addMarkers(Session.get("stepCenterPoint"),'navMap', map);
 
 
-		//Tracker.autorun(function() {	
+		Tracker.autorun(function() {	
 				var center = findId(Session.get("stepCenterPoint"));
 				var theLatLng = new google.maps.LatLng(center.x,center.y);
 				map.instance.setCenter(theLatLng);
 				centerMarker.setPosition(theLatLng);
 				map.instance.setZoom(15);
 				console.log("test run autorun");
-		//})	
+		})	
 
 			addMarkers(route[route.length-1],'navMap', map);
 			for(var j = 0; j<route.length - 1; j++){
@@ -195,6 +195,5 @@ Template.graph.events({
 		Router.go('/steps');
 	},
 });
-
 
 
