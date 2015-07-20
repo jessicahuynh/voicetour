@@ -360,7 +360,56 @@ paths_science = [
 	    "end":"bassine_c03",
 	    "description": "Exit the buidling, turn left and walk toward the stairs.",
 	},
-
+	{
+	    "start":"rosenstiel_c01",
+	    "end":"rosenstiel_c02",
+	    "description": "From stop sign, walk up the street",
+	},
+	{
+	    "start":"rosenstiel_c02",
+	    "end":"rosenstiel_c01",
+	    "description": "Walk down the street to stop sign",
+	},
+	{
+	    "start":"rosenstiel_c02",
+	    "end":"rosenstiel_c03",
+	    "description": "Walk upwards towards the castle which will be on your right",
+	},
+	{
+	    "start":"rosenstiel_c03",
+	    "end":"rosenstiel_c02",
+	    "description": "Walk down away from the castle",
+	},
+	{
+	    "start":"rosenstiel_e01",
+	    "end":"rosenstiel_c04",
+	    "description": "Walk toward the samll path.",
+	},
+	{
+	    "start":"rosenstiel_c04",
+	    "end":"rosenstiel_e01",
+	    "description": "Walk toward the building on yout left.",
+	},
+	{
+	    "start":"ssc_e03",
+	    "end":"rosenstiel_e02",
+	    "description": "Exit the double glass door.",
+	},
+	{
+	    "start":"rosenstiel_e02",
+	    "end":"ssc_e03",
+	    "description": "Exit Rosenstiel.",
+	},
+	{
+	    "start":"rosenstiel_c04",
+	    "end":"rosenstiel_c01",
+	    "description": "Walk up the slope on Loop Road.",
+	},
+	{
+	    "start":"rosenstiel_c01",
+	    "end":"rosenstiel_c04",
+	    "description": "Walk down the slope on Loop Road.",
+	},
 
 
 ]

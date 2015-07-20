@@ -36,302 +36,6 @@ points_southcampus = [
     "type": "crossing",
 },
 {
-    "id": "heller_e01",
-    "coordinate":new Point(42.369115, -71.258427),
-    "type": "entrance",
-},
-{
-    "id": "heller_c01",
-    "coordinate":new Point(42.369217, -71.258240),
-    "type": "crossing",
-},
-{
-    "id": "heller_c02",
-    "coordinate":new Point(42.369328, -71.258055),
-    "type": "crossing",
-},
-{
-    "id": "mandel_e01",
-    "coordinate":new Point(42.369592, -71.258119),
-    "type": "entrance",
-},
-{
-    "id": "mandel_e02",
-    "coordinate":new Point(42.369723, -71.258568),
-    "type": "entrance",
-},
-{
-    "id": "goldfarb_e01",
-    "coordinate":new Point(42.367939, -71.258273 ),
-    "type": "entrance",
-},
-{
-    "id": "library_c01",
-    "coordinate":new Point(42.367638, -71.258299),
-    "type": "crossing",
-},
-{
-    "id": "library_c02",
-    "coordinate":new Point(42.367713, -71.257816),
-    "type": "crossing",
-},
-{
-    "id": "library_c03",
-    "coordinate":new Point(42.367899, -71.257628),
-    "type": "crossing",
-},
-{
-    "id": "library_c04",
-    "coordinate":new Point(42.368813, -71.257312),
-    "type": "crossing",
-},
-{
-    "id": "library_c05",
-    "coordinate":new Point(42.367712, -71.257475),
-    "type": "crossing",
-},
-{
-    "id": "schwartz_c01",
-    "coordinate":new Point(42.367527, -71.257568),
-    "type": "crossing",
-},
-
-{
-    "id": "rabb_e01",
-    "coordinate":new Point(42.369108, -71.257294),
-    "type": "entrance",
-},
-{
-    "id": "rabb_c01",
-    "coordinate":new Point(42.368772, -71.257132),
-    "type": "crossing",
-},
-{
-    "id": "rabb_c02",
-    "coordinate":new Point(42.369069, -71.257222),
-    "type": "crossing",
-},
-{
-    "id": "rabb_c03",
-    "coordinate":new Point(42.369369, -71.257259),
-    "type": "crossing",
-},
-{
-    "id": "kutz_e01",
-    "coordinate":new Point(42.369029, -71.256103),
-    "type": "entrance",
-},
-{
-    "id": "kutz_e02",
-    "coordinate":new Point(42.368952, -71.255629),
-    "type": "entrance",
-},
-{
-    "id": "kutz_c01",
-    "coordinate":new Point(42.368811, -71.256215),
-    "type": "crossing",
-},
-{
-    "id": "kutz_c02",
-    "coordinate":new Point(42.368776, -71.256561),
-    "type": "crossing",
-},
-{
-    "id": "kutz_c03",
-    "coordinate":new Point(42.368711, -71.256959),
-    "type": "crossing",
-},
-{
-    "id":"kutz_c04",
-    "coordinate":new Point(42.368973, -71.256367),
-    "type":"crossing"
-},
-{
-    "id":"kutz_c05",
-    "coordinate":new Point(42.368438, -71.256215),
-    "type":"crossing"
-},
-{
-    "id": "olin-sang_e01",
-    "coordinate":new Point(42.369461, -71.257387),
-    "type": "entrance",
-},
-{
-    "id": "shiffman_e01",
-    "coordinate":new Point(42.369657, -71.257098),
-    "type": "entrance",
-},
-{
-    "id": "shiffman_c01",
-    "coordinate":new Point(42.369575, -71.257270),
-    "type": "crossing",
-},
-{
-    "id": "lown_e01",
-    "coordinate":new Point(42.370079, -71.257324),
-    "type": "entrance",
-},
-{
-    "id": "golding_e01",
-    "coordinate":new Point(42.370020, -71.257716),
-    "type": "entrance",
-},
-{
-    "id": "golding_c01",
-    "coordinate":new Point(42.369817, -71.257635),
-    "type": "crossing",
-},
-{
-    "id": "golding_c02",
-    "coordinate":new Point(42.369888, -71.257533),
-    "type": "crossing",
-},
-{
-    "id": "rosenstiel_e01",
-    "coordinate":new Point(42.365757, -71.257192),
-    "type": "entrance",
-},
-{
-    "id": "rosenstiel_e02",
-    "coordinate":new Point(42.365975, -71.257645),
-    "type": "entrance",
-},
-{
-    "id": "rosenstiel_c01",
-    "coordinate":new Point(42.366065, -71.256331),
-    "type": "crossing",
-},
-{
-    "id": "rosenstiel_c02",
-    "coordinate":new Point(42.366263, -71.256385),
-    "type": "crossing",
-},
-{
-    "id": "rosenstiel_c03",
-    "coordinate":new Point(42.366770, -71.256020),
-    "type": "crossing",
-},
-{
-    "id": "rosenstiel_c04",
-    "coordinate":new Point(42.365660, -71.257254),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c01",
-    "coordinate":new Point(42.366592, -71.255205),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c02",
-    "coordinate":new Point(42.366509, -71.255012),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c03",
-    "coordinate":new Point(42.366438, -71.254873),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c04",
-    "coordinate":new Point(42.366957, -71.254680),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c05",
-    "coordinate":new Point(42.367199, -71.254369),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c06",
-    "coordinate":new Point(42.367615, -71.254444),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c07",
-    "coordinate":new Point(42.367278, -71.255002),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c08",
-    "coordinate":new Point(42.367195, -71.255238),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c09",
-    "coordinate":new Point(42.367662, -71.255249),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c10",
-    "coordinate":new Point(42.367634, -71.255442),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c11",
-    "coordinate":new Point(42.367836, -71.255217),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c14",
-    "coordinate":new Point(42.368113, -71.255625),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c15",
-    "coordinate":new Point(42.367998, -71.255657),
-    "type": "crossing",
-},
-{
-    "id": "rubenstein_c16",
-    "coordinate":new Point(42.368093, -71.255947),
-    "type": "crossing",
-},
-{
-    "id": "eastHassenfeld_e02",
-    "coordinate":new Point(42.367977, -71.254876),
-    "type": "entrance",
-},
-{
-    "id": "eastHassenfeld_e01",
-    "coordinate":new Point(42.368089, -71.255218),
-    "type": "entrance",
-},
-{
-    "id": "eastShapiro_e01",
-    "coordinate":new Point(42.367677, -71.254632),
-    "type": "entrance",
-},
-{
-    "id": "eastRubenstein_e01",
-    "coordinate":new Point(42.367268, -71.254913),
-    "type": "entrance",
-},
-{
-    "id": "usdan_e01",
-    "coordinate":new Point(42.368067, -71.256704),
-    "type": "entrance",
-},
-{
-    "id": "usdan_c01",
-    "coordinate":new Point(42.367368, -71.256159),
-    "type": "crossing",
-},
-{
-    "id": "usdan_c02",
-    "coordinate":new Point(42.367578, -71.256685),
-    "type": "crossing",
-},
-{
-    "id": "usdan_c03",
-    "coordinate":new Point(42.367693, -71.257275),
-    "type": "crossing",
-},
-{
-    "id": "usdan_c04",
-    "coordinate":new Point(42.367903, -71.256899),
-    "type": "crossing",
-},
-{
     "id": "scc_e02",
     "coordinate":new Point(42.365703, -71.259938),
     "type": "entrance",
@@ -406,117 +110,242 @@ points_southcampus = [
     "coordinate":new Point(42.364019, -71.261467),
     "type": "crossing",
 },
+// admissions
 {
     "id": "admissions_c01",
     "coordinate":new Point(42.364743, -71.260767),
     "type": "crossing",
 },
 {
-    "id": "mailman_c01",
-    "coordinate":new Point(42.365743, -71.256094),
-    "type": "crossing",
+    "id":"admissions_e01", // the main one
+    "coordinate": new Point(42.364413, -71.260716),
+    "type":"entrance",
+    "getTo":"Head to the main entrance of Admissions."
 },
 {
-    "id":"levin_e01",
-    "coordinate":new Point(42.368117, -71.256926),
+    "id":"admissions_e02", // secondary
+    "coordinate":new Point(42.364535, -71.260677),
+    "type":"entrance",
+    "getTo":"Head to Admissions's smaller entrance, in the area with the displays."
+},
+//slosberg
+{
+    "id":"slosberg_e01", // main
+    "coordinate":new Point(42.364098, -71.259915),
+    "type":"entrance",
+    "getTo":"Head to Slosberg's main entrance."
+},
+{
+    "id":"slosberg_e02", //side entrance closest to admissions
+    "coordinate":new Point(42.364428, -71.259636),
     "type":"entrance"
 },
 {
-    "id":"levin_e02",
-    "coordinate":new Point(42.367992, -71.256964),
+    "id":"slosberg_e03", //other side entrance
+    "coordinate":new Point(42.364369, -71.259453),
     "type":"entrance"
 },
 {
-    "id":"farber_e01",
-    "coordinate":new Point(42.367832, -71.258425),
+    "id":"slosberg_e04", //back entrance
+    "coordinate":new Point(42.364191, -71.259483),
+    "type":"entrance"
+},
+//lemberg
+{
+    "id":"lemberg_e01", //main
+    "coordinate":new Point(42.363525, -71.258831),
+    "type":"entrance",
+    "getTo":"Head to Lemberg's main entrance."
+},
+//rabb school
+{
+    "id":"rabbSchool_e01", //main
+    "coordinate":new Point(42.362924, -71.259146),
+    "type":"entrance",
+},
+{
+    "id":"rabbSchool_e02", //grad
+    "coordinate":new Point(42.362937, -71.259009),
     "type":"entrance"
 },
 {
-    "id":"schwartz_e01",
-    "coordinate":new Point(42.367605, -71.257126),
+    "id":"rabbSchool_e03", //ide
+    "coordinate":new Point(42.363010, -71.258962),
+    "type":"entrance"
+},
+// ridgewood
+{
+    "id":"ridgewoodA_e01", //main
+    "coordinate":new Point(42.364108, -71.260479),
+    "type":"entrance",
+    "getTo":"Head to Ridgewood A's main entrance in Ridgewood Commons."
+},
+{
+    "id":"ridgewoodA_e02",
+    "coordinate":new Point(42.364148, -71.260593),
     "type":"entrance"
 },
 {
-    "id":"pearlman_e01",
-    "coordinate":new Point(42.367498, -71.257879),
+    "id":"ridgewoodA_e03",
+    "coordinate":new Point(42.364005, -71.260684),
     "type":"entrance"
 },
 {
-    "id":"pearlman_e02",
-    "coordinate":new Point(42.367492, -71.258030),
+    "id":"ridgewoodA_e04",
+    "coordinate":new Point(42.363994, -71.260643),
     "type":"entrance"
 },
 {
-    "id":"brown_e01",
-    "coordinate":new Point(42.367286, -71.257305),
+    "id":"ridgewoodA_e05",
+    "coordinate":new Point(42.363962, -71.260562),
     "type":"entrance"
 },
 {
-    "id":"goldfarb_e02",
-    "coordinate":new Point(42.368090, -71.257938),
+    "id":"ridgewoodB_e01", //main
+    "coordinate":new Point(42.363851, -71.260931),
+    "type":"entrance",
+    "getTo":"Head to Ridgewood B's main entrance."
+},
+{
+    "id":"ridgewoodB_e02", //back
+    "coordinate":new Point(42.363798, -71.261373),
     "type":"entrance"
 },
 {
-    "id":"rosensweig_e01",
-    "coordinate":new Point(42.366297, -71.256813),
+    "id":"ridgewoodC_e01", //main
+    "coordinate":new Point(42.363693, -71.260909),
+    'type':"entrance",
+    "getTo":"Head to Ridgewood C's main entrance."
+},
+{
+    "id":"ridgewoodC_e02", //back
+    "coordinate":new Point(42.363521, -71.260831),
+    "type":"entrance"
+},
+// ziv
+{
+    "id":"ziv127_e01", // main
+    "coordinate":new Point(42.363408, -71.261613),
+    "type":"entrance",
+    "getTo":"Head to the main entrance of Ziv 127."
+},
+{
+    "id":"ziv127_e02",
+    "coordinate":new Point(42.363345, -71.261676),
     "type":"entrance"
 },
 {
-    "id":"rosensweig_e02",
-    "coordinate":new Point(42.365988, -71.257097),
+    "id":"ziv127_e03",
+    "coordinate":new Point(42.363417, -71.261746),
     "type":"entrance"
 },
 {
-    "id":"rosensweig_e03",
-    "coordinate":new Point(42.365926, -71.257011),
+    "id":"ziv128_e01", //main
+    "coordinate":new Point(42.363044, -71.261471),
+    "type":"entrance",
+    "getTo":"Head to the main entrance of Ziv 128."
+},
+{
+    "id":"ziv128_e02",
+    "coordinate":new Point(42.363062, -71.261581),
     "type":"entrance"
 },
 {
-    "id":"foster_e01",
-    "coordinate":new Point(42.366195, -71.256540),
+    "id":"ziv128_e03", //back
+    "coordinate":new Point(42.362966, -71.261588),
+    "type":"entrance",
+    "getTo":"Head to the entrance of Ziv 128 facing Epstein."
+},
+{
+    "id":"ziv129_e01", //main
+    "coordinate":new Point(42.362953, -71.261076),
+    "type":"entrance",
+    "getTo":"Head to the main entrance of Ziv 129."
+},
+{
+    "id":"ziv129_e02",
+    "coordinate":new Point(42.362908, -71.260991),
     "type":"entrance"
 },
 {
-    "id":"sciencevisitorlot_e01",
-    "coordinate":new Point(42.366509, -71.256858),
+    "id":"ziv129_e03",
+    "coordinate": new Point(42.362843, -71.261080),
+    "type":"entrance",
+    "getTo":"Head to the entrance of Ziv 129 facing Epstein."   
+},
+{
+    "id":"ziv130_e01", //main
+    "coordinate":new Point(42.363293, -71.260951),
+    "type":"entrance",
+    "getTo":"Head to the main entrance of Ziv 130."
+},
+{
+    "id":"ziv130_e02",
+    "coordinate":new Point(42.363287, -71.260837),
     "type":"entrance"
 },
 {
-    "id":"sciencespeciallot_e01",
-    "coordinate":new Point(42.366592, -71.257097),
+    "id":"ziv130_e03", //back, facing Ridgewood
+    "coordinate":new Point(42.363368, -71.260850),
+    "type":"entrance",
+    "getTo":"Head to the entrance of Ziv 128 facing Ridgewood C."
+},
+// village
+{
+    "id":"villageA_e01", // to the commons
+    "coordinate":new Point(42.363497, -71.260154),
+    "type":"entrance",
+    'getTo':"Head to the entrance in the lobby between Village And and B with the double doors."
+},
+{
+    "id":"villageA_e02", //courtyard
+    "coordinate":new Point(42.363664, -71.260019),
+    "type":"entrance",
+    "getTo":"Head to the Village A entrance leading out to the courtyard."
+},
+{
+    "id":"villageA_e03", //courtyard side
+    "coordinate": new Point(42.363692, -71.260061),
     "type":"entrance"
 },
 {
-    "id":"icc_e01",
-    "coordinate":new Point(42.367677, -71.254950),
+    "id":"villageA_e04", //very top of stairs to fourth floor
+    "coordinate":new Point(42.363681, -71.260001),
+    "type":"entrance",
+},
+{
+    "id":"villageA_e05", //middle of stairs, third floor
+    "coordinate": new Point(42.363703, -71.260074),
     "type":"entrance"
 },
 {
-    "id":"sciencelot_e01",
-    "coordinate":new Point(42.366189, -71.256172),
-    "type":"entrance"
+    "id":"villageA_ie01", //between A and B
+    "coordinate": new Point(42.363426, -71.260095),
+    "type":"ientrance"
 },
 {
-    "id":"sciencelot_e02",
-    "coordinate":new Point(42.366522, -71.255577),
-    "type":"entrance"
+    "id":"villageB_e01",//main in courtyard
+    "coordinate":new Point(42.363312, -71.260235),
+    "type":"entrance",
+    "getTo":"Head to the main courtyard entrance of Village B."   
 },
 {
-    "id":"stonemanlot_e01",
-    "coordinate":new Point(42.366425, -71.254895),
-    "type":"entrance"
+    "id":"villageB_e02",
+    "coordinate":new Point(42.363377, -71.260239),
+    "type":"entrance",
+    "getTo":"Head to the side courtyard entrance for Village B."
 },
 {
-    "id":"eastquadlot_e01",
-    "coordinate":new Point(42.367252, -71.254341),
-    "type":"entrance"
+    "id":"villageB_ie01", //between B and C
+    "coordinate":new Point(42.363153, -71.260385),
+    "type":"ientrance",
 },
 {
-    "id":"eastquadlot_e02",
-    "coordinate":new Point(42.367176, -71.254374),
-    "type":"entrance"
-},
-
+    "id":"villageC_e01", //next to dunkins
+    "coordinate":new Point(42.363150, -71.260377),
+    "type":"entrance",
+    "getTo":"Head to the entrance of Village C next to Dunkin Donuts."
+}
 
 ]
 

@@ -107,12 +107,14 @@ locations = [
 		"id":"turner",
 		"nickname":"Turner",
 		"name":"60 Turner Street",
+		"function":"Turner is home to the classrooms for the Osher Lifelong Learning Institute at Brandeis.",
 		"coordinates":[
-			new Point(42.362028,-71.264118), 
-			new Point(42.361976,-71.263828),
-			new Point(42.361834,-71.26386),
-			new Point(42.361889,-71.264187)],
-		"category":["administrative"]
+			new Point(42.362090, -71.264160), 
+			new Point(42.362017, -71.263813),
+			new Point(42.361845, -71.263886),
+			new Point(42.361886, -71.264220)],
+		"category":["administrative","classroom"],
+		"entrances":["turner_e01"]
 	},
 	bernstein = {
 		"id":"bernstein-marcus",
@@ -127,14 +129,16 @@ locations = [
 		},
 	epstein = {
 		"id":"epstein",
-		"name":"Epstein Building",
+		"name":"Rubin and Ethel Epstein Center for Campus Services",
 		"nickname":"Epstein",
+		"function":"Epstein is home to facilities, the Women's Studies Research Center, and the Kniznick Gallery.",
 		"coordinates":[
 			new Point(42.362457,-71.261636), 
 			new Point(42.362374,-71.260823), 
 			new Point(42.362134,-71.260864), 
 			new Point(42.362204,-71.261671)],
-		"category":["classroom","offices"]
+		"category":["classroom","offices"],
+		"entrances":["epstein_e01","epstein_e02"]
 		},
 	facultycenter = {
 		"id":"facultycenter",
@@ -215,10 +219,11 @@ locations = [
 			new Point(42.363061,-71.258924),
 			new Point(42.36298,-71.25929),  
 			new Point(42.362872,-71.259233),
-			new Point(42.362961,-71.258887),],
-		"function":"The Rabb School is home to",
+			new Point(42.362961,-71.258887)],
+		"function":"The Rabb School is home to continuing education, graduate and professional programs, OLLI @ Brandeis, and summer programs, including the Justice Brandeis Semester (JBS).",
 		"category":["graduate"],
-		"nearby":["lemberg"]
+		"nearby":["lemberg","slosberg"],
+		"entrances":["rabbSchool_e01","rabbSchool_e02","rabbSchool_e03"]
 		},
 	admissions = {
 		"id":"admissions",
@@ -230,8 +235,11 @@ locations = [
 			new Point(42.364489, -71.260878), 
 			new Point(42.364150, -71.261231), 
 			new Point(42.364074, -71.261022),
-			new Point(42.364386, -71.260705),],
-		"category":["offices","informational"]
+			new Point(42.364386, -71.260705)],
+		"function":"Admissions hosts tours and provides information about Brandeis to any interested parties.",
+		"category":["offices","informational"],
+		"entrances":["admissions_e01","admissions_e02"],
+		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC","village"]
 		},	
 	slosberg = {
 		"id":"slosberg",
@@ -242,7 +250,11 @@ locations = [
 			new Point(42.364319,-71.2594), 
 			new Point(42.363891,-71.259666), 
 			new Point(42.363985,-71.259942)],
-		"category":["art","classroom"]
+		"function":"Slosberg is home to the Brandeis Concert Series.",
+		"description":"The Brandeis Concert Series features about 50-70 student and professional concerts each year.",
+		"category":["art","classroom"],
+		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
+		"nearby":["admissions","bernstein-marcus","lemberg","village"]
 		},
 	spingold = {
 		"id":"spingold",
@@ -766,6 +778,7 @@ locations = [
 	},
 	{
 		"id":"healthcenter",
+		"nickname":"Health Center",
 		"name":"Golding Health Center",
 		"coordinates":[
 			new Point(42.366174, -71.255160), 
@@ -776,11 +789,12 @@ locations = [
 			new Point(42.366011, -71.255133),
 			new Point(42.366046, -71.255147),
 			new Point(42.366054, -71.255118),],
-		"category":[],
+		"category":["health"],
 		"entrances":["healthcenter_e01"],
 	},
 	{
 		"id":"superconducting",
+		"nickname":"Landsman",
 		"name":"Landsman Research Facility",
 		"coordinates":[
 			new Point(42.366049, -71.255343), 
@@ -792,6 +806,7 @@ locations = [
 	},
 	{
 		"id":"mandelpeacegarden",
+		"nickname":"Peace Circle",
 		"name":"Mandel Peace Garden",
 		"coordinates":[
 			new Point(42.367868, -71.257631), 
@@ -799,16 +814,23 @@ locations = [
 			new Point(42.367751, -71.257513),],
 		"category":["garden"],
 	},
-	// {
-	// 	"id":"lemberg",
-	// 	"nickname":"Lemberg",
-	// 	"name":"Lemberg Children's Center",
-	// 	"coordinates":[
-			
-	// 	],
-	// 	"category":["classroom"],
-	// 	"nearby":["rabbSchool"]
-	// },
+	{
+		"id":"lemberg",
+		"nickname":"Lemberg",
+		"name":"Gersh and Sarah Lemberg Children's Center",
+		"function":"Lemberg offers childcare for children under age seven. Brandeis students majoring in education can work and teach here.",
+		"coordinates":[
+			new Point(42.363665, -71.258979),
+			new Point(42.363665, -71.259105),
+			new Point(42.363508, -71.259228),
+			new Point(42.363443, -71.259073),
+			new Point(42.363404, -71.258886),
+			new Point(42.363630, -71.258806)
+		],
+		"category":["classroom"],
+		"nearby":["rabbSchool","slosberg"],
+		"entrances":["lemberg_e01"]
+	},
 
 
 ]

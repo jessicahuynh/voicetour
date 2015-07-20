@@ -1,5 +1,22 @@
 Session.setDefault("category","");
 
+// every time the selection changes, alter the text of the listen button
+Tracker.autorun(function(){
+	var listen = "This is a list of every location on campus. ";
+	if (Session.get("category") == "") {
+		listen += listToRead(Locations.find({},{sort:{"nickname":1}}));
+	}
+	Session.set("listenTo",listen);
+});
+
+function listToRead(list) {
+	var read = "";
+	list.forEach(function(loc) {
+		read += loc.name + ". ";
+	});
+	return read;
+}
+
 Template.locationList.helpers({
 	locationsData: function() {
 		if (Session.get("category") == "") {

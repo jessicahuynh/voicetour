@@ -133,7 +133,72 @@ points_science = [
 		"id":"bassine_e03", 
 		"coordinate":new Point(42.366210, -71.258851),
 		"type":"entrance"
-	}
+	},
+	{
+	    "id":"foster_e01",
+	    "coordinate":new Point(42.366195, -71.256540),
+	    "type":"entrance"
+	},
+	{
+	    "id":"sciencevisitorlot_e01",
+	    "coordinate":new Point(42.366509, -71.256858),
+	    "type":"entrance"
+	},
+	{
+	    "id":"sciencelot_e01",
+	    "coordinate":new Point(42.366189, -71.256172),
+	    "type":"entrance"
+	},
+	{
+	    "id":"sciencelot_e02",
+	    "coordinate":new Point(42.366522, -71.255577),
+	    "type":"entrance"
+	},
+	{
+	    "id":"rosensweig_e01",
+	    "coordinate":new Point(42.366297, -71.256813),
+	    "type":"entrance"
+	},
+	{
+	    "id":"rosensweig_e02",
+	    "coordinate":new Point(42.365988, -71.257097),
+	    "type":"entrance"
+	},
+	{
+	    "id":"rosensweig_e03",
+	    "coordinate":new Point(42.365926, -71.257011),
+	    "type":"entrance"
+	},
+	{
+	    "id": "rosenstiel_e01",
+	    "coordinate":new Point(42.365757, -71.257192),
+	    "type": "entrance",
+	},
+	{
+	    "id": "rosenstiel_e02",
+	    "coordinate":new Point(42.365975, -71.257645),
+	    "type": "entrance",
+	},
+	{
+	    "id": "rosenstiel_c01",
+	    "coordinate":new Point(42.366065, -71.256331),
+	    "type": "crossing",
+	},
+	{
+	    "id": "rosenstiel_c02",
+	    "coordinate":new Point(42.366263, -71.256385),
+	    "type": "crossing",
+	},
+	{
+	    "id": "rosenstiel_c03",
+	    "coordinate":new Point(42.366770, -71.256020),
+	    "type": "crossing",
+	},
+	{
+	    "id": "rosenstiel_c04",
+	    "coordinate":new Point(42.365660, -71.257254),
+	    "type": "crossing",
+	},
 
 ]
 

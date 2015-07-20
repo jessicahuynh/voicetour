@@ -14,7 +14,7 @@ locations_parking = [
 	{
 		"id":"gosmanparkinglot",
 		"name":"Gosman Parking Lot",
-		"nickname":"Gosman Lot ",
+		"nickname":"Gosman Lot",
 		"coordinates":[
 			new Point(42.365056,-71.253832), 
 			new Point(42.365541,-71.252837),
@@ -38,7 +38,7 @@ locations_parking = [
 	{
 		"id":"towerlot",
 		"name":"Tower Parking lot",
-		"nickname":"Tower lot",
+		"nickname":"T-Lot",
 		"coordinates":[
 			new Point(42.370790, -71.258274), 
 			new Point(42.370909, -71.258726), 
@@ -144,6 +144,30 @@ locations_parking = [
 		"category":["parking"],
 		"entrances":["eastquadlot_e01","eastquadlot_e02"]
 	},
+	{
+		"id":"charlesriverlot",
+		"name":"Charles River Lot",
+		"nickname":"C-Lot",
+		"coordinates":[
+			new Point(42.359381, -71.258471),
+			new Point(42.359402, -71.258644),
+			new Point(42.359345, -71.258710),
+			new Point(42.359387, -71.259058),
+			new Point(42.360113, -71.259882),
+			new Point(42.360318, -71.259650),
+			new Point(42.360366, -71.259618),
+			new Point(42.360383, -71.259398),
+			new Point(42.360321, -71.259344),
+			new Point(42.360267, -71.258557),
+			new Point(42.360233, -71.258358),
+			new Point(42.360294, -71.258064),
+			new Point(42.360028, -71.257795),
+			new Point(42.359894, -71.258162),
+			new Point(42.359378, -71.258467)
+		],
+		"category":["parking"],
+		"entrances":["clot_e01","clot_e02","clot_e03"]
+	}
 ]
 
 function Point(x,y) {
