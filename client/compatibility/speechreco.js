@@ -6,13 +6,15 @@ function applyIntent(intent,entities,mic) {
     if (intent == undefined) {
         numAttempts++;
         switch(numAttempts) {
-            case 1: r+="<p>Could you try that again?</p>"; break;
-            case 2: r+="<p>Hmm. Could you say that once more?</p>"; break;
-            case 3: r+="<p>I'm sorry, but I haven't been able to understand you. Once more?</p>"; break;
-            case 4: r+="<p>Oh dear, I couldn't get that this time either. You can also try 'help' or 'what do you do?' for a list of supported commands.</p>"; break;
-            default: r+="<p>Make sure your mic is working and either say <span class='arg'>help</span> or head over to the About page for a list of supported commands.</p>"; break;
+            case 1: r+="Could you try that again?"; break;
+            case 2: r+="Oh dear. Could you say that once more?"; break;
+            case 3: r+="I'm sorry, but I haven't been able to understand you. Once more?"; break;
+            case 4: r+="Oh dear, I couldn't get that this time either. You can also try 'help' or 'what do you do?' for a list of supported commands."; break;
+            default: r+="Make sure your mic is working and either say 'help' or head over to the About page for a list of supported commands."; break;
         }
-        $("#result").append(r);
+        $("#result").append("<p>"+r+"</p>");
+        Session.set("listenTo",r);
+        speak();
     }
     else {
        numAttempts = 0;
@@ -34,6 +36,9 @@ function applyIntent(intent,entities,mic) {
            }
            
            Session.set("searchTerm",searchTerm);
+           Session.set("listenTo","Looking for " +searchTerm);
+           speak();
+           
            document.getElementById("searchBox").value = Session.get("searchTerm");
             
            $("#searchBox").show("slow");
@@ -44,12 +49,14 @@ function applyIntent(intent,entities,mic) {
         }
         else if (intent == "navigate") {
             r += "Navigating to ";
+            var rSay = "Navigating to ";
             var disDestination = "";
             if (entities["end"] != undefined) {
                disDestination = disambiguate(entities["end"].value);
                if (!disDestination) {
                    r += "<span class='said'>"+entities["end"].body+"</span>";
                    Session.set("navigateTo",entities["end"].value);
+                   rSay += entities["end"].value;
                }
             }
             else {
@@ -58,6 +65,7 @@ function applyIntent(intent,entities,mic) {
                    if (!disDestination) {
                        r += "<span class='said'>"+entities["deis_loc"].body+"</span>";
                        Session.set("navigateTo",entities["deis_loc"].value);
+                       rSay += entities["end"].value;
                    }
                }
             }
@@ -68,10 +76,12 @@ function applyIntent(intent,entities,mic) {
                      if (entities["start"] == "this_loc") {
                          r+= " from <span class='said'>this location</span>";
                          Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+                         rSay += " from your current location."
                      }
                      else {
                         r += " from <span class='said'>"+entities["start"].body+"</span>";
                         Session.set("navigateFrom",entities["start"].value);
+                        rSay += " from " + entities["start"].value;
                      }                 
                 }
             }
@@ -83,6 +93,10 @@ function applyIntent(intent,entities,mic) {
                 console.log(disambiguationChoices);        
             }
             else {
+                
+                Session.set("listenTo",rSay);
+                speak();
+                
                 $("#result").append("<p>"+r+"...</p>");
                 if (Router.current().route.path() == "/navigate") {
                     document.getElementById("startpoint").value = Session.get("navigateFrom");
@@ -103,7 +117,7 @@ function applyIntent(intent,entities,mic) {
             r+= "<li>Take me to <span class='arg'>the SCC</span></li>";
             r+= "<li>Tell me about <span class='arg'>Volen</span></li>";
             //r+= "<li>When is <span class='arg'>the Faculty Club</span> open?</li>";
-            //r+= "<li>Start a <span class='arg'>self-guided tour</span></li>";
+            r+= "<li>Start the <span class='arg'>self-guided tour</span></li>";
             //r+= "<li>Open settings and <span class='arg'>switch to U.S. customary units</span></li>";
             r+= "<li>Where am I?</li>";
             //r+= "<li>What's nearby?</li>";
@@ -112,6 +126,8 @@ function applyIntent(intent,entities,mic) {
             r+= "</ul>";
             
             $("#result").append(r);
+            Session.set("listenTo","Here are some commands you can try.");
+            speak();
         }
         else if (intent == "get_current_loc") {
             
@@ -137,6 +153,8 @@ function applyIntent(intent,entities,mic) {
             r += "<p>"+loc.function+"</p>";
             r += "<p>And here's more info for your perusal.";
             
+            Session.set("listenTo",loc.function + "And here's more information for your perusal.");
+            speak();
             $("#result").append(r);
             
             Session.setPersistent("viewLocation",loc._id);
@@ -147,6 +165,8 @@ function applyIntent(intent,entities,mic) {
                 if (entities["tour_type"].value = "self") {
                     r += "<p>Starting up the <span class='said'>self-guided</span> tour...</p>";
                     
+                    Session.set("listenTo","Starting up the self-guided tour.");
+                    speak();
                     $("#result").append(r);
                     
                     Router.go('/selfguide');
@@ -163,13 +183,16 @@ function applyIntent(intent,entities,mic) {
             disambiguationChoices = ["Carl J. Shapiro Science Center","Carl and Ruth Shapiro Admissions Center","Carl and Ruth Shapiro Campus Center","Shapiro Hall"];
             dis = "Did you mean the <span class='said'>Shapiro Science Center</span>, <span class='said'>Carl and Ruth Shapiro Admissions Center</span>, <span class='said'>Shapiro Campus Center</span>, or <span class='said'>Shapiro Hall</span> in Massell Quad?";
             
+            Session.set("listenTo","Did you mean the Shapiro Science Center, Carl and Ruth Shapiro Admissions Center, Shapiro Campus CEnter, or Shapiro Hall in Massell Quad?");
+            
             Session.set("disambiguationChoices",disambiguationChoices);
             
              disambiguated = true;
         }
     
         if (disambiguated) {
-            $("#result").append("<p>"+dis+"</p>");
+           speak();
+           $("#result").append("<p>"+dis+"</p>");
         }
         return disambiguated;
     }
@@ -244,4 +267,8 @@ function kv(k, v) {
         v = JSON.stringify(v);
     }
     return k + "=" + v + "\n";
+}
+
+function speak() {
+    window.speechSynthesis.speak(new SpeechSynthesisUtterance(Session.get("listenTo")));
 }
