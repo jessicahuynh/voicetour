@@ -38,11 +38,7 @@ Template.steps.events({
 				// 	marker.setPosition(theLatLng);
 				// 	console.log("test run autorun");
 				// })
-				console.log("ready to add blue route");
-				Tracker.autorun(function() {
-				routes[Session.get("countForStep")].setOptions({strokeColor: '#00FFFF'});
-				})
-				console.log("added blue route");
+
 			//});
 			count ++;
 			
@@ -126,11 +122,17 @@ Template.steps.rendered = function () {
 			console.log("test run autorun in rendered");
 		})
 
+		console.log("ready to add blue route");
+		Tracker.autorun(function() {
+		routes[Session.get("countForStep")].setOptions({strokeColor: '#00FFFF'});
+		})
+		console.log("added blue route");
+
 	});
 
 };
 
-Template.steps.onCreated(function() {
+//Template.steps.onCreated(function() {
 	
 	// route = Session.get("route");
 	// console.log(route);
@@ -157,7 +159,7 @@ Template.steps.onCreated(function() {
 	// 		addRoutes(route[j],route[j+1],'stepMap', map, '#000000');
 	// 	}
 	// });
-});
+//});
 
 
 function getStepDescription(route) {
