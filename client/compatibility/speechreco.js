@@ -36,8 +36,8 @@ function applyIntent(intent,entities,mic) {
                 $("#result").append("<p>Looking for <span class='said'>" + searchTerm +"</span>...</p>");
            }
            
-           Session.setPersistent("searchTerm",searchTerm);
-           Session.setPersistent("listenTo","Looking for " +searchTerm);
+           Session.set("searchTerm",searchTerm);
+           Session.set("listenTo","Looking for " +searchTerm);
            speak();
            
            document.getElementById("searchBox").value = Session.get("searchTerm");
@@ -56,7 +56,7 @@ function applyIntent(intent,entities,mic) {
                disDestination = disambiguate(entities["end"].value);
                if (!disDestination) {
                    r += "<span class='said'>"+entities["end"].body+"</span>";
-                   Session.setPersistent("navigateTo",entities["end"].value);
+                   Session.set("navigateTo",entities["end"].value);
                    rSay += entities["end"].value;
                }
             }
@@ -65,7 +65,7 @@ function applyIntent(intent,entities,mic) {
                if (entities["deis_loc"] != undefined) {
                    if (!disDestination) {
                        r += "<span class='said'>"+entities["deis_loc"].body+"</span>";
-                       Session.setPersistent("navigateTo",entities["deis_loc"].value);
+                       Session.set("navigateTo",entities["deis_loc"].value);
                        rSay += entities["end"].value;
                    }
                }
@@ -76,18 +76,18 @@ function applyIntent(intent,entities,mic) {
                 if (!disStart) {
                      if (entities["start"] == "this_loc") {
                          r+= " from <span class='said'>this location</span>";
-                         Session.setPersistent("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+                         Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
                          rSay += " from your current location."
                      }
                      else {
                         r += " from <span class='said'>"+entities["start"].body+"</span>";
-                        Session.setPersistent("navigateFrom",entities["start"].value);
+                        Session.set("navigateFrom",entities["start"].value);
                         rSay += " from " + entities["start"].value;
                      }                 
                 }
             }
             else {
-                Session.setPersistent("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+                Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
             }
             
             if (disDestination || disStart) {
@@ -99,7 +99,7 @@ function applyIntent(intent,entities,mic) {
             }
             else {
                 
-                Session.setPersistent("listenTo",rSay);
+                Session.set("listenTo",rSay);
                 speak();
                 
                 $("#result").append("<p>"+r+"...</p>");
@@ -131,7 +131,7 @@ function applyIntent(intent,entities,mic) {
             r+= "</ul>";
             
             $("#result").append(r);
-            Session.setPersistent("listenTo","Here are some commands you can try.");
+            Session.set("listenTo","Here are some commands you can try.");
             speak();
         }
         else if (intent == "get_current_loc") {
@@ -139,13 +139,13 @@ function applyIntent(intent,entities,mic) {
             r += "<p>You're currently at <span class='arg'>"+Session.get("inLocation")[0].name+"</span>.</p>";
             r += "<p>Welcome!</p>";
             
-            Session.setPersistent("listenTo","You're currently at "+Session.get("inLocation")[0].name +"!");
+            Session.set("listenTo","You're currently at "+Session.get("inLocation")[0].name +"!");
             speak();
             
             $("#result").append(r);
             
             var loc = Locations.findOne({"name":Session.get("inLocation")[0].name});
-            Session.setPersistent("viewLocation",loc._id);
+            Session.set("viewLocation",loc._id);
             Router.go('/viewLocation/'+loc._id);
         }
         else if (intent == "get_info_about_loc") {
@@ -161,11 +161,11 @@ function applyIntent(intent,entities,mic) {
             r += "<p>"+loc.function+"</p>";
             r += "<p>And here's more info for your perusal.";
             
-            Session.setPersistent("listenTo",loc.function + "And here's more information for your perusal.");
+            Session.set("listenTo",loc.function + "And here's more information for your perusal.");
             speak();
             $("#result").append(r);
             
-            Session.setPersistent("viewLocation",loc._id);
+            Session.set("viewLocation",loc._id);
             Router.go('/viewLocation/'+loc._id);
         }
         else if (intent == "start_tour") {
