@@ -21,7 +21,7 @@ Template.locationProfile.rendered = function() {
 	}
 	
 	var listen = thisLoc.name + ". " + thisLoc.function + thisLoc.description;
-	Session.set("listenTo",listen);
+	Session.setPersistent("listenTo",listen);
 }
 
 Template.locationProfile.events({

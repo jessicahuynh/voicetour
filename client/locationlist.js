@@ -3,7 +3,7 @@ Session.setDefault("category","");
 Template.locationList.rendered = function() {
 	var listen = "This is a list of every location on campus, filterable and sortable.";
 
-	Session.set("listenTo",listen);
+	Session.setPersistent("listenTo",listen);
 }
 
 Template.locationList.helpers({
