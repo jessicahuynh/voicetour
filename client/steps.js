@@ -30,8 +30,8 @@ Template.steps.events({
 			//Session.set("countForStep", count);
 			getStepDescription(route);
 				//middlestop = findId(route[count]);
-			routes[count - 1].setOptions({strokeColor: '#000000'});
-			routes[count].setOptions({strokeColor: '#00FFFF'});
+			routesForStep[count - 1].setOptions({strokeColor: '#000000'});
+			routesForStep[count].setOptions({strokeColor: '#00FFFF'});
 			count ++;
 				
 		} else {
@@ -107,7 +107,7 @@ Template.steps.rendered = function () {
 			route = Session.get("routeForStep");
 			if (route.length == 1){
 				console.log("test google map ready");
-				deleteRoutes(routes);
+				deleteRoutes(routesForStep);
 				console.log("delete route");
 
 				var theLatLngRecal = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
@@ -122,7 +122,7 @@ Template.steps.rendered = function () {
 			} else {
 
 				console.log("test google map ready");
-				deleteRoutes(routes);
+				deleteRoutes(routesForStep);
 				console.log("delete route");
 
 				var theLatLngRecal = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
@@ -135,13 +135,13 @@ Template.steps.rendered = function () {
 
 				
 				for(var j = 0; j<route.length - 1; j++){
-					addRoutes(route[j],route[j+1],'stepMap', map,'#000000',routes);
+					addRoutes(route[j],route[j+1],'stepMap', map,'#000000',routesForStep);
 					console.log("draw route");
 				}
 
 				if (count == 0) {
 			// 	console.log("ready to add blue route: " + Session.get("countForStep"));
-			 		routes[count].setOptions({strokeColor: '#00FFFF'});
+			 		routesForStep[count].setOptions({strokeColor: '#00FFFF'});
 			 	console.log("added blue route");
 			 		count ++;
 				}
@@ -150,7 +150,7 @@ Template.steps.rendered = function () {
 		})
 			if (count == 1) {
 		// 	console.log("ready to add blue route: " + Session.get("countForStep"));
-		 		routes[count - 1].setOptions({strokeColor: '#00FFFF'});
+		 		routesForStep[count - 1].setOptions({strokeColor: '#00FFFF'});
 		 	console.log("added blue route");
 			}
 		 
@@ -166,7 +166,7 @@ Template.steps.rendered = function () {
 Template.steps.onCreated(function() {
 	//Session.set("countForStep", count);
 	count = 0;
-	routes = [];
+	routesForStep = [];
 });
 
 
