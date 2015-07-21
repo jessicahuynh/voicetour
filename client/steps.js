@@ -118,7 +118,7 @@ Template.steps.rendered = function () {
 				var theLatLng2 = new google.maps.LatLng(laststop.x,laststop.y);
 				marker2.setPosition(theLatLng2);
 
-				alert("you are at your destination");
+				// alert("you are at your destination");
 			} else {
 
 				console.log("test google map ready");
