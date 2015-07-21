@@ -143,8 +143,11 @@ Template.graph.events({
 		console.log("end "+ ends);
 		//route = null;
 		route = getRoute(starts, ends);
-		startstop = findId(route[0]);
-		laststop = findId(route[route.length - 1]);
+		
+		setTimeout(function() {
+			startstop = findId(route[0]);
+			laststop = findId(route[route.length - 1]);
+		},3000) ;
 
 		// session variable for steps.js
 		Session.set("route",route);
@@ -152,11 +155,9 @@ Template.graph.events({
 		Session.set("destination", ends);
 		//Session.set("stepCenterPoint",route[0]);
 
-		getRouteDescription(route);
+		$("#routeTab").tab('show');
 		
-		$("#navPane").tab('hide');
-		$("#routePane").tab('show');
-	
+		getRouteDescription(route);
 	},
 	"click input":function(event) {
 		event.target.value = '';
