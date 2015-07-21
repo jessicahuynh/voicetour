@@ -101,7 +101,7 @@ Template.steps.rendered = function () {
 			//console.log("test run autorun in rendered");
 		})
 
-
+		getStepDescription(route);
 
 		Tracker.autorun(function() {
 			route = Session.get("routeForStep");
@@ -156,7 +156,7 @@ Template.steps.rendered = function () {
 		 
 
 
-		getStepDescription(route);	
+			
 	});
 
 
