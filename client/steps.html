@@ -2,29 +2,33 @@
 <h1 class="page-header">Navigate</h1>
 
 <div class="row">
+	<div class="col-sm-12">
+		<p><label for="endpoint">Destination: </label>
+		{{destination}}</p>
+		<p>
+		<label>Current Location: </label>
+		({{current.x}}, {{current.y}})
+		</p>
+	</div>
 
-<div class="col-sm-6">
-	<form id="navstepform" name="navstepform">
-		<div class="form-group">
-			<label for="endpoint">Destination</label>
-			{{destination}}
-			<br/>
-			<label>Current Location</label>
-			({{current.x}}, {{current.y}})
-			<br/>
-			{{step}}
+	<div class="col-sm-8">
+		<div id="map-nav" style="width:500px; height:500px">
+			{{> googleMap name="stepMap" options=stepMapOptions}}
 		</div>
-	</form>
+		<br/>
+	</div>
 	
-	<div id="map-nav" style="width:500px; height:500px">
-		{{> googleMap name="stepMap" options=stepMapOptions}}
+	<div class="col-sm-4">
+		<form id="navstepform" name="navstepform">
+			<div class="form-group">
+				{{step}}
+			</div>
+		</form>
+		<div class="form-group">
+			<button type="click" id="refreshMap" name="refreshMap" class="btn btn-primary">Next Step</button>
+			<button type="click" id="recalMap" name="recalMap" class="btn btn-primary">Recalculate</button>
+		</div>
 	</div>
-	<br/>
-	<div class="form-group">
-	<button type="click" id="refreshMap" name="refreshMap" class="btn btn-primary">Next Step</button>
-	<button type="click" id="recalMap" name="recalMap" class="btn btn-primary">Recalculate</button>
-	</div>
-</div>
 
 <!-- <div class="col-sm-6">
 	<ul>

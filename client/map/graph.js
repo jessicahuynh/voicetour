@@ -153,6 +153,9 @@ Template.graph.events({
 		//Session.set("stepCenterPoint",route[0]);
 
 		getRouteDescription(route);
+		
+		$("#navPane").tab('hide');
+		$("#routePane").tab('show');
 	
 	},
 	"click input":function(event) {

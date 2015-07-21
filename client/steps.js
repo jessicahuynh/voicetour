@@ -10,7 +10,7 @@ Template.steps.helpers({
 			//console.log(Session.get("currentLocation").x,Session.get("currentLocation").y);
 			return {
 				center: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
-				zoom:15
+				zoom:17
 			};
 		}
 	},
@@ -60,6 +60,11 @@ Template.steps.events({
 });
 
 Template.steps.rendered = function () {
+	if ($(window).width() > 768) {
+		$(".page-header").prepend("<a href='#' id='returnToList'><span class='glyphicon glyphicon-menu-left'></span></a>");
+	}
+	
+	
 	graph = new Graph(Map.findOne());
 
 
@@ -101,7 +106,7 @@ Template.steps.rendered = function () {
 			//console.log("test run autorun in rendered");
 		})
 
-
+		getStepDescription(route);	
 
 		Tracker.autorun(function() {
 			route = Session.get("routeForStep");
@@ -153,10 +158,6 @@ Template.steps.rendered = function () {
 		 		routesForStep[count - 1].setOptions({strokeColor: '#00FFFF'});
 		 	console.log("added blue route");
 			}
-		 
-
-
-		getStepDescription(route);	
 	});
 
 
@@ -174,8 +175,18 @@ function getStepDescription(route) {
 	var r = [];
 		
 	if (route != null && route != undefined && route.length != 1) {
+		var getToPath = "";
+		
+		console.log(route);
+		//if there's a getTo
+		if (count == 0 && Intersections.findOne({"id":route[count]}).getTo != undefined) {
+			getToPath += Intersections.findOne({"id":route[count]}).getTo;
+		}
+		
 		var thePath = Paths.findOne({"start":route[count],"end":route[count+1]});
-		r.push(thePath.description);
+		r.push(getToPath + " " + thePath.description);
+	
+		
 	} else if (route.length == 1){
 		r.push("You have reached your destination!");
 	} else {
