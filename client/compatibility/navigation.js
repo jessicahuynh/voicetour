@@ -129,11 +129,11 @@ function deleteMarkers(){
 	markers= [];
 }
 
-var routes = [];
+//var routes = [];
 
 
 
-function addRoutes(startloc, endloc, mapOpt, map, lineColor){		
+function addRoutes(startloc, endloc, mapOpt, map, lineColor, routes){		
 	var start= findId(startloc);
 	var end = findId(endloc);
 
@@ -157,7 +157,7 @@ function addRoutes(startloc, endloc, mapOpt, map, lineColor){
 
 }
 
-function deleteRoutes(){
+function deleteRoutes(routes){
 	for(var j=0;j<routes.length;j++){
 		routes[j].setMap(null);
 	}

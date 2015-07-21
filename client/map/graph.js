@@ -30,50 +30,71 @@ Template.graph.rendered = function () {
 
 	GoogleMaps.load();
 
-	Session.set("centerPoint", Session.get("currentLocation"));
-	
-// Tracker.autorun(function() {
-	// var center = findId(Session.get("centerPoint"));
 	GoogleMaps.ready('navMap',function(map) {
-		centerMarker = new google.maps.Marker({
-			position: map.options.center,
+		console.log("test google map ready");
+
+		var marker1 = new google.maps.Marker({
+			position: new google.maps.LatLng(startstop.x,startstop.y),
+			icon: '/GoogleMapsMarkers/green_MarkerA.png',
 			map: map.instance
 		});
-		//markers[0] = marker;
-		// console.log("test google map ready");
-	
-		
-		// 	console.log("test tracker in rendered");
-		// 	deleteMarkers();
-		// 	deleteRoutes();
+		//marker1.setVisible(false);
+		var marker2 = new google.maps.Marker({
+			position: new google.maps.LatLng(laststop.x,laststop.y),
+			icon: '/GoogleMapsMarkers/red_MarkerB.png',
+			map:map.instance
+		});
+		//marker2.setVisible(false);
+		// var markerCurrent = new google.maps.Marker({
+		// 	position: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
+		// 	icon: '/GoogleMapsMarkers/bluedot.png',
+		// 	map:map.instance
+		// });
 
-		// 	addMarkers(Session.get("centerPoint"),'navMap', map);
-		
-			
-		// 	var theLatLng = new google.maps.LatLng(center.x,center.y);
+		// Tracker.autorun(function() {
+		// 	var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
 		// 	map.instance.setCenter(theLatLng);
-		// 	map.instance.setZoom(15);
-		// 	centerMarker.setPosition(theLatLng);
+		// 	markerCurrent.setPosition(theLatLng);
 		// 	console.log("test run autorun in rendered");
-		
-		// 	addMarkers(route[route.length-1],'navMap', map);
-		// 	for(var j = 0; j<route.length - 1; j++){
-		// 		addRoutes(route[j],route[j+1],'navMap', map,'#000000');
-		// 	}
+		// })
+
+		Tracker.autorun(function() {
+			route = Session.get("route");
+
+			console.log("test google map ready: " + route);
+			deleteRoutes(routes);
+			console.log("delete route");
+
+			var theLatLng1 = new google.maps.LatLng(startstop.x,startstop.y);
+			map.instance.setCenter(theLatLng1);
+			marker1.setPosition(theLatLng1);
+			//marker1.setVisible(true);
+			//marker1.setOptions({icon: '/GoogleMapsMarkers/green_MarkerA.png'});
+			var theLatLng2 = new google.maps.LatLng(laststop.x,laststop.y);
+			marker2.setPosition(theLatLng2);
+			//marker2.setOptions({icon: '/GoogleMapsMarkers/red_MarkerB.png'});
+			
+			if (route != null){
+				for(var j = 0; j<route.length - 1; j++){
+					addRoutes(route[j],route[j+1],'stepMap', map,'#000000', routes);
+					console.log("draw route");
+				}
+			}
+
+		})
 
 	})	
 
-// });
-
-
-
-
 };
 
-// Template.graph.onCreated(function () {
-// 	Session.set("centerPoint", Point(0,0));
-
-// });
+Template.graph.onCreated(function () {
+	//Session.set("centerPoint", Point(0,0));
+	route = null;
+	routes = [];
+	startstop = Session.get("currentLocation");
+	console.log("(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+	laststop = Session.get("currentLocation");
+});
 
 Template.graph.helpers({
 	stops: function() {
@@ -115,51 +136,23 @@ Template.graph.helpers({
 Template.graph.events({
 	"submit #navform": function(event){
 		event.preventDefault();
-		
-
 
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
 		console.log("start " + starts);
 		console.log("end "+ ends);
-		var route = null;
+		//route = null;
 		route = getRoute(starts, ends);
-
+		startstop = findId(route[0]);
+		laststop = findId(route[route.length - 1]);
 
 		// session variable for steps.js
 		Session.set("route",route);
+		Session.set("routeForStep",route);
 		Session.set("destination", ends);
-		Session.set("stepCenterPoint",route[0]);
+		//Session.set("stepCenterPoint",route[0]);
 
 		getRouteDescription(route);
-		
-
-		
-		GoogleMaps.load();
-		GoogleMaps.ready('navMap',function(map){
-			console.log("test google map ready");
-			deleteMarkers();
-			deleteRoutes();
-
-			addMarkers(Session.get("stepCenterPoint"),'navMap', map);
-
-
-		Tracker.autorun(function() {	
-				var center = findId(Session.get("stepCenterPoint"));
-				var theLatLng = new google.maps.LatLng(center.x,center.y);
-				map.instance.setCenter(theLatLng);
-				centerMarker.setPosition(theLatLng);
-				map.instance.setZoom(15);
-				console.log("test run autorun");
-		})	
-
-			addMarkers(route[route.length-1],'navMap', map);
-			for(var j = 0; j<route.length - 1; j++){
-				addRoutes(route[j],route[j+1],'navMap', map,'#000000');
-			}
-
-		//google.maps.event.addDomListener(window, 'load', initialize);	
-		});
 	
 	},
 	"click input":function(event) {
