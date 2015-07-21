@@ -20,7 +20,6 @@ Template.hours.helpers({
 		return day;
 	},
 	period: function(){
-		var loc = Locations.findOne({"id":JSON.stringify(this).replace(/"([^"]+(?="))"/g, '$1')});
 		if(loc.hour){
 			x=[];
 			if(d==0){
@@ -38,11 +37,11 @@ Template.hours.helpers({
 			} else if (d==6){
 				x=loc.Sat;
 			}
-			var startH=x[0];
-			var startMin=x[1];
-			var endH=x[2];
-			var endMin=x[3];
-			var openPeriod=d+startH+":"+startMin+"-"+endH+":"+endMin;
+			var sH=x[0];
+			var sM=x[1];
+			var eH=x[2];
+			var eM=x[3];
+			var openPeriod=d+sH+":"+sM+"-"+eH+":"+eM;
 			return openPeriod;
 		} else {
 			return "N/A"; 
@@ -50,20 +49,34 @@ Template.hours.helpers({
 		return loc;
 	},
 	status: function(){
-		if(x.length==4){
+		return this.id;
+		// get id of the building
+		// find whether the id exists in collection of hours
+		// var state;
+		// if(h==sH&&m>=sM){
+		// 	state=true;
+		// } else if(h>sH&&h<eH){
+		// 	state=true;
+		// } else if(h>sH&&h==eH&&m<eM){
+		// 	state=true;
+		// } else {
+		// 	state=false;
+		// }
+		// return state;
+		// if(x.length==4){
 
-		}
-		else if(x.length==8){
+		// }
+		// else if(x.length==8){
 
-		}
-		else if(x.length==12){
+		// }
+		// else if(x.length==12){
 
-		}
+		// }
 	},
 	now: function(){
-		hour=new Date().getHours();
-		minute=new Date().getMinutes();
-		var nowTime=hour+":"+minute;
+		h=new Date().getHours();
+		m=new Date().getMinutes();
+		var nowTime=h+":"+m;
 		return nowTime;
 	}
 })

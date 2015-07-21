@@ -179,6 +179,11 @@ function getRouteDescription(route) {
 	else {
 		r.push("You're starting from " + document.getElementById("startpoint").value);
 	}
+	
+	// push getTo of starting point if it exists
+	if (Intersections.findOne({"id":route[0]}).getTo != undefined) {
+		r.push(Intersections.findOne({"id":route[0]}).getTo);
+	}
 		
 	if (route != null && route != undefined) {
 		for (var i = 0; i < route.length - 1; i++) {
@@ -187,7 +192,7 @@ function getRouteDescription(route) {
 		}
 	}
 	else {
-		r.push("We don't seem to be able to find the routing data!");
+		r.push("We don't seem to be able to get the routing data between these two!");
 	}
 	
 	r.push("Your ending location is " + document.getElementById("endpoint").value);

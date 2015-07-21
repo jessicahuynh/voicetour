@@ -25,7 +25,7 @@ locations_parking = [
 	},
 	{
 		"id":"linseyparkinglot",
-		"name":"Linsey Parking lot",
+		"name":"Linsey Parking Lot",
 		"nickname":"Linsey Lot",
 		"coordinates":[
 			new Point(42.365568,-71.254114), 
@@ -37,7 +37,7 @@ locations_parking = [
 	},
 	{
 		"id":"towerlot",
-		"name":"Tower Parking lot",
+		"name":"Tower Parking Lot",
 		"nickname":"T-Lot",
 		"coordinates":[
 			new Point(42.370790, -71.258274), 

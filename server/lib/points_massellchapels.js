@@ -169,6 +169,17 @@ points_massellchapels = [
 		"id":"rosiesouth_c01",
 		"coordinate":new Point(42.366939, -71.260379),
 		"type":"crossing"
+	},
+
+	{
+		"id":"hlot_e01",
+		"coordinate":new Point(42.366869, -71.261764),
+		"type":"entrance"
+	},
+	{
+		"id":"hlot_e02",
+		"coordinate":new Point(42.366516, -71.261528),
+		"type":"entrance"
 	}
 
 

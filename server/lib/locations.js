@@ -15,7 +15,7 @@ locations = [
 						(examples include experimental psychology, computational neuroscience, and cellular \
 						and molecular neurobiology).",
 		"category":["science","classroom","offices"],
-		"entrances":["volen_e01","volen_ie02","volen_ie03"],
+		"entrances":["volen_e01","volen_ie02","volen_ie03","feldberg_ie01"],
 		"nearby":["feldberg","gzang","goldsmith","chapelsfield"]
 	},
 	{
@@ -23,10 +23,15 @@ locations = [
 		"name": "Carl and Ruth Shapiro Campus Center",
 		"nickname": "SCC",
 		"coordinates": [
-			new Point(42.366123,-71.260054),
-			new Point(42.365798,-71.259665),
-			new Point(42.365554,-71.259944),
-			new Point(42.365522,-71.260561)],
+			new Point(42.365528, -71.260574),
+			new Point(42.365736, -71.260538),
+			new Point(42.365733, -71.260315),
+			new Point(42.365894, -71.260192),
+			new Point(42.366005, -71.260338),
+			new Point(42.366120, -71.260064),
+			new Point(42.365793, -71.259663),
+			new Point(42.365548, -71.259941),
+		],
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
 		"description":"green",
 		"category":["student center"],
@@ -78,7 +83,8 @@ locations = [
 			],
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Museum",
-		"category":["art"]
+		"category":["art"],
+		"entrances":['museum_e01']
 	},
 
 	bassine = {
@@ -107,7 +113,8 @@ locations = [
 			new Point(42.366546,-71.258833),
 			new Point(42.366751,-71.259269)],
 		"function":"Feldberg contains offices and is home to Library and Technology Services.",
-		"category":["science","offices"]
+		"category":["science","offices"],
+		"entrances":["feldberg_e01","feldberg_ie01"]
 	},
 	
 	turner = {
@@ -165,7 +172,8 @@ locations = [
 			new Point(42.364799,-71.26258), 
 			new Point(42.364525,-71.262821), 
 			new Point(42.364628,-71.263304)],
-		"category":["art"]
+		"category":["art"],
+		"entrances":['goldman_e01','goldman_e02']
 		},
 	gryzmish = {
 		"id":"gryzmish",
@@ -201,7 +209,8 @@ locations = [
 			new Point(42.364810, -71.264904), 
 			new Point(42.364738, -71.265078), 
 		],
-		"category":["classroom","graduate"]
+		"category":["classroom","graduate"],
+		"entrances":['sachar_e01']
 		},
 	irving = {
 		"id":"irving",
@@ -223,7 +232,8 @@ locations = [
 			new Point(42.365007,-71.258634),
 			new Point(42.364978,-71.258681), 
 			],
-		"category":["informational"]
+		"category":["informational"],
+		"entrances":["info_e01"]
 		},
 	pollack = {
 		"id":"pollack",
@@ -233,7 +243,8 @@ locations = [
 			new Point(42.365291,-71.262325), 
 			new Point(42.365122,-71.262435), 
 			new Point(42.365158,-71.262541)],
-		"category":["art","classroom"]
+		"category":["art","classroom"],
+		"entrances":['pollack_e01']
 		},
 	rabbSchool = {
 		"id":"rabbSchool",
@@ -295,18 +306,20 @@ locations = [
 			new Point(42.364550, -71.262137),
 			new Point(42.364589, -71.261813),
 			],
-		"category":["art"]
+		"category":["art"],
+		"entrances":['spingold_e01','spingold_e02']
 		},
 	abelson = {
 		"id":"abelson",
 		"name":"Abelson-Bass-Yalem",
 		"nickname":"Abelson",
 		"coordinates":[
-			new Point(42.366696,-71.258464), 
-			new Point(42.366554,-71.258437), 
-			new Point(42.366157,-71.258726), 
-			new Point(42.366226,-71.258882)],
-		"category":["science","classroom"]
+			new Point(42.366623, -71.258532), 
+			new Point(42.366547, -71.258397), 
+			new Point(42.366157, -71.258709), 
+			new Point(42.366220, -71.258861)],
+		"category":["science","classroom"],
+		"entrances":["abelson_e01","abelson_e02","abelson_c01","gzang_ie03"]
 		},
 	berlin = {
 		"id":"berlin",
@@ -404,7 +417,7 @@ locations = [
 		],
 		"function":"",
 		"category":["science","classroom"],
-		"entrances":["edison_e01"]
+		"entrances":["edison_e01","gzang_ie02"]
 	},
 	heller = {
 		"id":"heller",
@@ -459,10 +472,15 @@ locations = [
 		"name":"Carl J. Shapiro Science Center",
 		"nickname":"Science Center",
 		"coordinates":[
-			new Point(42.36595,-71.258617), 
-			new Point(42.366115,-71.257734), 
-			new Point(42.365894,-71.257864),
-			new Point(42.365759,-71.258559), ],
+			new Point(42.365962, -71.258665), 
+			new Point(42.366050, -71.258434), 
+			new Point(42.366101, -71.257962), 
+			new Point(42.366146, -71.257913), 
+			new Point(42.366045, -71.257711), 
+			new Point(42.365870, -71.257891), 
+			new Point(42.365841, -71.258311), 
+			new Point(42.365741, -71.258570), 
+		],
 		"category":["science","classroom","student center"],
 		"entrances":["ssc_e01","ssc_e02","ssc_e03","ssc_ie01"]
 		},
@@ -657,7 +675,6 @@ locations = [
 		"category":["classroom"],
 		"description": "A longer description",
 		"entrances":["goldfarb_e01","goldfarb_e02"],
-		"hours":["hour_library"],
 	},	
 	gerstenzang = {
 		"id":"gerstenzang",
@@ -669,7 +686,7 @@ locations = [
 			new Point(42.366304, -71.257812), 
 			new Point(42.366647, -71.258526)],
 		"category":["library","classroom"],
-		"entrances":["gzang_e01","gzang_ie01"],
+		"entrances":["gzang_e01","gzang_e02","gzang_ie01","gzang_ie02","gzang_ie03"],
 	},
 	pearlman = {
 		"id":"pearlman",
@@ -860,6 +877,24 @@ locations = [
 		"category":["classroom"],
 		"nearby":["rabbSchool","slosberg"],
 		"entrances":["lemberg_e01"]
+	},
+	{
+		"id":"samuellemberg",
+		"nickname":"Lemberg",
+		"name":"Samuel Lemberg Academic Center",
+		"function":"",
+		"coordinates":[
+			new Point(42.364705, -71.264387),
+			new Point(42.364670, -71.264192),
+			new Point(42.364538, -71.264051),
+			new Point(42.364373, -71.264029),
+			new Point(42.364363, -71.264184),
+			new Point(42.364425, -71.264190),
+			new Point(42.364495, -71.264491),
+		],
+		"category":["classroom"],
+		"nearby":["sachar","goldman"],
+		"entrances":['samuellemberg_e01','samuellemberg_e02']
 	},
 
 

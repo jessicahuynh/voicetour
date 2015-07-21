@@ -465,6 +465,18 @@ points_southcampus = [
     "id":"village_c05", //next to inspiration statue
     "coordinate":new Point(42.362443, -71.260404),
     "type":"crossing"
+},
+
+{
+    "id":"info_e01",
+    "coordinate":new Point(42.364991, -71.258653),
+    "type":"entrance"
+},
+
+{
+    "id":"bernsteinparkinglot_e01",
+    "coordinate":new Point(42.364892, -71.260169),
+    "type":"entrance"
 }
 ]
 

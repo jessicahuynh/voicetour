@@ -1,5 +1,6 @@
 var disambiguationChoices = [];
 var numAttempts = 0;
+var historyRecord = 
 
 function applyIntent(intent,entities,mic) {
     var r = "";
@@ -31,8 +32,8 @@ function applyIntent(intent,entities,mic) {
                }
            }
            else if (entities["location_category"] != undefined) {
-              searchTerm = entities["location_category"].body;
-                    $("#result").append("<p>Looking for <span class='said'>" + searchTerm +"</span>...</p>");
+                searchTerm = entities["location_category"].body;
+                $("#result").append("<p>Looking for <span class='said'>" + searchTerm +"</span>...</p>");
            }
            
            Session.setPersistent("searchTerm",searchTerm);
@@ -90,7 +91,11 @@ function applyIntent(intent,entities,mic) {
             }
             
             if (disDestination || disStart) {
-                console.log(disambiguationChoices);        
+                console.log(disambiguationChoices);
+                // if (disDestination) {
+
+                //     r += "Sorry, I did not get your destination. Could you repeat that again?";
+                // }        
             }
             else {
                 
@@ -192,6 +197,7 @@ function applyIntent(intent,entities,mic) {
             
              disambiguated = true;
         }
+
     
         if (disambiguated) {
            speak();
@@ -200,6 +206,7 @@ function applyIntent(intent,entities,mic) {
         return disambiguated;
     }
 }
+
 
 function startAudio() {
     navigator.getUserMedia = (navigator.getUserMedia || 
