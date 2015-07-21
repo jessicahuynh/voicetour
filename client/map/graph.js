@@ -189,6 +189,7 @@ Template.graph.events({
 	},
 	"click #stepsButton":function(event) {
 		event.preventDefault();
+		Session.set("prev","/navigate");
 		Router.go('/steps');
 	},
 });

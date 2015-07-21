@@ -17,16 +17,9 @@ Template.locationProfile.helpers({
 
 Template.locationProfile.rendered = function() {
 	if ($(window).width() > 768) {
-		$(".page-header").prepend("<a href='#' id='returnToList'><span class='glyphicon glyphicon-menu-left'></span></a>");
+		$(".page-header").prepend("<a href='#' id='returnToList' class='back'><span class='glyphicon glyphicon-menu-left'></span></a>");
 	}
 	
 	var listen = thisLoc.name + ". " + thisLoc.function + thisLoc.description;
 	Session.setPersistent("listenTo",listen);
 }
-
-Template.locationProfile.events({
-	'click #returnToList':function(event) {
-		event.preventDefault();
-		history.back();
-	}
-});

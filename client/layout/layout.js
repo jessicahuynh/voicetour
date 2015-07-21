@@ -1,4 +1,6 @@
 Session.setDefault("searchTerm","");
+Session.setDefault("prev","");
+
 Template.layout.events({
     'submit #searchForm': function (event) {
         event.preventDefault();
@@ -30,16 +32,17 @@ Template.layout.events({
              }
          }
      },
-     'click #back':function(event) {
+     'click .back':function(event) {
          event.preventDefault();
-         history.back();
+         Router.go(Session.get("prev"));
+         Session.set("prev","");
      },
      'click .nav-link':function(event) {
          slideNav();
      }
 });
 
-Template.layout.rendered = function() {
+Template.layout.rendered = function() { 
    slide();
    
    document.getElementById("searchBox").value = Session.get("searchTerm");
@@ -51,7 +54,7 @@ function slide() {
     $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
 
 
-    var toggler = '.navbar-toggle';
+    var toggler = '#toggleBtn';
     $("#slide-nav").on("click", toggler, function (e) {
         slideNav();   
   
