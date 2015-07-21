@@ -613,6 +613,16 @@ paths_southcampus = [
     "description":"Exit Ridgewood B and turn right towards the intersection."
 },
 {
+    "start":"ridgewoodB_e02",
+    "end":"ridgewoodB_c02",
+    "description":"Take the small sidewalk that leads out to the intersection."
+},
+{
+    "start":"ridgewoodB_c02",
+    "end":"ridgewoodB_e02",
+    "description":"Take the sidewalk that leads to the back entrance of Ridgewood B."
+},
+{
     "start":"ridgewoodB_c02",
     "end":"ridgewoodB_e01",
     "description":"Walk towards the main entrance of Ridgewood B."
@@ -656,6 +666,26 @@ paths_southcampus = [
     "start":"ridgewoodC_e01",
     "end":"ridgewoodC_c01",
     "description":"Exit Ridgewood C and turn right, towards the four-way intersection next to the fences and the Village."
+},
+{
+    "start":"theaterlot_e01",
+    "end":"ridgewoodB_c03",
+    "description":"Take the large path that goes past Ziv, towards South Street."
+},
+{
+    "start":"ridgewoodB_c03",
+    "end":"theaterlot_e01",
+    "description":"Continue along the large path towards the parking lot."
+},
+{
+    "start":"ridgewoodB_c02",
+    "end":"ridgewoodB_c03",
+    "description":"Continue along the large path towards Ziv, away from Admissions."
+},
+{
+    "start":"ridgewoodB_c03",
+    "end":"ridgewoodB_c02",
+    "description":"Take the large path between Ridgewood B and Ridgewood C, in the direction of Admissions."
 },
 // village paths
 {

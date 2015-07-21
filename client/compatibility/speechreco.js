@@ -36,7 +36,7 @@ function applyIntent(intent,entities,mic) {
            }
            
            Session.setPersistent("searchTerm",searchTerm);
-           Session.set("listenTo","Looking for " +searchTerm);
+           Session.setPersistent("listenTo","Looking for " +searchTerm);
            speak();
            
            document.getElementById("searchBox").value = Session.get("searchTerm");
@@ -55,7 +55,7 @@ function applyIntent(intent,entities,mic) {
                disDestination = disambiguate(entities["end"].value);
                if (!disDestination) {
                    r += "<span class='said'>"+entities["end"].body+"</span>";
-                   Session.set("navigateTo",entities["end"].value);
+                   Session.setPersistent("navigateTo",entities["end"].value);
                    rSay += entities["end"].value;
                }
             }
@@ -94,7 +94,7 @@ function applyIntent(intent,entities,mic) {
             }
             else {
                 
-                Session.set("listenTo",rSay);
+                Session.setPersistent("listenTo",rSay);
                 speak();
                 
                 $("#result").append("<p>"+r+"...</p>");
@@ -126,13 +126,16 @@ function applyIntent(intent,entities,mic) {
             r+= "</ul>";
             
             $("#result").append(r);
-            Session.set("listenTo","Here are some commands you can try.");
+            Session.setPersistent("listenTo","Here are some commands you can try.");
             speak();
         }
         else if (intent == "get_current_loc") {
             
             r += "<p>You're currently at <span class='arg'>"+Session.get("inLocation")[0].name+"</span>.</p>";
             r += "<p>Welcome!</p>";
+            
+            Session.setPersistent("listenTo","You're currently at "+Session.get("inLocation")[0].name +"!");
+            speak();
             
             $("#result").append(r);
             
@@ -153,7 +156,7 @@ function applyIntent(intent,entities,mic) {
             r += "<p>"+loc.function+"</p>";
             r += "<p>And here's more info for your perusal.";
             
-            Session.set("listenTo",loc.function + "And here's more information for your perusal.");
+            Session.setPersistent("listenTo",loc.function + "And here's more information for your perusal.");
             speak();
             $("#result").append(r);
             

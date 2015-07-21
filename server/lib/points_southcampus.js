@@ -419,6 +419,11 @@ points_southcampus = [
     "type":"crossing"
 },
 {
+    "id":"ridgewoodB_c03", // behind Ridgewood B next to Ziv A
+    "coordinate":new Point(42.363671, -71.261409),
+    "type":"crossing"
+},
+{
     "id":"ridgewoodC_c01", //big intersection between Ridgewoods
     "coordinate":new Point(42.363753, -71.260399),
     "type":"crossing"
