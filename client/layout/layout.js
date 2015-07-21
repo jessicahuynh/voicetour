@@ -3,14 +3,14 @@ Template.layout.events({
     'submit #searchForm': function (event) {
         event.preventDefault();
         var s = document.getElementById("searchBox").value;
-        Session.set("searchTerm", s);
+        Session.setPersistent("searchTerm", s);
 
         Router.go('/search');
      },
      'focus #searchBox': function (event) {
         event.preventDefault();
         var s = document.getElementById("searchBox").value;
-        Session.set("searchTerm", s);
+        Session.setPersistent("searchTerm", s);
 
         Router.go('/search');
      },
@@ -40,7 +40,6 @@ Template.layout.events({
 });
 
 Template.layout.rendered = function() {
-   
    slide();
    
    document.getElementById("searchBox").value = Session.get("searchTerm");
@@ -54,7 +53,8 @@ function slide() {
 
     var toggler = '.navbar-toggle';
     $("#slide-nav").on("click", toggler, function (e) {
-        slideNav();
+        slideNav();   
+  
     });
 
 
@@ -78,10 +78,12 @@ function slideNav() {
     var menuneg = '-100%';
     var slideneg = '-60%';
     
-    $("#searchGlass").toggle("searchGlass");
-    $("#searchForm").toggle("searchForm");
-    
     var selected = $(".navbar-header").hasClass('slide-active');
+    
+    if ($(window).width() < 768) {
+        $("#searchGlass").toggle("searchGlass");
+        $("#searchForm").toggle("searchForm");
+    }
 
     $('#navbar-hamburger').stop().animate({
         left: selected ? menuneg : '0px'

@@ -9,7 +9,7 @@ navigator.geolocation.watchPosition(function (position) {
 						console.log(error);
 					}
 					else {
-						Session.set("inLocation", data);
+						Session.setPersistent("inLocation", data);
 					}
 				}
 				

@@ -3,41 +3,57 @@
 
 <div class="row">
 
-<div class="col-sm-6">
-	<form id="navform" name="navform">
-		<div class="form-group">
-			<label for="startpoint">Start</label>
-			{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location" value=startLoc }}
-			<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
-			<div class="getCurrentContainer">
-				<a id="getCurrentLoc" href="#">
-					<span class="glyphicon glyphicon-record"></span>&nbsp;Use current location
-				</a>
+	<ul class="nav nav-pills" role="tablist" id="navmenu">
+		<li role="presentation" class="active"><a href="#navPane" data-toggle="pill" role="pill" aria-controls="navigate">Navigate</a></li>
+		<li role="presentation"><a href="#routePane" role="pill" data-toggle="pill" aria-controls="route">Route</a></li>
+		<li role="presentation"><a href="#mapPane" role="pill" data-toggle="pill" aria-controls="map">Map</a></li>
+	</ul>
+	
+	<div class="tab-content">		
+		<div role="tabpanel" class="tab-pane active col-sm-6" id="navPane">
+			<form id="navform" name="navform">
+				<div class="form-group">
+					<label for="startpoint">Start</label>
+					{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location" value=startLoc }}
+					<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
+					<div class="getCurrentContainer">
+						<a id="getCurrentLoc" href="#">
+							<span class="glyphicon glyphicon-record"></span>&nbsp;Use current location
+						</a>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="endpoint">End</label>
+					{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination" value=endLoc}}
+					<!--<input type="text" id="endpoint" class="form-control" placeholder="destination">-->
+				</div>
+				<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Go</button>
+			</form>
+		</div>
+			
+		<div role="tabpanel" class="tab-pane col-sm-6" id="mapPane">
+			<div id="map-nav" style="width:400px; height:400px">
+				{{> googleMap name="navMap" options=navMapOptions}}
 			</div>
 		</div>
-		<div class="form-group">
-			<label for="endpoint">End</label>
-			{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination" value=endLoc}}
-			<!--<input type="text" id="endpoint" class="form-control" placeholder="destination">-->
+		
+		
+
+		<div role="tabpanel" class="tab-pane col-sm-12" id="routePane">
+			<ul>
+				{{#each stops}}
+				<li>{{stopDescription}}</li>
+				{{/each}}
+			</ul>
+			<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary">Step-by-Step</button>
 		</div>
-		<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Go</button>
-	</form>
-	
-	<div id="map-nav" style="width:400px; height:400px">
-		{{> googleMap name="navMap" options=navMapOptions}}
+		
 	</div>
-</div>
-
-<div class="col-sm-6">
-	<ul>
-		{{#each stops}}
-		<li>{{stopDescription}}</li>
-		{{/each}}
-	</ul>
-	<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary">Navigate</button>
-</div>
+		
+	
 
 </div>
+
 
 
 </template>

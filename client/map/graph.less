@@ -31,3 +31,32 @@ ul.-autocomplete-list {
 		border-bottom:1px dashed @deis-blue;
 	}
 }
+
+@media (min-width:768px) {
+	#navmenu {display:none;}
+	.tab-content div.tab-pane {
+		display:block;
+	}
+}
+
+#navmenu {
+	width:100%;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:1em;
+	
+	ul {
+		margin:0 auto;
+	}
+	
+	
+	li {
+		width:calc(~'33% - 1px');
+		text-align:center;
+		
+		a {
+			border-radius:0;
+			text-transform:uppercase;
+		}
+	}
+}

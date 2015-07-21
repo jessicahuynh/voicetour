@@ -66,6 +66,17 @@ Template.footer.events({
         //    }
         // });
     },
+    'click .wit-microphone':function(event){
+        event.preventDefault();
+        
+        if (navigator.getUserMedia || 
+          navigator.webkitGetUserMedia || 
+          navigator.mozGetUserMedia || 
+          navigator.msGetUserMedia) {
+              mic.connect("ANATOUXNLPGVGPTGWPN7RXQHFYYSPGPP");
+          }
+        
+    },
     'mouseover .wit-microphone':function(event) {
        $(".mic").css("color","#FF3F4E");
     },
