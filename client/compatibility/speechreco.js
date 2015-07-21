@@ -35,7 +35,7 @@ function applyIntent(intent,entities,mic) {
                     $("#result").append("<p>Looking for <span class='said'>" + searchTerm +"</span>...</p>");
            }
            
-           Session.set("searchTerm",searchTerm);
+           Session.setPersistent("searchTerm",searchTerm);
            Session.set("listenTo","Looking for " +searchTerm);
            speak();
            
@@ -64,7 +64,7 @@ function applyIntent(intent,entities,mic) {
                if (entities["deis_loc"] != undefined) {
                    if (!disDestination) {
                        r += "<span class='said'>"+entities["deis_loc"].body+"</span>";
-                       Session.set("navigateTo",entities["deis_loc"].value);
+                       Session.setPersistent("navigateTo",entities["deis_loc"].value);
                        rSay += entities["end"].value;
                    }
                }
@@ -75,18 +75,18 @@ function applyIntent(intent,entities,mic) {
                 if (!disStart) {
                      if (entities["start"] == "this_loc") {
                          r+= " from <span class='said'>this location</span>";
-                         Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+                         Session.setPersistent("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
                          rSay += " from your current location."
                      }
                      else {
                         r += " from <span class='said'>"+entities["start"].body+"</span>";
-                        Session.set("navigateFrom",entities["start"].value);
+                        Session.setPersistent("navigateFrom",entities["start"].value);
                         rSay += " from " + entities["start"].value;
                      }                 
                 }
             }
             else {
-                Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+                Session.setPersistent("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
             }
             
             if (disDestination || disStart) {
