@@ -124,16 +124,16 @@ points_science = [
 		"coordinate":new Point(42.365982, -71.258543),
 		"type":"icrossing"
 	},
-	{
-		"id":"bassine_e02", 
-		"coordinate":new Point(42.366043, -71.258960),
-		"type":"entrance"
-	},
-	{
-		"id":"bassine_e03", 
-		"coordinate":new Point(42.366210, -71.258851),
-		"type":"entrance"
-	},
+	// {
+	// 	"id":"bassine_e02", 
+	// 	"coordinate":new Point(42.366043, -71.258960),
+	// 	"type":"entrance"
+	// },
+	// {
+	// 	"id":"bassine_e03", 
+	// 	"coordinate":new Point(42.366210, -71.258851),
+	// 	"type":"entrance"
+	// },
 	{
 	    "id":"foster_e01",
 	    "coordinate":new Point(42.366195, -71.256540),
@@ -200,6 +200,49 @@ points_science = [
 	    "type": "crossing",
 	},
 
+
+
+	{
+	    "id": "gzang_e02",
+	    "coordinate":new Point(42.366527, -71.258368),
+	    "type": "entrance",
+	},
+	{
+	    "id": "gzang_ie02",//to edison
+	    "coordinate":new Point(42.366548, -71.258307),
+	    "type": "ientrance",
+	},
+	{
+	    "id": "gzang_ie03",//to abelson
+	    "coordinate":new Point(42.366601, -71.258352),
+	    "type": "ientrance",
+	},
+	{
+	    "id": "abelson_e01",
+	    "coordinate":new Point(42.366669, -71.258500),
+	    "type": "entrance",
+	},
+	{
+	    "id": "abelson_e02",
+	    "coordinate":new Point(42.366184, -71.258794),
+	    "type": "entrance",
+	},
+	{
+	    "id": "abelson_c01",
+	    "coordinate":new Point(42.366092, -71.258608),
+	    "type": "crossing",
+	},
+
+	{
+	    "id": "feldberg_ie01",//to volen
+	    "coordinate":new Point(42.366855, -71.258670),
+	    "type": "ientrance",
+	},
+	{
+	    "id": "feldberg_e01",
+	    "coordinate":new Point(42.366647, -71.259054),
+	    "type": "entrnace",
+	},
 ]
 
 function Point(x,y) {

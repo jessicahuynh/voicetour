@@ -179,7 +179,8 @@ locations_parking = [
 			new Point(42.365064, -71.260004)
 		],
 		"category":["parking"],
-		"nearby":["bernstein-marcus","stop_admissions","greatlawn","slosberg"]
+		"nearby":["bernstein-marcus","stop_admissions","greatlawn","slosberg"],
+		"entrances":["bernsteinparkinglot_e01"]
 	},
 	{
 		"id":"hlot",
@@ -194,7 +195,8 @@ locations_parking = [
 			new Point(42.366453, -71.261501)
 		],
 		"category":["parking"],
-		"nearby":["shapirodorm"]
+		"nearby":["shapirodorm"],
+		"entrances":["hlot_e01","hlot_e02"]
 	},
 	{
 		"id":"admissionsvisitorparking",
@@ -212,7 +214,7 @@ locations_parking = [
 		"entrances":["slosberg_c02","slosberg_c03"]
 	},
 	{
-		"id":"theaterparking",
+		"id":"theaterlot",
 		"name":"Theater Lot",
 		"nickname":"theater lot",
 		"coordinates":[
@@ -224,8 +226,8 @@ locations_parking = [
 			new Point(42.363594, -71.263761),
 		],
 		"category":["parking"],
-		"nearby":["spingold,,ridgewoodB,zivB,zivA,lemberg,goldman"],
-		"entrances":[]
+		"nearby":["spingold","ridgewoodB","zivB”,“zivA”,“samuellemberg”,“goldman"],
+		"entrances":['theaterlot_e01','theaterlot_e02','theaterlot_e03','theaterlot_e04','theaterlot_e05','theaterlot_e06']
 	}
 ]
 

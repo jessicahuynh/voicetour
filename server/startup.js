@@ -1,7 +1,7 @@
 Meteor.startup(function() {
 	if (Locations.find().count() == 0) {
 		// list of all of the files containing location data
-		var locFiles = [locations,locations_artinstallations,locations_dorms,locations_parking,locations_transport];
+		var locFiles = [locations,locations_artinstallations,locations_dorms,locations_parking,locations_transport,locations_rooms];
 		
 		locFiles.forEach(function(locFile) {
 			locFile.forEach(function(location) {
@@ -67,6 +67,13 @@ Meteor.startup(function() {
 		
 		/*console.log(map);*/
 		Map.insert(map);
+	}
+
+	if (Hours.find().count()==0){
+		var hoursFile=operationhours;
+		hoursFile.forEach(function(hour) {
+			Hours.insert(hour);
+		});
 	}
 	console.log(Map.find().count());
 	console.log("startup end");
