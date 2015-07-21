@@ -428,6 +428,17 @@ points_southcampus = [
     "coordinate":new Point(42.363753, -71.260399),
     "type":"crossing"
 },
+{
+    "id":"ridgewoodC_c02", // behind Ridgewood C
+    "coordinate":new Point(42.363542, -71.261121),
+    "type":"crossing"
+},
+// ziv crossings
+{
+    "id":"ziv127_c01", // in front near ridgewood
+    "coordinate": new Point(42.363431, -71.261531),
+    "type":"crossing"
+},
 // village crossings
 {
     "id":"village_c01", //outside A

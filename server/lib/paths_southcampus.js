@@ -687,6 +687,47 @@ paths_southcampus = [
     "end":"ridgewoodB_c02",
     "description":"Take the large path between Ridgewood B and Ridgewood C, in the direction of Admissions."
 },
+{
+    "start":"ridgewoodB_c02",
+    "end":"ridgewoodC_c02",
+    "description":"Head down the small sidewalk that goes in the direction of Ziv Quad."
+},
+{
+    "start":"ridgewoodC_c02",
+    "end":"ridgewoodB_c02",
+    "description":"Head up the small sidewalk directly next to Ridgewood C."
+},
+{
+    "start":"ridgewoodB_c03",
+    "end":"ridgewoodC_c02",
+    "description":"Continue along the large road leading to South Street."
+},
+{
+    "start":"ridgewoodC_c02",
+    "end":"ridgewoodB_c03",
+    "description":"Continue along the large path leading to  the parking lot."
+},
+// ziv paths
+{
+    "start":"ridgewoodB_c03",
+    "end":"ziv127_c01",
+    "description":"Take the smaller sidewalk down to Ziv 127."
+},
+{
+    "start":"ziv127_c01",
+    "end":"ridgewoodB_c03",
+    "description":"Walk up the path to the large road that ends near Ridgewood B and the parking lot."
+},
+{
+    "start":"ziv127_e01",
+    "end":"ziv127_c01",
+    "description":"Exit Ziv 127."
+},
+{
+    "start":"ziv127_c01",
+    "end":"ziv127_e01",
+    "description":"Head to the main entrance of Ziv 127."
+},
 // village paths
 {
     "start":"slosberg_c03",
