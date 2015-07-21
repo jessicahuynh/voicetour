@@ -10,7 +10,7 @@
 			{{/ifEsInputIsEmpty}}
 
 			{{#ifEsIsSearching index="locations" id="searchBox"}}
-			<p>Loading&hellip;</p>
+				{{> loading}}
 			{{else}}
 			<div class="list-group">
 				{{#esEach index="locations" id="searchBox"}}
