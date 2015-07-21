@@ -204,7 +204,7 @@ function startAudio() {
                           navigator.mozGetUserMedia || 
                           navigator.msGetUserMedia);
     if (navigator.getUserMedia) {
-        var mic = new Wit.Microphone(document.getElementById("microphone"));
+        mic = new Wit.Microphone(document.getElementById("microphone"));
         
         var info = function (msg) {
             document.getElementById("info").innerHTML = msg;
@@ -256,9 +256,9 @@ function startAudio() {
             info("Microphone is not connected");
         };
     
-        mic.connect("ANATOUXNLPGVGPTGWPN7RXQHFYYSPGPP");
+       
         // mic.start();
-        mic.stop();
+        //mic.stop();
     }
 }
 
