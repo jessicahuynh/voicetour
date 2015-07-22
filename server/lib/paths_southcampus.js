@@ -707,6 +707,16 @@ paths_southcampus = [
     "end":"ridgewoodB_c03",
     "description":"Continue along the large path leading to  the parking lot."
 },
+{
+    "start":"ridgewoodC_c02",
+    "end":"village_c03",
+    "description":"Head along the large road that leads to South Street."
+},
+{
+    "start":"village_c03",
+    "end":"ridgewoodC_c02",
+    "description":"Head along the large road that leads towards Theater Lot."
+},
 // ziv paths
 {
     "start":"ridgewoodB_c03",
@@ -727,6 +737,206 @@ paths_southcampus = [
     "start":"ziv127_c01",
     "end":"ziv127_e01",
     "description":"Head to the main entrance of Ziv 127."
+},
+{
+    "start":"ziv127_c01",
+    "end":"ziv130_e01",
+    "description":"Take the right path and keep heading straight along this path towards the main entrance of Ziv 130."
+},
+{
+    "start":"ziv130_e01",
+    "end":"ziv127_c01",
+    "description":"Take the path immediately in front of you straight all the way to the main entrance of Ziv 127."
+},
+{
+    "start":"ziv127_c01",
+    "end":"ziv127_c02",
+    "description":"Take the path on your right to the next intersection."
+},
+{
+    "start":"ziv127_c02",
+    "end":"ziv127_c01",
+    "description":"Head along the path towards the entrance of Ziv 127."
+},
+{
+    "start":"ziv127_c02",
+    "end":"ridgewoodC_c02",
+    "description":"Take the path on your left that leads to the large road."
+},
+{
+    "start":"ridgewoodC_c02",
+    "end":"ziv127_c02",
+    "description":"At the fork near Ziv Quad, take the rightmost path."
+},
+{
+    "start":"ziv127_c02",
+    "end":"ziv130_c01",
+    "description":"Head to the four-way intersection in the middle of Ziv Quad."
+},
+{
+    "start":"ziv130_c01",
+    "end":"ziv127_c02",
+    "description":"Take the sidewalk that leads to Ziv 127, the one closest to Theater Lot."
+},
+{
+    "start":"ziv130_c01",
+    "end":"ridgewoodC_c02",
+    "description":"Take the sidewalk up to the large road between Ziv and Ridgewood Quads."
+},
+{
+    "start":"ridgewoodC_c02",
+    "end":"ziv130_c01",
+    "description":"At the fork next to Ziv Quad, take the middle path down to the four-way intersection."
+},
+{
+    "start":"ridgewoodC_c02",
+    "end":"ziv130_c02",
+    "description":"At the fork next to Ziv Quad, take the leftmost path that goes by the front of Ziv 130."
+},
+{
+    "start":"ziv130_c02",
+    "end":"ridgewoodC_c02",
+    "description":"Take the sidewalk that leads to the road between Ziv and Ridgewood Quads."
+},
+{
+    "start":"ziv130_c01",
+    "end":"ziv130_c02",
+    "description":"Take the sidewalk that leads to the main entrance of Ziv 130."
+},
+{
+    "start":"ziv130_c02",
+    "end":"ziv130_c01",
+    "description":"Take the sidewalk that leads to the four-way intersection in the middle of Ziv Quad."
+},
+{
+    "start":"ziv130_c02",
+    "end":"ziv130_e01",
+    "description":"Walk to the main entrance of Ziv 130."
+},
+{
+    "start":"ziv130_e01",
+    "end":"ziv130_c02",
+    "description":"Head out the entrance of Ziv 130."
+},
+{
+    "start":"ziv130_c01",
+    "end":"ziv128_c01",
+    "description":"Take the sidewalk that leads towards the large road that divides Ziv Quad in two."
+},
+{
+    "start":"ziv128_c01",
+    "end":"ziv130_c01",
+    "description":"Take the sidewalk that leads up to the four-way intersection."
+},
+{
+    "start":"ziv128_c01",
+    "end":"ziv127_c02",
+    "description":"Take the sidewalk that heads over to Ziv 127."
+},
+{
+    "start":"ziv127_c02",
+    "end":"ziv128_c01",
+    "description":"Take the sidewalk that leads down to the large road that splits Ziv Quad in two."
+},
+{
+    "start":"ziv128_c01",
+    "end":"ziv128_e01",
+    "description":"Take the sidewalk that leads directly to the main entrance of Ziv 128."
+},
+{
+    "start":"ziv128_e01",
+    "end":"ziv128_c01",
+    "description":"Exit and take the sidewalk on your left towards the large road."
+},
+{
+    "start":"village_c03",
+    "end":"ziv129_c01",
+    "description":"Go down the large road that swings by Dunkin Donuts and into Ziv Quad."
+},
+{
+    "start":"ziv129_c01",
+    "end":"village_c03",
+    "description":"Take the large road up to the Village, past Dunkin Donuts."
+},
+{
+    "start":"ziv129_c01",
+    "end":"ziv130_e01",
+    "description":"Take the sidewalk up to the main entrance for Ziv 130."
+},
+{
+    "start":"ziv130_e01",
+    "end":"ziv129_c01",
+    "description":"Exit and then take the sidewalk on your left down to the large road."
+},
+{
+    "start":"ziv129_c01",
+    "end":"ziv130_c02",
+    "description":"Take the sidewalk up towards the main entrance for Ziv 130."
+},
+{
+    "start":"ziv130_c02",
+    "end":"ziv129_c01",
+    "description":"Take the sidewalk down to the large road that splits Ziv Quad in half."
+},
+{
+    "start":"ziv129_c01",
+    "end":"ziv128_c01",
+    "description":"Continue along the large road towards the parking lot."
+},
+{
+    "start":"ziv128_c01",
+    "end":"ziv129_c01",
+    "description":"Continue along the large road towards the Village, Dunkin Donuts, and South Street."
+},
+{
+    "start":"ziv129_c01",
+    "end":"ziv129_e01",
+    "description":"Take the sidewalk down to the main entrance for Ziv 129 (Mazer Residence Hall)."
+},
+{
+    "start":"ziv129_e01",
+    "end":"ziv129_c01",
+    "description":"Exit and take the sidewalk on your right up to the large road."
+},
+{
+    "start":"ziv128_e01",
+    "end":"ziv128_c02",
+    "description":"Exit and swing right to the gap between Ziv 128 and Ziv 129."
+},
+{
+    "start":"ziv128_c02",
+    "end":"ziv128_e01",
+    "description":"Head to the main entrance of Ziv 128."
+},
+{
+    "start":"ziv128_c02",
+    "end":"ziv129_e01",
+    "description":"Head to the main entrance of Ziv 129."
+},
+{
+    "start":"ziv129_e01",
+    "end":"ziv128_c02",
+    "description":"Exit and swing left to the gap between Ziv 128 and Ziv 129."
+},
+{
+    "start":"ziv128_c01",
+    "end":"ziv128_c02",
+    "description":"Head down to the gap between Ziv 128 and Ziv 129."
+},
+{
+    "start":"ziv128_c02",
+    "end":"ziv128_c01",
+    "description":"Veer slightly left and take the left sidewalk up to the large road."
+},
+{
+    "start":"ziv128_c02",
+    "end":"ziv129_c01",
+    "description":"Veer slightly right and take the right sidewalk up to the large road."
+},
+{
+    "start":"ziv129_c01",
+    "end":"ziv128_c02",
+    "description":"Head down to the gap between Ziv 128 and Ziv 129."
 },
 // village paths
 {

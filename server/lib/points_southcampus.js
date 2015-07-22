@@ -439,6 +439,36 @@ points_southcampus = [
     "coordinate": new Point(42.363431, -71.261531),
     "type":"crossing"
 },
+{
+    "id":"ziv127_c02", // to the side
+    "coordinate":new Point(42.363394, -71.261422),
+    "type":"crossing"
+},
+{
+    "id":"ziv128_c01", // between 127 and 128
+    "coordinate":new Point(42.363201, -71.261277),
+    "type":"crossing"
+},
+{
+    "id":"ziv128_c02", //between ziv and epstein
+    "coordinate":new Point(42.363039, -71.261277),
+    "type":"crossing"
+},
+{
+    "id":"ziv129_c01", //between 129 and 130
+    "coordinate":new Point(42.363171, -71.261106),
+    "type":"crossing"
+},
+{
+    "id":"ziv130_c01", //middle of the intersections
+    "coordinate":new Point(42.363351, -71.261227),
+    "type":"crossing"
+},
+{
+    "id":"ziv130_c02", // right in front
+    "coordinate":new Point(42.363331, -71.261072),
+    "type":"crossing"
+},
 // village crossings
 {
     "id":"village_c01", //outside A
