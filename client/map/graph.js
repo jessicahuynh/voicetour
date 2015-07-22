@@ -2,6 +2,8 @@ Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/
 	
+	Session.set("listenTo","Enter a start and end location to get started!");
+	
 	var navTo = Session.get("navigateTo");
 	if (navTo != "" && navTo != null) {
 		document.getElementById("endpoint").value = navTo;
@@ -158,6 +160,7 @@ Template.graph.events({
 		$("#routeTab").tab('show');
 		
 		getRouteDescription(route);
+		Session.set("listenTo",Session.get("routeToTake"));
 	},
 	"click input":function(event) {
 		event.target.value = '';

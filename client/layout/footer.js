@@ -46,6 +46,7 @@ Template.footer.events({
         msg.text = Session.get("listenTo");
         console.log(Session.get("listenTo"));
         msg.lang = 'en-US';
+        msg.rate = 3;
         
         msg.onend = function(e) {
           console.log('Finished in ' + event.elapsedTime + ' seconds.');
