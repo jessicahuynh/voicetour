@@ -1,6 +1,12 @@
 Session.setDefault("searchTerm","");
 Session.setDefault("prev","");
 
+Template.layout.helpers({
+    mobileTitle:function() {
+        return Session.get("pageTitle");
+    }
+});
+
 Template.layout.events({
     'submit #searchForm': function (event) {
         event.preventDefault();
@@ -23,12 +29,12 @@ Template.layout.events({
              $("#searchBox").toggle(450).focus();
          }
          else {
-             if ($("#searchBox").css("display") == "none") {
-                 $("#searchBox").slideDown();
+             if ($("#searchForm").css("display") == "none") {
+                 $("#searchForm").toggle();
                  $("#searchBox").focus();
              }
              else {
-                 $("#searchBox").slideUp();
+                 $("#searchForm").toggle();
              }
          }
      },
@@ -85,7 +91,9 @@ function slideNav() {
     
     if ($(window).width() < 768) {
         $("#searchGlass").toggle("searchGlass");
-        $("#searchForm").toggle("searchForm");
+        
+        if ($("#searchForm").css("display") != "none")
+            $("#searchForm").toggle("searchForm");
     }
 
     $('#navbar-hamburger').stop().animate({

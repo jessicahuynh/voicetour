@@ -1,4 +1,6 @@
 Template.graph.rendered = function () {
+	Session.set("pageTitle","Navigate");
+	
 	graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/
 	
@@ -138,6 +140,8 @@ Template.graph.helpers({
 Template.graph.events({
 	"submit #navform": function(event){
 		event.preventDefault();
+		
+		$("#routeTab").tab('show');
 
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
@@ -156,8 +160,6 @@ Template.graph.events({
 		Session.set("routeForStep",route);
 		Session.set("destination", ends);
 		//Session.set("stepCenterPoint",route[0]);
-
-		$("#routeTab").tab('show');
 		
 		getRouteDescription(route);
 		Session.set("listenTo",Session.get("routeToTake"));
