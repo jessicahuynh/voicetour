@@ -1,3 +1,14 @@
 <template name="settings">
 	<h1 class="page-header">Settings</h1>
+	
+	<div class="checkbox">
+		<div class="unitToggle">
+			<label for="unit" class="col-xs-6">Distance units</label>
+			<div class="col-xs-6 text-right">	
+				<input type="checkbox" id="unit" class="switch" data-off-text="FT" data-on-text="M" data-off-color="info" checked="{{unitCheck}}">
+			</div>
+			<span class="clear">&nbsp;</span>
+		</div>
+		<p class="help-block col-xs-12">When off, all distances are in feet. When on, all distances are in meters.</p>
+	</div>
 </template>

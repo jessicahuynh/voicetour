@@ -29,8 +29,12 @@ Template.nearbyLocs.helpers({
 					}
 					else {
 						var classname = ".nearbydist"+loc.id;
-						$(classname).html("about "+ Math.floor(data)+"m");
-						return "about "+ Math.floor(data)+"m";
+						if (Session.get("unit") == "m") {
+							$(classname).html("about "+ Math.floor(data)+"m");
+						}
+						else {
+							$(classname).html("about "+Math.round(Math.floor(data*3.28))+"ft");
+						}
 					}
 				});
 		}

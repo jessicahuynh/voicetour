@@ -27,7 +27,12 @@ Template.footer.helpers({
            return "current location";
        }
        else {
-           return Math.floor(Session.get("inLocation")[2]) + "m away";
+           if (Session.get("unit") == "m") {
+               return Math.floor(Session.get("inLocation")[2]) + "m away";
+           }
+           else {
+               return Math.round(Math.floor(Session.get("inLocation")[2])*3.28) + "ft away";
+           }
        }
    }
 });
