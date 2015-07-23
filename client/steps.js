@@ -65,6 +65,7 @@ Template.steps.events({
 
 	},
 	"click #recalMap": function(event){
+		event.preventDefault();
 		count = 0;
 		//console.log("count in recal: " + count);
 		for(var i = 0; i<route.length - 1; i++){

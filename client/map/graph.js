@@ -207,6 +207,7 @@ Template.graph.events({
 		Session.set("listenTo",Session.get("routeToTake"));
 
 		if ($(window).width() < 768) {
+			event.preventDefault();
 			Session.set("prev","/navigate");
 			Router.go('/steps');
 		}
