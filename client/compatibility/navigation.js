@@ -4,7 +4,7 @@ function getRoute(starts, ends) {
 			// if you're in a building, return that building and go on as before
 			if (Session.get("inLocation")[1] == "in") {
 				starts = Locations.findOne({"name":Session.get("inLocation")[0].name}).name;
-				console.log(starts);
+				//console.log(starts);
 				
 				route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
 			}
@@ -80,7 +80,7 @@ function getShortestRoute(startEntrances,endEntrances) {
 		}
 	}
 
-	console.log(shortestRoute);
+	//console.log(shortestRoute);
 	return shortestRoute;
 }
 

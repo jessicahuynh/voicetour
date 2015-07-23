@@ -32,51 +32,41 @@ Template.graph.rendered = function () {
 		}
 	}
 
+};
+
+Template.graph.onCreated(function () {
+	//Session.set("centerPoint", Point(0,0));
+	route = null;
+	routes = [];
+	startstop = null;
+	//console.log("(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+	laststop = null;
+
 	GoogleMaps.load();
 
 	GoogleMaps.ready('navMap',function(map) {
 		console.log("test google map ready");
 
 		var marker1 = new google.maps.Marker({
-			position: new google.maps.LatLng(startstop.x,startstop.y),
+			position: new google.maps.LatLng(Session.get("currentLocation").x, Session.get("currentLocation").y),
 			icon: '/GoogleMapsMarkers/green_MarkerA.png',
 			map: map.instance
 		});
-		//marker1.setVisible(false);
+
 		var marker2 = new google.maps.Marker({
-			position: new google.maps.LatLng(laststop.x,laststop.y),
+			position: new google.maps.LatLng(Session.get("currentLocation").x, Session.get("currentLocation").y),
 			icon: '/GoogleMapsMarkers/red_MarkerB.png',
 			map:map.instance
 		});
-		//marker2.setVisible(false);
-		// var markerCurrent = new google.maps.Marker({
-		// 	position: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
-		// 	icon: '/GoogleMapsMarkers/bluedot.png',
-		// 	map:map.instance
-		// });
-
-		// Tracker.autorun(function() {
-		// 	var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
-		// 	map.instance.setCenter(theLatLng);
-		// 	markerCurrent.setPosition(theLatLng);
-		// 	console.log("test run autorun in rendered");
-		// })
 
 		Tracker.autorun(function() {
 			route = Session.get("route");
 
 			console.log("test google map ready: " + route);
 			deleteRoutes(routes);
+			routes = [];
 			console.log("delete route");
 
-			var theLatLng1 = new google.maps.LatLng(startstop.x,startstop.y);
-			map.instance.setCenter(theLatLng1);
-			marker1.setPosition(theLatLng1);
-			//marker1.setVisible(true);
-			//marker1.setOptions({icon: '/GoogleMapsMarkers/green_MarkerA.png'});
-			var theLatLng2 = new google.maps.LatLng(laststop.x,laststop.y);
-			marker2.setPosition(theLatLng2);
-			//marker2.setOptions({icon: '/GoogleMapsMarkers/red_MarkerB.png'});
 			
 			if (route != null){
 				for(var j = 0; j<route.length - 1; j++){
@@ -87,17 +77,32 @@ Template.graph.rendered = function () {
 
 		})
 
+		Tracker.autorun(function() {
+			console.log("auto run startstop: " + startstop);
+			startstop = Session.get("startstop");
+			if (startstop != null) {
+
+				var startstopCor = findId(startstop);
+				var theLatLng1 = new google.maps.LatLng(startstopCor.x,startstopCor.y);
+				map.instance.setCenter(theLatLng1);
+				marker1.setPosition(theLatLng1);
+			}
+
+			console.log("move marker A");
+		})	
+
+		Tracker.autorun(function() {
+			console.log("auto run laststop: " + laststop);
+			laststop = Session.get("laststop");
+			if (laststop != null) {
+				var laststopCor = findId(laststop);
+				var theLatLng2 = new google.maps.LatLng(laststopCor.x,laststopCor.y);
+				marker2.setPosition(theLatLng2);	
+			}
+			console.log("move marker B");
+		})
+
 	})	
-
-};
-
-Template.graph.onCreated(function () {
-	//Session.set("centerPoint", Point(0,0));
-	route = null;
-	routes = [];
-	startstop = Session.get("currentLocation");
-	console.log("(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
-	laststop = Session.get("currentLocation");
 });
 
 Template.graph.helpers({
@@ -149,17 +154,24 @@ Template.graph.events({
 		console.log("end "+ ends);
 		//route = null;
 		route = getRoute(starts, ends);
-		
-		setTimeout(function() {
-			startstop = findId(route[0]);
-			laststop = findId(route[route.length - 1]);
-		},3000) ;
-
-		// session variable for steps.js
+		console.log(route);
 		Session.set("route",route);
+
+		//setTimeout(function() {
+			startstop = route[0];
+			//console.log("startstop: " + startstop);
+			Session.set("startstop", startstop);
+			//console.log("set startstop");
+			laststop = route[route.length - 1];
+			//console.log("laststop: " + laststop);
+			Session.set("laststop", laststop);
+			//console.log("set laststop");
+		//},3000) ;
+
+
+		//session variable for steps.js
 		Session.set("routeForStep",route);
 		Session.set("destination", ends);
-		//Session.set("stepCenterPoint",route[0]);
 		
 		getRouteDescription(route);
 		Session.set("listenTo",Session.get("routeToTake"));
@@ -198,5 +210,3 @@ Template.graph.events({
 		Router.go('/steps');
 	},
 });
-
-
