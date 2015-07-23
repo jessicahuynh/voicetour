@@ -104,7 +104,9 @@ Template.steps.rendered = function () {
 	console.log("route: " + route);
 	console.log("route length: " + route.length);
 	startstop = findId(route[0]);
+
 	nextstop = findId(route[count]);
+	
 	laststop = findId(route[route.length - 1]);
 	console.log("startstop:" + startstop.x + "," + startstop.y);
 	console.log("laststop:" + laststop.x + "," + laststop.y);
@@ -142,7 +144,7 @@ Template.steps.rendered = function () {
 
 			nextstop = findId(route[count]);
 			if (autoNextStep(nextstop) == true) {
-				if (count < (route.length - 1)){
+				if (count < (route.length - 2)){
 					count ++;
 					//console.log("count:" + count);
 					//Session.set("countForStep", count);
@@ -160,7 +162,7 @@ Template.steps.rendered = function () {
 				}
 
 			}
-			
+
 		})
 
 		getStepDescription(route);	
