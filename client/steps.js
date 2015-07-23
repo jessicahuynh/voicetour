@@ -234,30 +234,30 @@ Template.steps.onCreated(function() {
 
 });
 
-// function autoNextStep(nextStop){
-// 	var tfnext = false;
-// 	var currentForAuto = Session.get("currentLocation");
-// 	Meteor.call("distance", Session.get("currentLocation"), tfnext,
-// 		function(error,data) {
-// 			if (error) {
-// 				console.log(error);
-// 			}
-// 			else {
+function autoNextStep(nextStop){
+	var tfnext = false;
+	var currentForAuto = Session.get("currentLocation");
+	Meteor.call("distance", Session.get("currentLocation"), tfnext,
+		function(error,data) {
+			if (error) {
+				console.log(error);
+			}
+			else {
 
-// 				if (Session.get("unit") == "m"){
-// 					if (Math.floor(data) < 2){
-// 						tfnext = true;
-// 					}
-// 				} else {
-// 					if ((Math.floor(data) / 3.28) < 2){
-// 						tfnext = true;
-// 					}
-// 				}
-// 			}
-// 		});
-// 	return tfnext;
-// 	// Session.set("tfnext", tfnext);
-// }
+				if (Session.get("unit") == "m"){
+					if (Math.floor(data) < 2){
+						tfnext = true;
+					}
+				} else {
+					if ((Math.floor(data) / 3.28) < 2){
+						tfnext = true;
+					}
+				}
+			}
+		});
+	return tfnext;
+	// Session.set("tfnext", tfnext);
+}
 
 
 function getStepDescription(route) {
