@@ -27,7 +27,7 @@ Template.footer.helpers({
            return "current location";
        }
        else {
-           return "about " + Math.floor(Session.get("inLocation")[2]) + "m away";
+           return Math.floor(Session.get("inLocation")[2]) + "m away";
        }
    }
 });
