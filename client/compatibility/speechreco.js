@@ -231,6 +231,16 @@ function disambiguate(entity) {
         
          disambiguated = true;
     }
+    if (entity == "Rabb") {
+        disambiguationChoices = ["The Rabb School of Continuing Studies","Rabb Graduate Center"];
+        dis = "Did you mean the <span class='said'>The Rabb School of Continuing Studies</span> or <span class='said'>Rabb Graduate Center</span>?";
+        
+        Session.set("micResponse","Did you mean The Rabb School of Continuing Studies or Rabb Graduate Center?");
+        
+        Session.set("disambiguationChoices",disambiguationChoices);
+        
+         disambiguated = true;
+    }
 
     if (disambiguated) {
        speak();
