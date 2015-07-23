@@ -26,7 +26,7 @@ Template.steps.events({
 	"click #refreshMap" : function(event) {
 		if (count < (route.length - 1)){
 			
-			console.log("count:" + count);
+			//console.log("count:" + count);
 			//Session.set("countForStep", count);
 			getStepDescription(route);
 				//middlestop = findId(route[count]);
@@ -41,6 +41,7 @@ Template.steps.events({
 	},
 	"click #recalMap": function(event){
 		count = 0;
+		//console.log("count in recal: " + count);
 
 		Session.set("current","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 		var navFrom = Session.get("current");
@@ -114,9 +115,9 @@ Template.steps.rendered = function () {
 		Tracker.autorun(function() {
 			route = Session.get("routeForStep");
 			if (route.length == 1){
-				console.log("test google map ready");
+				//console.log("test google map ready");
 				deleteRoutes(routesForStep);
-				console.log("delete route");
+				//console.log("delete route");
 
 				var theLatLngRecal = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
 				map.instance.setCenter(theLatLngRecal);
@@ -129,9 +130,10 @@ Template.steps.rendered = function () {
 				// alert("you are at your destination");
 			} else {
 
-				console.log("test google map ready");
+				//console.log("test google map ready");
 				deleteRoutes(routesForStep);
-				console.log("delete route");
+				routesForStep = [];
+				//console.log("delete route");
 
 				var theLatLngRecal = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
 				map.instance.setCenter(theLatLngRecal);
@@ -149,8 +151,9 @@ Template.steps.rendered = function () {
 
 				if (count == 0) {
 			// 	console.log("ready to add blue route: " + Session.get("countForStep"));
+					//console.log("count before blue: " + count);
 			 		routesForStep[count].setOptions({strokeColor: '#00FFFF'});
-			 	console.log("added blue route");
+			 		//console.log("added blue route");
 			 		count ++;
 				}
 			}	
@@ -159,7 +162,7 @@ Template.steps.rendered = function () {
 			if (count == 1) {
 		// 	console.log("ready to add blue route: " + Session.get("countForStep"));
 		 		routesForStep[count - 1].setOptions({strokeColor: '#00FFFF'});
-		 	console.log("added blue route");
+		 	//console.log("added blue route");
 			}
 	});
 
@@ -171,6 +174,7 @@ Template.steps.onCreated(function() {
 	//Session.set("countForStep", count);
 	count = 0;
 	routesForStep = [];
+
 });
 
 
