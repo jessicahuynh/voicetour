@@ -35,6 +35,7 @@ Template.footer.helpers({
 
 Template.footer.events({
     'click #currentLocLink':function(event) {
+        Session.set("prev",Router.current().route.path());
         Session.setPersistent("viewLocation",this._id);  
     },
     'click #listen':function(event) {
@@ -45,6 +46,7 @@ Template.footer.events({
         msg.text = Session.get("listenTo");
         console.log(Session.get("listenTo"));
         msg.lang = 'en-US';
+        msg.rate = 3;
         
         msg.onend = function(e) {
           console.log('Finished in ' + event.elapsedTime + ' seconds.');

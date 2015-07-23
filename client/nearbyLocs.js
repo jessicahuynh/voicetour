@@ -2,7 +2,13 @@ Template.nearbyLocs.helpers({
 	nearbyname:function() {
 		var loc = Locations.findOne({"id":JSON.stringify(this).replace(/"([^"]+(?="))"/g, '$1')});
 		if (loc.name) {
-			return loc.nickname + " ("+loc.name+")";
+			if (loc.nickname != undefined) {
+				return loc.nickname + " ("+loc.name+")";
+			}
+			else {
+				return loc.name;
+			}
+			
 		}
 		else {
 			return "N/A";
@@ -41,6 +47,7 @@ Template.selfguide.events({
 	'click .visitnearby':function(event) {
 		event.preventDefault();
 		var loc = Locations.findOne({"id":JSON.stringify(this).replace(/"([^"]+(?="))"/g, '$1')});
+		Session.set("prev","/selfguide");
 		Session.set("viewLocation",loc._id);
 		Router.go('/viewLocation/'+loc._id);
 	}

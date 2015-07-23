@@ -80,6 +80,11 @@ points_grad = [
 		"coordinate":new Point(42.361674, -71.261063),
 		"type":"crossing"
 	},
+	{
+		"id":"epstein_c05", //leading up to ziv
+		"coordinate":new Point(42.362581, -71.261155),
+		"type":"crossing"
+	},
 	// grad 111
 	{
 		"id":"grad111_e01", //stair A

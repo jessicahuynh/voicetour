@@ -36,8 +36,14 @@ body.slide-active {
 	}
 }
 #page-content.slide-active {
-    padding-top: 0
+    padding-top:71px;
 }
+@media (min-width:768px) {
+	#page-content.slide-active {
+		padding-top: 0;
+	}
+}
+
 nav div.container {
 	padding:0;
 	font-size:1.2em;
@@ -254,6 +260,7 @@ button#searchGlass {
 		top:0;
 		right:0;
 		float:none;
+		display:none;
 		margin:0 auto;
 		padding:0 1em;
 		max-width:100%;
@@ -266,9 +273,7 @@ button#searchGlass {
 			margin-bottom:12px;
 		}
 		
-		input#searchBox { 
-			display:none; 
-		}
+		input {display:block;}
 		
 	}
 	button#searchGlass {
@@ -285,15 +290,61 @@ button#searchGlass {
 	nav.navbar .container .navbar-brand {
 		margin:0 auto;
 	}
+	
+	#toggleBtn {
+		display:none;
+	}
+	.back {
+		display:none;
+	}
+	
+	#discoverDeisLink {
+		display:block;
+	}
+	#mobileTitleLink {
+		display:none;
+	}
 }
 
 /* PAGE HEADER */
 @media(max-width:768px) {
+	// get rid of header in mobile view except for on pages that need the full location name
 	.page-header {
-		padding-top:9px;
+		display:none;
+	}
+	.locName {
+		display:block;
+		margin-top:0;
+	}
+	
+	.back {
+		display:none;
+	}
+	#toggleBtn {
+		display:block;
+	}
+	
+	#discoverDeisLink {
+		display:none;
+	}
+	#mobileTitleLink {
+		display:block;
 	}
 }
 
 .navbar-fixed-top, .navbar-fixed-bottom {
 	z-index:1000;
+}
+
+.navbar-header .back span {
+	font-size:1.4em;
+}
+
+
+
+// #permissionsAlert {
+// 	display:none;
+// }
+.alert {
+	border-radius:0;
 }

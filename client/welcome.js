@@ -44,18 +44,9 @@ Template.welcome.helpers({
 });
 
 Template.welcome.rendered = function() {
-	GoogleMaps.load();
-// 	GoogleMaps.ready('locationMap',function(map) {
-// 		marker = new google.maps.Marker({
-// 			position: map.options.center,
-// 			map: map.instance
-// 		})
-// 		Tracker.autorun(function(map,marker){
-// 	var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
-// 	marker.setPosition(theLatLng);
-// 	map.setCenter(theLatLng);
-// });
+	Session.set("pageTitle","Discover Deis");
 	
+	GoogleMaps.load();	
 	
 	GoogleMaps.ready('locationMap',function(map) {
 		var marker = new google.maps.Marker({
