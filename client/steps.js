@@ -91,7 +91,9 @@ Template.steps.events({
 });
 
 Template.steps.rendered = function () {
-	Session.set("pageTitle","Step-by-Step");
+	Session.set("pageTitle","Directions");
+	Session.set("navigateFrom","")
+	Session.set("navigateTo","");
 	
 	if ($(window).width() > 768) {
 		$(".page-header").prepend("<a href='#' id='returnToList' class='back'><span class='glyphicon glyphicon-menu-left'></span></a>");
