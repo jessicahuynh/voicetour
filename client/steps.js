@@ -106,7 +106,7 @@ Template.steps.rendered = function () {
 	startstop = findId(route[0]);
 
 	nextstop = findId(route[count]);
-	
+
 	laststop = findId(route[route.length - 1]);
 	console.log("startstop:" + startstop.x + "," + startstop.y);
 	console.log("laststop:" + laststop.x + "," + laststop.y);

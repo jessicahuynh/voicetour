@@ -315,8 +315,8 @@ paths_libraryeast = [
 	    "description": "Exit Usdan and turn left.",
 	},
 	{
-	    "start":"usdan_e01",
-	    "end":"usdan_c04",
+	    "start":"usdan_c04",
+	    "end":"usdan_e01",
 	    "description": "The entance is on your right.",
 	},
 ]
