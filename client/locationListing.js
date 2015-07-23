@@ -18,6 +18,7 @@ Template.locationListing.helpers({
 Template.locationListing.events({
 	'click a.go-to-location':function(event) {
 		Session.setPersistent("viewLocation",this._id);
+		Session.set("prev","/locationList");
 	},
 	'click a.go-to-navigate':function(event) {
 		Session.set("navigateTo",this.name);

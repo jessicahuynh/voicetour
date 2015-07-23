@@ -1,6 +1,8 @@
 Session.setDefault("category","");
 
 Template.locationList.rendered = function() {
+	Session.set("pageTitle","Locations @ Brandeis");
+	
 	var listen = "This is a list of every location on campus, filterable and sortable.";
 
 	Session.setPersistent("listenTo",listen);

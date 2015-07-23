@@ -1,6 +1,10 @@
 Template.graph.rendered = function () {
+	Session.set("pageTitle","Navigate");
+	
 	graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/
+	
+	Session.set("listenTo","Enter a start and end location to get started!");
 	
 	var navTo = Session.get("navigateTo");
 	if (navTo != "" && navTo != null) {
@@ -136,6 +140,8 @@ Template.graph.helpers({
 Template.graph.events({
 	"submit #navform": function(event){
 		event.preventDefault();
+		
+		$("#routeTab").tab('show');
 
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
@@ -154,10 +160,9 @@ Template.graph.events({
 		Session.set("routeForStep",route);
 		Session.set("destination", ends);
 		//Session.set("stepCenterPoint",route[0]);
-
-		$("#routeTab").tab('show');
 		
 		getRouteDescription(route);
+		Session.set("listenTo",Session.get("routeToTake"));
 	},
 	"click input":function(event) {
 		event.target.value = '';
@@ -189,6 +194,7 @@ Template.graph.events({
 	},
 	"click #stepsButton":function(event) {
 		event.preventDefault();
+		Session.set("prev","/navigate");
 		Router.go('/steps');
 	},
 });

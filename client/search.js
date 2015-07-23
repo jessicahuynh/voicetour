@@ -15,6 +15,7 @@ Template.search.helpers({
 });
 
 Template.search.rendered = function() {
+	Session.set("pageTitle","Search");
 	$("#searchBox").css("display","block").focus();
 }
 

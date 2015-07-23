@@ -60,8 +60,10 @@ Template.steps.events({
 });
 
 Template.steps.rendered = function () {
+	Session.set("pageTitle","Step-by-Step");
+	
 	if ($(window).width() > 768) {
-		$(".page-header").prepend("<a href='#' id='returnToList'><span class='glyphicon glyphicon-menu-left'></span></a>");
+		$(".page-header").prepend("<a href='#' id='returnToList' class='back'><span class='glyphicon glyphicon-menu-left'></span></a>");
 	}
 	
 	

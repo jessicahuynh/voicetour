@@ -1,4 +1,12 @@
 Session.setDefault("searchTerm","");
+Session.setDefault("prev","");
+
+Template.layout.helpers({
+    mobileTitle:function() {
+        return Session.get("pageTitle");
+    }
+});
+
 Template.layout.events({
     'submit #searchForm': function (event) {
         event.preventDefault();
@@ -21,25 +29,26 @@ Template.layout.events({
              $("#searchBox").toggle(450).focus();
          }
          else {
-             if ($("#searchBox").css("display") == "none") {
-                 $("#searchBox").slideDown();
+             if ($("#searchForm").css("display") == "none") {
+                 $("#searchForm").toggle();
                  $("#searchBox").focus();
              }
              else {
-                 $("#searchBox").slideUp();
+                 $("#searchForm").toggle();
              }
          }
      },
-     'click #back':function(event) {
+     'click .back':function(event) {
          event.preventDefault();
-         history.back();
+         Router.go(Session.get("prev"));
+         Session.set("prev","");
      },
      'click .nav-link':function(event) {
          slideNav();
      }
 });
 
-Template.layout.rendered = function() {
+Template.layout.rendered = function() { 
    slide();
    
    document.getElementById("searchBox").value = Session.get("searchTerm");
@@ -51,7 +60,7 @@ function slide() {
     $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
 
 
-    var toggler = '.navbar-toggle';
+    var toggler = '#toggleBtn';
     $("#slide-nav").on("click", toggler, function (e) {
         slideNav();   
   
@@ -82,7 +91,9 @@ function slideNav() {
     
     if ($(window).width() < 768) {
         $("#searchGlass").toggle("searchGlass");
-        $("#searchForm").toggle("searchForm");
+        
+        if ($("#searchForm").css("display") != "none")
+            $("#searchForm").toggle("searchForm");
     }
 
     $('#navbar-hamburger').stop().animate({

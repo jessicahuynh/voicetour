@@ -35,6 +35,8 @@ Template.about.helpers({
 });
 
 Template.about.onCreated(function() {
+	Session.set("pageTitle","About");
+	
 	GoogleMaps.load();
 	GoogleMaps.ready('dataMap',function(map) {
 		/* POINTS */
