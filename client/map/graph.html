@@ -27,7 +27,7 @@
 					{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination" value=endLoc}}
 					<!--<input type="text" id="endpoint" class="form-control" placeholder="destination">-->
 				</div>
-				<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Go</button>
+				<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Start</button>
 			</form>
 		</div>
 			
@@ -40,12 +40,13 @@
 		
 
 		<div role="tabpanel" class="tab-pane col-sm-12" id="routePane">
+			<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary pull-right">Step-by-Step</button>
 			<ul>
 				{{#each stops}}
 				<li>{{stopDescription}}</li>
 				{{/each}}
 			</ul>
-			<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary">Step-by-Step</button>
+			
 		</div>
 		
 	</div>

@@ -146,6 +146,7 @@ Template.graph.helpers({
 Template.graph.events({
 	"submit #navform": function(event){
 		event.preventDefault();
+
 		
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
@@ -205,7 +206,12 @@ Template.graph.events({
 		getRouteDescription(route);
 		Session.set("listenTo",Session.get("routeToTake"));
 
-		$("#routeTab").tab('show');
+		if ($(window).width() < 768) {
+			Session.set("prev","/navigate");
+			Router.go('/steps');
+		}
+
+		// $("#routeTab").tab('show');
 	},
 	"click input":function(event) {
 		event.target.value = '';
