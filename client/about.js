@@ -34,7 +34,7 @@ Template.about.helpers({
 	}
 });
 
-Template.about.onCreated(function() {
+Template.about.rendered = function() {
 	Session.set("pageTitle","About");
 	
 	GoogleMaps.load();
@@ -174,7 +174,7 @@ Template.about.onCreated(function() {
 			}
 		}
 	});
-});
+}
 
 function putIMarker(point,map,marker) {
 	google.maps.event.addListener(marker, 'click',function() {
