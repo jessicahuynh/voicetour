@@ -1,7 +1,7 @@
 Template.graph.rendered = function () {
 	Session.set("pageTitle","Navigate");
 	
-	graph = new Graph(Map.findOne());
+	//graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/
 	
 	Session.set("listenTo","Enter a start and end location to get started!");
@@ -36,6 +36,7 @@ Template.graph.rendered = function () {
 
 Template.graph.onCreated(function () {
 	//Session.set("centerPoint", Point(0,0));
+	graph = new Graph(Map.findOne());
 	route = null;
 	routes = [];
 	startstop = null;
@@ -146,13 +147,41 @@ Template.graph.events({
 	"submit #navform": function(event){
 		event.preventDefault();
 		
-		$("#routeTab").tab('show');
-
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
 		console.log("start " + starts);
 		console.log("end "+ ends);
 		//route = null;
+
+		// route = getRoute(starts, ends, function () {
+
+		// 	console.log(route);
+		// 	Session.set("route",route);
+
+		// 	//setTimeout(function() {
+		// 		startstop = route[0];
+		// 		//console.log("startstop: " + startstop);
+		// 		Session.set("startstop", startstop);
+		// 		//console.log("set startstop");
+		// 		laststop = route[route.length - 1];
+		// 		//console.log("laststop: " + laststop);
+		// 		Session.set("laststop", laststop);
+		// 		//console.log("set laststop");
+		// 	//},3000) ;
+
+
+		// 	//session variable for steps.js
+		// 	Session.set("routeForStep",route);
+		// 	Session.set("destination", ends);
+			
+		// 	getRouteDescription(route);
+		// 	Session.set("listenTo",Session.get("routeToTake"));
+
+		// 	$("#routeTab").tab('show');
+
+		// });
+
+		
 		route = getRoute(starts, ends);
 		console.log(route);
 		Session.set("route",route);
@@ -175,6 +204,8 @@ Template.graph.events({
 		
 		getRouteDescription(route);
 		Session.set("listenTo",Session.get("routeToTake"));
+
+		$("#routeTab").tab('show');
 	},
 	"click input":function(event) {
 		event.target.value = '';

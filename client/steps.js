@@ -24,24 +24,53 @@ Template.steps.helpers({
 
 Template.steps.events({
 	"click #refreshMap" : function(event) {
-		if (count < (route.length - 1)){
-			
+		
+		if (count < (route.length - 2)){
+			count ++;
 			//console.log("count:" + count);
 			//Session.set("countForStep", count);
 			getStepDescription(route);
 				//middlestop = findId(route[count]);
-			routesForStep[count - 1].setOptions({strokeColor: '#000000'});
+			if (count != 0) {
+				routesForStep[count - 1].setOptions({strokeColor: '#000000'});
+			}
+			
 			routesForStep[count].setOptions({strokeColor: '#00FFFF'});
-			count ++;
+			
 				
 		} else {
 			alert("You reached your destination.");
+			//count --;
+		}
+
+	},
+	"click #previousMap" : function(event) {
+		
+		if (count > 0){
+			count --;
+			//console.log("count:" + count);
+			//Session.set("countForStep", count);
+			getStepDescription(route);
+				//middlestop = findId(route[count]);
+			if (count != route.length) {
+				routesForStep[count + 1].setOptions({strokeColor: '#000000'});
+			}
+			
+			routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+				
+		} else {
+			alert("You are at the first step.");
+			//count ++;
 		}
 
 	},
 	"click #recalMap": function(event){
 		count = 0;
 		//console.log("count in recal: " + count);
+		for(var i = 0; i<route.length - 1; i++){
+			routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+			console.log("change route back to black");
+		}
 
 		Session.set("current","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 		var navFrom = Session.get("current");
@@ -75,6 +104,7 @@ Template.steps.rendered = function () {
 	console.log("route: " + route);
 	console.log("route length: " + route.length);
 	startstop = findId(route[0]);
+	nextstop = findId(route[count]);
 	laststop = findId(route[route.length - 1]);
 	console.log("startstop:" + startstop.x + "," + startstop.y);
 	console.log("laststop:" + laststop.x + "," + laststop.y);
@@ -100,6 +130,7 @@ Template.steps.rendered = function () {
 		});
 
 		Tracker.autorun(function() {
+			console.log("currentLocation changes");
 			var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
 			map.instance.setCenter(theLatLng);
 			markerCurrent.setPosition(theLatLng);
@@ -107,6 +138,29 @@ Template.steps.rendered = function () {
 				// var theLatLngMiddle = new google.maps.LatLng(middlestop.x,middlestop.y);
 				// map.instance.setCenter(theLatLngMiddle);
 			//console.log("test run autorun in rendered");
+
+
+			nextstop = findId(route[count]);
+			if (autoNextStep(nextstop) == true) {
+				if (count < (route.length - 1)){
+					count ++;
+					//console.log("count:" + count);
+					//Session.set("countForStep", count);
+					getStepDescription(route);
+						//middlestop = findId(route[count]);
+					if (count != 0) {
+						routesForStep[count - 1].setOptions({strokeColor: '#000000'});
+					}
+					
+					routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+							
+				} else {
+					alert("You reached your destination.");
+					//count --;
+				}
+
+			}
+			
 		})
 
 		getStepDescription(route);	
@@ -151,19 +205,20 @@ Template.steps.rendered = function () {
 
 				if (count == 0) {
 			// 	console.log("ready to add blue route: " + Session.get("countForStep"));
-					//console.log("count before blue: " + count);
+					console.log("count before blue: " + count);
 			 		routesForStep[count].setOptions({strokeColor: '#00FFFF'});
 			 		//console.log("added blue route");
-			 		count ++;
+			 		//count ++;
 				}
 			}	
 
 		})
-			if (count == 1) {
-		// 	console.log("ready to add blue route: " + Session.get("countForStep"));
-		 		routesForStep[count - 1].setOptions({strokeColor: '#00FFFF'});
-		 	//console.log("added blue route");
-			}
+		// 	if (count == 1) {
+		// // 	console.log("ready to add blue route: " + Session.get("countForStep"));
+		//  		routesForStep[count - 1].setOptions({strokeColor: '#00FFFF'});
+		//  	//console.log("added blue route");
+		// 	}
+
 	});
 
 
@@ -176,6 +231,31 @@ Template.steps.onCreated(function() {
 	routesForStep = [];
 
 });
+
+// function autoNextStep(nextStop){
+// 	var tfnext = false;
+// 	var currentForAuto = Session.get("currentLocation");
+// 	Meteor.call("distance", Session.get("currentLocation"), tfnext,
+// 		function(error,data) {
+// 			if (error) {
+// 				console.log(error);
+// 			}
+// 			else {
+
+// 				if (Session.get("unit") == "m"){
+// 					if (Math.floor(data) < 2){
+// 						tfnext = true;
+// 					}
+// 				} else {
+// 					if ((Math.floor(data) / 3.28) < 2){
+// 						tfnext = true;
+// 					}
+// 				}
+// 			}
+// 		});
+// 	return tfnext;
+// 	// Session.set("tfnext", tfnext);
+// }
 
 
 function getStepDescription(route) {
