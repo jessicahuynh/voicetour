@@ -1,7 +1,9 @@
 Template.graph.rendered = function () {
 	graph = new Graph(Map.findOne());
-	/*console.log(graph);	*/
+	//console.log(graph);
 	
+	console.log("rednered");
+
 	var navTo = Session.get("navigateTo");
 	if (navTo != "" && navTo != null) {
 		document.getElementById("endpoint").value = navTo;
@@ -28,22 +30,25 @@ Template.graph.rendered = function () {
 		}
 	}
 
-	GoogleMaps.load();
+	//GoogleMaps.load();
 
 	GoogleMaps.ready('navMap',function(map) {
-		console.log("test google map ready");
+		 console.log("test google map ready");
 
-		var marker1 = new google.maps.Marker({
-			position: new google.maps.LatLng(startstop.x,startstop.y),
-			icon: '/GoogleMapsMarkers/green_MarkerA.png',
-			map: map.instance
-		});
-		//marker1.setVisible(false);
-		var marker2 = new google.maps.Marker({
-			position: new google.maps.LatLng(laststop.x,laststop.y),
-			icon: '/GoogleMapsMarkers/red_MarkerB.png',
-			map:map.instance
-		});
+		// var marker1 = new google.maps.Marker({
+		// 	position: new google.maps.LatLng(startstop.x,startstop.y),
+		// 	icon: '/GoogleMapsMarkers/green_MarkerA.png',
+		// 	map: map.instance
+		// });
+		// //marker1.setVisible(false);
+		// var marker2 = new google.maps.Marker({
+		// 	position: new google.maps.LatLng(laststop.x,laststop.y),
+		// 	icon: '/GoogleMapsMarkers/red_MarkerB.png',
+		// 	map:map.instance
+		// });
+
+
+
 		//marker2.setVisible(false);
 		// var markerCurrent = new google.maps.Marker({
 		// 	position: new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y),
@@ -63,6 +68,7 @@ Template.graph.rendered = function () {
 
 			console.log("test google map ready: " + route);
 			deleteRoutes(routes);
+			routes = [];
 			console.log("delete route");
 
 			var theLatLng1 = new google.maps.LatLng(startstop.x,startstop.y);
@@ -94,6 +100,23 @@ Template.graph.onCreated(function () {
 	startstop = Session.get("currentLocation");
 	console.log("(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 	laststop = Session.get("currentLocation");
+	GoogleMaps.load();
+
+	GoogleMaps.ready('navMap',function(map) {
+		console.log("test google map ready");
+
+		marker1 = new google.maps.Marker({
+			position: new google.maps.LatLng(startstop.x,startstop.y),
+			icon: '/GoogleMapsMarkers/green_MarkerA.png',
+			map: map.instance
+		});
+		//marker1.setVisible(false);
+		marker2 = new google.maps.Marker({
+			position: new google.maps.LatLng(laststop.x,laststop.y),
+			icon: '/GoogleMapsMarkers/red_MarkerB.png',
+			map:map.instance
+		});
+	})
 });
 
 Template.graph.helpers({
@@ -143,11 +166,13 @@ Template.graph.events({
 		console.log("end "+ ends);
 		//route = null;
 		route = getRoute(starts, ends);
+		console.log(route);
+
 		
-		setTimeout(function() {
+		//setTimeout(function() {
 			startstop = findId(route[0]);
 			laststop = findId(route[route.length - 1]);
-		},3000) ;
+		//},3000) ;
 
 		// session variable for steps.js
 		Session.set("route",route);
