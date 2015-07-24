@@ -62,6 +62,7 @@ function applyIntent(intent,entities,mic) {
             r+= "<li>Tell me about <span class='arg'>Volen</span></li>";
             //r+= "<li>When is <span class='arg'>the Faculty Club</span> open?</li>";
             r+= "<li>Start the <span class='arg'>self-guided tour</span></li>";
+            r+= "<li>Show me the list of locations</li>";
             //r+= "<li>Open settings and <span class='arg'>switch to U.S. customary units</span></li>";
             r+= "<li>Where am I?</li>";
             //r+= "<li>What's nearby?</li>";
@@ -122,6 +123,15 @@ function applyIntent(intent,entities,mic) {
             
             Router.go('/selfguide');       
         }
+        else if (intent == "open_loc_list") {
+            r+= "<p>Taking you to the list of locations at Brandeis.</p>"
+            
+            Session.set("micResponse","Taking you to the list of locations at Brandeis.");
+            speak();
+            $("#result").append(r);
+            
+            Router.go('/locationList');
+        }
     }
     
 }
@@ -148,7 +158,7 @@ function startAudio() {
             error("");
            
             $("#speechText").show("slow");
-            $("#result").append("<h4>I'm listening!</h4>")
+            $("#result").append("<h4>I'm listening! <small>Tap again to stop listening and start processing</small></h4>")
         };
         mic.onaudioend = function () {
             info("Recording stopped, processing started");
@@ -235,7 +245,7 @@ function disambiguate(entity) {
         disambiguationChoices = ["The Rabb School of Continuing Studies","Rabb Graduate Center"];
         dis = "Did you mean the <span class='said'>The Rabb School of Continuing Studies</span> or <span class='said'>Rabb Graduate Center</span>?";
         
-        Session.set("micResponse","Did you mean The Rabb School of Continuing Studies or Rabb Graduate Center?");
+        Session.set("micResponse","Did you mean the Rabb School of Continuing Studies or Rabb Graduate Center?");
         
         Session.set("disambiguationChoices",disambiguationChoices);
         
@@ -271,6 +281,7 @@ function navigateCommand(entities) {
                r += "<span class='said'>"+entities["end"].body+"</span>";
                Session.set("navigateTo",entities["end"].value);
                rSay += entities["end"].value;
+               numClarify = 0;
            }
            else {
                clarifyLoc();
@@ -288,6 +299,7 @@ function navigateCommand(entities) {
                    r += "<span class='said'>"+entities["deis_loc"].body+"</span>";
                    Session.set("navigateTo",entities["deis_loc"].value);
                    rSay += entities["end"].value;
+                   numClarify = 0;
                }
                else {
                    clarifyLoc();
@@ -306,12 +318,14 @@ function navigateCommand(entities) {
                  r+= " from <span class='said'>this location</span>";
                  Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
                  rSay += " from your current location."
+                 numClarify = 0;
              }
              else {
                 if (Locations.findOne({"name":entities["start"].value}) != undefined) {
                     r += " from <span class='said'>"+entities["start"].body+"</span>";
                     Session.set("navigateFrom",entities["start"].value);
                     rSay += " from " + entities["start"].value;
+                    numClarify = 0;
                 }
                 else {
                     clarifyLoc();
