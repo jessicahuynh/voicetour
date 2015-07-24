@@ -1,10 +1,17 @@
 Session.setDefault("unit","m");
 Session.setDefault("rate", 0.8);
+Session.setDefault("readingmode",false);
+
 
 Template.settings.rendered = function() {
 	Session.set("pageTitle","Settings");
+	Session.set("listenTo","Change settings for Discover Deis here.");
 	
 	$(".switch").bootstrapSwitch();
+	
+	if (window.SpeechSynthesisUtterance === undefined) {
+			  $("#voiceSettingsDiv").hide();
+		  }
 	
 	$("#unit").on('switchChange.bootstrapSwitch', function(event, data) {
 		if ($("#unit").is(":checked")) {
@@ -16,13 +23,17 @@ Template.settings.rendered = function() {
 	});
 
 
-	$('.slider').slider();
-	$('#rate').slider()
-	  .on('slide', function(value){
-	  	console.log(value);
-	    Session.setPersistent("rate",value);
-	});
+	// $('.slider').slider();
+	// $('#rate').slider()
+	//   .on('slide', function(value){
+	//   	console.log(value);
+	//     Session.setPersistent("rate",value);
+	// });
 
+
+	$("#readingmode").on('switchChange.bootstrapSwitch',function(event,data) {
+		Session.setPersistent("readingmode",$("#readingmode").is(":checked"));
+	});
 
 }
 
@@ -34,16 +45,9 @@ Template.settings.helpers({
 		else {
 			return false;
 		}
+	},
+	readingmodeCheck:function() {
+		return Session.get("readingmode");
 	}
 
 });
-
-Template.settings.events({
-	"range #rate": function(event){
-		var rateInput = document.getElementById('rate');
-		var rate = rateInput.value;
-		console.log(rateInput);
-		console.log(rate);
-		Session.setPersistent("rate",rate);
-	}
-})

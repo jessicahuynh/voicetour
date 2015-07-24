@@ -5,7 +5,7 @@ Template.locationList.rendered = function() {
 	
 	var listen = "This is a list of every location on campus, filterable and sortable.";
 
-	Session.setPersistent("listenTo",listen);
+	Session.set("listenTo",listen);
 }
 
 Template.locationList.helpers({

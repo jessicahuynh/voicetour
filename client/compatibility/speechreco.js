@@ -63,6 +63,7 @@ function applyIntent(intent,entities,mic) {
             //r+= "<li>When is <span class='arg'>the Faculty Club</span> open?</li>";
             r+= "<li>Start the <span class='arg'>self-guided tour</span></li>";
             r+= "<li>Show me the list of locations</li>";
+            r+= "<li>Read this to me</li>"
             //r+= "<li>Open settings and <span class='arg'>switch to U.S. customary units</span></li>";
             r+= "<li>Where am I?</li>";
             //r+= "<li>What's nearby?</li>";
@@ -131,6 +132,13 @@ function applyIntent(intent,entities,mic) {
             $("#result").append(r);
             
             Router.go('/locationList');
+        }
+        else if (intent == "read") {
+            r+= "<p>Reading.</p>"
+            
+            $("#listen").trigger("click");
+            
+            $("#result").append(r);
         }
     }
     
@@ -243,7 +251,7 @@ function disambiguate(entity) {
     }
     if (entity == "Rabb") {
         disambiguationChoices = ["The Rabb School of Continuing Studies","Rabb Graduate Center"];
-        dis = "Did you mean the <span class='said'>The Rabb School of Continuing Studies</span> or <span class='said'>Rabb Graduate Center</span>?";
+        dis = "Did you mean the <span class='said'>Rabb School of Continuing Studies</span> or <span class='said'>Rabb Graduate Center</span>?";
         
         Session.set("micResponse","Did you mean the Rabb School of Continuing Studies or Rabb Graduate Center?");
         
@@ -251,16 +259,7 @@ function disambiguate(entity) {
         
          disambiguated = true;
     }
-    if (entity == "Usen") {
-        disambiguationChoices = ["Usen Castle","Edyth and Irving Usen Hall"];
-        dis = "Did you mean the <span class='said'>Usen Castle</span> or <span class='said'>Edyth and Irving Usen Hall</span>?";
-        
-        Session.set("micResponse","Did you mean Usen Castle or Edyth and Irving Usen Hall?");
-        
-        Session.set("disambiguationChoices",disambiguationChoices);
-        
-         disambiguated = true;
-    }
+   
 
     if (disambiguated) {
        speak();

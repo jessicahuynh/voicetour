@@ -32,5 +32,5 @@ function setAudio(loc) {
 	
 	
 	
-	Session.setPersistent("listenTo",listen);
+	Session.set("listenTo",listen);
 }
