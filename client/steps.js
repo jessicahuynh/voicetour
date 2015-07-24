@@ -102,7 +102,7 @@ Template.steps.rendered = function () {
 	}
 	
 	
-	graph = new Graph(Map.findOne());
+	//graph = new Graph(Map.findOne());
 
 
 	route = Session.get("routeForStep");
@@ -236,6 +236,7 @@ Template.steps.onCreated(function() {
 	//Session.set("countForStep", count);
 	count = 0;
 	routesForStep = [];
+	graph = new Graph(Map.findOne());
 
 });
 
@@ -288,5 +289,6 @@ function getStepDescription(route) {
 	}
 	
 	Session.set("step",r);
+	Session.set("listenTo",r);
 }
 
