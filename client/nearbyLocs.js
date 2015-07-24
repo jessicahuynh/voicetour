@@ -47,12 +47,19 @@ Template.nearbyLocs.helpers({
 });
 
 
-Template.selfguide.events({
+Template.nearbyLocs.events({
 	'click .visitnearby':function(event) {
 		event.preventDefault();
 		var loc = Locations.findOne({"id":JSON.stringify(this).replace(/"([^"]+(?="))"/g, '$1')});
-		Session.set("prev","/selfguide");
+		
+		Session.set("prev","/viewLocation/"+Session.get("viewLocation"));
 		Session.set("viewLocation",loc._id);
+		
+		console.log(Session.get("viewLocation"));
+		console.log(Session.get("prev"));
+		
 		Router.go('/viewLocation/'+loc._id);
+		
+		Session.set("pageTitle","Viewing " + loc.nickname);
 	}
 });

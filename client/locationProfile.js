@@ -21,7 +21,14 @@ Template.locationProfile.events({
 });
 
 Template.locationProfile.rendered = function() {
+	this.autorun(function() {
+		Session.get("viewLocation");
+		var data=Template.currentData();
+		Session.set("pageTitle","Viewing " +thisLoc.nickname);
+	});
 	Session.set("pageTitle","Viewing " +thisLoc.nickname);
+	var listen = thisLoc.name + ". " + thisLoc.function + thisLoc.description;
+	Session.setPersistent("listenTo",listen);
 	
 	$("#searchForm").hide();
 	
@@ -29,6 +36,4 @@ Template.locationProfile.rendered = function() {
 		$(".page-header").prepend("<a href='#' id='returnToList' class='back'><span class='glyphicon glyphicon-menu-left'></span></a>");
 	}
 	
-	var listen = thisLoc.name + ". " + thisLoc.function + thisLoc.description;
-	Session.setPersistent("listenTo",listen);
 }

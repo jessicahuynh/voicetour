@@ -1,5 +1,5 @@
 Session.setDefault("searchTerm","");
-Session.setDefault("prev","");
+Session.setDefault("prev","/");
 
 Template.layout.helpers({
     mobileTitle:function() {
@@ -41,7 +41,12 @@ Template.layout.events({
      'click .back':function(event) {
          event.preventDefault();
          Router.go(Session.get("prev"));
-         Session.set("prev","");
+         if (Session.get("prev").indexOf("viewLocation") != -1) {
+             console.log("back to a profile");
+
+            Blaze.renderWithData(Template.locationProfile,Session.get("viewLocation"),this);
+         }
+         //Session.set("prev","");
      },
      'click .nav-link':function(event) {
          slideNav();
