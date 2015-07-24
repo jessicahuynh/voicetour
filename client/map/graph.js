@@ -180,7 +180,7 @@ Template.graph.events({
 		getRouteDescription(route);
 		Session.set("listenTo",Session.get("routeToTake"));
 
-		if ($(window).width() < 768) {
+		if ($(window).width() < 769) {
 			event.preventDefault();
 			Session.set("prev","/navigate");
 			Router.go('/steps');

@@ -14,6 +14,10 @@ a, input, button, textarea, select, option, label {
 	box-shadow: none;
 }
 
+#searchForm .form-group {
+	width:100%;
+}
+
 .form-group.required label:after {
   content:" *";
   color:@reddish;
@@ -38,7 +42,7 @@ body.slide-active {
 #page-content.slide-active {
     padding-top:71px;
 }
-@media (min-width:768px) {
+@media (min-width:769px) {
 	#page-content.slide-active {
 		padding-top: 0;
 	}
@@ -92,6 +96,11 @@ nav div.container {
 	}
 	.navbar-brand {
 		color:#ffffff;
+	}
+	
+	.navbar-nav li {
+		display:block;
+		clear:both;
 	}
 	.navbar-nav li a {
 		color:#efefef;
@@ -184,7 +193,7 @@ nav div.container {
 	    width: 100%
 	}
 }
-@media (min-width:768px) { 
+@media (min-width:769px) { 
 	#page-content {
 	    left: 0!important;
 		z-index:200;
@@ -286,7 +295,7 @@ button#searchGlass {
 
 
 /* NAVBAR BRAND ON WEB */
-@media (min-width:768px) {
+@media (min-width:769px) {
 	nav.navbar .container .navbar-brand {
 		margin:0 auto;
 	}
