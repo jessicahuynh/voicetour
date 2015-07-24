@@ -2,13 +2,32 @@
 	<h1 class="page-header">Settings</h1>
 	
 	<div class="checkbox">
-		<div class="unitToggle">
-			<label for="unit" class="col-xs-6">Distance units</label>
+		<div class="row">
+			<div class="col-xs-6 text-left">
+				<label for="unit">Distance units</label>
+			</div>
 			<div class="col-xs-6 text-right">	
-				<input type="checkbox" id="unit" class="switch" data-off-text="FT" data-on-text="M" data-off-color="info" checked="{{unitCheck}}">
+				<input type="checkbox" id="unit" class="switch" data-off-text="FT" data-on-text="M" data-off-color="info" data-handle-width="40" checked="{{unitCheck}}">
 			</div>
 			<span class="clear">&nbsp;</span>
 		</div>
-		<p class="help-block col-xs-12">Choose either meters or feet to be used app-wide.</p>
+		<p class="help-block">Choose either meters or feet to be used app-wide.</p>
+		
+	</div>
+	
+	<div id="voiceSettingsDiv">
+	<hr />
+		<div class="checkbox">
+			<div class="row">
+				<div class="col-xs-6 text-left">
+					<label for="readingmode">Reading mode</label>
+				</div>
+				<div class="col-xs-6 text-right">
+					<input type="checkbox" id="readingmode" class="switch" data-off-text="OFF" data-on-text="ON" data-handle-width="40" checked="{{readingmodeCheck}}">
+				</div>
+				<span class="clear">&nbsp;</span>
+			</div>
+			<p class="help-block">When reading mode is on, the app will read every page you visit. This mode is fantastic for the self-guided tour or step-by-step navigation.</p>
+		</div>
 	</div>
 </template>
