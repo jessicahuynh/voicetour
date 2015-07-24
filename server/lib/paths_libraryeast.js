@@ -175,9 +175,34 @@ paths_libraryeast = [
 	    "description": "Walk to the bottom of the ramp on the left, Hassenfeld will be on your right",
 	},
 	{
-	    "start":"rubenstein_c11",
+	    "start":"rubenstein_c15",
 	    "end":"rubenstein_c16",
 	    "description": "Walk up the ramp and you will be on loop road at an intersection",
+	},
+	{
+	    "start":"rubenstein_c16",
+	    "end":"rubenstein_c15",
+	    "description": "Walk down the ramp and you will be on loop road at an intersection",
+	},
+	{
+	    "start":"rubenstein_c14",
+	    "end":"rubenstein_c11",
+	    "description": "Walk down the steep slope",
+	},
+	{
+	    "start":"rubenstein_c11",
+	    "end":"rubenstein_c14",
+	    "description": "Walk up the steep slope",
+	},
+	{
+	    "start":"rubenstein_c15",
+	    "end":"rubenstein_c14",
+	    "description": "Walk toward the steep slope",
+	},
+	{
+	    "start":"rubenstein_c14",
+	    "end":"rubenstein_c15",
+	    "description": "Walk toward the Loop Road",
 	},
 	{
 	    "start":"rubenstein_c10",
@@ -319,4 +344,35 @@ paths_libraryeast = [
 	    "end":"usdan_e01",
 	    "description": "The entance is on your right.",
 	},
+	{
+	    "start":"library_c01",
+	    "end":"farber_e01",
+	    "description": "Walk toward the entrance on your left.",
+	},
+	{
+	    "start":"farber_e01",
+	    "end":"library_c01",
+	    "description": "Walk toward the path in front of you.",
+	},
+	{
+	    "start":"rubenstein_c11",
+	    "end":"eastHassenfeld_e01",
+	    "description": "Walk toward the small path on your left.",
+	},
+	{
+	    "start":"eastHassenfeld_e01",
+	    "end":"rubenstein_c11",
+	    "description": "Walk along the small path toward the mini parking lot.",
+	},
+	{
+	    "start":"eastHassenfeld_e02",
+	    "end":"rubenstein_c11",
+	    "description": "Walk along the small path toward the mini parking lot.",
+	},
+	{
+	    "start":"rubenstein_c11",
+	    "end":"eastHassenfeld_e02",
+	    "description": "Walk toward the entrance near the mini parking lot.",
+	},
+
 ]
