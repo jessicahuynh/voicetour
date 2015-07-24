@@ -52,7 +52,7 @@ Template.nearbyLocs.events({
 		event.preventDefault();
 		var loc = Locations.findOne({"id":JSON.stringify(this).replace(/"([^"]+(?="))"/g, '$1')});
 		
-		Session.set("prev","/viewLocation/"+Session.get("viewLocation"));
+		Session.set("prev","/locationList");
 		Session.set("viewLocation",loc._id);
 		
 		console.log(Session.get("viewLocation"));
