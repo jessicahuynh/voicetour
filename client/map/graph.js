@@ -189,11 +189,11 @@ Template.graph.events({
 		Session.set("route",route);
 
 		//setTimeout(function() {
-			startstop = route[0];
+			startstop = Session.get("route")[0];
 			//console.log("startstop: " + startstop);
 			Session.set("startstop", startstop);
 			//console.log("set startstop");
-			laststop = route[route.length - 1];
+			laststop = Session.get("route")[route.length - 1];
 			//console.log("laststop: " + laststop);
 			Session.set("laststop", laststop);
 			//console.log("set laststop");
@@ -223,24 +223,24 @@ Template.graph.events({
 		
 		document.getElementById("startpoint").value = "getting current location...";
 		
-		navigator.geolocation.getCurrentPosition(function (position) {
-			var current = new Point(position.coords.latitude, position.coords.longitude);
-			Session.set("currentLocation", current);
+		// navigator.geolocation.getCurrentPosition(function (position) {
+		// 	var current = new Point(position.coords.latitude, position.coords.longitude);
+		// 	Session.set("currentLocation", current);
 			
-			Meteor.call("searchLocations",			
-			Session.get("currentLocation"),
-				function(error, data) {
-					if (error) {
-						console.log(error);
-					}
-					else {
-						Session.set("inLocation",data);
-						document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
-					}
-				}
-			);
-		});			
-		// document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
+		// 	Meteor.call("searchLocations",			
+		// 	Session.get("currentLocation"),
+		// 		function(error, data) {
+		// 			if (error) {
+		// 				console.log(error);
+		// 			}
+		// 			else {
+		// 				Session.set("inLocation",data);
+		// 				document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
+		// 			}
+		// 		}
+		// 	);
+		// });			
+		 document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")";
 		
 	},
 	"click #stepsButton":function(event) {
