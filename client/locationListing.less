@@ -10,13 +10,17 @@
 		color:#111;
 		padding:0;
 		margin:0;
-		height:6em;
+		height:6.5em;
+		max-height:6.5em;
 		display:block;
+		overflow:hidden;
+		text-overflow:ellipsis;
 		
 		div {
 			padding:1em;
 			width:100%;
 			min-height:6em;
+			text-overflow:ellipsis;
 		}
 		
 		div.inside-info {
@@ -51,4 +55,10 @@
 		font-size:100%;
 	}
 	
+}
+
+@media (max-width:768px) {
+	h4 {
+		font-size:1.1em;
+	}
 }
