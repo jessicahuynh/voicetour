@@ -51,7 +51,9 @@ Template.footer.events({
         msg.text = Session.get("listenTo");
         console.log(Session.get("listenTo"));
         msg.lang = 'en-US';
-        msg.rate = 1;
+        console.log(parseFloat(Session.get("rate")));
+        msg.rate = parseFloat(Session.get("rate"));
+        
         
         msg.onend = function(e) {
           console.log('Finished in ' + event.elapsedTime + ' seconds.');
