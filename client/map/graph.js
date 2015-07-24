@@ -1,5 +1,6 @@
 Template.graph.rendered = function () {
 	Session.set("pageTitle","Navigate");
+	$("#searchForm").hide();
 	
 	//graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/

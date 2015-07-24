@@ -22,6 +22,9 @@ Template.locationProfile.events({
 
 Template.locationProfile.rendered = function() {
 	Session.set("pageTitle","Viewing " +thisLoc.nickname);
+	
+	$("#searchForm").hide();
+	
 	if ($(window).width() > 768) {
 		$(".page-header").prepend("<a href='#' id='returnToList' class='back'><span class='glyphicon glyphicon-menu-left'></span></a>");
 	}
