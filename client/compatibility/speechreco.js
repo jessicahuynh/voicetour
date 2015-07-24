@@ -241,6 +241,16 @@ function disambiguate(entity) {
         
          disambiguated = true;
     }
+    if (entity == "Usen") {
+        disambiguationChoices = ["Usen Castle","Edyth and Irving Usen Hall"];
+        dis = "Did you mean the <span class='said'>Usen Castle</span> or <span class='said'>Edyth and Irving Usen Hall</span>?";
+        
+        Session.set("micResponse","Did you mean Usen Castle or Edyth and Irving Usen Hall?");
+        
+        Session.set("disambiguationChoices",disambiguationChoices);
+        
+         disambiguated = true;
+    }
 
     if (disambiguated) {
        speak();
