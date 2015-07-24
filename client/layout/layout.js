@@ -94,7 +94,7 @@ function slideNav() {
     
     var selected = $(".navbar-header").hasClass('slide-active');
     
-    if ($(window).width() < 768) {
+    if ($(window).width() < 769) {
         $("#searchGlass").toggle("searchGlass");
         
         if ($("#searchForm").css("display") != "none")
