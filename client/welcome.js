@@ -48,6 +48,7 @@ Template.welcome.helpers({
 });
 
 Template.welcome.rendered = function() {
+	graph = new Graph(Map.findOne());
 	Session.set("pageTitle","Discover Deis");
 	Session.set("listenTo","Welcome to Discover Deis! You can navigate to any location on campus here and find out more.");
 	

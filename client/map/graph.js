@@ -28,6 +28,7 @@ Template.graph.rendered = function () {
 	else {
 		if (navTo != "" && navTo != null) {
 			Session.set("navigateFrom","(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
+			document.getElementById("startpoint").value = Session.get("navigateFrom");
 			$("#navform").submit();
 			console.log("submitted");
 		}
@@ -148,41 +149,13 @@ Template.graph.events({
 	"submit #navform": function(event){
 		event.preventDefault();
 
-		
+		//console.log("before start: " + Session.get ("currentLocation").x + "," + Session.get ("currentLocation").y);
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
+		
 		console.log("start " + starts);
 		console.log("end "+ ends);
-		//route = null;
-
-		// route = getRoute(starts, ends, function () {
-
-		// 	console.log(route);
-		// 	Session.set("route",route);
-
-		// 	//setTimeout(function() {
-		// 		startstop = route[0];
-		// 		//console.log("startstop: " + startstop);
-		// 		Session.set("startstop", startstop);
-		// 		//console.log("set startstop");
-		// 		laststop = route[route.length - 1];
-		// 		//console.log("laststop: " + laststop);
-		// 		Session.set("laststop", laststop);
-		// 		//console.log("set laststop");
-		// 	//},3000) ;
-
-
-		// 	//session variable for steps.js
-		// 	Session.set("routeForStep",route);
-		// 	Session.set("destination", ends);
-			
-		// 	getRouteDescription(route);
-		// 	Session.set("listenTo",Session.get("routeToTake"));
-
-		// 	$("#routeTab").tab('show');
-
-		// });
-
+		//console.log(Session.get ("currentLocation").x + "," + Session.get ("currentLocation").y);
 		
 		route = getRoute(starts, ends);
 		console.log(route);

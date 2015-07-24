@@ -1,3 +1,5 @@
+
+
 function getRoute(starts, ends) {
 		// if it starts with a (, it's your current location
 		if (starts[0] == "(") {
