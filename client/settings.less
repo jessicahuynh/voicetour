@@ -1,7 +1,32 @@
+@import url('colors.less');
+
 .checkbox {
 	label {
 		vertical-align:bottom;
 		padding-left:0;
 		font-size:1.4em;
+	}
+}
+
+.slider {
+	&.slider-horizontal {
+		width: 400px;
+	}
+
+}
+
+@media (max-width:1100px) {
+	.slider {
+		&.slider-horizontal {
+			width: 300px;
+		}
+	}
+}
+
+@media (max-width:768px) {
+	.slider {
+		&.slider-horizontal {
+			width: 180px;
+		}
 	}
 }
