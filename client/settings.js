@@ -23,12 +23,15 @@ Template.settings.rendered = function() {
 	});
 
 
-	// $('.slider').slider();
-	// $('#rate').slider()
-	//   .on('slide', function(value){
-	//   	console.log(value);
-	//     Session.setPersistent("rate",value);
-	// });
+	$('.slider').slider();
+	$('#rate').slider()
+	  .on('slideStop', function(data){
+	  	console.log(data);
+	  	var rate = data.value;
+	  	console.log(rate);
+	    Session.setPersistent("rate",rate);
+	});
+	$('#rate').slider('setValue', Session.get("rate", rate));
 
 
 	$("#readingmode").on('switchChange.bootstrapSwitch',function(event,data) {

@@ -51,7 +51,6 @@ Template.footer.events({
         msg.text = Session.get("listenTo");
         console.log(Session.get("listenTo"));
         msg.lang = 'en-US';
-        console.log(parseFloat(Session.get("rate")));
         msg.rate = parseFloat(Session.get("rate"));
         
         
