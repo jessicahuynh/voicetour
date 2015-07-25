@@ -216,7 +216,10 @@ function kv(k, v) {
 }
 
 function speak() {
-    window.speechSynthesis.speak(new SpeechSynthesisUtterance(Session.get("micResponse")));
+    var msg = new SpeechSynthesisUtterance(Session.get("micResponse"));
+    msg.rate = 1;
+    msg.lang = 'en-US';
+    window.speechSynthesis.speak(msg);
 }
 
 function clarifyLoc() {
