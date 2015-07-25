@@ -10,23 +10,11 @@
 
 .slider {
 	&.slider-horizontal {
-		width: 400px;
+		width: 100%;
 	}
 
 }
 
-@media (max-width:1000px) {
-	.slider {
-		&.slider-horizontal {
-			width: 250px;
-		}
-	}
-}
-
-@media (max-width:768px) {
-	.slider {
-		&.slider-horizontal {
-			width: 180px;
-		}
-	}
+.slider-track, .slider-selection {
+	border-radius:0;
 }
