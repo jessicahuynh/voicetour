@@ -18,7 +18,7 @@ Template.feedback.events({
 });
 
 Template.feedback.rendered = function() {
-	$('#feedbackForm').on('shown.bs.modal', function () {
+	$('#feedbackFormDiv').on('shown.bs.modal', function () {
 	  $('#feedbackEmail').focus()
 	});
 }
