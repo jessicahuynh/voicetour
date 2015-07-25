@@ -140,6 +140,14 @@ function applyIntent(intent,entities,mic) {
             
             $("#result").append(r);
         }
+        else if (intent == "repeat_prev") {
+            r+="<p>Once more.</p>"
+            
+            Session.set("micResponse","Once more: "+Session.get("micResponse"));
+            speak();
+            
+            $("#result").append(r);
+        }
     }
     
 }
@@ -217,7 +225,7 @@ function kv(k, v) {
 
 function speak() {
     var msg = new SpeechSynthesisUtterance(Session.get("micResponse"));
-    msg.rate = 1;
+    msg.rate = parseFloat(Session.get("rate"));
     msg.lang = 'en-US';
     window.speechSynthesis.speak(msg);
 }
