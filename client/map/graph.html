@@ -30,16 +30,9 @@
 				<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Start</button>
 			</form>
 		</div>
-			
-		<div role="tabpanel" class="tab-pane col-sm-6" id="mapPane">
-			<div id="map-nav">
-				{{> googleMap name="navMap" options=navMapOptions}}
-			</div>
-		</div>
 		
-		
-
-		<div role="tabpanel" class="tab-pane col-sm-12" id="routePane">
+		<div role="tabpanel" class="tab-pane col-sm-6" id="routePane">
+			<div id="loadingPanel">{{> loading}}</div>
 			<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary pull-right">Step-by-Step</button>
 			<ul>
 				{{#each stops}}
@@ -48,6 +41,13 @@
 			</ul>
 			
 		</div>
+			
+		<div role="tabpanel" class="tab-pane col-sm-12" id="mapPane">
+			<div id="map-nav">
+				{{> googleMap name="navMap" options=navMapOptions}}
+			</div>
+		</div>
+
 		
 	</div>
 		

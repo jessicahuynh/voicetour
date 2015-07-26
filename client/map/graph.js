@@ -37,12 +37,10 @@ Template.graph.rendered = function () {
 };
 
 Template.graph.onCreated(function () {
-	//Session.set("centerPoint", Point(0,0));
 	graph = new Graph(Map.findOne());
 	route = null;
 	routes = [];
 	startstop = null;
-	//console.log("(" + Session.get("currentLocation").x + ", " + Session.get("currentLocation").y + ")");
 	laststop = null;
 
 	GoogleMaps.load();
@@ -155,35 +153,22 @@ Template.graph.events({
 		
 		console.log("start " + starts);
 		console.log("end "+ ends);
-		//console.log(Session.get ("currentLocation").x + "," + Session.get ("currentLocation").y);
 		
-		route = getRoute(starts, ends);
-		console.log(route);
-		Session.set("route",route);
-
-		//setTimeout(function() {
-			startstop = Session.get("route")[0];
-			//console.log("startstop: " + startstop);
-			Session.set("startstop", startstop);
-			//console.log("set startstop");
-			laststop = Session.get("route")[route.length - 1];
-			//console.log("laststop: " + laststop);
-			Session.set("laststop", laststop);
-			//console.log("set laststop");
-		//},3000) ;
-
-
-		//session variable for steps.js
-		Session.set("routeForStep",route);
-		Session.set("destination", ends);
+		Session.set("route",getRoute(starts, ends));
+		console.log(Session.get("route"));
 		
-		getRouteDescription(route);
-		Session.set("listenTo",Session.get("routeToTake"));
+		if (Session.get("route") != null) {
+			setStops();
+		}
+		// if it can't get the route right away, because you're not in a building
+		// then delay for three seconds
+		else {
+			$("#loadingPanel").css("display","block");
+			setTimeout(function() {
+				setStops();
+				$("#loadingPanel").css("display","none");
+			}, 2000);
 
-		if ($(window).width() < 769) {
-			event.preventDefault();
-			Session.set("prev","/navigate");
-			Router.go('/steps');
 		}
 
 		// $("#routeTab").tab('show');
@@ -222,3 +207,21 @@ Template.graph.events({
 		Router.go('/steps');
 	},
 });
+
+function setStops() {
+	Session.set("startstop", Session.get("route")[0]);
+
+	Session.set("laststop", Session.get("route")[Session.get("route").length - 1]);	
+	
+	//session variable for steps.js
+	Session.set("routeForStep",Session.get("route"));
+	Session.set("destination", document.getElementById("endpoint").value);
+	
+	getRouteDescription(Session.get("route"));
+	Session.set("listenTo",Session.get("routeToTake"));
+
+	if ($(window).width() < 769) {
+		Session.set("prev","/navigate");
+		Router.go('/steps');
+	}		
+}

@@ -30,9 +30,10 @@ function getRoute(starts, ends) {
 									nearestIntersection = intersection.id;
 									
 									route = getShortestRoute([nearestIntersection],Locations.findOne({"name":ends}).entrances);
-									console.log("*" + route);
+									//console.log("*" + route);
 									if (route != null) {
 										getRouteDescription(route);
+										Session.set("route",route);
 									}
 								}
 							}
