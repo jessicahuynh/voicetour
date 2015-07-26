@@ -9,7 +9,8 @@
 		<li role="presentation"><a href="#mapPane" role="pill" data-toggle="pill" aria-controls="map" id="mapTab">Map</a></li>
 	</ul>
 	
-	<div class="tab-content">		
+	<div class="tab-content">
+		<div id="loadingPanel">{{> loading}}</div>		
 		<div role="tabpanel" class="tab-pane active col-sm-6" id="navPane">
 			<form id="navform" name="navform">
 				<div class="form-group">
@@ -32,7 +33,6 @@
 		</div>
 		
 		<div role="tabpanel" class="tab-pane col-sm-6" id="routePane">
-			<div id="loadingPanel">{{> loading}}</div>
 			<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary pull-right">Step-by-Step</button>
 			<ul>
 				{{#each stops}}
