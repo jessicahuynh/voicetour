@@ -219,6 +219,8 @@ function setStops() {
 	
 	getRouteDescription(Session.get("route"));
 	Session.set("listenTo",Session.get("routeToTake"));
+	
+	$("#loadingPanel").css("display","none");
 
 	if ($(window).width() < 769) {
 		Session.set("prev","/navigate");
