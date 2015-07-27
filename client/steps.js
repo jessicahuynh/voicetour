@@ -27,15 +27,15 @@ Template.steps.events({
 		event.preventDefault();
 		if (count < (route.length - 2)){
 			count ++;
-			//console.log("count:" + count);
-			//Session.set("countForStep", count);
-			getStepDescription(route);
-				//middlestop = findId(route[count]);
-			if (count != 0) {
-				routesForStep[count - 1].setOptions({strokeColor: '#000000'});
-			}
+			console.log(count);
+			// getStepDescription(route);
+			// if (count != 0) {
+			// 	routesForStep[count - 1].setOptions({strokeColor: '#000000'});
+			// }
 			
-			routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+			// routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+			Session.set("countRefresh", count);
+			console.log(Session.get("countRefresh"));
 			
 				
 		} else {
@@ -48,16 +48,15 @@ Template.steps.events({
 		event.preventDefault();
 		if (count > 0){
 			count --;
-			//console.log("count:" + count);
-			//Session.set("countForStep", count);
-			getStepDescription(route);
-				//middlestop = findId(route[count]);
-			if (count != route.length) {
-				routesForStep[count + 1].setOptions({strokeColor: '#000000'});
-			}
+			console.log(count);
+			// getStepDescription(route);
+			// if (count != route.length) {
+			// 	routesForStep[count + 1].setOptions({strokeColor: '#000000'});
+			// }
 			
-			routesForStep[count].setOptions({strokeColor: '#00FFFF'});
-				
+			// routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+			Session.set("countPrev", count);
+			console.log(Session.get("countPrev"));
 		} else {
 			alert("You are at the first step.");
 			//count ++;
@@ -116,7 +115,8 @@ Template.steps.rendered = function () {
 	console.log("startstop:" + startstop.x + "," + startstop.y);
 	console.log("laststop:" + laststop.x + "," + laststop.y);
 	//middlestop = findId(route[count]);
-		
+	
+	getStepDescription(route);	
 
 	GoogleMaps.load();
 	GoogleMaps.ready('stepMap',function(map){
@@ -137,43 +137,7 @@ Template.steps.rendered = function () {
 		});
 
 		Tracker.autorun(function() {
-			//console.log("currentLocation changes");
-			var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
-			map.instance.setCenter(theLatLng);
-			markerCurrent.setPosition(theLatLng);
-				// console.log("set center: " + middlestop.x + "," + middlestop.y);
-				// var theLatLngMiddle = new google.maps.LatLng(middlestop.x,middlestop.y);
-				// map.instance.setCenter(theLatLngMiddle);
-			//console.log("test run autorun in rendered");
-
-
-			// nextstop = findId(route[count]);
-			// if (autoNextStep(nextstop) == true) {
-			// 	if (count < (route.length - 2)){
-			// 		count ++;
-			// 		//console.log("count:" + count);
-			// 		//Session.set("countForStep", count);
-			// 		getStepDescription(route);
-			// 			//middlestop = findId(route[count]);
-			// 		if (count != 0) {
-			// 			routesForStep[count - 1].setOptions({strokeColor: '#000000'});
-			// 		}
-					
-			// 		routesForStep[count].setOptions({strokeColor: '#00FFFF'});
-							
-			// 	} else {
-			// 		alert("You reached your destination.");
-			// 		//count --;
-			// 	}
-
-			// }
-
-		})
-
-		getStepDescription(route);	
-
-
-		Tracker.autorun(function() {
+			console.log("in the autorun for routesForStep : " + Session.get("routeForStep"));
 			route = Session.get("routeForStep");
 			if (route.length == 1){
 				//console.log("test google map ready");
@@ -220,11 +184,71 @@ Template.steps.rendered = function () {
 			}	
 
 		})
+
+		Tracker.autorun(function() {
+			console.log("in the autorun now for countRefresh:" + Session.get("countRefresh"));
+			var countRefresh = Session.get("countRefresh");
+			getStepDescription(route);
+			if (countRefresh != 0 && routesForStep != []) {
+				routesForStep[countRefresh - 1].setOptions({strokeColor: '#000000'});
+			}
+			
+			routesForStep[countRefresh].setOptions({strokeColor: '#00FFFF'});
+		})
+
+
+		Tracker.autorun(function() {
+			console.log("in the autorun now for countPrev:" + Session.get("countPrev"));
+			var countPrev = Session.get("countPrev");
+			getStepDescription(route);
+			if (countPrev != route.length && routesForStep != []) {
+				routesForStep[countPrev + 1].setOptions({strokeColor: '#000000'});
+			}
+			
+			routesForStep[countPrev].setOptions({strokeColor: '#00FFFF'});
+		})
+
+
+
 		// 	if (count == 1) {
 		// // 	console.log("ready to add blue route: " + Session.get("countForStep"));
 		//  		routesForStep[count - 1].setOptions({strokeColor: '#00FFFF'});
 		//  	//console.log("added blue route");
 		// 	}
+
+		Tracker.autorun(function() {
+			//console.log("currentLocation changes");
+			var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
+			map.instance.setCenter(theLatLng);
+			markerCurrent.setPosition(theLatLng);
+				// console.log("set center: " + middlestop.x + "," + middlestop.y);
+				// var theLatLngMiddle = new google.maps.LatLng(middlestop.x,middlestop.y);
+				// map.instance.setCenter(theLatLngMiddle);
+			//console.log("test run autorun in rendered");
+
+
+			// nextstop = findId(route[count]);
+			// if (autoNextStep(nextstop) == true) {
+			// 	if (count < (route.length - 2)){
+			// 		count ++;
+			// 		//console.log("count:" + count);
+			// 		//Session.set("countForStep", count);
+			// 		getStepDescription(route);
+			// 			//middlestop = findId(route[count]);
+			// 		if (count != 0) {
+			// 			routesForStep[count - 1].setOptions({strokeColor: '#000000'});
+			// 		}
+					
+			// 		routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+							
+			// 	} else {
+			// 		alert("You reached your destination.");
+			// 		//count --;
+			// 	}
+
+			// }
+
+		})
 
 	});
 
@@ -235,6 +259,8 @@ Template.steps.rendered = function () {
 Template.steps.onCreated(function() {
 	//Session.set("countForStep", count);
 	count = 0;
+	Session.set("countRefresh", count);
+	Session.set("countPrev", count);
 	routesForStep = [];
 	graph = new Graph(Map.findOne());
 
@@ -272,7 +298,7 @@ function getStepDescription(route) {
 	if (route != null && route != undefined && route.length != 1) {
 		var getToPath = "";
 		
-		console.log(route);
+		//console.log(route);
 		//if there's a getTo
 		if (count == 0 && Intersections.findOne({"id":route[count]}).getTo != undefined) {
 			getToPath += Intersections.findOne({"id":route[count]}).getTo;
