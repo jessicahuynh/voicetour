@@ -1,0 +1,56 @@
+@import url('colors.less');
+
+a.filterSelect {
+	width:100%;
+}
+
+.filterDiv a:link, .filterDiv a:visited {
+	display:block;
+	color:@deis-blue;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:.25em;
+	border:1px solid @deis-blue;
+	
+	span {
+		vertical-align:bottom;
+	}
+}
+
+.filterDiv a:hover, .filterDiv a:active {
+	text-decoration:none;
+	background-color:@off-white;
+}
+
+.filterDiv {
+	padding-bottom:1em;
+	
+	label {
+		padding-left:0;
+	}
+}
+
+.filterCol {
+	width:33.333333%;
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+/* the selection menus */
+.filterSelections {
+	display:none;
+	
+	a:link, a:visited {
+		display:block;
+		font-size:90%;
+		width:100%;
+		padding:1em .4em;
+		text-transform:uppercase;
+		border:0;
+	}
+	a:hover, a:visited {
+		background-color:@deis-blue;
+		color:@off-white;
+	}
+}

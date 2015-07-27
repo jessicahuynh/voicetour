@@ -17,74 +17,35 @@ Template.locationList.helpers({
 			return Locations.find({"category":Session.get("category")},{sort:{"nickname":1}});
 		}
 	},
+	selectedCat:function() {
+		if (Session.get("category") == "") {
+			return "All";
+		}
+		else {
+			return Session.get("category");
+		}
+	},
 	allCount:function() {
 		return Locations.find().count();
 	},
-	scienceCount:function() {
-		return Locations.find({"category":"science"}).count();
-	},
-	artCount:function() {
-		return Locations.find({"category":"art"}).count();
-	},
-	dormCount:function() {
-		return Locations.find({"category":"dorm"}).count();
-	},
-	religiousCount:function() {
-		return Locations.find({"category":"religious"}).count();
-	},
-	diningCount:function() {
-		return Locations.find({"category":"dining"}).count();
-	},
-	administrativeCount:function() {
-		return Locations.find({"category":"administrative"}).count();
-	},
-	graduateCount:function() {
-		return Locations.find({"category":"graduate"}).count();
+	catCount:function(cat) {
+		return Locations.find({"category":cat}).count();
 	}
 });
 
 Template.locationList.events({
-	'click .nav li':function(event) {
+	'click .filterSelect':function(event) {
 		event.preventDefault();
-		// removes active class from previous tab
-		$(".nav li.active").removeClass("active");
-
-		// toggles the active class for the li you clicked on
-		// make sure to set data-toggle="pill"/"tab" for it to work!
-		if (!$(this).hasClass("active")) {
-			$(this).toggleClass("active");
+		if ($(event.target).find("span").hasClass("glyphicon-menu-up")) {
+			$(event.target).find("span").removeClass("glyphicon-menu-up");
+			$(event.target).find("span").addClass("glyphicon-menu-down");
+		}
+		else {
+			$(event.target).find("span").removeClass("glyphicon-menu-down");
+			$(event.target).find("span").addClass("glyphicon-menu-up");
 		}
 	},
-	'click #all':function(event){
+	'click .selection':function(event) {
 		event.preventDefault();
-		Session.set("category","");
-	},
-	'click #science':function(event){
-		event.preventDefault();
-		Session.set("category","science");
-	},
-	'click #art':function(event){
-		event.preventDefault();
-		Session.set("category","art");
-	},
-	'click #dorm':function(event){
-		event.preventDefault();
-		Session.set("category","dorm");
-	},
-	'click #religious':function(event){
-		event.preventDefault();
-		Session.set("category","religious");
-	},
-	'click #dining':function(event){
-		event.preventDefault();
-		Session.set("category","dining");
-	},
-	'click #admin':function(event){
-		event.preventDefault();
-		Session.set("category","administrative");
-	},
-	'click #grad':function(event){
-		event.preventDefault();
-		Session.set("category","graduate");
 	}
 });

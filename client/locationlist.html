@@ -1,15 +1,35 @@
 <template name="locationList">
 	<h1 class="page-header">Locations at Brandeis</h1>
-	<ul class="nav nav-pills" role="tablist">
-		<li role="presentation" data-toggle="pill" class="active"><a href="#" id="all">All <span class="badge">{{allCount}}</span></a></li>
-		<li role="presentation" data-toggle="pill"><a href="#" id="science">Science complex <span class="badge">{{scienceCount}}</span></a></li>
-		<li role="presentation" data-toggle="pill"><a href="#" id="art">the Arts <span class="badge">{{artCount}}</span></a></li>
-		<li role="presentation" data-toggle="pill"><a href="#" id="grad">Graduate education <span class="badge">{{graduateCount}}</span></a></li>
-		<li role="presentation" data-toggle="pill"><a href="#" id="dorm">Dorms <span class="badge">{{dormCount}}</span></a></li>
-		<li role="presentation" data-toggle="pill"><a href="#" id="religious">Religious <span class="badge">{{religiousCount}}</span></a></li>
-		<li role="presentation" data-toggle="pill"><a href="#" id="dining">Dining areas <span class="badge">{{diningCount}}</span></a></li>
-		<li role="presentation" data-toggle="pill"><a href="#" id="admin">Administrative <span class="badge">{{administrativeCount}}</span></a></li>
-	</ul>
+	
+	<div class="filter">
+		<div class="filterDiv">
+			<label for="catFilter">Category</label>
+			<a class="filterSelect" href="#filterCatSelections" data-toggle="collapse" data-target="#filterCatSelections" aria-expanded="false" aria-controls="filterCatSelections">{{selectedCat}} <span class="glyphicon glyphicon-menu-up pull-right"></span></a>
+			
+			<div id="filterCatSelections" class="filterSelections">
+				<div class="filterCol">
+					<a href="#" class="selection">Academics</a>
+					<a href="#" class="selection">Dining</a>
+					<a href="#" class="selection">Library</a>
+					<a href="#" class="selection">Student life</a>
+				</div>
+				<div class="filterCol">
+					<a href="#" class="selection">Athletics</a>
+					<a href="#" class="selection">Health</a>
+					<a href="#" class="selection">Offices</a>
+					<a href="#" class="selection">Transport</a>
+				</div>
+				<div class="filterCol">
+					<a href="#" class="selection">Dorm</a>
+					<a href="#" class="selection">Landscape</a>
+					<a href="#" class="selection">Parking</a>
+					<a href="#" class="selection">Religious</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
 	<div class="list-group">
 	{{#each locationsData}}
 		{{> locationListing}}
