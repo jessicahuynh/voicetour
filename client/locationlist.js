@@ -10,7 +10,7 @@ Template.locationList.rendered = function() {
 
 Template.locationList.helpers({
 	locationsData: function() {
-		if (Session.get("category") == "") {
+		if (Session.get("category") == "" || Session.get("category") == "All") {
 			return Locations.find({},{sort:{"nickname":1}});
 		}
 		else {

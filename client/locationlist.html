@@ -4,28 +4,30 @@
 	<div class="filter">
 		<div class="filterDiv">
 			<label for="catFilter">Category</label>
-			<a class="filterSelect" href="#filterCatSelections" data-toggle="collapse" data-target="#filterCatSelections" aria-expanded="false" aria-controls="filterCatSelections">{{selectedCat}} <span class="glyphicon glyphicon-menu-up pull-right"></span></a>
+			<a class="filterSelect" href="#filterCatSelections" data-toggle="collapse" data-target="#filterCatSelections" aria-expanded="false" aria-controls="filterCatSelections" role="button">{{selectedCat}} <span class="glyphicon glyphicon-menu-up pull-right"></span></a>
 			
-			<div id="filterCatSelections" class="filterSelections">
+			<div id="filterCatSelections" class="filterSelections collapse">
 				<div class="filterCol">
-					<a href="#" class="selection" data-filter="academics">Academics</a>
-					<a href="#" class="selection" data-filter="dining">Dining</a>
+					<a href="#" class="selection" data-filter="">All</a>
+					<a href="#" class="art" data-filter="art">Art</a>
+					<a href="#" class="selection" data-filter="dorm">Dorm</a>
 					<a href="#" class="selection" data-filter="library">Library</a>
-					<a href="#" class="selection" data-filter="studentlife">Student life</a>
+					<a href="#" class="selection" data-filter="student life">Student life</a>
 				</div>
 				<div class="filterCol">
+					<a href="#" class="selection" data-filter="academics">Academics</a>
 					<a href="#" class="selection" data-filter="athletics">Athletics</a>
 					<a href="#" class="selection" data-filter="health">Health</a>
 					<a href="#" class="selection" data-filter="offices">Offices</a>
 					<a href="#" class="selection" data-filter="transportation">Transport</a>
 				</div>
 				<div class="filterCol">
-					<a href="#" class="selection" data-filter="dorm">Dorm</a>
+					<a href="#" class="selection" data-filter="administrative">Administrative</a>
+					<a href="#" class="selection" data-filter="dining">Dining</a>
 					<a href="#" class="selection" data-filter="landscape">Landscape</a>
 					<a href="#" class="selection" data-filter="parking">Parking</a>
 					<a href="#" class="selection" data-filter="religious">Religious</a>
 				</div>
-				<a href="#" class="selection pull-right" data-filter="">All</a>
 			</div>
 		</div>
 	</div>

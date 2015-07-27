@@ -83,7 +83,7 @@ locations = [
 			],
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Rose Art Museum houses the largest collection of modern art in New England. Admission is free to students and many intern there during the year. For a fee of $10 per semester, Brandeis students can rent a piece from the Student Loan Collection to hang in their room. The Rose Art Museum houses works by artists such as Marc Chagall, Andy Warhol, and Wassily Kandinsky. Recent acquisitions in 2012 have included works by Bruce Conner and Mark Bradford. As one of the most daring and innovative contemporary art museums the Rose regularly showcases new and innovative exhibitions. It also hosts regular artist talks and its permanent collection is frequently used as a teaching tool both in and outside of the classroom.",
-		"category":["landscape"],
+		"category":["art"],
 		"entrances":['museum_e01']
 	},
 
@@ -128,7 +128,7 @@ locations = [
 			new Point(42.362017, -71.263813),
 			new Point(42.361845, -71.263886),
 			new Point(42.361886, -71.264220)],
-		"category":["offices","academics"],
+		"category":["administrative","academics"],
 		"entrances":["turner_e01"]
 	},
 	bernstein = {
@@ -140,7 +140,7 @@ locations = [
 			new Point(42.365222,-71.259642), 
 			new Point(42.365046,-71.259492), 
 			new Point(42.36489,-71.259837)],
-		"category":["offices"]
+		"category":["administrative"]
 		},
 	epstein = {
 		"id":"epstein",
@@ -175,7 +175,7 @@ locations = [
 			new Point(42.364799,-71.26258), 
 			new Point(42.364525,-71.262821), 
 			new Point(42.364628,-71.263304)],
-		"category":["academics"],
+		"category":["academics","art"],
 		"entrances":['goldman_e01','goldman_e02']
 		},
 	gryzmish = {
@@ -187,7 +187,7 @@ locations = [
 			new Point(42.365759,-71.25918), 
 			new Point(42.365577,-71.259025), 
 			new Point(42.365417,-71.259403)],
-		"category":["offices"]
+		"category":["administrative"]
 		},
 	sachar = {
 		"id":"sachar",
@@ -224,7 +224,7 @@ locations = [
 			new Point(42.365423,-71.259113), 
 			new Point(42.36529,-71.259006), 
 			new Point(42.365076,-71.259521)],
-		"category":["offices"]
+		"category":["administrative"]
 		},
 	info = {
 		"id":"info",
@@ -247,7 +247,7 @@ locations = [
 			new Point(42.365291,-71.262325), 
 			new Point(42.365122,-71.262435), 
 			new Point(42.365158,-71.262541)],
-		"category":["academics"],
+		"category":["academics","art"],
 		"entrances":['pollack_e01']
 		},
 	rabbSchool = {
@@ -290,7 +290,7 @@ locations = [
 			new Point(42.363985,-71.259942)],
 		"function":"Slosberg is home to the Brandeis Concert Series.",
 		"description":"Slosberg Music Center, built in the shape of a grand piano with 88 windows to represent the 88 keys on a piano, is home to the music department. Inside you will discover a 225 seat concert hall where eight student ensembles and the internationally acclaimed Lydian String Quartet perform everything from Beethoven to original student-composed electronic music. Additionally, there are practice rooms open to all students including both music majors and non-music majors. The first piano of acclaimed composer Leonard Bernstein (faculty 1951-55) is displayed in the lobby. Each year, nearly 300 professional and student performances and exhibitions take place on campus, culminating in the annual Leonard Bernstein Festival for the Creative Arts, founded in 1952 by Bernstein himself. First Lady Eleanor Roosevelt, who was also a founding faculty member of Brandeis, had a television show in Slosberg, and it is said that on that show JFK confirmed he was running for President of the United States.",
-		"category":["academics"],
+		"category":["academics","art"],
 		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
 		"nearby":["admissions","bernstein-marcus","lemberg","village"]
 		},
@@ -311,7 +311,7 @@ locations = [
 			new Point(42.364589, -71.261813),
 			],
 		"description":"Spingold Theater, is home to the theatre department. The cutting-edge Brandeis Theatre Company produces five productions each season. Debra Messing (Grace Adler) of Will & Grace , Steven Culp (Rex VanDe Camp) of Desperate Housewives, and Loretta Devine of the original Broadway cast of Dreamgirls, among many others, are graduates of our programs. Undergraduate students are encouraged to get involved with campus productions, whether that means assistant stage managing, costume designing, or acting in them!",
-		"category":["academics"],
+		"category":["academics","art"],
 		"entrances":['spingold_e01','spingold_e02']
 		},
 	abelson = {
@@ -552,7 +552,7 @@ locations = [
 			new Point(42.366953, -71.255936), 
 			new Point(42.366929, -71.255488),
 			new Point(42.367387, -71.255545)],
-		"category":["dorm","landscape"],
+		"category":["dorm","landscape","art"],
 		"description":"Usen Castle may seem out of place on our campus, and, in fact, it predates the university. The castle was built to look like many of the castles that one might find in Scotland; however, this castle was built based on rough exterior sketches drawn from the outside of an already-existing castle. As a result, the castle is filled with architectural mishaps including rogue staircases, trapdoors, and oddly shaped rooms. While it is now a national historic landmark, the castle is also a residence hall with singles, doubles, and suites available for students in their sophomore year. With its quirky character and spectacular view of Boston, the castle makes for a unique living experience.",
 		"entrances":["castle_e01","castle_e02"],
 	},
@@ -586,7 +586,7 @@ locations = [
 			new Point(42.369151, -71.255997),
 			new Point(42.369151, -71.256053),
 			new Point(42.369131, -71.256053),],
-		"category":["offices"],
+		"category":["administrative"],
 		"entrances":["kutz_e01","Kutz_e02"],
 	},
 	mandel = {
@@ -721,7 +721,7 @@ locations = [
 			new Point(42.369666, -71.259279),  
 			new Point(42.369609, -71.259300),
 			new Point(42.369722, -71.259721),],
-		"category":["offices"],
+		"category":["offices","academics"],
 		"entrances":["abraham_e01"],
 	},
 	{
@@ -735,7 +735,7 @@ locations = [
 			new Point(42.369605, -71.259309),  
 			new Point(42.369609, -71.259300),
 			new Point(42.369722, -71.259721),],
-		"category":["offices"],
+		"category":["offices","academics"],
 		"entrances":["mandelJewish_e01"],
 	},
 	{
@@ -752,7 +752,7 @@ locations = [
 			new Point(42.369148, -71.259343),
 			new Point(42.369258, -71.259346),
 			new Point(42.369166, -71.259735),],
-		"category":["offices"],
+		"category":["offices","academics"],
 		"entrances":["schneider_e01"],
 	},
 	{
@@ -861,7 +861,7 @@ locations = [
 			new Point(42.366031, -71.255433), 
 			new Point(42.365898, -71.255424),
 			new Point(42.365927, -71.255305),],
-		"category":["academics"],
+		"category":["academics","offices"],
 		"entrances":["superconducting_e01"],
 	},
 	{
