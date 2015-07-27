@@ -4,18 +4,15 @@
 
 <div class="row">
 	<div class="col-sm-8">
+		<div id="map-container">
+			{{> googleMap name="locMap" options=locMapOptions}}
+		</div>
 		<p>{{function}}</p>
-	</div>
-	<div class="col-sm-8">
 		<p>{{description}}</p>
 	</div>
 	<div class="col-sm-4">
 		<div class="go-to-navigate">
 			<a href="{{pathFor 'graph'}}"><span class="glyphicon glyphicon-send"></span>&nbsp;Go!</a>
-		</div>
-		<div id="map-container">
-			<h3>Map</h3>
-			{{> googleMap name="locMap" options=locMapOptions}}
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
