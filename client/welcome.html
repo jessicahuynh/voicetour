@@ -1,40 +1,27 @@
 <template name="welcome">
-	<div class="jumbotron col-xs-12">
+	<div class="jumbotron">
 		<h1 class="page-header">Discover Deis</h1>
-
-		<p>Current location: ({{currentLocation.x}}, {{currentLocation.y}})</p>
-
-		<div class="row">
-			<a id="whereAmI" class="btn btn-default col-sm-2" href="#locationName">Where am I?</a>
-			<div id="locationName" class="col-sm-10">
-				<p>{{inLocation}}</p>
-			</div>
+	
+		<div id="locationName">
+			<p>{{inLocation}}</p>
 		</div>
-
-		<div class="row">
-			<a href="#locationDescription" id="whatIsHere" class="btn btn-info col-sm-2">Learn more</a>
-			<div class="bg-info col-sm-10" id="locationDescription">
-				<p>{{inLocationFunction}}</p>
-			</div>
-
+	
+	
+	
+		<div id ="goToLoc">
+			<p>Where do you want to go?</p>
+			<form id="navform" class="form-inline">
+				<label for="endpoint" class="sr-only">Destination</label>
+				{{> inputAutocomplete settings=settings id="endpoint" class="form-control input input-lg" placeholder="Shapiro" }}
+				<!--<input type="text" id="endpoint" class="form-control input input-lg" placeholder="Shapiro">-->
+				<button type="submit" class="btn btn-lg btn-primary" id="startNav"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Take Me There</button>
+				<span class="clear">&nbsp;</span>
+			</form>
 		</div>
-
-		<div class="row">
-			<div id="map-container" style="height:300px; width:300px">
-				{{> googleMap name="locationMap" options=locationMapOptions}}
-			</div>
+	
+		<div id="map-container">
+			{{> googleMap name="locationMap" options=locationMapOptions}}
 		</div>
 	</div>
-	<!-- <div class="row">
-		{{>compass}}	
-	</div> -->
-</template>
-
-<template name="compass">
-	<div id="text">initializing</div>
-	<div id="compass">
-		<div class="north">N</div>
-		<div class="south"></div>
-	</div>
-	<div id="meta"></div>
+	
 </template>

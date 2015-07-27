@@ -5,30 +5,22 @@ offCampus = {
 }
 
 Template.welcome.helpers({
-
-	currentLocation: function () {
-		return Session.get("currentLocation");
-
-	},
 	inLocation: function () {
 		var name = Locations.findOne({ "name": Session.get("inLocation")[0].name }).name;
 		if (Session.get("inLocation")[1] == "in") {
 			return "You're in " + name;
 		}	
 		else {
-			return "You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name;
+			if (Session.get("unit") == "m") {
+				return "You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name;
+			}
+			else {
+				return "You're about " + Math.floor(Math.round(Session.get("inLocation")[2]*3.28)) + "ft from " + name;
+			}
+			
 		}
 		if (name == null) {
 			return "You're off campus";
-		}
-	},
-	inLocationFunction:function() {
-		var loc = Locations.findOne({"name":Session.get("inLocation")[0].name}); 
-		if (loc == null) {
-			return offCampus.function;
-		}
-		else {
-			return loc.function;
 		}
 	},
 	locationMapOptions: function() {
@@ -40,22 +32,27 @@ Template.welcome.helpers({
 			}
 			
 		}
-	}
+	},
+	settings:function() {
+		return {
+			position:"bottom",
+			limit:10,
+			rules:[{
+				collection:Locations,
+				matchAll:true,
+				field:"name",
+				template:Template.suggestions
+			}]
+		};
+	},
 });
 
 Template.welcome.rendered = function() {
-	GoogleMaps.load();
-// 	GoogleMaps.ready('locationMap',function(map) {
-// 		marker = new google.maps.Marker({
-// 			position: map.options.center,
-// 			map: map.instance
-// 		})
-// 		Tracker.autorun(function(map,marker){
-// 	var theLatLng = new google.maps.LatLng(Session.get("currentLocation").x,Session.get("currentLocation").y);
-// 	marker.setPosition(theLatLng);
-// 	map.setCenter(theLatLng);
-// });
+	graph = new Graph(Map.findOne());
+	Session.set("pageTitle","Discover Deis");
+	Session.set("listenTo","Welcome to Discover Deis! You can navigate to any location on campus here and find out more.");
 	
+	GoogleMaps.load();	
 	
 	GoogleMaps.ready('locationMap',function(map) {
 		var marker = new google.maps.Marker({
@@ -74,109 +71,10 @@ Template.welcome.rendered = function() {
 }
 
 Template.welcome.events({
-	'click #whereAmI': function(event) {
+	'submit #navform':function(event) {
 		event.preventDefault();
-
-		navigator.geolocation.getCurrentPosition(function(position) {
-			var current = new Point(position.coords.latitude,position.coords.longitude);
-			Session.set("currentLocation",current);
-		});
 		
-
-		Meteor.call("searchLocations",			
-			Session.get("currentLocation"),
-			function(error, data) {
-				if (error) {
-					console.log(error);
-				}
-				else {
-					Session.set("inLocation",data);
-				}
-			}
-			);
-
-		if (Session.get("inLocation") == null) {
-			window.speechSynthesis.speak(new SpeechSynthesisUtterance("You are off campus."));
-		}
-		else {
-			var name = Session.get("inLocation")[0].name;
-
-			if (Session.get("inLocation")[1] == "in") {
-				readName = new SpeechSynthesisUtterance("You're in " + name);
-			}
-			else {
-				readName = new SpeechSynthesisUtterance("You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name);
-			}
-
-			window.speechSynthesis.speak(readName);
-		}
-
-		
-	},
-
-	'click #whatIsHere': function(event) {
-		event.preventDefault();
-
-		if (Session.get("inLocation") == null) {
-			window.speechSynthesis.speak(new SpeechSynthesisUtterance("There's lots to do off campus, but unfortunately I can't tell you all that much about it."));
-		}
-		else {
-			var loc = Locations.findOne({"name":Session.get("inLocation")[0].name});
-			//console.log(loc.function);
-			readFunction = new SpeechSynthesisUtterance(loc.function);
-
-			window.speechSynthesis.speak(readFunction);
-		}
+		Session.set("navigateTo",document.getElementById("endpoint").value);
+		Router.go('/navigate');
 	}
 });
-
-// Template.compass.helpers({
-//     byId: function (id) {
-//         return document.getElementById(id);
-//     },
-//     text: function (id, value) {
-//         byId(id).innerHTML = value;
-//     },
-//     transform: function (id, commands) {
-//         var props = ['transform', 'webkitTransform', 'mozTransform',
-//                      'msTransform', 'oTransform'];
-//         var node  = byId(id);
-//         for (var i = 0; i < props.length; i ++) {
-//           	if ( typeof(node.style[props[i]]) != 'undefined' ) {
-//             	node.style[props[i]] = commands;
-//             	break;
-//           	}
-//         }
-//     },
-//     round: function (value) {
-//         return Math.round(value * 100) / 100;
-//     }
-// })
-
-//     Compass.noSupport(function () {
-//         text('text', 'no support');
-//     })
-//     .needGPS(function () {
-//         text('text', 'need GPS');
-//     })
-//     .needMove(function () {
-//         text('text', 'need move');
-//     })
-//     .init(function (method) {
-//         if ( method == 'orientationAndGPS' ) {
-//           	text('meta', 'GPS diff: ' + round(Compass._gpsDiff));
-//         }
-//     })
-//     .watch(function (heading) {
-//         text('text', round(heading));
-//         transform('compass', 'rotate(' + (-heading) + 'deg)');
-//     });
-    
-//     Compass.watch(function (heading) {
-// 	  $('.degrees').text(heading);
-// 	  $('.compass').css('transform', 'rotate(' + (-heading) + 'deg)');
-// 	});
-// 	Compass.init(function (method) {
-// 	  console.log('Compass heading by ' + method);
-// 	});
-

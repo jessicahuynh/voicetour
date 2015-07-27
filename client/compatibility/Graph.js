@@ -144,3 +144,5 @@ var Graph = (function (undefined) {
 	return Graph;
 
 })();
+
+//graph = new Graph(Map.findOne());

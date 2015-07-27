@@ -204,6 +204,17 @@ paths_northrabb = [
 	    "end":"kutz_c05",
 	    "description": "Get off the Loop Road and walk along the samller road.",
 	},
+	{
+	    "start":"kutz_c05",
+	    "end":"kutz_c03",
+	    "description": "Walk along the Loop Road.",
+	},
+	{
+	    "start":"kutz_c03",
+	    "end":"kutz_c05",
+	    "description": "Walk along the Loop Road.",
+	},
+
 	
 
 ]

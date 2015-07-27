@@ -5,6 +5,10 @@ Template.selfguide.helpers({
 	},
 });
 
+Template.selfguide.rendered = function() {
+	Session.set("pageTitle","Self-Guided Tour");
+};
+
 Tracker.autorun(function() {
 	setAudio(Session.get("inLocation")[0]);	
 });
@@ -28,5 +32,5 @@ function setAudio(loc) {
 	
 	
 	
-	Session.setPersistent("listenTo",listen);
+	Session.set("listenTo",listen);
 }

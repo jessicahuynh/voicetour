@@ -1,5 +1,11 @@
 Session.setDefault("searchTerm","");
-Session.setDefault("prev","");
+Session.setDefault("prev","/");
+
+Template.layout.helpers({
+    mobileTitle:function() {
+        return Session.get("pageTitle");
+    }
+});
 
 Template.layout.events({
     'submit #searchForm': function (event) {
@@ -23,19 +29,24 @@ Template.layout.events({
              $("#searchBox").toggle(450).focus();
          }
          else {
-             if ($("#searchBox").css("display") == "none") {
-                 $("#searchBox").slideDown();
+             if ($("#searchForm").css("display") == "none") {
+                 $("#searchForm").toggle();
                  $("#searchBox").focus();
              }
              else {
-                 $("#searchBox").slideUp();
+                 $("#searchForm").toggle();
              }
          }
      },
      'click .back':function(event) {
          event.preventDefault();
          Router.go(Session.get("prev"));
-         Session.set("prev","");
+         if (Session.get("prev").indexOf("viewLocation") != -1) {
+             console.log("back to a profile");
+
+            Blaze.renderWithData(Template.locationProfile,Session.get("viewLocation"),this);
+         }
+         //Session.set("prev","");
      },
      'click .nav-link':function(event) {
          slideNav();
@@ -83,9 +94,11 @@ function slideNav() {
     
     var selected = $(".navbar-header").hasClass('slide-active');
     
-    if ($(window).width() < 768) {
+    if ($(window).width() < 769) {
         $("#searchGlass").toggle("searchGlass");
-        $("#searchForm").toggle("searchForm");
+        
+        if ($("#searchForm").css("display") != "none")
+            $("#searchForm").toggle("searchForm");
     }
 
     $('#navbar-hamburger').stop().animate({

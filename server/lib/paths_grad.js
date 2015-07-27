@@ -180,6 +180,26 @@ paths_grad = [
 		"end":"epstein_c04",
 		"description":"Cross the street towards South Street Market and the train tracks."
 	},
+	{
+		"start":"epstein_e02",
+		"end":"epstein_c05",
+		"description":"Exit, head down the stairs, and then head for the small sidewalk that leads up to Ziv Quad, next to the Perennial Garden."
+	},
+	{
+		"start":"epstein_c05",
+		"end":"epstein_e02",
+		"description":"Head downhill and up the stairs to the Women's Studies Research Center entrance of Epstein."
+	},
+	{
+		"start":"epstein_c05",
+		"end":"ziv128_c02",
+		"description":"Follow the winding path uphill until you reach Ziv Quad."
+	},
+	{
+		"start":"ziv128_c02",
+		"end":"epstein_c05",
+		"description":"Follow the winding path downhill until you reach the Perennial Garden."
+	},
 	// grad
 	{
 		"start":"clot_e01",

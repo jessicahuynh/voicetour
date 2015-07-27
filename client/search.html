@@ -1,30 +1,30 @@
 <template name="search">
 <h1 class="page-header">Search</h1>
-<p>You searched for: {{searchTerm}}</p>
-
 <div class="row">
-	<div>
-		<div id="locations">
-			{{#ifEsInputIsEmpty index="locations" id="searchBox"}}
-				{{> voiceResults}}
-			{{/ifEsInputIsEmpty}}
-
-			{{#ifEsIsSearching index="locations" id="searchBox"}}
-				{{> loading}}
-			{{else}}
-			<div class="list-group">
-				{{#esEach index="locations" id="searchBox"}}
-					{{> locationListing}}
-				{{/esEach}}
-			</div>
-			{{/ifEsIsSearching}}
-
-			{{#ifEsHasNoResults index="locations" id="searchBox"}}
-			<p>No results found for &ldquo;{{searchTerm}}&rdquo;! Try searching again.</p>
-			{{/ifEsHasNoResults}}
-		</div>
-	</div>
+	<p class="col-xs-12">You searched for: {{searchTerm}}</p>
 </div>
+
+	
+<div id="locations">
+	{{#ifEsInputIsEmpty index="locations" id="searchBox"}}
+		{{> voiceResults}}
+	{{/ifEsInputIsEmpty}}
+
+	{{#ifEsIsSearching index="locations" id="searchBox"}}
+		{{> loading}}
+	{{else}}
+	<div class="list-group">
+		{{#esEach index="locations" id="searchBox"}}
+			{{> locationListing}}
+		{{/esEach}}
+	</div>
+	{{/ifEsIsSearching}}
+
+	{{#ifEsHasNoResults index="locations" id="searchBox"}}
+	<p>No results found for &ldquo;{{searchTerm}}&rdquo;! Try searching again.</p>
+	{{/ifEsHasNoResults}}
+</div>
+
 </template>
 
 <template name="voiceResults">

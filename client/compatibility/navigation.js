@@ -1,10 +1,12 @@
+
+
 function getRoute(starts, ends) {
 		// if it starts with a (, it's your current location
 		if (starts[0] == "(") {
 			// if you're in a building, return that building and go on as before
 			if (Session.get("inLocation")[1] == "in") {
 				starts = Locations.findOne({"name":Session.get("inLocation")[0].name}).name;
-				console.log(starts);
+				//console.log(starts);
 				
 				route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
 			}
@@ -28,9 +30,10 @@ function getRoute(starts, ends) {
 									nearestIntersection = intersection.id;
 									
 									route = getShortestRoute([nearestIntersection],Locations.findOne({"name":ends}).entrances);
-									console.log("*" + route);
+									//console.log("*" + route);
 									if (route != null) {
 										getRouteDescription(route);
+										Session.set("route",route);
 									}
 								}
 							}
@@ -80,7 +83,7 @@ function getShortestRoute(startEntrances,endEntrances) {
 		}
 	}
 
-	console.log(shortestRoute);
+	//console.log(shortestRoute);
 	return shortestRoute;
 }
 

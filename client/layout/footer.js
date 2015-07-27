@@ -27,7 +27,12 @@ Template.footer.helpers({
            return "current location";
        }
        else {
-           return "about " + Math.floor(Session.get("inLocation")[2]) + "m away";
+           if (Session.get("unit") == "m") {
+               return Math.floor(Session.get("inLocation")[2]) + "m away";
+           }
+           else {
+               return Math.round(Math.floor(Session.get("inLocation")[2])*3.28) + "ft away";
+           }
        }
    }
 });
@@ -46,6 +51,8 @@ Template.footer.events({
         msg.text = Session.get("listenTo");
         console.log(Session.get("listenTo"));
         msg.lang = 'en-US';
+        msg.rate = parseFloat(Session.get("rate"));
+        
         
         msg.onend = function(e) {
           console.log('Finished in ' + event.elapsedTime + ' seconds.');

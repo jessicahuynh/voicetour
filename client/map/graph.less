@@ -32,7 +32,7 @@ ul.-autocomplete-list {
 	}
 }
 
-@media (min-width:768px) {
+@media (min-width:769px) {
 	#navmenu {display:none;}
 	.tab-content div.tab-pane {
 		display:block;
@@ -40,6 +40,7 @@ ul.-autocomplete-list {
 }
 
 #navmenu {
+	display:none;
 	width:100%;
 	padding-left:15px;
 	padding-right:15px;
@@ -59,4 +60,16 @@ ul.-autocomplete-list {
 			text-transform:uppercase;
 		}
 	}
+}
+
+/* keep the route description a reasonable height */
+@media (min-width:769px) {
+	#routePane {
+		max-height:30em;
+		overflow-y:scroll;
+	}
+}
+
+#loadingPanel {
+	display:none;
 }

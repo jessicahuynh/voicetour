@@ -25,7 +25,7 @@ locations_parking = [
 	},
 	{
 		"id":"linseyparkinglot",
-		"name":"Linsey Parking lot",
+		"name":"Linsey Parking Lot",
 		"nickname":"Linsey Lot",
 		"coordinates":[
 			new Point(42.365568,-71.254114), 
@@ -37,7 +37,7 @@ locations_parking = [
 	},
 	{
 		"id":"towerlot",
-		"name":"Tower Parking lot",
+		"name":"Tower Parking Lot",
 		"nickname":"T-Lot",
 		"coordinates":[
 			new Point(42.370790, -71.258274), 
@@ -179,8 +179,7 @@ locations_parking = [
 			new Point(42.365064, -71.260004)
 		],
 		"category":["parking"],
-		"nearby":["bernstein-marcus","stop_admissions","greatlawn","slosberg"],
-		"entrances":["bernsteinparkinglot_e01"]
+		"nearby":["bernstein-marcus","stop_admissions","greatlawn","slosberg"]
 	},
 	{
 		"id":"hlot",
@@ -195,8 +194,7 @@ locations_parking = [
 			new Point(42.366453, -71.261501)
 		],
 		"category":["parking"],
-		"nearby":["shapirodorm"],
-		"entrances":["hlot_e01","hlot_e02"]
+		"nearby":["shapirodorm"]
 	},
 	{
 		"id":"admissionsvisitorparking",
@@ -214,7 +212,7 @@ locations_parking = [
 		"entrances":["slosberg_c02","slosberg_c03"]
 	},
 	{
-		"id":"theaterlot",
+		"id":"theaterparking",
 		"name":"Theater Lot",
 		"nickname":"theater lot",
 		"coordinates":[
@@ -226,8 +224,8 @@ locations_parking = [
 			new Point(42.363594, -71.263761),
 		],
 		"category":["parking"],
-		"nearby":["spingold","ridgewoodB","zivB”,“zivA”,“samuellemberg”,“goldman"],
-		"entrances":['theaterlot_e01','theaterlot_e02','theaterlot_e03','theaterlot_e04','theaterlot_e05','theaterlot_e06']
+		"nearby":["spingold,,ridgewoodB,zivB,zivA,lemberg,goldman"],
+		"entrances":[]
 	}
 ]
 

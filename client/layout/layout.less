@@ -1,7 +1,11 @@
 @import url('../colors.less');
 
-a, input, button, textarea, select, option, label {
-	font-family:"Trebuchet MS", Helvetica, Arial, sans-serif;
+body, p, span, div {
+	font-family:"Ubuntu","Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a, input, button, textarea, select, option, label, h1, h2, h3, h4, h5, h6 {
+	font-family:"Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	border-radius:0;
 }
 .btn {
@@ -12,6 +16,10 @@ a, input, button, textarea, select, option, label {
 	border-radius:0;
 	border:2px solid @dark-blue;
 	box-shadow: none;
+}
+
+#searchForm .form-group {
+	width:100%;
 }
 
 .form-group.required label:after {
@@ -36,8 +44,14 @@ body.slide-active {
 	}
 }
 #page-content.slide-active {
-    padding-top: 0
+    padding-top:71px;
 }
+@media (min-width:769px) {
+	#page-content.slide-active {
+		padding-top: 0;
+	}
+}
+
 nav div.container {
 	padding:0;
 	font-size:1.2em;
@@ -86,6 +100,11 @@ nav div.container {
 	}
 	.navbar-brand {
 		color:#ffffff;
+	}
+	
+	.navbar-nav li {
+		display:block;
+		clear:both;
 	}
 	.navbar-nav li a {
 		color:#efefef;
@@ -178,7 +197,7 @@ nav div.container {
 	    width: 100%
 	}
 }
-@media (min-width:768px) { 
+@media (min-width:769px) { 
 	#page-content {
 	    left: 0!important;
 		z-index:200;
@@ -254,6 +273,7 @@ button#searchGlass {
 		top:0;
 		right:0;
 		float:none;
+		display:none;
 		margin:0 auto;
 		padding:0 1em;
 		max-width:100%;
@@ -266,9 +286,7 @@ button#searchGlass {
 			margin-bottom:12px;
 		}
 		
-		input#searchBox { 
-			display:none; 
-		}
+		input {display:block;}
 		
 	}
 	button#searchGlass {
@@ -281,16 +299,49 @@ button#searchGlass {
 
 
 /* NAVBAR BRAND ON WEB */
-@media (min-width:768px) {
+@media (min-width:769px) {
 	nav.navbar .container .navbar-brand {
 		margin:0 auto;
+	}
+	
+	#toggleBtn {
+		display:none;
+	}
+	.back {
+		display:none;
+	}
+	
+	#discoverDeisLink {
+		display:block;
+	}
+	#mobileTitleLink {
+		display:none;
 	}
 }
 
 /* PAGE HEADER */
 @media(max-width:768px) {
+	// get rid of header in mobile view except for on pages that need the full location name
 	.page-header {
-		padding-top:9px;
+		display:none;
+	}
+	.locName {
+		display:block;
+		margin-top:0;
+	}
+	
+	.back {
+		display:none;
+	}
+	#toggleBtn {
+		display:block;
+	}
+	
+	#discoverDeisLink {
+		display:none;
+	}
+	#mobileTitleLink {
+		display:block;
 	}
 }
 
@@ -300,4 +351,26 @@ button#searchGlass {
 
 .navbar-header .back span {
 	font-size:1.4em;
+}
+
+
+
+/* ALERTS */
+.alert {
+	border-radius:0;
+}
+
+
+
+/* MAPS */
+#map-container, #map-nav {
+	height:300px;
+	width:100%;
+}
+
+
+
+/* SWITCHES */
+.bootstrap-switch {
+	border-radius:0;
 }
