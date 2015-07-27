@@ -14,7 +14,7 @@ locations = [
 						in artificial intelligence, cognitive science, and various neuroscience topics \
 						(examples include experimental psychology, computational neuroscience, and cellular \
 						and molecular neurobiology).",
-		"category":["science","classroom","offices"],
+		"category":["academics","offices"],
 		"entrances":["volen_e01","volen_ie02","volen_ie03","feldberg_ie01"],
 		"nearby":["feldberg","gzang","goldsmith","chapelsfield"]
 	},
@@ -33,8 +33,8 @@ locations = [
 			new Point(42.365548, -71.259941),
 		],
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
-		"description":"The Shapiro Campus Center opened in 2002 and is the hub of student life on campus. The SCC is open to students 24 hours a day, seven days a week. Many student organizations, including Student Union, Waltham Group, Student Events, WBRS (a radio station),the newspaper offices, BTV offices, and many others can be found within the campus center. It continues to be the most student-centered, “out of the classroom” building on campus. Although it is also home to the offices of the Dean of Student Life, Student Activities, and Department of Student Rights and Community Standards, students primarily utilize this building for social and extra curricular activities. It also contains Einstein Bros. Cafe, the campus Brandeis Bookstore, student art exhibition space, rehearsal spaces, meeting rooms, a computer library and the 250 seat Carl J. Shapiro Theater. This theater is home to the Undergraduate Theatre Collective, our student run theatre organization. They produce, act in and build sets for over ten shows a year, ranging from straight plays to musical theater to sketch comedy!",
-		"category":["student center"],
+		"description":"The Shapiro Campus Center opened in 2002 and is the hub of student life on campus. The SCC is open to students 24 hours a day, seven days a week. Many student organizations, including Student Union, Waltham Group, Student Events, WBRS (a radio station),the newspaper offices, BTV offices, and many others can be found within the campus center. It continues to be the most student-centered, “out of the classroom building on campus. Although it is also home to the offices of the Dean of Student Life, Student Activities, and Department of Student Rights and Community Standards, students primarily utilize this building for social and extra curricular activities. It also contains Einstein Bros. Cafe, the campus Brandeis Bookstore, student art exhibition space, rehearsal spaces, meeting rooms, a computer library and the 250 seat Carl J. Shapiro Theater. This theater is home to the Undergraduate Theatre Collective, our student run theatre organization. They produce, act in and build sets for over ten shows a year, ranging from straight plays to musical theater to sketch comedy!",
+		"category":["student life"],
 		"entrances":["scc_e01","scc_e02","scc_e03"]
 	},
 	{
@@ -48,7 +48,7 @@ locations = [
 			new Point(42.366023,-71.259101)],
 		"function": "Fellows Garden is a nice place to hangout with friends in nice weather",
 		"description":"Nobody knows the name",
-		"category":["art"],
+		"category":["landscape"],
 		"entrances":['fellowsgarden_c01','fellowsgarden_c02','fellowsgarden_c03']
 	},
 	{
@@ -62,7 +62,7 @@ locations = [
 			new Point(42.365428, -71.260770),],
 		"function": "Great Lawn is a nice place to hangout with friends in nice weather",
 		"description":"The Great Lawn is one of students’ favorite expanses of green on campus. Here you will typically see students doing their homework, playing frisbee, or just catching some afternoon sunshine between classes. It is also the setting for our activities fair, which takes place at the beginning of each semester, when over 260 clubs recruit first-years and continuing undergrads to their groups.",
-		"category":["lawn"],
+		"category":["landscape"],
 		"entrances":['scc_c07','scc_c08','scc_c09','scc_c10']
 	},
 	{
@@ -83,7 +83,7 @@ locations = [
 			],
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Rose Art Museum houses the largest collection of modern art in New England. Admission is free to students and many intern there during the year. For a fee of $10 per semester, Brandeis students can rent a piece from the Student Loan Collection to hang in their room. The Rose Art Museum houses works by artists such as Marc Chagall, Andy Warhol, and Wassily Kandinsky. Recent acquisitions in 2012 have included works by Bruce Conner and Mark Bradford. As one of the most daring and innovative contemporary art museums the Rose regularly showcases new and innovative exhibitions. It also hosts regular artist talks and its permanent collection is frequently used as a teaching tool both in and outside of the classroom.",
-		"category":["art"],
+		"category":["landscape"],
 		"entrances":['museum_e01']
 	},
 
@@ -98,7 +98,7 @@ locations = [
 			new Point(42.366782,-71.257457), ],
 		"function": "Bassine Science Building has many bio lab?",
 		"description":"Lab",
-		"category":["science","classroom"],
+		"category":["academics"],
 		"entrances":["bassine_e01","bassine_e02","bassine_e03"]
 
 	},
@@ -113,7 +113,7 @@ locations = [
 			new Point(42.366546,-71.258833),
 			new Point(42.366751,-71.259269)],
 		"function":"Feldberg contains offices and is home to Library and Technology Services.",
-		"category":["science","offices"],
+		"category":["academics","offices"],
 		"entrances":["feldberg_e01","feldberg_ie01"]
 	},
 	
@@ -128,7 +128,7 @@ locations = [
 			new Point(42.362017, -71.263813),
 			new Point(42.361845, -71.263886),
 			new Point(42.361886, -71.264220)],
-		"category":["administrative","classroom"],
+		"category":["offices","academics"],
 		"entrances":["turner_e01"]
 	},
 	bernstein = {
@@ -140,7 +140,7 @@ locations = [
 			new Point(42.365222,-71.259642), 
 			new Point(42.365046,-71.259492), 
 			new Point(42.36489,-71.259837)],
-		"category":["administrative"]
+		"category":["offices"]
 		},
 	epstein = {
 		"id":"epstein",
@@ -152,7 +152,7 @@ locations = [
 			new Point(42.362374,-71.260823), 
 			new Point(42.362134,-71.260864), 
 			new Point(42.362204,-71.261671)],
-		"category":["classroom","offices"],
+		"category":["academics","offices"],
 		"entrances":["epstein_e01","epstein_e02"]
 		},
 	facultycenter = {
@@ -175,7 +175,7 @@ locations = [
 			new Point(42.364799,-71.26258), 
 			new Point(42.364525,-71.262821), 
 			new Point(42.364628,-71.263304)],
-		"category":["art"],
+		"category":["academics"],
 		"entrances":['goldman_e01','goldman_e02']
 		},
 	gryzmish = {
@@ -187,7 +187,7 @@ locations = [
 			new Point(42.365759,-71.25918), 
 			new Point(42.365577,-71.259025), 
 			new Point(42.365417,-71.259403)],
-		"category":["administrative"]
+		"category":["offices"]
 		},
 	sachar = {
 		"id":"sachar",
@@ -213,7 +213,7 @@ locations = [
 			new Point(42.364810, -71.264904), 
 			new Point(42.364738, -71.265078), 
 		],
-		"category":["classroom","graduate"],
+		"category":["academics"],
 		"entrances":['sachar_e01']
 		},
 	irving = {
@@ -224,7 +224,7 @@ locations = [
 			new Point(42.365423,-71.259113), 
 			new Point(42.36529,-71.259006), 
 			new Point(42.365076,-71.259521)],
-		"category":["administrative"]
+		"category":["offices"]
 		},
 	info = {
 		"id":"info",
@@ -236,7 +236,7 @@ locations = [
 			new Point(42.365007,-71.258634),
 			new Point(42.364978,-71.258681), 
 			],
-		"category":["informational"],
+		"category":["offices"],
 		"entrances":["info_e01"]
 		},
 	pollack = {
@@ -247,7 +247,7 @@ locations = [
 			new Point(42.365291,-71.262325), 
 			new Point(42.365122,-71.262435), 
 			new Point(42.365158,-71.262541)],
-		"category":["art","classroom"],
+		"category":["academics"],
 		"entrances":['pollack_e01']
 		},
 	rabbSchool = {
@@ -259,7 +259,7 @@ locations = [
 			new Point(42.362872,-71.259233),
 			new Point(42.362961,-71.258887)],
 		"function":"The Rabb School is home to continuing education, graduate and professional programs, OLLI @ Brandeis, and summer programs, including the Justice Brandeis Semester (JBS).",
-		"category":["graduate"],
+		"category":["academics"],
 		"nearby":["lemberg","slosberg"],
 		"entrances":["rabbSchool_e01","rabbSchool_e02","rabbSchool_e03"]
 		},
@@ -275,7 +275,7 @@ locations = [
 			new Point(42.364074, -71.261022),
 			new Point(42.364386, -71.260705)],
 		"function":"Admissions hosts tours and provides information about Brandeis to any interested parties.",
-		"category":["offices","informational"],
+		"category":["offices"],
 		"entrances":["admissions_e01","admissions_e02"],
 		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC","village"]
 		},	
@@ -290,7 +290,7 @@ locations = [
 			new Point(42.363985,-71.259942)],
 		"function":"Slosberg is home to the Brandeis Concert Series.",
 		"description":"Slosberg Music Center, built in the shape of a grand piano with 88 windows to represent the 88 keys on a piano, is home to the music department. Inside you will discover a 225 seat concert hall where eight student ensembles and the internationally acclaimed Lydian String Quartet perform everything from Beethoven to original student-composed electronic music. Additionally, there are practice rooms open to all students including both music majors and non-music majors. The first piano of acclaimed composer Leonard Bernstein (faculty 1951-55) is displayed in the lobby. Each year, nearly 300 professional and student performances and exhibitions take place on campus, culminating in the annual Leonard Bernstein Festival for the Creative Arts, founded in 1952 by Bernstein himself. First Lady Eleanor Roosevelt, who was also a founding faculty member of Brandeis, had a television show in Slosberg, and it is said that on that show JFK confirmed he was running for President of the United States.",
-		"category":["art","classroom"],
+		"category":["academics"],
 		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
 		"nearby":["admissions","bernstein-marcus","lemberg","village"]
 		},
@@ -311,7 +311,7 @@ locations = [
 			new Point(42.364589, -71.261813),
 			],
 		"description":"Spingold Theater, is home to the theatre department. The cutting-edge Brandeis Theatre Company produces five productions each season. Debra Messing (Grace Adler) of Will & Grace , Steven Culp (Rex VanDe Camp) of Desperate Housewives, and Loretta Devine of the original Broadway cast of Dreamgirls, among many others, are graduates of our programs. Undergraduate students are encouraged to get involved with campus productions, whether that means assistant stage managing, costume designing, or acting in them!",
-		"category":["art"],
+		"category":["academics"],
 		"entrances":['spingold_e01','spingold_e02']
 		},
 	abelson = {
@@ -323,7 +323,7 @@ locations = [
 			new Point(42.366547, -71.258397), 
 			new Point(42.366157, -71.258709), 
 			new Point(42.366220, -71.258861)],
-		"category":["science","classroom"],
+		"category":["academics"],
 		"entrances":["abelson_e01","abelson_e02","abelson_c01","gzang_ie03"]
 		},
 	berlin = {
@@ -372,7 +372,7 @@ locations = [
 			new Point(42.367281,-71.259034), 
 			new Point(42.367681,-71.260542)],
 		"description":"Chapels Field is usually bustling with student activities ranging from sports events, such as Quidditch practice, to concerts, such as Springfest. The three chapels on Chapel’s Field represent three different faiths and surround a heart shaped pond. They are built in such a way that no chapel casts its shadow over another chapel, symbolizing our respect for pluralism and diversity. The university has added a Muslim Prayer Room to campus and has connections with various other religious groups off-campus to address the spiritual needs of all. In total, the Brandeis community represents seventeen recognized world religions.",
-		"category":["lawn"]
+		"category":["landscape"]
 		},
 	brown = {
 		"id":"brown",
@@ -383,7 +383,7 @@ locations = [
 			new Point(42.36728,-71.256666), 
 			new Point(42.367169,-71.256718), 
 			new Point(42.367266,-71.257265)],
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["brown_e01"],
 		},
 	farber = {
@@ -408,7 +408,7 @@ locations = [
 			new Point(42.367281, -71.258526), 
 			new Point(42.367103, -71.258148)],
 		"function":"Goldsmith is home to the mathematics department.",
-		"category":["science","classroom"],
+		"category":["academics"],
 		"entrances":["goldsmith_e01","goldsmith_ie02"]
 		},
 	{
@@ -422,7 +422,7 @@ locations = [
 			new Point(42.366182, -71.258006)
 		],
 		"function":"",
-		"category":["science","classroom"],
+		"category":["academics"],
 		"entrances":["edison_e01","gzang_ie02"]
 	},
 	heller = {
@@ -435,7 +435,7 @@ locations = [
 			new Point(42.369025,-71.258474), 
 			new Point(42.369158,-71.259171)],
 		"function":"Heller-Brown is home to the Heller School for Social Policy and Management, one of the top ten schools of social policy in the United States and one of the eight approved U.S. training institutions for World Bank Scholars.",
-		"category":["classroom","graduate"],
+		"category":["academics"],
 		"entrances":["heller_e01"],
 		},
 	rabb = {
@@ -447,7 +447,7 @@ locations = [
 			new Point(42.368996,-71.256845),
 			new Point(42.36915,-71.257674), 
 			],
-		"category":["graduate"],
+		"category":["academics"],
 		"entrances":["rabb_e01"]
 		},
 	roseMedical = {
@@ -458,7 +458,7 @@ locations = [
 			new Point(42.365901,-71.257013), 
 			new Point(42.365724,-71.257239), 
 			new Point(42.365884,-71.257585)],
-		"category":["science"],
+		"category":["academics"],
 		"entrances":["rosenstiel_e01","rosenstiel_e02"]
 		},
 	schwartz = {
@@ -470,7 +470,7 @@ locations = [
 			new Point(42.367563,-71.257024), 
 			new Point(42.367418,-71.257072), 
 			new Point(42.367494,-71.257484)],
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["schwartz_e01"]
 		},
 	scienceCenter = {
@@ -488,7 +488,7 @@ locations = [
 			new Point(42.365741, -71.258570), 
 		],
 		"description":"The Carl J. Shapiro Science Center is home to many of our undergraduate science programs. The center is comprised of three main centers, the Gerstenzang Science Library (commonly referred to as G-Zang by students), and other research facilities. The first center is the Brandeis University National Center for Behavioral Genomics which focuses on brain function and behavior in addition to finding therapeutic strategies for brain disease and dysfunction. The second is The Volen Center, or National Center for Complex Systems, in which faculty and students study the brain and intelligence. This center’s staff specialize in artificial intelligence, cognitive science, and various neuroscience topics (examples include experimental psychology, computational neuroscience, and cellular and molecular neurobiology). The final center is The Brandeis Materials Research Science and Engineering Center which focuses on developing the relationship between biology and materials science via a top-down and bottom-up method. Each center was founded with interdisciplinary study in mind. In fact, a few classes are taught by faculty of varying disciplines – one class is even taught by three professors – a biologist, a chemist, and a physicist. This interdisciplinary approach is different from the instruction methods at most universities. Beyond the centers, faculty and students from many departments collaborate in research, in the classrooms and in the labs. The Leo Gerstenzang Complex has traditional lab areas as well as special classrooms for teaching math and science. Brandeis Students have many opportunities to engage in research during their undergraduate years. In fact, since 2003, undergraduate students have co-authored over one hundred and thirty published articles. ",
-		"category":["science","classroom","student center"],
+		"category":["academics","student life"],
 		"entrances":["ssc_e01","ssc_e02","ssc_e03","ssc_ie01"]
 		},
 	usdan = {
@@ -500,8 +500,8 @@ locations = [
 			new Point(42.367852,-71.256794), 
 			new Point(42.367777,-71.256451), 
 			new Point(42.368243,-71.256259)],
-		"category":["student center","dining"],
-		"description":"Usdan Student Center contains an a la carte style dining hall, a post office, an ATM, the Student Service Bureau (where you can lease microwaves or refrigerators, sign up for newspaper delivery, and rent movies, among other things), administrative offices, and a variety of meeting spaces. It is a busy meeting place for students and faculty – especially between classes or at meals. The convenience store, also located inside Usdan, is open until 2am seven days a week and has everything from laundry detergent to midnight snacks available. Usdan also houses the Hiatt Career Center, Academic Services, Department of Community Living, and Student Financial Services. Services at the Hiatt Career Center are free to students and alumni. Services include one-on-one career counseling sessions, a network of over 25,000 internships, assistance in writing resumes and cover letters, and interview prep. Usdan is also home to the study abroad offices – over a third of the Junior class goes abroad every year! If you’d like to explore Usdan, you’ll find the dining hall, post office, and some offices on the lower level.",
+		"category":["student life"],
+		"description":"Usdan Student Center contains an a la carte style dining hall, a post office, an ATM, the Student Service Bureau (where you can lease microwaves or refrigerators, sign up for newspaper delivery, and rent movies, among other things), offices offices, and a variety of meeting spaces. It is a busy meeting place for students and faculty – especially between classes or at meals. The convenience store, also located inside Usdan, is open until 2am seven days a week and has everything from laundry detergent to midnight snacks available. Usdan also houses the Hiatt Career Center, Academic Services, Department of Community Living, and Student Financial Services. Services at the Hiatt Career Center are free to students and alumni. Services include one-on-one career counseling sessions, a network of over 25,000 internships, assistance in writing resumes and cover letters, and interview prep. Usdan is also home to the study abroad offices – over a third of the Junior class goes abroad every year! If you’d like to explore Usdan, you’ll find the dining hall, post office, and some offices on the lower level.",
 		"entrances":["usdan_e01"]
 		
 		},
@@ -552,7 +552,7 @@ locations = [
 			new Point(42.366953, -71.255936), 
 			new Point(42.366929, -71.255488),
 			new Point(42.367387, -71.255545)],
-		"category":["art"],
+		"category":["dorm","landscape"],
 		"description":"Usen Castle may seem out of place on our campus, and, in fact, it predates the university. The castle was built to look like many of the castles that one might find in Scotland; however, this castle was built based on rough exterior sketches drawn from the outside of an already-existing castle. As a result, the castle is filled with architectural mishaps including rogue staircases, trapdoors, and oddly shaped rooms. While it is now a national historic landmark, the castle is also a residence hall with singles, doubles, and suites available for students in their sophomore year. With its quirky character and spectacular view of Boston, the castle makes for a unique living experience.",
 		"entrances":["castle_e01","castle_e02"],
 	},
@@ -565,7 +565,7 @@ locations = [
 			new Point(42.367790, -71.255139), 
 			new Point(42.367576, -71.255094), 
 			new Point(42.367591, -71.254939),],
-		"category":["art"],
+		"category":["student life"],
 		"entrances":["icc_e01"],
 	},
 
@@ -586,7 +586,7 @@ locations = [
 			new Point(42.369151, -71.255997),
 			new Point(42.369151, -71.256053),
 			new Point(42.369131, -71.256053),],
-		"category":["offices","administrative"],
+		"category":["offices"],
 		"entrances":["kutz_e01","Kutz_e02"],
 	},
 	mandel = {
@@ -625,7 +625,7 @@ locations = [
 						building regularly hosts an interdisciplinary seminar taught by several professors from \
 						different areas of study. Classes in this building are taught in a round-table setting \
 						as well as in lecture halls.",
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["mandel_e01"],
 		"nearby":["olin-sang","golding","rabbGrad", "heller"],
 	},
@@ -638,7 +638,7 @@ locations = [
 			new Point(42.370013, -71.258116), 
 			new Point(42.369876, -71.257926), 
 			new Point(42.370232, -71.257451),],
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["golding_e01"],
 		"nearby":["olin-sang","mandel","lown","shiffman"]
 	},
@@ -651,7 +651,7 @@ locations = [
 			new Point(42.369831, -71.257372), 
 			new Point(42.369475, -71.256876), 
 			new Point(42.369583, -71.256729),],
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["shiffman_e01"],
 	},
 	olinsang = {
@@ -663,7 +663,7 @@ locations = [
 			new Point(42.369778, -71.258012), 
 			new Point(42.369392, -71.257481), 
 			new Point(42.369507, -71.257322),],
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["olin-sang_e01"],
 	},
 	goldfarb = {
@@ -682,7 +682,7 @@ locations = [
 			new Point(42.368135, -71.257891),
 			new Point(42.368118, -71.257811),
 			new Point(42.368674, -71.257622),],
-		"category":["classroom"],
+		"category":["academics"],
 		"description": "Goldfarb/Farber Libraries house ever growing collections and reference resources in creative arts, humanities, government documents, Judaica, and social sciences. Research materials are extremely accessible to students due to the online availability of resources, and additional resources are made available through the Boston Library Consortium and the Interlibrary Loan system. The library offers services for students including a listening center, computer labs, study rooms, a media lab that helps students edit their films and soundtracks, as well as the Writing Center. The Writing Center assists students in all aspects of writing their papers, from brainstorming to editing. Recently, a new café was added to the Green Room section of the library.",
 		"entrances":["goldfarb_e01","goldfarb_e02"],
 	},	
@@ -695,7 +695,7 @@ locations = [
 			new Point(42.366653, -71.257549), 
 			new Point(42.366304, -71.257812), 
 			new Point(42.366647, -71.258526)],
-		"category":["library","classroom"],
+		"category":["library","academics"],
 		"entrances":["gzang_e01","gzang_e02","gzang_ie01","gzang_ie02","gzang_ie03"],
 	},
 	pearlman = {
@@ -707,7 +707,7 @@ locations = [
 			new Point(42.367577, -71.257855), 
 			new Point(42.367302, -71.257938), 
 			new Point(42.367367, -71.258206)],
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["pearlman_e01","pearlman_e02"],
 	},
 
@@ -764,7 +764,7 @@ locations = [
 			new Point(42.370185, -71.257497), 
 			new Point(42.369941, -71.257161),
 			new Point(42.370076, -71.256976),],
-		"category":["classroom"],
+		"category":["academics"],
 		"entrances":["lown_e01"],
 	},
 	{
@@ -780,7 +780,7 @@ locations = [
 			new Point(42.368090, -71.257274),
 			new Point(42.367938, -71.257330),
 			new Point(42.367883, -71.257026),],
-		"category":[],
+		"category":["student life"],
 		"entrances":["levin_e01","levin_e02",],
 	},
 	{
@@ -795,7 +795,7 @@ locations = [
 			new Point(42.365901, -71.257018),
 			new Point(42.365947, -71.256925),
 			new Point(42.366248, -71.256689),],
-		"category":["lab"],
+		"category":["academics"],
 		"entrances":["rosensweig_e01","rosensweig_e02","rosensweig_e03"],
 	},
 	{
@@ -809,7 +809,7 @@ locations = [
 			new Point(42.365884, -71.256773),
 			new Point(42.365947, -71.256925),
 			new Point(42.366274, -71.256662),],
-		"category":["lab"],
+		"category":["academics"],
 		"entrances":["foster_e01"],
 	},
 	{
@@ -830,7 +830,7 @@ locations = [
 			new Point(42.366143, -71.255511),
 			new Point(42.366241, -71.255544),
 			new Point(42.366228, -71.255598),],
-		"category":[],
+		"category":["health"],
 		"description":"Stoneman Public Safety, Stoneman is home to Brandeis Police.",
 		"entrances":["police_e01"],
 	},
@@ -861,7 +861,7 @@ locations = [
 			new Point(42.366031, -71.255433), 
 			new Point(42.365898, -71.255424),
 			new Point(42.365927, -71.255305),],
-		"category":["lab"],
+		"category":["academics"],
 		"entrances":["superconducting_e01"],
 	},
 	{
@@ -873,7 +873,7 @@ locations = [
 			new Point(42.367868, -71.257631), 
 			new Point(42.367728, -71.257779), 
 			new Point(42.367751, -71.257513),],
-		"category":["garden"],
+		"category":["landscape"],
 	},
 	{
 		"id":"lemberg",
@@ -889,7 +889,7 @@ locations = [
 			new Point(42.363404, -71.258886),
 			new Point(42.363630, -71.258806)
 		],
-		"category":["classroom"],
+		"category":["academics"],
 		"nearby":["rabbSchool","slosberg"],
 		"entrances":["lemberg_e01"]
 	},
@@ -908,7 +908,7 @@ locations = [
 			new Point(42.364425, -71.264190),
 			new Point(42.364495, -71.264491),
 		],
-		"category":["classroom"],
+		"category":["academics"],
 		"nearby":["sachar","goldman"],
 		"entrances":['samuellemberg_e01','samuellemberg_e02']
 	},
