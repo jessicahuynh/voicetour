@@ -285,6 +285,16 @@ paths_gym = [
 		"end":"healthcenter_e01",
 		"description":"Walk toward the building near the stairway."
 	},
+	{
+		"start":"superconducting_e01",
+		"end":"sstreet_c01",
+		"description":"Walk toward the South Street."
+	},
+	{
+		"start":"sstreet_c01",
+		"end":"superconducting_e01",
+		"description":"Walk the small path that turing right."
+	},
 
 
 

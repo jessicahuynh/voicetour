@@ -410,6 +410,41 @@ paths_science = [
 	    "end":"rosenstiel_c04",
 	    "description": "Walk down the slope on Loop Road.",
 	},
+	{
+	    "start":"rosenstiel_c02",
+	    "end":"foster_e01",
+	    "description": "The entrance is on your left hand side.",
+	},
+	{
+	    "start":"foster_e01",
+	    "end":"rosenstiel_c02",
+	    "description": "Exit the building and get on the path in front of you.",
+	},
+	{
+	    "start":"edison_c03",
+	    "end":"rosensweig_e01",
+	    "description": "Up the stairs of the buidling on your left side.",
+	},
+	{
+	    "start":"rosensweig_e01",
+	    "end":"edison_c03",
+	    "description": "Walk toward the parking lot.",
+	},
+	{
+	    "start":"rosensweig_e02",
+	    "end":"edison_c02",
+	    "description": "Walk toward the parking lot.",
+	},
+	{
+	    "start":"edison_c02",
+	    "end":"rosensweig_e02",
+	    "description": "Walk toward the building next to the path way.",
+	},
+	// {
+	//     "start":"rosensweig_e03",
+	//     "end":"",
+	//     "description": "Walk toward the Loop Road .",
+	// },
 
 
 ]
