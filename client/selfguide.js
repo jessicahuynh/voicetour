@@ -11,6 +11,7 @@ Template.selfguide.rendered = function() {
 
 Tracker.autorun(function() {
 	setAudio(Session.get("inLocation")[0]);	
+	console.log("system print ")
 });
 
 function setAudio(loc) {

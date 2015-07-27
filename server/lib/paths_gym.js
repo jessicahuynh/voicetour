@@ -270,6 +270,22 @@ paths_gym = [
 		"end":"gosmanparkinglot_e02",
 		"description":"Pass through the parking lot."
 	},
+	{
+		"start":"healthcenter_e01",
+		"end":"healthcenter_c01",
+		"description":"Walk toward the small parking lot."
+	},
+	{
+		"start":"healthcenter_c01",
+		"end":"healthcenter_e01",
+		"description":"Walk toward the building near the stairway."
+	},
+	{
+		"start":"healthcenter_c01",
+		"end":"healthcenter_e01",
+		"description":"Walk toward the building near the stairway."
+	},
+
 
 
 ]
