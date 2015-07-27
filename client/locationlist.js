@@ -47,5 +47,7 @@ Template.locationList.events({
 	},
 	'click .selection':function(event) {
 		event.preventDefault();
+		
+		Session.set("category",$(event.target).data("filter"));
 	}
 });
