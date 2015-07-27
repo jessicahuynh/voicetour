@@ -170,17 +170,22 @@ Template.steps.rendered = function () {
 
 				
 				for(var j = 0; j<route.length - 1; j++){
-					addRoutes(route[j],route[j+1],'stepMap', map,'#000000',routesForStep);
-					console.log("draw route");
+					if (j != count){
+						addRoutes(route[j],route[j+1],'stepMap', map,'#000000',routesForStep);
+						console.log("draw route");
+					} else {
+						addRoutes(route[j],route[j+1],'stepMap', map,'#00FFFF',routesForStep);;
+					}
+
 				}
 
-				if (count == 0) {
-			// 	console.log("ready to add blue route: " + Session.get("countForStep"));
-					console.log("count before blue: " + count);
-			 		routesForStep[count].setOptions({strokeColor: '#00FFFF'});
-			 		//console.log("added blue route");
-			 		//count ++;
-				}
+			// 	if (count == 0) {
+			// // 	console.log("ready to add blue route: " + Session.get("countForStep"));
+			// 		console.log("count before blue: " + count);
+			//  		routesForStep[count].setOptions({strokeColor: '#00FFFF'});
+			//  		//console.log("added blue route");
+			//  		//count ++;
+			// 	}
 			}	
 
 		})
@@ -189,11 +194,22 @@ Template.steps.rendered = function () {
 			console.log("in the autorun now for countRefresh:" + Session.get("countRefresh"));
 			var countRefresh = Session.get("countRefresh");
 			getStepDescription(route);
-			if (countRefresh != 0 && routesForStep != []) {
-				routesForStep[countRefresh - 1].setOptions({strokeColor: '#000000'});
-			}
+			// if (countRefresh != 0 && routesForStep != []) {
+			// 	routesForStep[countRefresh - 1].setOptions({strokeColor: '#000000'});
+			// }
 			
-			routesForStep[countRefresh].setOptions({strokeColor: '#00FFFF'});
+			// routesForStep[countRefresh].setOptions({strokeColor: '#00FFFF'});
+			deleteRoutes(routesForStep);
+			routesForStep = [];
+			for(var j = 0; j<route.length - 1; j++){
+				if (j != countRefresh){
+					addRoutes(route[j],route[j+1],'stepMap', map,'#000000',routesForStep);
+					console.log("draw route");
+				} else {
+					addRoutes(route[j],route[j+1],'stepMap', map,'#00FFFF',routesForStep);;
+				}
+
+			}
 		})
 
 
@@ -201,11 +217,22 @@ Template.steps.rendered = function () {
 			console.log("in the autorun now for countPrev:" + Session.get("countPrev"));
 			var countPrev = Session.get("countPrev");
 			getStepDescription(route);
-			if (countPrev != route.length && routesForStep != []) {
-				routesForStep[countPrev + 1].setOptions({strokeColor: '#000000'});
-			}
+			// if (countPrev != route.length && routesForStep != []) {
+			// 	routesForStep[countPrev + 1].setOptions({strokeColor: '#000000'});
+			// }
 			
-			routesForStep[countPrev].setOptions({strokeColor: '#00FFFF'});
+			// routesForStep[countPrev].setOptions({strokeColor: '#00FFFF'});
+			deleteRoutes(routesForStep);
+			routesForStep = [];
+			for(var j = 0; j<route.length - 1; j++){
+				if (j != countPrev){
+					addRoutes(route[j],route[j+1],'stepMap', map,'#000000',routesForStep);
+					console.log("draw route");
+				} else {
+					addRoutes(route[j],route[j+1],'stepMap', map,'#00FFFF',routesForStep);;
+				}
+
+			}
 		})
 
 
