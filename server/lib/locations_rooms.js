@@ -10,7 +10,6 @@ locations_rooms = [
 // 		"description":"",
 // 		"category":["dining"],
 // 		"entrances":[],
-// 		"nearby":[],
 // 	},
 	{
 		"id":"dd",
@@ -25,8 +24,7 @@ locations_rooms = [
 		"function":"",
 		"description": "",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 	{
 		"id":"einstein",
@@ -41,8 +39,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 // 	{
 // 		"id":"facultyclub",
@@ -55,7 +52,6 @@ locations_rooms = [
 // 		"description":"",
 // 		"category":["dining"],
 // 		"entrances":[],
-// 		"nearby":[],
 // 	},
 	{
 		"id":"shermandining",
@@ -72,8 +68,7 @@ locations_rooms = [
 		"function":"",
 		"description":"Sherman Dining Hall is one of main dining facilities on campus. It is an all-you-care-to- eat buffet style option. Sherman is unique in that it is the only integrated kosher (Jewish dietary law) cafeteria in the country, where all students can eat together in the same place. Options include grilled foods, a sandwich station, a salad bar, pizza, a stir fry bar, omelet stations, a gluten free section, a crepe station, vegan and vegetarian options, as well as a large dessert selection. Furthermore, students can submit recipes from home and receive notice as to when these coveted meals will be served in Sherman.",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 		{
 		"id":"starbucksHeller",
@@ -88,8 +83,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 		{
 		"id":"starbucksLib",
@@ -104,8 +98,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 		{
 		"id":"peets",
@@ -120,8 +113,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 		{
 		"id":"stein",
@@ -136,8 +128,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 	{
 		"id":"usdanBoulevard",
@@ -156,8 +147,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 	{
 		"id":"usdanCafe",
@@ -172,8 +162,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},	
 {
 		"id":"cStore",
@@ -188,21 +177,22 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 {
 		"id":"usdanLouisDeli",
 		"name":"Usdan Louis' Deli",
 		"nickname":["Deli","Louis"],
 		"coordinates": [
-			new Point(), 
+			new Point(42.368022, -71.257302), 
+			new Point(42.367935, -71.257338), 
+			new Point(42.367905, -71.257197), 
+			new Point(42.367971, -71.257184), 
 			],
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
  },
 	{
 		"id":"isso",
@@ -217,8 +207,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["offices"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 	{
 		"id":"mail",
@@ -233,21 +222,22 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["offices"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 	{
 		"id":"registrar",
 		"name":"Registrar Office",
 		"nickname":"registrar",
 		"coordinates": [
-			new Point(42.369030, -71.255934), 
+			new Point(42.369076, -71.255889), 
+			new Point(42.368974, -71.255935), 
+			new Point(42.368998, -71.256039), 
+			new Point(42.369106, -71.255991), 
 			],
 		"function":"",
 		"description":"",
 		"category":["offices"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 	{
 		"id":"bookStore",
@@ -262,8 +252,7 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["student life"],
-		"entrances":[],
-		"nearby":[],
+		"entrances":[]
 	},
 ]
 

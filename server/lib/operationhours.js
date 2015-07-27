@@ -272,8 +272,35 @@ operationhours=[
 		"Sat":closed,
 		"Sun":closed
 	},
-	//career center
-	//study abroad
-	//game room
+	{
+		"id":"hiattCareerCenter",//need add location
+		"Mon":["09","00","17","00"],
+		"Tue":["09","00","17","00"],
+		"Wed":["09","00","17","00"],
+		"Thu":["09","00","17","00"],
+		"Fri":["09","00","17","00"],
+		"Sat":closed,
+		"Sun":closed
+	},
+	{
+		"id":"studyAbroad",//need add location
+		"Mon":["09","00","17","00"],
+		"Tue":["09","00","17","00"],
+		"Wed":["09","00","17","00"],
+		"Thu":["09","00","17","00"],
+		"Fri":["09","00","17","00"],
+		"Sat":closed,
+		"Sun":closed
+	},
+	{
+		"id":"gameRoom",//need add location
+		"Mon":["11","00","23","00"],
+		"Tue":["11","00","23","00"],
+		"Wed":["11","00","23","00"],
+		"Thu":["11","00","23","00"],
+		"Fri":["13","00","24","00"],
+		"Sat":["13","00","24","00"],
+		"Sun":["13","00","24","00"],
+	}
 ]
 
