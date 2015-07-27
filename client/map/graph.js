@@ -123,7 +123,26 @@ Template.graph.helpers({
 				collection:Locations,
 				matchAll:true,
 				field:"name",
-				template:Template.suggestions
+				template:Template.suggestions,
+				selector: function(match) {
+                   var regex;
+                   regex = new RegExp(match, 'i');
+                   return {
+                       $or: [
+                          {
+                              'name': regex
+                          }, {
+                              'nickname': regex
+                          }, {
+							  'category': regex
+						  }, {
+							  'function':regex
+						  }, {
+							  'description':regex
+						  }
+                       ]
+                   };
+                },
 			}]
 		};
 	},
