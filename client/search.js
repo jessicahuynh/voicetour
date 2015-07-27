@@ -16,7 +16,7 @@ Template.search.helpers({
 
 Template.search.rendered = function() {
 	Session.set("pageTitle","Search");
-	$("#searchForm").show();
+	$("#searchForm").show("slow");
 	$("#searchBox").css("display","block").focus();
 }
 

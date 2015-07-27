@@ -26,7 +26,7 @@ Template.layout.events({
          event.preventDefault();
          
          if ($(window).width() > 768) {
-             $("#searchBox").toggle(450).focus();
+             $("#searchBox").toggle("slow").focus();
          }
          else {
              if ($("#searchForm").css("display") == "none") {

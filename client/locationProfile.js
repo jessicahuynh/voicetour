@@ -83,8 +83,6 @@ Template.locationProfile.rendered = function() {
 	var listen = thisLoc.name + ". " + thisLoc.function + thisLoc.description;
 	Session.set("listenTo",listen);
 	
-	$("#searchForm").hide();
-	
 	if ($(window).width() > 768) {
 		$(".page-header").prepend("<a href='#' id='returnToList' class='back'><span class='glyphicon glyphicon-menu-left'></span></a>");
 	}
