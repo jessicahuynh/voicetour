@@ -16,7 +16,8 @@ locations = [
 						and molecular neurobiology).",
 		"category":["academics","offices"],
 		"entrances":["volen_e01","volen_ie02","volen_ie03","feldberg_ie01"],
-		"nearby":["feldberg","gzang","goldsmith","chapelsfield"]
+		"nearby":["feldberg","gzang","goldsmith","chapelsfield"],
+		"pic":"https://brandeis.box.com/volen",
 	},
 	{
 		"id":"scc",
@@ -35,7 +36,8 @@ locations = [
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
 		"description":"The Shapiro Campus Center opened in 2002 and is the hub of student life on campus. The SCC is open to students 24 hours a day, seven days a week. Many student organizations, including Student Union, Waltham Group, Student Events, WBRS (a radio station),the newspaper offices, BTV offices, and many others can be found within the campus center. It continues to be the most student-centered, “out of the classroom building on campus. Although it is also home to the offices of the Dean of Student Life, Student Activities, and Department of Student Rights and Community Standards, students primarily utilize this building for social and extra curricular activities. It also contains Einstein Bros. Cafe, the campus Brandeis Bookstore, student art exhibition space, rehearsal spaces, meeting rooms, a computer library and the 250 seat Carl J. Shapiro Theater. This theater is home to the Undergraduate Theatre Collective, our student run theatre organization. They produce, act in and build sets for over ten shows a year, ranging from straight plays to musical theater to sketch comedy!",
 		"category":["student life"],
-		"entrances":["scc_e01","scc_e02","scc_e03"]
+		"entrances":["scc_e01","scc_e02","scc_e03"],
+		"pic":"https://brandeis.box.com/ssc",
 	},
 	{
 		"id":"fellowsgarden",
@@ -248,7 +250,7 @@ locations = [
 			new Point(42.365122,-71.262435), 
 			new Point(42.365158,-71.262541)],
 		"category":["academics","art"],
-		"entrances":['pollack_e01']
+		"entrances":['pollack_e01'],
 		},
 	rabbSchool = {
 		"id":"rabbSchool",
@@ -489,7 +491,7 @@ locations = [
 		],
 		"description":"The Carl J. Shapiro Science Center is home to many of our undergraduate science programs. The center is comprised of three main centers, the Gerstenzang Science Library (commonly referred to as G-Zang by students), and other research facilities. The first center is the Brandeis University National Center for Behavioral Genomics which focuses on brain function and behavior in addition to finding therapeutic strategies for brain disease and dysfunction. The second is The Volen Center, or National Center for Complex Systems, in which faculty and students study the brain and intelligence. This center’s staff specialize in artificial intelligence, cognitive science, and various neuroscience topics (examples include experimental psychology, computational neuroscience, and cellular and molecular neurobiology). The final center is The Brandeis Materials Research Science and Engineering Center which focuses on developing the relationship between biology and materials science via a top-down and bottom-up method. Each center was founded with interdisciplinary study in mind. In fact, a few classes are taught by faculty of varying disciplines – one class is even taught by three professors – a biologist, a chemist, and a physicist. This interdisciplinary approach is different from the instruction methods at most universities. Beyond the centers, faculty and students from many departments collaborate in research, in the classrooms and in the labs. The Leo Gerstenzang Complex has traditional lab areas as well as special classrooms for teaching math and science. Brandeis Students have many opportunities to engage in research during their undergraduate years. In fact, since 2003, undergraduate students have co-authored over one hundred and thirty published articles. ",
 		"category":["academics","student life"],
-		"entrances":["ssc_e01","ssc_e02","ssc_e03","ssc_ie01"]
+		"entrances":["ssc_e01","ssc_e02","ssc_e03","ssc_ie01"],
 		},
 	usdan = {
 		"id":"usdan",
@@ -555,6 +557,7 @@ locations = [
 		"category":["dorm","landscape","art"],
 		"description":"Usen Castle may seem out of place on our campus, and, in fact, it predates the university. The castle was built to look like many of the castles that one might find in Scotland; however, this castle was built based on rough exterior sketches drawn from the outside of an already-existing castle. As a result, the castle is filled with architectural mishaps including rogue staircases, trapdoors, and oddly shaped rooms. While it is now a national historic landmark, the castle is also a residence hall with singles, doubles, and suites available for students in their sophomore year. With its quirky character and spectacular view of Boston, the castle makes for a unique living experience.",
 		"entrances":["castle_e01","castle_e02"],
+		"pic":"https://www.dropbox.com/s/eka3me21xgwb0au/castle.jpg?dl=0",
 	},
 	icc = {
 		"id":"icc",
@@ -628,6 +631,7 @@ locations = [
 		"category":["academics"],
 		"entrances":["mandel_e01"],
 		"nearby":["olin-sang","golding","rabbGrad", "heller"],
+		"pic":"https://www.dropbox.com/s/nw72e9xj84bm96h/Mandel.png?dl=0",
 	},
 	golding = {
 		"id":"golding",
