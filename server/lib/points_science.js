@@ -241,7 +241,7 @@ points_science = [
 	{
 	    "id": "feldberg_e01",
 	    "coordinate":new Point(42.366647, -71.259054),
-	    "type": "entrnace",
+	    "type": "entrance",
 	},
 ]
 

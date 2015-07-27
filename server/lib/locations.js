@@ -33,7 +33,7 @@ locations = [
 			new Point(42.365548, -71.259941),
 		],
 		"function": "The SCC is home to many of Brandeis' media clubs, the bookstore, and the Student Union. Students can access the SCC 24/7 and many can be found studying here.",
-		"description":"green",
+		"description":"The Shapiro Campus Center opened in 2002 and is the hub of student life on campus. The SCC is open to students 24 hours a day, seven days a week. Many student organizations, including Student Union, Waltham Group, Student Events, WBRS (a radio station),the newspaper offices, BTV offices, and many others can be found within the campus center. It continues to be the most student-centered, “out of the classroom” building on campus. Although it is also home to the offices of the Dean of Student Life, Student Activities, and Department of Student Rights and Community Standards, students primarily utilize this building for social and extra curricular activities. It also contains Einstein Bros. Cafe, the campus Brandeis Bookstore, student art exhibition space, rehearsal spaces, meeting rooms, a computer library and the 250 seat Carl J. Shapiro Theater. This theater is home to the Undergraduate Theatre Collective, our student run theatre organization. They produce, act in and build sets for over ten shows a year, ranging from straight plays to musical theater to sketch comedy!",
 		"category":["student center"],
 		"entrances":["scc_e01","scc_e02","scc_e03"]
 	},
@@ -61,7 +61,7 @@ locations = [
 			new Point(42.365101, -71.261341),
 			new Point(42.365428, -71.260770),],
 		"function": "Great Lawn is a nice place to hangout with friends in nice weather",
-		"description":"",
+		"description":"The Great Lawn is one of students’ favorite expanses of green on campus. Here you will typically see students doing their homework, playing frisbee, or just catching some afternoon sunshine between classes. It is also the setting for our activities fair, which takes place at the beginning of each semester, when over 260 clubs recruit first-years and continuing undergrads to their groups.",
 		"category":["lawn"],
 		"entrances":['scc_c07','scc_c08','scc_c09','scc_c10']
 	},
@@ -82,7 +82,7 @@ locations = [
 			new Point(42.365739, -71.262582),
 			],
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
-		"description":"The Museum",
+		"description":"The Rose Art Museum houses the largest collection of modern art in New England. Admission is free to students and many intern there during the year. For a fee of $10 per semester, Brandeis students can rent a piece from the Student Loan Collection to hang in their room. The Rose Art Museum houses works by artists such as Marc Chagall, Andy Warhol, and Wassily Kandinsky. Recent acquisitions in 2012 have included works by Bruce Conner and Mark Bradford. As one of the most daring and innovative contemporary art museums the Rose regularly showcases new and innovative exhibitions. It also hosts regular artist talks and its permanent collection is frequently used as a teaching tool both in and outside of the classroom.",
 		"category":["art"],
 		"entrances":['museum_e01']
 	},
@@ -122,6 +122,7 @@ locations = [
 		"nickname":"Turner",
 		"name":"60 Turner Street",
 		"function":"Turner is home to the classrooms for the Osher Lifelong Learning Institute at Brandeis.",
+		"description":"The Office of Financial Affairs and Treasury Services is dedicated to providing the community with timely and accurate financial information and accounting services in support of students, faculty and staff.",
 		"coordinates":[
 			new Point(42.362090, -71.264160), 
 			new Point(42.362017, -71.263813),
@@ -162,11 +163,13 @@ locations = [
 			new Point(42.365861,-71.261069), 
 			new Point(42.365651,-71.260898), 
 			new Point(42.36548,-71.2613)],
+		"description":"The Faculty Club is a restaurant that is open to faculty and students alike and is on the student meal plan. The Student Union hosts a program called “Take Your Professor to Lunch”, which encourages students to get to know faculty members outside the classroom. The Student Union distributes vouchers to the students in order to cover the cost of the meal. This opportunity aides in fostering Brandeis’ legacy of strong professor-student relationships. Mitch Albom, a Brandeis alum, wrote the famous book Tuesdays with Morrie, which chronicles his time with Morrie Schwartz, his life-long mentor and Brandeis professor.",
 		"category":["dining"]
 		},
 	goldman = {
 		"id":"goldman",
 		"name":"Goldman-Schwartz Fine Arts",
+		"description":"Goldman-Schwartz Fine Arts is home to the Department of Fine Arts. It welcomes students to experience art through scholarship and as a process of creation. By uniting intellectual inquiry with artist excellence, it affirms the importance of a broad education and prepare the students for creative participation in a changing society.",
 		"coordinates":[
 			new Point(42.365001,-71.263157), 
 			new Point(42.364799,-71.26258), 
@@ -178,6 +181,7 @@ locations = [
 	gryzmish = {
 		"id":"gryzmish",
 		"name":"Gryzmish Center",
+		"description":"Gryzmish Center is home to Office of Communications, Department of Integrated Media, Office of Student & Enrollment, Planning & Institutional Rsrch, Division of Admin & Finance, Office of Human Resources, Investment Management, Office of the General Counsel and Department of Digital Communications.",
 		"coordinates":[
 			new Point(42.365593,-71.259553), 
 			new Point(42.365759,-71.25918), 
@@ -285,7 +289,7 @@ locations = [
 			new Point(42.363891,-71.259666), 
 			new Point(42.363985,-71.259942)],
 		"function":"Slosberg is home to the Brandeis Concert Series.",
-		"description":"The Brandeis Concert Series features about 50-70 student and professional concerts each year.",
+		"description":"Slosberg Music Center, built in the shape of a grand piano with 88 windows to represent the 88 keys on a piano, is home to the music department. Inside you will discover a 225 seat concert hall where eight student ensembles and the internationally acclaimed Lydian String Quartet perform everything from Beethoven to original student-composed electronic music. Additionally, there are practice rooms open to all students including both music majors and non-music majors. The first piano of acclaimed composer Leonard Bernstein (faculty 1951-55) is displayed in the lobby. Each year, nearly 300 professional and student performances and exhibitions take place on campus, culminating in the annual Leonard Bernstein Festival for the Creative Arts, founded in 1952 by Bernstein himself. First Lady Eleanor Roosevelt, who was also a founding faculty member of Brandeis, had a television show in Slosberg, and it is said that on that show JFK confirmed he was running for President of the United States.",
 		"category":["art","classroom"],
 		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
 		"nearby":["admissions","bernstein-marcus","lemberg","village"]
@@ -306,6 +310,7 @@ locations = [
 			new Point(42.364550, -71.262137),
 			new Point(42.364589, -71.261813),
 			],
+		"description":"Spingold Theater, is home to the theatre department. The cutting-edge Brandeis Theatre Company produces five productions each season. Debra Messing (Grace Adler) of Will & Grace , Steven Culp (Rex VanDe Camp) of Desperate Housewives, and Loretta Devine of the original Broadway cast of Dreamgirls, among many others, are graduates of our programs. Undergraduate students are encouraged to get involved with campus productions, whether that means assistant stage managing, costume designing, or acting in them!",
 		"category":["art"],
 		"entrances":['spingold_e01','spingold_e02']
 		},
@@ -366,6 +371,7 @@ locations = [
 			new Point(42.36763,-71.25901), 
 			new Point(42.367281,-71.259034), 
 			new Point(42.367681,-71.260542)],
+		"description":"Chapels Field is usually bustling with student activities ranging from sports events, such as Quidditch practice, to concerts, such as Springfest. The three chapels on Chapel’s Field represent three different faiths and surround a heart shaped pond. They are built in such a way that no chapel casts its shadow over another chapel, symbolizing our respect for pluralism and diversity. The university has added a Muslim Prayer Room to campus and has connections with various other religious groups off-campus to address the spiritual needs of all. In total, the Brandeis community represents seventeen recognized world religions.",
 		"category":["lawn"]
 		},
 	brown = {
@@ -481,6 +487,7 @@ locations = [
 			new Point(42.365841, -71.258311), 
 			new Point(42.365741, -71.258570), 
 		],
+		"description":"The Carl J. Shapiro Science Center is home to many of our undergraduate science programs. The center is comprised of three main centers, the Gerstenzang Science Library (commonly referred to as G-Zang by students), and other research facilities. The first center is the Brandeis University National Center for Behavioral Genomics which focuses on brain function and behavior in addition to finding therapeutic strategies for brain disease and dysfunction. The second is The Volen Center, or National Center for Complex Systems, in which faculty and students study the brain and intelligence. This center’s staff specialize in artificial intelligence, cognitive science, and various neuroscience topics (examples include experimental psychology, computational neuroscience, and cellular and molecular neurobiology). The final center is The Brandeis Materials Research Science and Engineering Center which focuses on developing the relationship between biology and materials science via a top-down and bottom-up method. Each center was founded with interdisciplinary study in mind. In fact, a few classes are taught by faculty of varying disciplines – one class is even taught by three professors – a biologist, a chemist, and a physicist. This interdisciplinary approach is different from the instruction methods at most universities. Beyond the centers, faculty and students from many departments collaborate in research, in the classrooms and in the labs. The Leo Gerstenzang Complex has traditional lab areas as well as special classrooms for teaching math and science. Brandeis Students have many opportunities to engage in research during their undergraduate years. In fact, since 2003, undergraduate students have co-authored over one hundred and thirty published articles. ",
 		"category":["science","classroom","student center"],
 		"entrances":["ssc_e01","ssc_e02","ssc_e03","ssc_ie01"]
 		},
@@ -494,6 +501,7 @@ locations = [
 			new Point(42.367777,-71.256451), 
 			new Point(42.368243,-71.256259)],
 		"category":["student center","dining"],
+		"description":"Usdan Student Center contains an a la carte style dining hall, a post office, an ATM, the Student Service Bureau (where you can lease microwaves or refrigerators, sign up for newspaper delivery, and rent movies, among other things), administrative offices, and a variety of meeting spaces. It is a busy meeting place for students and faculty – especially between classes or at meals. The convenience store, also located inside Usdan, is open until 2am seven days a week and has everything from laundry detergent to midnight snacks available. Usdan also houses the Hiatt Career Center, Academic Services, Department of Community Living, and Student Financial Services. Services at the Hiatt Career Center are free to students and alumni. Services include one-on-one career counseling sessions, a network of over 25,000 internships, assistance in writing resumes and cover letters, and interview prep. Usdan is also home to the study abroad offices – over a third of the Junior class goes abroad every year! If you’d like to explore Usdan, you’ll find the dining hall, post office, and some offices on the lower level.",
 		"entrances":["usdan_e01"]
 		
 		},
@@ -507,6 +515,7 @@ locations = [
 			new Point(42.364998,-71.253952), 
 			new Point(42.364449,-71.254864)],
 		"category":["athletics"],
+		"description":"Gosman Sports and Convocation Center: If you were to cross the street here and take the footbridge to the other side of South Street, you would reach Gosman. Gosman is one of the largest, best-equipped sports and recreation facilities in New England. Gosman was, until recently, the practice facility for the Boston Celtics. The complex is a state-of- the-art facility for all students, not just varsity athletes. The 70,000 square-foot field house contains basketball, volleyball, tennis, and squash courts, a six-lane indoor track, batting cages, workout rooms complete with personal trainers, and a fencing room. Each year, Gosman hosts athletic competitions (including NCAA Division III national contests), big-name concerts, and the graduation ceremony. Since it has opened, performers have included Adam Sandler, Jerry Seinfeld, Live, Blues Traveler, Counting Crows, Ben Harper, Indigo Girls, John Mayer, and The Steve Miller Band. The Dalai Lama and former presidents Jimmy Carter and Bill Clinton visited as speakers.",
 		"entrances":["gosman_e01"],
 		},
 	linsey = {
@@ -544,6 +553,7 @@ locations = [
 			new Point(42.366929, -71.255488),
 			new Point(42.367387, -71.255545)],
 		"category":["art"],
+		"description":"Usen Castle may seem out of place on our campus, and, in fact, it predates the university. The castle was built to look like many of the castles that one might find in Scotland; however, this castle was built based on rough exterior sketches drawn from the outside of an already-existing castle. As a result, the castle is filled with architectural mishaps including rogue staircases, trapdoors, and oddly shaped rooms. While it is now a national historic landmark, the castle is also a residence hall with singles, doubles, and suites available for students in their sophomore year. With its quirky character and spectacular view of Boston, the castle makes for a unique living experience.",
 		"entrances":["castle_e01","castle_e02"],
 	},
 	icc = {
@@ -673,7 +683,7 @@ locations = [
 			new Point(42.368118, -71.257811),
 			new Point(42.368674, -71.257622),],
 		"category":["classroom"],
-		"description": "A longer description",
+		"description": "Goldfarb/Farber Libraries house ever growing collections and reference resources in creative arts, humanities, government documents, Judaica, and social sciences. Research materials are extremely accessible to students due to the online availability of resources, and additional resources are made available through the Boston Library Consortium and the Interlibrary Loan system. The library offers services for students including a listening center, computer labs, study rooms, a media lab that helps students edit their films and soundtracks, as well as the Writing Center. The Writing Center assists students in all aspects of writing their papers, from brainstorming to editing. Recently, a new café was added to the Green Room section of the library.",
 		"entrances":["goldfarb_e01","goldfarb_e02"],
 	},	
 	gerstenzang = {
@@ -821,6 +831,7 @@ locations = [
 			new Point(42.366241, -71.255544),
 			new Point(42.366228, -71.255598),],
 		"category":[],
+		"description":"Stoneman Public Safety, Stoneman is home to Brandeis Police.",
 		"entrances":["police_e01"],
 	},
 	{
@@ -837,12 +848,14 @@ locations = [
 			new Point(42.366046, -71.255147),
 			new Point(42.366054, -71.255118),],
 		"category":["health"],
+		"description":"The Health Center offers confidential health services. In the case of an emergency, there is a nurse or doctor on call at all times. The Brandeis Emergency Medical Corps (BEMCO) is a student-operated, certified EMT service, trained to respond to student’s calls 24/7.",
 		"entrances":["healthcenter_e01"],
 	},
 	{
 		"id":"superconducting",
 		"nickname":"Landsman",
 		"name":"Landsman Research Facility",
+		"description":"Landsman Research Facility, is the campus home to a 15,000-pound superconducting magnet used by scientists to search for clues to solving the riddles of neurodegenerative diseases and cancer.",
 		"coordinates":[
 			new Point(42.366049, -71.255343), 
 			new Point(42.366031, -71.255433), 
@@ -855,6 +868,7 @@ locations = [
 		"id":"mandelpeacegarden",
 		"nickname":"Peace Circle",
 		"name":"Mandel Peace Garden",
+		"description":"The Brandeis University Peace Monument was first dedicated in May 2002. It is located in the circular seating area between Usdan and Pearlman and is surrounded by benches and a garden. In the very center of the monument is a beautiful mosaic of a dove — the international symbol of peace. Encircling the mosaic are tiles engraved with the word 'peace' in the languages spoken at Brandeis. There are approximately 40 different language bricks. Building for Peace set out to further the beauty and breadth of the Peace Monument by adding bricks and improving the garden. There are hopes to add approximately 20 more language bricks (including American Sign Language and Braile), various cultural symbols of peace, a dedication plaque and a 'peace tree.' Part of the financing for what we now call the Mandel Peace Garden, came from generous benefactor Jay A. Mandel '80 and his life partner, Jeffrey M. Scheckner, in memory of Jay's grandparents, Harry and Violet Mandel.",
 		"coordinates":[
 			new Point(42.367868, -71.257631), 
 			new Point(42.367728, -71.257779), 
@@ -866,6 +880,7 @@ locations = [
 		"nickname":"Lemberg",
 		"name":"Gersh and Sarah Lemberg Children's Center",
 		"function":"Lemberg offers childcare for children under age seven. Brandeis students majoring in education can work and teach here.",
+		"description":"Located adjacent to the Brandeis University campus, the Gersh & Sarah Lemberg Children's Center develops children, families, teachers, researchers, and ultimately the field of early childhood education itself in a warm family environment.",
 		"coordinates":[
 			new Point(42.363665, -71.258979),
 			new Point(42.363665, -71.259105),
@@ -883,6 +898,7 @@ locations = [
 		"nickname":"Lemberg",
 		"name":"Samuel Lemberg Academic Center",
 		"function":"",
+		"description":"The focal point of Brandeis University’s growing International Business School, the Lemberg Center is home to a new 30-seat tiered lecture hall, a small library, conference areas, and offices. A popular, double-height cyber café, known as The World Court, is a dramatic space at the heart of the building, lit from floor-to-ceiling by windows overlooking wetlands and a wooded hillside. Built as an expansion to an existing circa 1972 building, the new academic complex nearly doubles the size of the school’s facilities. The program creates multiple overlapping points of activity throughout the building to stimulate interaction between students both academically and socially. Built as an expansion to an existing circa 1972 building, the new academic complex nearly doubles the size of the school’s facilities. The program creates multiple overlapping points of activity throughout the building to stimulate interaction between students both academically and socially. The Lemberg Center addition not only extends the educational program but also extends the aesthetic expression of the existing facility, blending seamlessly with the existing building to project a unified, distinct facility.",
 		"coordinates":[
 			new Point(42.364705, -71.264387),
 			new Point(42.364670, -71.264192),

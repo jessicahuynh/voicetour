@@ -15,7 +15,7 @@ locations_rooms = [
 	{
 		"id":"dd",
 		"name":"Dunkin' Dounuts",
-		"nickname":"dd",
+		"nickname":"DD",
 		"coordinates": [
 			new Point(42.363174, -71.260435), 
 			new Point(42.363149, -71.260429), 
@@ -31,7 +31,7 @@ locations_rooms = [
 	{
 		"id":"einstein",
 		"name":"Einstein Bros. Bagels",
-		"nickname":"einstein",
+		"nickname":"Einstein",
 		"coordinates": [
 			new Point(42.365729, -71.260335), 
 			new Point(42.365671, -71.260347), 
@@ -60,7 +60,7 @@ locations_rooms = [
 	{
 		"id":"shermandining",
 		"name":"Sherman Dining Hall",
-		"nickname":"sherman",
+		"nickname":"Sherman",
 		"coordinates": [
 			new Point(42.366622, -71.260961), 
 			new Point(42.366687, -71.260819), 
@@ -70,7 +70,7 @@ locations_rooms = [
 			new Point(42.366437, -71.260811), 
 			],
 		"function":"",
-		"description":"",
+		"description":"Sherman Dining Hall is one of main dining facilities on campus. It is an all-you-care-to- eat buffet style option. Sherman is unique in that it is the only integrated kosher (Jewish dietary law) cafeteria in the country, where all students can eat together in the same place. Options include grilled foods, a sandwich station, a salad bar, pizza, a stir fry bar, omelet stations, a gluten free section, a crepe station, vegan and vegetarian options, as well as a large dessert selection. Furthermore, students can submit recipes from home and receive notice as to when these coveted meals will be served in Sherman.",
 		"category":["dining"],
 		"entrances":[],
 		"nearby":[],
@@ -91,7 +91,7 @@ locations_rooms = [
 		{
 		"id":"starbucksLib",
 		"name":"Library Starbucks",
-		"nickname":"library starbucks",
+		"nickname":"Library starbucks",
 		"coordinates": [
 			new Point(42.367862, -71.258553), 
 			new Point(42.367839, -71.258619), 
@@ -107,7 +107,7 @@ locations_rooms = [
 		{
 		"id":"peets",
 		"name":"Peet's Coffe & Tea",
-		"nickname":"peet's",
+		"nickname":"Peet's",
 		"coordinates": [
 			new Point(42.366049, -71.257998),
 			new Point(42.365951, -71.258019),  
@@ -123,7 +123,7 @@ locations_rooms = [
 		{
 		"id":"stein",
 		"name":"The Stein Restaurant",
-		"nickname":"stein",
+		"nickname":"Stein",
 		"coordinates": [
 			new Point(42.366529, -71.260891), 
 			new Point(42.366637, -71.260648), 
@@ -230,7 +230,7 @@ locations_rooms = [
 	{
 		"id":"bookStore",
 		"name":"Book Store",
-		"nickname":"book store",
+		"nickname":"Book store",
 		"coordinates": [
 			new Point(42.365738, -71.260542), 
 			new Point(42.365735, -71.260419),

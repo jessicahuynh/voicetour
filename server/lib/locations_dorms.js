@@ -4,6 +4,7 @@ locations_dorms = [
 		"name":"567 South Street Apartments",
 		"nickname":"567",
 		"function":"The 567 Apartments provide two-person suite living for sophomores.",
+		"description":"67 South Street is an apartment-style living option for sophomores, located next to Cappy's Pizza Parlor and conveniently located across from the Brandeis/Roberts Commuter Rail station. With only 30 residents, 567 South Street provides provides Brandeis students the privacy associated with apartment style living, while being within close distance to the main campus of Brandeis.",
 		"coordinates":[
 			new Point(42.36141,-71.261572), 
 			new Point(42.361333,-71.261402), 
@@ -32,7 +33,7 @@ locations_dorms = [
 		"name":"Charles River Commons",
 		"nickname":"Charles River Commons",
 		"function":"The Charles River Common is available for student and club use.",
-		"description":"The room has a large, flat-screen TV, a variety of gaming tables, a kitchen area, and cardio equipment. The Area Coordinator of both Charles River and the Foster Mods holds regular office hours here.",
+		"description":"Charles River offers an apartment-style living environment located in an off campus setting while still providing residents an on campus community lifestyle. The Charles River Apartments are home to juniors and seniors who enjoy the privacy of the apartment style living as well as its on-campus feel. There are four buildings in the Charles River Quad, each commonly referred to by students by their address number. These buildings include: Morton May (110 Angleside Road), Max and Ann Coffman (150 Charles River Road), Ollie A. Cohen (164 Charles River Road), and George E. Lewis (178 Charles River Road). Each of the four Charles River apartment buildings accommodates a range from 70 to up to 110 students.",
 		"coordinates":[
 			new Point(42.359485, -71.257064),
 			new Point(42.359356, -71.256937),
@@ -216,6 +217,7 @@ locations_dorms = [
 		"name":"Village Residence Hall",
 		"nickname":"The Village",
 		"function":"The Village houses sophomores, mid-years, and students going abroad.",
+		"description":"The Village houses 220 students in single and double occupancy rooms. The Village is broken down into three houses (A, B, and C).  For the full academic year, sophomores live in Village A. In the fall, juniors planning to study abroad live in B and C, with Mid-Year students taking their place in the spring semester. The Village is a traditional style residence hall with single and double occupancy rooms.  All rooms within the Village are gender neutral.  Single rooms in the Village range from approximately 110 to 130 square feet, and double rooms range from approximately 145 to 180 square feet.",
 		"coordinates":[
 			new Point(42.363419, -71.260057), 
 			new Point(42.363532, -71.260042), 
@@ -255,7 +257,7 @@ locations_dorms = [
 		"id":"villageA",
 		"name":"Lorraine and Jack N. Friedman House",
 		"nickname":"Village A House",
-		"function":"Village A houses sophomores, mid-years, and students going abroad.",
+		"function":"Village A houses sophomores, mid-years, and students going abroad. For the full academic year, sophomores live in Village A.",
 		"coordinates":[
 			new Point(42.363419, -71.260057), 
 			new Point(42.363532, -71.260042), 
@@ -276,6 +278,7 @@ locations_dorms = [
 		"name":"Melvin and Gale Nessel House",
 		"nickname":"Village B House",
 		"function":"Village B houses sophomores, mid-years, and students going abroad.",
+		"description":" In the fall, juniors planning to study abroad live in B and C, with Mid-Year students taking their place in the spring semester.",
 		"coordinates":[
 			new Point(42.363493, -71.260282),
 			new Point(42.363393, -71.260298),
@@ -295,7 +298,8 @@ locations_dorms = [
 		"id":"villageC",
 		"name":"Village C House",
 		"nickname":"Village C House",
-		"function":"Village C houses sophomores, mid-years, and students going abroad.",
+		"function":" In the fall, juniors planning to study abroad live in B and C, with Mid-Year students taking their place in the spring semester.",
+		"description":" In the fall, juniors planning to study abroad live in B and C, with Mid-Year students taking their place in the spring semester.",
 		"coordinates":[
 			new Point(42.363142, -71.260352),
 			new Point(42.363176, -71.260446),
@@ -316,6 +320,7 @@ locations_dorms = [
 		"name":"Ziv Residence Hall A",
 		"nickname":"Ziv 127",
 		"function":"Ziv 127 provides suite-style living for upperclassmen and students going abroad.",
+		"description":" Ziv residents live in six-person suites. Each air-conditioned suite has six single bedrooms, a spacious common area and two private bathrooms.",
 		"coordinates":[
 			new Point(42.363544, -71.261652), 
 			new Point(42.363305, -71.261828), 
@@ -334,6 +339,7 @@ locations_dorms = [
 		"name":"Ziv Residence Hall B",
 		"nickname":"Ziv 128",
 		"function":"Ziv 128 provides suite-style living for upperclassmen and students going abroad.",
+		"description":" Ziv residents live in six-person suites. Each air-conditioned suite has six single bedrooms, a spacious common area and two private bathrooms.",
 		"coordinates":[
 			new Point(42.363091, -71.261695), 
 			new Point(42.363010, -71.261744), 
@@ -352,6 +358,7 @@ locations_dorms = [
 		"name":"William and Helen Mazer Residence Hall",
 		"nickname":"Ziv 129",
 		"function":"Ziv 129, sometimes called Ziv C, provides suite-style living for upperclassmen and students going abroad.",
+		"description":" Ziv residents live in six-person suites. Each air-conditioned suite has six single bedrooms, a spacious common area and two private bathrooms.",
 		"coordinates":[
 			new Point(42.362989, -71.261231), 
 			new Point(42.362919, -71.261275), 
@@ -370,6 +377,7 @@ locations_dorms = [
 		"name":"Ziv Residence Hall D",
 		"nickname":"Ziv 130",
 		"function":"Ziv 130 provides suite-style living for upperclassmen and students going abroad.",
+		"description":" Ziv residents live in six-person suites. Each air-conditioned suite has six single bedrooms, a spacious common area and two private bathrooms.",
 		"coordinates":[
 			new Point(42.363353, -71.261089), 
 			new Point(42.363300, -71.260968), 
@@ -393,6 +401,7 @@ locations_dorms = [
 			new Point(42.368023, -71.254770),
 			new Point(42.367949, -71.254845),
 			new Point(42.367840, -71.254738),],
+		"description":"Shapiro Brothers is one of the buildings in East Quad. East Quad is home to the majority of sophomores on campus. East Quad is comprised of four sections with six names: Hassenfeld-Krivof, Shapiro House, Pomerantz-Rubenstein and Swig, yet students refer to the main residence hall buildings as Hassenfeld and Pomerantz. East Quad is conveniently located across the street from Gosman Sports Center and steps away from the Health Center and the Intercultural Center. East was designed to maximize the potential of the residence living environment to become a tight-knit community. With open lounges on most floors, extended corridors, a community kitchen and large common areas, life in East is anything but dull. The top floors of East also provide residents with a clear, breathtaking view of the Boston skyline.",
 		"category":["dorm"],
 		"entrances":["eastHassenfeld_e02","eastShapiro_e01"]
 		},
@@ -413,6 +422,7 @@ locations_dorms = [
 			new Point(42.367476, -71.254854),
 			new Point(42.367581, -71.254801),
 			new Point(42.367581, -71.254801),],
+		"description":"Rubenstein-Pomerantz is one of the buildings in East Quad. East Quad is home to the majority of sophomores on campus. East Quad is comprised of four sections with six names: Hassenfeld-Krivof, Shapiro House, Pomerantz-Rubenstein and Swig, yet students refer to the main residence hall buildings as Hassenfeld and Pomerantz. East Quad is conveniently located across the street from Gosman Sports Center and steps away from the Health Center and the Intercultural Center. East was designed to maximize the potential of the residence living environment to become a tight-knit community. With open lounges on most floors, extended corridors, a community kitchen and large common areas, life in East is anything but dull. The top floors of East also provide residents with a clear, breathtaking view of the Boston skyline.",
 		"category":["dorm"],
 		"entrances":["eastRubenstein_e01"]
 		},
@@ -427,6 +437,7 @@ locations_dorms = [
 			new Point(42.368133, -71.255269), 
 			new Point(42.368049, -71.255182),
 			new Point(42.367987, -71.255001),],
+		"description":"Hassenfeld-Krivoff is one of the buildings in East Quad. East Quad is home to the majority of sophomores on campus. East Quad is comprised of four sections with six names: Hassenfeld-Krivof, Shapiro House, Pomerantz-Rubenstein and Swig, yet students refer to the main residence hall buildings as Hassenfeld and Pomerantz. East Quad is conveniently located across the street from Gosman Sports Center and steps away from the Health Center and the Intercultural Center. East was designed to maximize the potential of the residence living environment to become a tight-knit community. With open lounges on most floors, extended corridors, a community kitchen and large common areas, life in East is anything but dull. The top floors of East also provide residents with a clear, breathtaking view of the Boston skyline.",
 		"category":["dorm"],
 		"entrances":["eastHassenfeld_e01","eastHassenfeld_e02"]
 		},
@@ -445,7 +456,7 @@ locations_dorms = [
 			new Point(42.369503, -71.255945),
 			new Point(42.369515, -71.255983),
 			new Point(42.369921, -71.255774),],
-		"description": "North Quad",
+		"description": "Gordon is one of the buildings in North Quad, which is mainly for freshmen. Students living in North enjoy traditional-style residence hall living on single sex and mixed gender floors. North Quad sits at the top of campus next to the Rabb Academic Quad, housing most humanities classes, and the Kutz Hall administrative building, housing the University Registrar, Campus Card Office and International Students & Scholars Office, amongst others. Furthermore, North is only steps from the Usdan Student Center, home to Dining Services, Hillel, a convenience store, the campus mailroom, the Chaplaincy, Academic Services, Hiatt Career Center and the Department of Community Living.",
 		"category":["dorm"],
 		"entrances":["gordon_e01","gordon_e02"]
 	},
@@ -462,7 +473,7 @@ locations_dorms = [
 			new Point(42.369740, -71.255230),
 			new Point(42.369783, -71.255377),
 			new Point(42.369757, -71.255393),],
-		"description": "North Quad",
+		"description": "Reitman is one of the buildings in North Quad, which is mainly for freshmen. Students living in North enjoy traditional-style residence hall living on single sex and mixed gender floors. North Quad sits at the top of campus next to the Rabb Academic Quad, housing most humanities classes, and the Kutz Hall administrative building, housing the University Registrar, Campus Card Office and International Students & Scholars Office, amongst others. Furthermore, North is only steps from the Usdan Student Center, home to Dining Services, Hillel, a convenience store, the campus mailroom, the Chaplaincy, Academic Services, Hiatt Career Center and the Department of Community Living.",
 		"category":["dorm"],
 		"entrances":["reitman_e01","reitman_e02"]
 	},
@@ -479,7 +490,7 @@ locations_dorms = [
 			new Point(42.369263, -71.255150),
 			new Point(42.369272, -71.255185),
 			new Point(42.369430, -71.255103),],
-		"description": "North Quad",
+		"description": "Cable is one of the buildings in North Quad, which is mainly for freshmen.Students living in North enjoy traditional-style residence hall living on single sex and mixed gender floors. North Quad sits at the top of campus next to the Rabb Academic Quad, housing most humanities classes, and the Kutz Hall administrative building, housing the University Registrar, Campus Card Office and International Students & Scholars Office, amongst others. Furthermore, North is only steps from the Usdan Student Center, home to Dining Services, Hillel, a convenience store, the campus mailroom, the Chaplaincy, Academic Services, Hiatt Career Center and the Department of Community Living",
 		"category":["dorm"],
 		"entrances":["cable_e01","cable_e02"]
 	},
@@ -496,7 +507,7 @@ locations_dorms = [
 			new Point(42.369268, -71.256409),
 			new Point(42.369061, -71.256518),
 			new Point(42.369023, -71.256391),],
-		"description": "North Quad",
+		"description": "Scheffres is one of the buildings in North Quad, which is mainly for freshmen. Students living in North enjoy traditional-style residence hall living on single sex and mixed gender floors. North Quad sits at the top of campus next to the Rabb Academic Quad, housing most humanities classes, and the Kutz Hall administrative building, housing the University Registrar, Campus Card Office and International Students & Scholars Office, amongst others. Furthermore, North is only steps from the Usdan Student Center, home to Dining Services, Hillel, a convenience store, the campus mailroom, the Chaplaincy, Academic Services, Hiatt Career Center and the Department of Community Living.",
 		"category":["dorm"],
 		"entrances":["scheffres_e01"]
 	},

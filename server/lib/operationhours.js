@@ -274,5 +274,6 @@ operationhours=[
 	},
 	//career center
 	//study abroad
+	//game room
 ]
 
