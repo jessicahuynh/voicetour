@@ -193,6 +193,7 @@ locations_parking = [
 			new Point(42.366190, -71.262189),
 			new Point(42.366453, -71.261501)
 		],
+		"description":"Parking for vehicles bearing red permit . Violators towed at owener's expense.",
 		"category":["parking"],
 		"nearby":["shapirodorm"]
 	},
@@ -208,6 +209,7 @@ locations_parking = [
 			new Point(42.364454, -71.259875)
 		],
 		"category":["parking"],
+		"description":"Parking for Admissions visitors ONLY. Violators towed at owner's expense.",
 		"nearby":["slosberg","admissions","bernstein-marcus","stop_admissions","ridgewoodA"],
 		"entrances":["slosberg_c02","slosberg_c03"]
 	},
@@ -224,9 +226,24 @@ locations_parking = [
 			new Point(42.363594, -71.263761),
 		],
 		"category":["parking"],
-		"nearby":["spingold,,ridgewoodB,zivB,zivA,lemberg,goldman"],
+		"nearby":["spingold,ridgewoodB,zivB,zivA,lemberg,goldman"],
 		"entrances":[]
-	}
+	},
+	{
+		"id":"hellerparking",
+		"name":"Heller Parking Lot",
+		"nickname":"heller lot",
+		"coordinates":[
+			new Point(42.369277, -71.260469),
+			new Point(42.369111, -71.260026),
+			new Point(42.369042, -71.260051),
+			new Point(42.369221, -71.260525),
+		],
+		"category":["parking"],
+		"nearby":["schneider","harlan"],
+		"entrances":[]
+	},
+
 ]
 
 function Point(x,y) {

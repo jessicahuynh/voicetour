@@ -13,7 +13,7 @@ locations_rooms = [
 // 	},
 	{
 		"id":"dd",
-		"name":"Dunkin' Dounuts",
+		"name":"Dunkin' Donuts",
 		"nickname":"DD",
 		"coordinates": [
 			new Point(42.363174, -71.260435), 
@@ -102,7 +102,7 @@ locations_rooms = [
 	},
 		{
 		"id":"peets",
-		"name":"Peet's Coffe & Tea",
+		"name":"Peet's Coffee & Tea",
 		"nickname":"Peet's",
 		"coordinates": [
 			new Point(42.366049, -71.257998),
@@ -197,7 +197,7 @@ locations_rooms = [
 	{
 		"id":"isso",
 		"name":"International Students and Scholars Office",
-		"nickname":"isso",
+		"nickname":"ISSO",
 		"coordinates": [
 			new Point(42.369011, -71.256124), 
 			new Point(42.369041, -71.256217), 
@@ -212,7 +212,7 @@ locations_rooms = [
 	{
 		"id":"mail",
 		"name":"Mail Room",
-		"nickname":"mail",
+		"nickname":"Mail",
 		"coordinates": [
 			new Point(42.368302, -71.256598), 
 			new Point(42.368246, -71.256290), 
@@ -227,7 +227,7 @@ locations_rooms = [
 	{
 		"id":"registrar",
 		"name":"Registrar Office",
-		"nickname":"registrar",
+		"nickname":"Registrar",
 		"coordinates": [
 			new Point(42.369076, -71.255889), 
 			new Point(42.368974, -71.255935), 

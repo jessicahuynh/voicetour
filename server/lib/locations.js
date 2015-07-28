@@ -49,7 +49,7 @@ locations = [
 			new Point(42.365813,-71.259543),
 			new Point(42.366023,-71.259101)],
 		"function": "Fellows Garden is a nice place to hangout with friends in nice weather",
-		"description":"Nobody knows the name",
+		"description":"Fellows Garden was dedicated on the occasion of Brandeis University's twenty-fifth commencement.",
 		"category":["landscape"],
 		"entrances":['fellowsgarden_c01','fellowsgarden_c02','fellowsgarden_c03']
 	},
