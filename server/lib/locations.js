@@ -700,7 +700,7 @@ locations = [
 			new Point(42.366304, -71.257812), 
 			new Point(42.366647, -71.258526)],
 		"category":["library","academics"],
-		"entrances":["gzang_e01","gzang_e02","gzang_ie01","gzang_ie02","gzang_ie03"],
+		"entrances":["gzang_e01","gzang_e02","gzang_ie01","gzang_ie02","gzang_ie03","volen_ie03"],
 	},
 	pearlman = {
 		"id":"pearlman",
