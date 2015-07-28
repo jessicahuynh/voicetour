@@ -61,7 +61,7 @@ paths_science = [
 	},
 	{
 		"start":"volen_c02",
-		"end":"fellowsgarden_c02",
+		"end":"fellowsgarden_c03",
 		"description":"Head down the hill, keeping Volen on your left and Chapels' Field on your right."
 	},
 	{
