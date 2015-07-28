@@ -11,6 +11,7 @@ div.go-to-navigate {
 		color:@off-white;
 		text-decoration:none;
 		background-color:@dark-blue;
+		text-transform:uppercase;
 	}
 	a:hover, a:focus, a:active {
 		background-color:#ededed;
@@ -42,7 +43,7 @@ div.go-to-navigate {
 #profileTabs {
 	max-width:100%;
 	font-size:1.4em;
-	
+	margin-bottom:1em;
 	
 	ul {
 		margin:0 auto;
@@ -58,4 +59,12 @@ div.go-to-navigate {
 			text-transform:uppercase;
 		}
 	}
+}
+
+.mobileGo {
+	display:none;
+}
+@media (max-width:768px) {
+	.mobileGo {display:block;}
+	.desktopGo {display:none;}
 }

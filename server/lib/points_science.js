@@ -170,6 +170,11 @@ points_science = [
 	    "type":"entrance"
 	},
 	{
+	    "id":"rosensweig_c01",
+	    "coordinate":new Point(42.365846, -71.256889),
+	    "type":"crossing"
+	},
+	{
 	    "id": "rosenstiel_e01",
 	    "coordinate":new Point(42.365757, -71.257192),
 	    "type": "entrance",
