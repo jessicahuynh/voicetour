@@ -484,6 +484,12 @@ paths_libraryeast = [
 	    "end":"rubenstein_c11",
 	    "description": "Walk toward the small parking space.",
 	},
+	{
+	    "start":"ice_c01",
+	    "end":"eastShapiro_e01",
+	    "description": "Walk toward the small parking space.",
+	},
+
 
 
 
