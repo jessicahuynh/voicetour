@@ -2,21 +2,14 @@
 <h1 class="page-header">Navigate</h1>
 
 <div class="row">
-
-	<ul class="nav nav-pills" role="tablist" id="navmenu">
-		<li role="presentation" class="active"><a href="#navPane" data-toggle="pill" role="pill" aria-controls="navigate" id="navigateTab">Navigate</a></li>
-		<li role="presentation"><a href="#routePane" role="pill" data-toggle="pill" aria-controls="route" id="routeTab">Route</a></li>
-		<li role="presentation"><a href="#mapPane" role="pill" data-toggle="pill" aria-controls="map" id="mapTab">Map</a></li>
-	</ul>
-	
 	<div class="tab-content" id="navpanels">
-		<div id="loadingPanel">{{> loading}}</div>		
-		<div role="tabpanel" class="tab-pane active col-sm-6" id="navPane">
+		<div id="loadingPanel">{{> loading}}</div>
+		
+		<div class="col-sm-6">
 			<form id="navform" name="navform">
 				<div class="form-group">
-					<label for="startpoint">Start</label>
-					{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location" value=startLoc }}
-					<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
+					<label for="startpoint">Start</label>{{> inputAutocomplete settings=settings id="startpoint" class="form-control" placeholder="starting location"
+					value=startLoc }}
 					<div class="getCurrentContainer">
 						<a id="getCurrentLoc" href="#">
 							<span class="glyphicon glyphicon-map-marker"></span>&nbsp;Use my current location
@@ -24,35 +17,31 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="endpoint">End</label>
-					{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination" value=endLoc}}
-					<!--<input type="text" id="endpoint" class="form-control" placeholder="destination">-->
-				</div>
-				<button type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Start</button>
+					<label for="endpoint">End</label>{{> inputAutocomplete settings=settings id="endpoint" class="form-control" placeholder="destination" value=endLoc}}</div>
+				<button
+				type="submit" id="routeButton" name="routeButton" class="btn btn-primary">Start</button>
 			</form>
-		</div>
-		
-		<div role="tabpanel" class="tab-pane col-sm-6" id="routePane">
-			<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary pull-right">Step-by-Step</button>
-			<ul>
-				{{#each stops}}
-				<li>{{stopDescription}}</li>
-				{{/each}}
-			</ul>
 			
-		</div>
-			
-		<div role="tabpanel" class="tab-pane col-sm-12" id="mapPane">
-			<div id="map-nav">
-				{{> googleMap name="navMap" options=navMapOptions}}
+			<div class="infoAboutPath">
+				<p>{{routeStartStop}}</p>
+				<p class="help-block">{{routeEstimate}}</p>
 			</div>
 		</div>
-
+		
+			
+		<div role="tabpanel" class="tab-pane col-sm-6" id="routePane">
+			<button type="click" id="stepsButton" name="stepsButton" class="btn btn-primary pull-right">Step-by-Step</button>
+			<ul>{{#each stops}}
+				<li>{{stopDescription}}</li>{{/each}}</ul>
+		</div>
+		
+			
+		<div role="tabpanel" class="tab-pane col-sm-12" id="mapPane">
+			<div id="map-nav">{{> googleMap name="navMap" options=navMapOptions}}</div>
+		</div>
 		
 	</div>
-		
 	
-
 </div>
 
 
@@ -62,11 +51,3 @@
 <template name="suggestions">
 	<span class="label">{{name}} <small class="muted">{{nickname}}</small></span>
 </template>
-<!-- 
-<template name="mapNav">
-	<div class="row">
-		<div id="map-nav" style="height:500px; width:500px">
-			{{> googleMap name="navMap" options=navMapOptions}}
-		</div>
-	</div>
-</template> -->
