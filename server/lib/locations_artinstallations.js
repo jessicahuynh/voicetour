@@ -3,6 +3,7 @@ locations_artinstallations = [
 		"id":"magnolias",
 		"name":"Six Magnolia Trees",
 		"function":"These six magnolia trees were planted in memory of the Holocaust.",
+		"description":"They are both symbolic of the past and representative of our optimism for the future. Planted by the students of Brandeis University Yom HaShoah at April 22, 2004.",
 		"coordinates":[new Point(42.368132, -71.260572)]
 	},
 	{
