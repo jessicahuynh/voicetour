@@ -21,6 +21,9 @@ Template.locationProfile.helpers({
 				zoom:17
 			}
 		}
+	},
+	id:function() {
+		return Session.get("thisLoc").id;
 	}
 });
 
