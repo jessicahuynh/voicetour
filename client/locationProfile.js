@@ -40,8 +40,7 @@ Template.locationProfile.rendered = function() {
 	// 	Session.set("pageTitle","Viewing " +thisLoc.nickname);
 	// });
 	var thisLoc = Session.get("thisLoc");
-	Session.set("pageTitle","Viewing " +thisLoc.nickname);
-	
+	Session.set("pageTitle","Viewing " +thisLoc.nickname);	
 	
 	GoogleMaps.load();
 	GoogleMaps.ready('locMap',function(map) {
