@@ -485,7 +485,7 @@ paths_libraryeast = [
 	    "description": "Walk toward the small parking space.",
 	},
 	{
-	    "start":"ice_c01",
+	    "start":"icc_c01",
 	    "end":"eastShapiro_e01",
 	    "description": "Walk toward the small parking space.",
 	},
