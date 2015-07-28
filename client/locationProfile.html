@@ -3,11 +3,37 @@
 <h1 class="page-header locName">{{name}} <small>{{categories}}</small></h1>
 
 <div class="row">
-	<div class="col-sm-8">
-		<img src="http://moore.cs-i.brandeis.edu/discoverdeis/{{id}}.JPG" class="profilePic">
-		<div id="map-container">
-			{{> googleMap name="locMap" options=locMapOptions}}
+	<div class="col-xs-12">
+		<div class="panes">
+			
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane" id="pic">
+					<img src="http://moore.cs-i.brandeis.edu/discoverdeis/{{id}}.JPG" class="profilePic">
+				</div>
+				<div role="tabpanel" class="tab-pane active" id="profileMap">
+					<div id="map-container">
+						{{> googleMap name="locMap" options=locMapOptions}}
+					</div>
+				</div>
+			</div>
+			
 		</div>
+		
+		<div class="tabs">
+			<ul class="nav nav-pills" role="tablist" id="profileTabs">
+				<li role="presentation">
+					<a href="#pic" aria-controls="pic" role="pill" data-toggle="pill"><span class="glyphicon glyphicon-picture"><span class="sr-only">Picture</span></span></a></li>
+				<li role="presentation" class="active">
+					<a href="#profileMap" aria-controls="profileMap" role="pill" data-toggle="pill"><span class="glyphicon glyphicon-map-marker"></span><span class="sr-only">Map</span></a></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+
+<div class="row">
+	<div class="col-sm-8">
 		<p>{{function}}</p>
 		<p>{{description}}</p>
 	</div>
