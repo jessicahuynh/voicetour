@@ -169,6 +169,12 @@ Template.graph.events({
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
 		
+		// if starting is empty, assume current location
+		if (starts == "") {
+			document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x +", "+Session.get("currentLocation").y+")";
+			starts = "(" + Session.get("currentLocation").x +", "+Session.get("currentLocation").y+")";
+		}
+		
 		console.log("start " + starts);
 		console.log("end "+ ends);
 		
