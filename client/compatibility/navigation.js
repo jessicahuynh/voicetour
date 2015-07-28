@@ -74,6 +74,9 @@ function getShortestRoute(startEntrances,endEntrances) {
 						if (currentRouteDist < theShortestDist) {
 							theShortestDist = currentRouteDist;
 							shortestRoute = currentRoute;
+							
+							// for the shortest path
+							Session.set("routeDist",theShortestDist);
 						}
 					}
 	
@@ -170,19 +173,6 @@ function deleteRoutes(routes){
 function getRouteDescription(route) {
 	var r = [];
 	
-	if (document.getElementById("startpoint").value[0] == "(") {
-			// if you're in a building, return that building and go on as before
-			if (Session.get("inLocation")[1] == "in") {
-				r.push("You're currently in " + Session.get("inLocation")[0].name);
-			}
-			else {
-				r.push("You're currently at " + document.getElementById("startpoint").value +", located near "+Session.get("inLocation")[0].name);
-			}
-	}
-	else {
-		r.push("You're starting from " + document.getElementById("startpoint").value);
-	}
-	
 	// push getTo of starting point if it exists
 	if (Intersections.findOne({"id":route[0]}).getTo != undefined) {
 		r.push(Intersections.findOne({"id":route[0]}).getTo);
@@ -197,8 +187,6 @@ function getRouteDescription(route) {
 	else {
 		r.push("We don't seem to be able to get the routing data between these two!");
 	}
-	
-	r.push("Your ending location is " + document.getElementById("endpoint").value);
 	
 	Session.set("routeToTake",r);
 }
