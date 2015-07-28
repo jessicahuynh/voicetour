@@ -169,7 +169,7 @@ Template.graph.helpers({
 			return "";
 		}
 		else {
-			return "about "+Math.round(Session.get("routeDist")*0.012)+ " minutes of walking";
+			return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes of walking";
 		}
 	}
 });

@@ -2,8 +2,11 @@
 count = 0;
 
 Template.steps.helpers({
-	destination: function() {
-		return Session.get("destination");
+	routeStartStop: function() {
+		return Session.get("routeStartStop");
+	},
+	estimate:function() {
+		return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes total walking";
 	},
 	stepMapOptions: function() {
 		if (GoogleMaps.loaded()) {
