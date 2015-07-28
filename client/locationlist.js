@@ -1,4 +1,5 @@
 Session.setDefault("category","");
+Session.setDefault("area","");
 
 Template.locationList.rendered = function() {
 	Session.set("pageTitle","Locations @ Brandeis");
@@ -25,6 +26,14 @@ Template.locationList.helpers({
 			return Session.get("category");
 		}
 	},
+	selectedArea:function() {
+		if (Session.get("area") == "") {
+			return "All";
+		}
+		else {
+			return Session.get("area");
+		}
+	},
 	allCount:function() {
 		return Locations.find().count();
 	},
@@ -45,9 +54,15 @@ Template.locationList.events({
 			$(event.target).find("span").addClass("glyphicon-menu-up");
 		}
 	},
-	'click .selection':function(event) {
+	'click .selectionCat':function(event) {
 		event.preventDefault();
 		
 		Session.set("category",$(event.target).data("filter"));
+	}
+	,
+	'click .selectionArea':function(event) {
+		event.preventDefault();
+		
+		Session.set("area",$(event.target).data("filter"));
 	}
 });
