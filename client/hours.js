@@ -28,6 +28,7 @@ Template.hours.helpers({
 		console.log("eachPeriod");
 	},
 	period: function(){
+		console.log("period start");
 		openPeriod=day+":";
 		if(today.length>=4){
 			eachPeriod(0);
@@ -38,7 +39,8 @@ Template.hours.helpers({
 		}else if(today.length==12){
 			achPeriod(8);
 			openPeriod+= sH+":"+sM+"-"+eH+":"+eM;
-		}	
+		}
+		console.log("period end");
 		return openPeriod;
 	},
 	state: function(h,m,sH,sM,eH,eM){
@@ -54,6 +56,7 @@ Template.hours.helpers({
 		}
 	},
 	status: function(){
+		console.log("status start");
 		var h=new Date().getHours();
 		var m=new Date().getMinutes();
 		
@@ -71,6 +74,7 @@ Template.hours.helpers({
 				} 
 			}
 		}
+		console.log("status end");
 		if(!state){
 			return "closed";
 		} else return "open";
