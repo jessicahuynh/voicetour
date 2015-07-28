@@ -374,5 +374,117 @@ paths_libraryeast = [
 	    "end":"eastHassenfeld_e02",
 	    "description": "Walk toward the entrance near the mini parking lot.",
 	},
+	{
+	    "start":"rubenstein_c05",
+	    "end":"eastquadlot_e02",
+	    "description": "You are at the entrance of the parking lot.",
+	},
+	{
+	    "start":"eastquadlot_e02",
+	    "end":"rubenstein_c05",
+	    "description": "Exit the parking lot.",
+	},
+	{
+	    "start":"rubenstein_c05",
+	    "end":"eastquadlot_e01",
+	    "description": "You are at the entrance of the parking lot.",
+	},
+	{
+	    "start":"eastquadlot_e01",
+	    "end":"rubenstein_c05",
+	    "description": "Exit the parking lot.",
+	},
+	{
+	    "start":"stonemanlot_e01",
+	    "end":"rubenstein_c03",
+	    "description": "Exit the parking lot.",
+	},
+	{
+	    "start":"rubenstein_c03",
+	    "end":"stonemanlot_e01",
+	    "description": "You are at the parking lot.",
+	},
+	{
+	    "start":"rubenstein_c03",
+	    "end":"rubenstein_c02",
+	    "description": "Walk up the slope.",
+	},
+	{
+	    "start":"rubenstein_c02",
+	    "end":"rubenstein_c03",
+	    "description": "Walk down the slope.",
+	},
+	{
+	    "start":"rubenstein_c07",
+	    "end":"eastRubenstein_e01",
+	    "description": "The entrance is next to you.",
+	},
+	{
+	    "start":"eastRubenstein_e01",
+	    "end":"rubenstein_c07",
+	    "description": "Exit the building and walk on to the path.",
+	},
+	{
+	    "start":"icc_c01",
+	    "end":"rubenstein_c07",
+	    "description": "Walk down the stairs and walk along the path.",
+	},
+	{
+	    "start":"rubenstein_c07",
+	    "end":"icc_c01",
+	    "description": "Walk along the path and walk up the stairs.",
+	},
+	{
+	    "start":"rubenstein_c07",
+	    "end":"icc_e01",
+	    "description": "Walk down the stairs and the entrance is your right.",
+	},
+	{
+	    "start":"icc_e01",
+	    "end":"rubenstein_c07",
+	    "description": "Exit the building and walk up the stairs.",
+	},
+	{
+	    "start":"rubenstein_c07",
+	    "end":"eastShapiro_e01",
+	    "description": "Walk along the path and walk up the stairs before you reach the parking spaces. The entrance is on your right.",
+	},
+	{
+	    "start":"eastShapiro_e01",
+	    "end":"rubenstein_c07",
+	    "description": "Exit the building. Walk down the stairs and fellow along the path.",
+	},
+	{
+	    "start":"eastShapiro_e01",
+	    "end":"icc_c01",
+	    "description": "Exit the building. Walk along the building.",
+	},
+	{
+	    "start":"icc_c01",
+	    "end":"eastShapiro_e01",
+	    "description": "Walk along the path next to the building.",
+	},
+	{
+	    "start":"icc_c01",
+	    "end":"eastHassenfeld_e02",
+	    "description": "The entrance is right next to you.",
+	},
+	{
+	    "start":"eastHassenfeld_e02",
+	    "end":"icc_c01",
+	    "description": "Walk toward the stairs.",
+	},
+	{
+	    "start":"rubenstein_c11",
+	    "end":"icc_c01",
+	    "description": "Walk along the small path that lead toward the residence hall.",
+	},
+	{
+	    "start":"icc_c01",
+	    "end":"rubenstein_c11",
+	    "description": "Walk toward the small parking space.",
+	},
+
+
 
 ]

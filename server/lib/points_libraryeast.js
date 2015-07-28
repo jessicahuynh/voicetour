@@ -109,6 +109,11 @@ points_libraryeast = [
 	    "coordinate":new Point(42.367677, -71.254950),
 	    "type":"entrance"
 	},
+	{
+	    "id":"icc_c01",
+	    "coordinate":new Point(42.367862, -71.254931),
+	    "type":"crossing"
+	},
 	//east
 	{
 	    "id": "rubenstein_c01",

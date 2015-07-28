@@ -402,13 +402,33 @@ paths_science = [
 	},
 	{
 	    "start":"rosenstiel_c04",
-	    "end":"rosenstiel_c01",
+	    "end":"rosensweig_c01",
 	    "description": "Walk up the slope on Loop Road.",
 	},
 	{
-	    "start":"rosenstiel_c01",
+	    "start":"rosensweig_c01",
 	    "end":"rosenstiel_c04",
 	    "description": "Walk down the slope on Loop Road.",
+	},
+	{
+	    "start":"rosenstiel_c01",
+	    "end":"rosensweig_c01",
+	    "description": "Walk up the slope on Loop Road.",
+	},
+	{
+	    "start":"rosensweig_c01",
+	    "end":"rosenstiel_c01",
+	    "description": "Walk down the slope on Loop Road.",
+	},
+	{
+	    "start":"rosensweig_e01",
+	    "end":"rosensweig_c01",
+	    "description": "Walk down the stairs.",
+	},
+	{
+	    "start":"rosensweig_c01",
+	    "end":"rosensweig_e01",
+	    "description": "Walk up the stairs.",
 	},
 	{
 	    "start":"rosenstiel_c02",
