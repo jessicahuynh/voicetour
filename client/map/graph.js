@@ -1,6 +1,5 @@
 Template.graph.rendered = function () {
 	Session.set("pageTitle","Navigate");
-	$("#searchForm").hide();
 	
 	//graph = new Graph(Map.findOne());
 	/*console.log(graph);	*/
@@ -124,7 +123,26 @@ Template.graph.helpers({
 				collection:Locations,
 				matchAll:true,
 				field:"name",
-				template:Template.suggestions
+				template:Template.suggestions,
+				selector: function(match) {
+                   var regex;
+                   regex = new RegExp(match, 'i');
+                   return {
+                       $or: [
+                          {
+                              'name': regex
+                          }, {
+                              'nickname': regex
+                          }, {
+							  'category': regex
+						  }, {
+							  'function':regex
+						  }, {
+							  'description':regex
+						  }
+                       ]
+                   };
+                },
 			}]
 		};
 	},
@@ -150,6 +168,12 @@ Template.graph.events({
 		//console.log("before start: " + Session.get ("currentLocation").x + "," + Session.get ("currentLocation").y);
 		var starts = document.getElementById("startpoint").value;
 		var ends = document.getElementById("endpoint").value;
+		
+		// if starting is empty, assume current location
+		if (starts == "") {
+			document.getElementById("startpoint").value = "(" + Session.get("currentLocation").x +", "+Session.get("currentLocation").y+")";
+			starts = "(" + Session.get("currentLocation").x +", "+Session.get("currentLocation").y+")";
+		}
 		
 		console.log("start " + starts);
 		console.log("end "+ ends);

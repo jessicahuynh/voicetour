@@ -58,6 +58,15 @@ locations_transport = [
 		"description":"The bus shelter itself was a gift of the Student Union 2013-2014.",
 		"category":["transportation"],
 		"nearby":["admissions","slosberg","bernstein-marcus","greatlawn","scc","ridgewoodA"]
+	},
+	{
+		"id":"stop_lemberg",
+		"name":"Lemberg Shuttle Stop",
+		"nickname":"Lemberg stop",
+		"coordinates":[new Point(42.363194, -71.258541)],
+		"function":"The Lemberg stop serves the campus BranVan.",
+		"category":["transportation"],
+		"nearby":["lemberg","rabbSchool","gordonfield"]
 	}
 ]
 

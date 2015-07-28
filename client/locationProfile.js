@@ -21,6 +21,9 @@ Template.locationProfile.helpers({
 				zoom:17
 			}
 		}
+	},
+	id:function() {
+		return Session.get("thisLoc").id;
 	}
 });
 
@@ -37,8 +40,7 @@ Template.locationProfile.rendered = function() {
 	// 	Session.set("pageTitle","Viewing " +thisLoc.nickname);
 	// });
 	var thisLoc = Session.get("thisLoc");
-	Session.set("pageTitle","Viewing " +thisLoc.nickname);
-	
+	Session.set("pageTitle","Viewing " +thisLoc.nickname);	
 	
 	GoogleMaps.load();
 	GoogleMaps.ready('locMap',function(map) {
@@ -69,13 +71,19 @@ Template.locationProfile.rendered = function() {
 ;		}
 		else {
 			// just a point
+			var marker = new google.maps.Marker({
+				position:new google.maps.LatLng(thisLoc.coordinates[0].x,thisLoc.coordinates[0].y),
+				map:map.instance,
+				title:thisLoc.name,
+				icon:'/GoogleMapsMarkers/blue_MarkerL.png'
+			});
+			
+			map.instance.setCenter(new google.maps.LatLng(thisLoc.coordinates[0].x,thisLoc.coordinates[0].y));
 		}
 	});
 	
 	var listen = thisLoc.name + ". " + thisLoc.function + thisLoc.description;
 	Session.set("listenTo",listen);
-	
-	$("#searchForm").hide();
 	
 	if ($(window).width() > 768) {
 		$(".page-header").prepend("<a href='#' id='returnToList' class='back'><span class='glyphicon glyphicon-menu-left'></span></a>");

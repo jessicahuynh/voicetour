@@ -182,7 +182,7 @@ locations_rooms = [
 {
 		"id":"usdanLouisDeli",
 		"name":"Usdan Louis' Deli",
-		"nickname":["Deli","Louis"],
+		"nickname":"Louis Deli",
 		"coordinates": [
 			new Point(42.368022, -71.257302), 
 			new Point(42.367935, -71.257338), 

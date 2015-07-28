@@ -130,7 +130,68 @@ points_gym = [
 	},
 
 
-
+	// old south street
+	{
+		"id":"rabbSchool_c01", // intersection of south st and old south st
+		"coordinate":new Point(42.362593, -71.260072),
+		"type":"crossing"
+	},
+	{
+		"id":"rabbSchool_c02", // intersection, crossing the street uphill
+		"coordinate": new Point(42.362764, -71.259952),
+		"type":"crossing"
+	},
+	{
+		"id":"rabbSchool_c03", // driveway for boat house
+		"coordinate":new Point(42.362760, -71.259653),
+		"type":"crossing"	
+	},
+	{
+		"id":"rabbSchool_c04", //driveway start for rabb school
+		"coordinate":new Point(42.362770, -71.259480),
+		"type":"crossing"
+	},
+	{
+		"id":"rabbSchool_c05", // in front of main entrance
+		"coordinate":new Point(42.362821, -71.259083),
+		"type":"crossing"
+	},
+	{
+		"id":"rabbSchool_c06", // in front of grad entrance
+		"coordinate":new Point(42.362870, -71.258973),
+		"type":"crossing"
+	},
+	// lemberg
+	{
+		"id":"lemberg_c01", // driveway of lemberg
+		"coordinate":new Point(42.363239, -71.258606),
+		"type":"crossing"
+	},
+	{
+		"id":"lemberg_c02", // next to shuttle stop
+		"coordinate":new Point(42.363234, -71.258538),
+		"type":"crossing"
+	},
+	{
+		"id":"lemberg_c03", //in front
+		"coordinate":new Point(42.363434, -71.258563),
+		"type":"crossing"
+	},
+	{
+		"id":"lemberg_c04", //south street, path to lemberg playground
+		"coordinate":new Point(42.363340, -71.259448),
+		"type":"crossing"
+	},
+	{
+		"id":"lemberg_c05", // next to playground
+		"coordinate":new Point(42.363445, -71.259235),
+		"type":"crossing"
+	},
+	{
+		"id":"lemberg_c06", // on the side, next to stairs
+		"coordinate":new Point(42.363331, -71.258897),
+		"type":"crossing"
+	}
 
 ]
 

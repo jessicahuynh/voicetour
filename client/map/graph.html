@@ -9,7 +9,7 @@
 		<li role="presentation"><a href="#mapPane" role="pill" data-toggle="pill" aria-controls="map" id="mapTab">Map</a></li>
 	</ul>
 	
-	<div class="tab-content">
+	<div class="tab-content" id="navpanels">
 		<div id="loadingPanel">{{> loading}}</div>		
 		<div role="tabpanel" class="tab-pane active col-sm-6" id="navPane">
 			<form id="navform" name="navform">
@@ -19,7 +19,7 @@
 					<!--<input type="text" id="startpoint" class="form-control" placeholder="starting">-->
 					<div class="getCurrentContainer">
 						<a id="getCurrentLoc" href="#">
-							<span class="glyphicon glyphicon-record"></span>&nbsp;Use current location
+							<span class="glyphicon glyphicon-map-marker"></span>&nbsp;Use my current location
 						</a>
 					</div>
 				</div>
