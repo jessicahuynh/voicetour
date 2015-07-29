@@ -233,21 +233,31 @@ paths_gym = [
 	{
 		"start":"castle_e01",
 		"end":"rosenstiel_c03",
-		"description":"Waking down the slope with Castle on your left side."
+		"description":"Walking down the slope with Castle on your left side."
 	},
 	{
 		"start":"rosenstiel_c03",
 		"end":"castle_e01",
-		"description":"Waking up the slope with Castle on your right side."
+		"description":"Walking up the slope with Castle on your right side."
+	},
+	{
+		"start":"rubenstein_c01",
+		"end":"healthcenter_c01",
+		"description":"Walking down the slope toward the building in front of you."
 	},
 	{
 		"start":"rosenstiel_c03",
-		"end":"healthcenter_c01",
-		"description":"Waking down the slope toward the building in front of you."
+		"end":"rubenstein_c01",
+		"description":"Walking down the stairs."
+	},
+	{
+		"start":"rubenstein_c01",
+		"end":"rosenstiel_c03",
+		"description":"Walking up the stairs."
 	},
 	{
 		"start":"healthcenter_c01",
-		"end":"rosenstiel_c03",
+		"end":"rubenstein_c01",
 		"description":"Waking up the slope toward the Loop Road."
 	},
 	{

@@ -2,8 +2,16 @@
 count = 0;
 
 Template.steps.helpers({
-	destination: function() {
-		return Session.get("destination");
+	routeStartStop: function() {
+		return Session.get("routeStartStop");
+	},
+	estimate:function() {
+		if (Session.get("routeStartStop")[0] = "Y") {
+				return "no time at all!"
+			}
+			else {
+				return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes total of walking";
+			}
 	},
 	stepMapOptions: function() {
 		if (GoogleMaps.loaded()) {

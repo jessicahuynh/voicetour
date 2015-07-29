@@ -65,11 +65,19 @@ ul.-autocomplete-list {
 /* keep the route description a reasonable height */
 @media (min-width:769px) {
 	#routePane {
-		max-height:30em;
+		max-height:25em;
 		overflow-y:scroll;
 	}
 }
 
 #loadingPanel {
 	display:none;
+}
+
+.infoAboutPath {
+	padding-top:1em;
+	display:none;
+}
+@media (min-width:769px) {
+	.infoAboutPath {display:block;}
 }

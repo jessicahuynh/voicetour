@@ -16,6 +16,7 @@ locations = [
 						and molecular neurobiology).",
 		"category":["academics","offices"],
 		"entrances":["volen_e01","volen_ie02","volen_ie03","feldberg_ie01"],
+		"icrossings":["volen_ic02"],
 		"nearby":["feldberg","gzang","goldsmith","chapelsfield"],
 		"pic":"https://www.dropbox.com/s/p3ony4eizclrwr9/volen.png?dl=0",
 	},
@@ -700,7 +701,7 @@ locations = [
 			new Point(42.366304, -71.257812), 
 			new Point(42.366647, -71.258526)],
 		"category":["library","academics"],
-		"entrances":["gzang_e01","gzang_e02","gzang_ie01","gzang_ie02","gzang_ie03"],
+		"entrances":["gzang_e01","gzang_e02","gzang_ie01","gzang_ie02","gzang_ie03","volen_ie03"],
 	},
 	pearlman = {
 		"id":"pearlman",

@@ -1,3 +1,5 @@
+Session.setDefault("routeStartStop","Enter a start and end location to get started!");
+
 Template.graph.rendered = function () {
 	Session.set("pageTitle","Navigate");
 	
@@ -157,6 +159,23 @@ Template.graph.helpers({
 				zoom:17
 			};
 		}
+	},
+	routeStartStop:function() {
+	
+		return Session.get("routeStartStop");
+	},
+	routeEstimate:function() {
+		if ((Session.get("routeDist") == "" || Session.get("routeDist")== null || Session.get("routeDist") == undefined) && Session.get("routeStartStop") != "") {
+			return "";
+		}
+		else {
+			if (Session.get("routeStartStop")[0] = "Y") {
+				return "no time at all!"
+			}
+			else {
+				return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes of walking";
+			}
+		}
 	}
 });
 
@@ -194,6 +213,8 @@ Template.graph.events({
 			}, 2000);
 
 		}
+		
+		displayRouteStartStop();
 
 		// $("#routeTab").tab('show');
 	},
@@ -250,4 +271,61 @@ function setStops() {
 		Session.set("prev","/navigate");
 		Router.go('/steps');
 	}		
+}
+
+function displayRouteStartStop() {
+	var info = "Enter a start and end location to get started.";
+	var start = null;
+	var end = null;
+	
+	if (document.getElementById("startpoint") != null && document.getElementById("endpoint") != null) {
+		info = "From ";
+		if (document.getElementById("startpoint").value[0] == "(") {
+			start = Session.get("inLocation")[0].name;
+			if (Session.get("inLocation")[1] == "in") {
+				info += Session.get("inLocation")[0].name;
+			}
+			else {
+				info += "your current location near " + Session.get("inLocation")[0].name;
+			}
+		}
+		else {
+			start = document.getElementById("startpoint").value;
+			info+=document.getElementById("startpoint").value;
+		}
+		
+		if (document.getElementById("endpoint").value != "") {
+			end = document.getElementById("endpoint").value;
+			info += " to "+document.getElementById("endpoint").value;
+		}
+	}
+	else {
+		if (Session.get("navigateTo") != "" && Session.get("navigateTo") != null) {
+			info = "From ";
+			if (Session.get("navigateFrom")[0] == "(") {
+				start = Session.get("inLocation")[0].name;
+				if (Session.get("inLocation")[1] == "in") {
+					info += "your current location in " +Session.get("inLocation")[0].name;
+				}
+				else {
+					info += "your current location near " + Session.get("inLocation")[0].name;
+				}
+			}
+			else {
+				start = Session.get("navigateFrom");
+				info+=Session.get("navigateFrom");
+			}
+			
+			if (Session.get("navigateTo") != "")
+				end = Session.get("navigateTo");
+				info += " to "+Session.get("navigateTo");
+		}
+	}
+	
+	if (start == end) {
+		info = "You're already at "+end;
+	}	
+		
+	Session.set("routeStartStop",info);
+	console.log(Session.get("routeStartStop"));
 }
