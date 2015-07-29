@@ -32,7 +32,7 @@ operationhours=[
 		"Sun":closed,
 	},
 	{
-		"id":"facultyclub",
+		"id":"facultycenter",
 		"Mon":["11","30","14","00"],
 		"Tue":["11","30","14","00"],
 		"Wed":["11","30","14","00"],

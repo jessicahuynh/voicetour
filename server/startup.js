@@ -72,7 +72,9 @@ Meteor.startup(function() {
 	if (Hours.find().count()==0){
 		var hoursFile=operationhours;
 		hoursFile.forEach(function(hour) {
+			console.log(hour);
 			Hours.insert(hour);
+			
 		});
 	}
 	console.log(Map.find().count());
