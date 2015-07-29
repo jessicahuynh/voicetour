@@ -12,7 +12,7 @@ function getRoute(starts, ends) {
 					route = ["You're already here!"];
 				}
 				else {
-					route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
+					route = getShortestRoute(Locations.findOne({"name":starts}).icrossings,Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
 				}
 				
 			}
@@ -35,7 +35,7 @@ function getRoute(starts, ends) {
 									distNearestIntersection = data;
 									nearestIntersection = intersection.id;
 									
-									route = getShortestRoute([nearestIntersection],Locations.findOne({"name":ends}).entrances);
+									route = getShortestRoute(Locations.findOne({"name":starts}).icrossings,[nearestIntersection],Locations.findOne({"name":ends}).entrances);
 									//console.log("*" + route);
 									if (route != null) {
 										getRouteDescription(route);
@@ -55,15 +55,19 @@ function getRoute(starts, ends) {
 					route = ["You're already here!"];
 				}
 				else {
-					route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
+					route = getShortestRoute(Locations.findOne({"name":starts}).icrossings,Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
 				}
 		}
 		return route;
 }
 
-function getShortestRoute(startEntrances,endEntrances) {
+function getShortestRoute(icrossings,startEntrances,endEntrances) {
 	var theShortestDist = 1000000000;
 	var shortestRoute = null;
+	
+	if (icrossings != undefined && icrossings != null && icrossings.length > 0) {
+		startEntrances = icrossings;
+	}
 	
 	if (startEntrances != undefined && endEntrances != undefined) {
 		shortestRoute = graph.findShortestPath(startEntrances[0],endEntrances[0]);
@@ -97,7 +101,7 @@ function getShortestRoute(startEntrances,endEntrances) {
 				});
 			});
 		}
-	}
+	}	
 
 	//console.log(shortestRoute);
 	return shortestRoute;
