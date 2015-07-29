@@ -1,8 +1,8 @@
 Template.locationProfile.helpers({
 	location:function() {
 		thisLoc = Locations.findOne({_id:Session.get("viewLocation")});
-		console.log("^^^^^^^^"+thisLoc.coordinates);
-		Session.set("thisLoc",thisLoc);
+		// console.log("^^^^^^^^"+thisLoc.coordinates);
+		Session.setPersistent("thisLoc",thisLoc);
 		return thisLoc;
 	},
 	categories:function() {
