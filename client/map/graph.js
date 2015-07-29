@@ -169,7 +169,12 @@ Template.graph.helpers({
 			return "";
 		}
 		else {
-			return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes of walking";
+			if (Session.get("routeStartStop")[0] = "Y") {
+				return "no time at all!"
+			}
+			else {
+				return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes of walking";
+			}
 		}
 	}
 });
@@ -270,10 +275,13 @@ function setStops() {
 
 function displayRouteStartStop() {
 	var info = "Enter a start and end location to get started.";
+	var start = null;
+	var end = null;
 	
 	if (document.getElementById("startpoint") != null && document.getElementById("endpoint") != null) {
 		info = "From ";
 		if (document.getElementById("startpoint").value[0] == "(") {
+			start = Session.get("inLocation")[0].name;
 			if (Session.get("inLocation")[1] == "in") {
 				info += Session.get("inLocation")[0].name;
 			}
@@ -282,16 +290,20 @@ function displayRouteStartStop() {
 			}
 		}
 		else {
+			start = document.getElementById("startpoint").value;
 			info+=document.getElementById("startpoint").value;
 		}
 		
-		if (document.getElementById("endpoint").value != "")
+		if (document.getElementById("endpoint").value != "") {
+			end = document.getElementById("endpoint").value;
 			info += " to "+document.getElementById("endpoint").value;
+		}
 	}
 	else {
 		if (Session.get("navigateTo") != "" && Session.get("navigateTo") != null) {
 			info = "From ";
 			if (Session.get("navigateFrom")[0] == "(") {
+				start = Session.get("inLocation")[0].name;
 				if (Session.get("inLocation")[1] == "in") {
 					info += "your current location in " +Session.get("inLocation")[0].name;
 				}
@@ -300,14 +312,19 @@ function displayRouteStartStop() {
 				}
 			}
 			else {
+				start = Session.get("navigateFrom");
 				info+=Session.get("navigateFrom");
 			}
 			
 			if (Session.get("navigateTo") != "")
+				end = Session.get("navigateTo");
 				info += " to "+Session.get("navigateTo");
 		}
 	}
 	
+	if (start == end) {
+		info = "You're already at "+end;
+	}	
 		
 	Session.set("routeStartStop",info);
 	console.log(Session.get("routeStartStop"));

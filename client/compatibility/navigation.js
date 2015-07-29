@@ -8,7 +8,13 @@ function getRoute(starts, ends) {
 				starts = Locations.findOne({"name":Session.get("inLocation")[0].name}).name;
 				//console.log(starts);
 				
-				route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
+				if (Session.get("inLocation")[0].name == ends) {
+					route = ["You're already here!"];
+				}
+				else {
+					route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
+				}
+				
 			}
 			// else, go from the nearest intersection
 			else {
@@ -45,7 +51,12 @@ function getRoute(starts, ends) {
 
 		// a location searched for
 		else {
-			route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
+			if (starts == ends) {
+					route = ["You're already here!"];
+				}
+				else {
+					route = getShortestRoute(Locations.findOne({"name":starts}).entrances,Locations.findOne({"name":ends}).entrances);
+				}
 		}
 		return route;
 }
@@ -53,6 +64,7 @@ function getRoute(starts, ends) {
 function getShortestRoute(startEntrances,endEntrances) {
 	var theShortestDist = 1000000000;
 	var shortestRoute = null;
+	
 	if (startEntrances != undefined && endEntrances != undefined) {
 		shortestRoute = graph.findShortestPath(startEntrances[0],endEntrances[0]);
 		
@@ -65,6 +77,7 @@ function getShortestRoute(startEntrances,endEntrances) {
 	
 					// if there's no route between the entrances, skip
 					if (currentRoute != null) {
+						console.log(currentRoute);
 						for (var i = 0; i < currentRoute.length - 2; i++) {
 							currentRouteDist += Paths.findOne({ "start": currentRoute[i], "end": currentRoute[i + 1] }).distance;
 						}
@@ -174,21 +187,27 @@ function getRouteDescription(route) {
 	var r = [];
 	
 	// push getTo of starting point if it exists
-	if (Intersections.findOne({"id":route[0]}).getTo != undefined) {
-		r.push(Intersections.findOne({"id":route[0]}).getTo);
-	}
-		
-	if (route != null && route != undefined) {
-		for (var i = 0; i < route.length - 1; i++) {
-			var thePath = Paths.findOne({"start":route[i],"end":route[i+1]});
-			r.push(thePath.description);
-		}
+	if (route[0] == "You're already here!") {
+		Session.set("routeToTake",route);
 	}
 	else {
-		r.push("We don't seem to be able to get the routing data between these two!");
+		if (Intersections.findOne({"id":route[0]}).getTo != undefined) {
+			r.push(Intersections.findOne({"id":route[0]}).getTo);
+		}
+			
+		if (route != null && route != undefined) {
+			for (var i = 0; i < route.length - 1; i++) {
+				var thePath = Paths.findOne({"start":route[i],"end":route[i+1]});
+				r.push(thePath.description);
+			}
+		}
+		else {
+			r.push("We don't seem to be able to get the routing data between these two!");
+		}
+		
+		Session.set("routeToTake",r);
 	}
 	
-	Session.set("routeToTake",r);
 }
 
 function Point(x,y) {
