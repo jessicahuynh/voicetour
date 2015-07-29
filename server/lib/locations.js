@@ -16,6 +16,7 @@ locations = [
 						and molecular neurobiology).",
 		"category":["academics","offices"],
 		"entrances":["volen_e01","volen_ie02","volen_ie03","feldberg_ie01"],
+		"icrossings":["volen_ic02"],
 		"nearby":["feldberg","gzang","goldsmith","chapelsfield"],
 		"pic":"https://www.dropbox.com/s/p3ony4eizclrwr9/volen.png?dl=0",
 	},

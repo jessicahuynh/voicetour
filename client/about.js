@@ -149,7 +149,7 @@ Template.about.rendered = function() {
 				
 				google.maps.event.addListener(polygon, 'click', function () {
 					new google.maps.InfoWindow({
-				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")<br>Entrances: "+theLocs[this.index].entrances,
+				      content: theLocs[this.index].nickname + " (" + theLocs[this.index].name + ")<br>Entrances: "+theLocs[this.index].entrances+"<br>I Crossings: "+theLocs[this.index].icrossings,
 				      maxWidth: 200,
 					  position:new google.maps.LatLng(theLocs[this.index].coordinates[0].x,theLocs[this.index].coordinates[0].y)
 				  }).open(map.instance,this);
