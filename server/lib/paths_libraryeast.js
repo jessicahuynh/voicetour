@@ -489,8 +489,65 @@ paths_libraryeast = [
 	    "end":"eastShapiro_e01",
 	    "description": "Walk toward the small parking space.",
 	},
-
-
-
+	{
+	    "start":"schwartz_e01",
+	    "end":"usdan_c03",
+	    "description": "Exit the building and trun left.",
+	},
+	{
+	    "start":"usdan_c03",
+	    "end":"schwartz_e01",
+	    "description": "Walk toward the building with many stairs.",
+	},
+	{
+	    "start":"schwartz_e01",
+	    "end":"usdan_c02",
+	    "description": "Exit the building and trun right.",
+	},
+	{
+	    "start":"usdan_c02",
+	    "end":"schwartz_e01",
+	    "description": "Walk toward the building with many stairs.",
+	},
+	{
+	    "start":"bassine_c03",
+	    "end":"brown_e01",
+	    "description": "Walk along the small and this the first building on your right.",
+	},
+	{
+	    "start":"brown_e01",
+	    "end":"bassine_c03",
+	    "description": "Turn left and walk along the small path.",
+	},
+	{
+	    "start":"schwartz_c01",
+	    "end":"brown_e01",
+	    "description": "Walk along the smaller path and the entrance is your left.",
+	},
+	{
+	    "start":"brown_e01",
+	    "end":"schwartz_c01",
+	    "description": "Walk along the small path toward the larger path.",
+	},
+	{
+	    "start":"usdan_c04",
+	    "end":"levin_e02",
+	    "description": "The entrance is on your left",
+	},
+	{
+	    "start":"levin_e02",
+	    "end":"usdan_c04",
+	    "description": "Exit the building and turn right.",
+	},
+	{
+	    "start":"levin_e01",
+	    "end":"usdan_c04",
+	    "description": "Exit the building and turn right.",
+	},	
+	{
+	    "start":"usdan_c04",
+	    "end":"levin_e01",
+	    "description": "The entrance is on your left",
+	},
 
 ]
