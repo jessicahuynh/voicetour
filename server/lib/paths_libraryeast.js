@@ -547,7 +547,8 @@ paths_libraryeast = [
 	{
 	    "start":"usdan_c04",
 	    "end":"levin_e01",
-	    "description": "The entrance is on your left",
+	    "description": "The entrance is on your left.",
 	},
+	
 
 ]

@@ -93,6 +93,12 @@ points_libraryeast = [
 	    "coordinate":new Point(42.367903, -71.256899),
 	    "type": "crossing",
 	},
+	// {
+	//     "id": "usdan_c05",
+	//     "coordinate":new Point(42.367903, -71.256899),
+	//     "type": "crossing",
+	// },
+
 	{
 	    "id":"levin_e01",
 	    "coordinate":new Point(42.368117, -71.256926),
