@@ -56,10 +56,10 @@ Template.hours.onCreated (function() {
 			eachPeriod(0);
 			openPeriod+= sH+":"+sM+"-"+eH+":"+eM;
 		} else if(today.length>=8){
-			achPeriod(4);
+			eachPeriod(4);
 			openPeriod+= ","+sH+":"+sM+"-"+eH+":"+eM;
 		}else if(today.length==12){
-			achPeriod(8);
+			eachPeriod(8);
 			openPeriod+= ","+sH+":"+sM+"-"+eH+":"+eM;
 		}
 		console.log("period :"+openPeriod);

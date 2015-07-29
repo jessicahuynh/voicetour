@@ -52,7 +52,14 @@ Template.nearbyLocs.events({
 		event.preventDefault();
 		var loc = Locations.findOne({"id":JSON.stringify(this).replace(/"([^"]+(?="))"/g, '$1')});
 		
-		Session.set("prev","/locationList");
+		var currentPage = Router.current().route.path();
+		if (currentPage == "/selfguide") {
+			Session.set("prev","/selfguide");
+		}
+		else {
+			Session.set("prev","/locationList");
+		}
+		
 		Session.set("viewLocation",loc._id);
 		
 		console.log(Session.get("viewLocation"));
