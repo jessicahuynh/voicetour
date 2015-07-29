@@ -1,8 +1,8 @@
-function getToday(){
-	var thisId=Session.get("thisLoc").id;
-	console.log(thisId);
-	schedule=Hours.findOne({id:thisId});
-	console.log("schedule:"+schedule);
+function getToday(schedule){
+	// var thisId=Session.get("thisLoc").id;
+	// console.log(thisId);
+	// schedule=Hours.findOne({id:thisId});
+	// console.log("schedule:"+schedule);
 	var today=[];
 	var day = new Date().getDay();
 	if(day==0){
@@ -29,7 +29,6 @@ function eachPeriod(i){
 	sM=today[i+1];
 	eH=today[i+2];
 	eM=today[i+3];
-	console.log("eachPeriod");
 }
 function stateF(h,m,sH,sM,eH,eM){
 	if(h==sH&&m>=sM){
@@ -45,8 +44,13 @@ function stateF(h,m,sH,sM,eH,eM){
 
 
 Template.hours.onCreated (function() {
-	today=getToday();
+	var thisId=Session.get("thisLoc").id;
+	console.log(thisId);
+	schedule=Hours.findOne({id:thisId});
+	console.log("schedule:"+schedule);
 
+	if(schedule!=null){
+		today=getToday(schedule);
 		openPeriod="";
 		if(today.length>=4){
 			eachPeriod(0);
@@ -77,16 +81,20 @@ Template.hours.onCreated (function() {
 				} 
 			}
 		}
-		
+	}	
 });
 Template.hours.helpers({
 	period:function(){
-		return openPeriod;
+		if(schedule == null){
+			return "N/A";
+		} else return openPeriod;
 	},
 	status: function(){
-		if(!state){
-			return "Closed";
-		} else return "Open";
+		if(schedule != null){
+			if(!state){
+				return "Closed";
+			} else return "Open";
+		} else return "N/A";		
 	}
 });
 
