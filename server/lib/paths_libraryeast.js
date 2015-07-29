@@ -549,6 +549,26 @@ paths_libraryeast = [
 	    "end":"levin_e01",
 	    "description": "The entrance is on your left.",
 	},
-	
+	{
+	    "start":"usdan_c08",
+	    "end":"levin_e01",
+	    "description": "Walk toward the building and the entrance is on your right.",
+	},
+	{
+	    "start":"levin_e01",
+	    "end":"usdan_c08",
+	    "description": "Exit the building and trun left.",
+	},
+	{
+	    "start":"usdan_c08",
+	    "end":"usdan_e01",
+	    "description": "Walk toward the building and the entrance is on your left.",
+	},
+	{
+	    "start":"usdan_e01",
+	    "end":"usdan_c08",
+	    "description": "Exit the building and trun right.",
+	},
+
 
 ]

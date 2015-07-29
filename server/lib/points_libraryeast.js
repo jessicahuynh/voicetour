@@ -93,12 +93,36 @@ points_libraryeast = [
 	    "coordinate":new Point(42.367903, -71.256899),
 	    "type": "crossing",
 	},
-	// {
-	//     "id": "usdan_c05",
-	//     "coordinate":new Point(42.367903, -71.256899),
-	//     "type": "crossing",
-	// },
-
+	{
+	    "id": "usdan_c05",
+	    "coordinate":new Point(42.368476, -71.256315),
+	    "type": "crossing",
+	},
+	{
+	    "id": "usdan_c06",
+	    "coordinate":new Point(42.368588, -71.256671),
+	    "type": "crossing",
+	},
+	{
+	    "id": "usdan_c07",
+	    "coordinate":new Point(42.368636, -71.256826),
+	    "type": "crossing",
+	},
+	{
+	    "id": "usdan_c08",
+	    "coordinate":new Point(42.368299, -71.256765),
+	    "type": "crossing",
+	},
+	{
+	    "id": "usdan_c09",
+	    "coordinate":new Point(42.368562, -71.257014),
+	    "type": "crossing",
+	},
+	{
+	    "id": "usdan_c10",
+	    "coordinate":new Point(42.368353, -71.257438),
+	    "type": "crossing",
+	},
 	{
 	    "id":"levin_e01",
 	    "coordinate":new Point(42.368117, -71.256926),
@@ -109,6 +133,7 @@ points_libraryeast = [
 	    "coordinate":new Point(42.367992, -71.256964),
 	    "type":"entrance"
 	},
+	
 	//icc
 	{
 	    "id":"icc_e01",
