@@ -1,6 +1,18 @@
 // points of gym, mailman, healthcenter and police station
 points_gym = [
 	{
+		"id":"squirebridge_e01",
+		"coordinate":new Point(42.365294, -71.255795),
+		"type":"entrance",
+		"getTo":"Head to Squire Bridge's entrance on the side closest to the athletics complex."
+	},
+	{
+		"id":"squirebridge_e02",
+		"coordinate":new Point(42.365622, -71.256147),
+		"type":"entrance",
+		"getTo":"Head to Squire Bridge's entrance next to Mailman House."
+	},
+	{
 		"id":"gosman_c01",
 		"coordinate":new Point(42.365305, -71.256108),
 		"type":"crossing"

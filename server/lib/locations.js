@@ -87,7 +87,8 @@ locations = [
 		"function": "The Rose Art Museum displays contemporary art with rotating exhibits.",
 		"description":"The Rose Art Museum houses the largest collection of modern art in New England. Admission is free to students and many intern there during the year. For a fee of $10 per semester, Brandeis students can rent a piece from the Student Loan Collection to hang in their room. The Rose Art Museum houses works by artists such as Marc Chagall, Andy Warhol, and Wassily Kandinsky. Recent acquisitions in 2012 have included works by Bruce Conner and Mark Bradford. As one of the most daring and innovative contemporary art museums the Rose regularly showcases new and innovative exhibitions. It also hosts regular artist talks and its permanent collection is frequently used as a teaching tool both in and outside of the classroom.",
 		"category":["art"],
-		"entrances":['museum_e01']
+		"entrances":['museum_e01'],
+		"nearby":["lightofreason"]
 	},
 
 	bassine = {

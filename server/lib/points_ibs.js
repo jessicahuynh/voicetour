@@ -5,6 +5,11 @@ points_ibs=[
 		"type":"entrance"
 	},
 	{
+		"id":"lightofreason_e01",
+		"coordinate":new Point(42.365452, -71.262027),
+		"type":"entrance"
+	},
+	{
 		"id":"pollack_e01",
 		"coordinate":new Point(42.365259, -71.262344),
 		"type":"entrance"

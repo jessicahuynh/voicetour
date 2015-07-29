@@ -1,5 +1,32 @@
 locations_artinstallations = [
 	{
+		"id":"squirebridge",
+		"name":"Squire Bridge",
+		"nickname":"Squire Bridge",
+		"function":"This bridge links Upper Campus with the Athletics complex.",
+		"description":"",
+		"coordinates":[new Point(42.365600, -71.256160),
+			new Point(42.365625, -71.256119),
+			new Point(42.365320, -71.255759),
+			new Point(42.365284, -71.255838)],
+		"nearby":["gosman","mailman"],
+		"entrances":["squirebridge_e01","squirebridge_e02"]
+	},
+	{
+		"id":"lightofreason",
+		"name":"Light of Reason, 2014",
+		"nickname":"Light of Reason",
+		"function":"This permanent sculpture was commissioned for the Rose Art Museum and Brandeis by Chris Burden.",
+		"description":"The structure of the sculpture was inspired by the three torches, three hills and three Hebrew letters in the Brandeis University seal, while the work's title borrows from a well-known quote by the university's namesake, Supreme Court Justice Louis Dembitz Brandeis: \"If we would guide by the light of reason, we must let our minds be bold.\" Light of Reason was made possible through a special museum endowment committed solely to the acquisition of works of art.",
+		"coordinates":[new Point(42.365401, -71.262062),
+			new Point(42.365491, -71.262014),
+			new Point(42.365491, -71.261783),
+			new Point(42.365376, -71.261814),
+			new Point(42.365278, -71.261920)],
+		"nearby":["roseart","facultycenter","goldman","pollack","greatlawn"],
+		"entrances":["lightofreason_e01"]
+	},
+	{
 		"id":"magnolias",
 		"name":"Six Magnolia Trees",
 		"function":"These six magnolia trees were planted in memory of the Holocaust.",
