@@ -206,14 +206,40 @@ paths_northrabb = [
 	},
 	{
 	    "start":"kutz_c05",
+	    "end":"usdan_c05",
+	    "description": "Walk along the Loop Road.",
+	},
+	{
+	    "start":"usdan_c05",
+	    "end":"usdan_c06",
+	    "description": "Walk along the Loop Road.",
+	},
+	{
+	    "start":"usdan_c05",
+	    "end":"usdan_c06",
+	    "description": "Walk along the Loop Road.",
+	},
+	{
+	    "start":"usdan_c07",
+	    "end":"usdan_c06",
+	    "description": "Walk along the Loop Road.",
+	},
+	{
+	    "start":"usdan_c07",
+	    "end":"usdan_c06",
+	    "description": "Walk along the Loop Road.",
+	},
+	{
+	    "start":"usdan_c07",
 	    "end":"kutz_c03",
 	    "description": "Walk along the Loop Road.",
 	},
 	{
-	    "start":"kutz_c03",
-	    "end":"kutz_c05",
+	    "start":"usdan_c07",
+	    "end":"kutz_c03",
 	    "description": "Walk along the Loop Road.",
 	},
+
 
 	
 
