@@ -35,7 +35,7 @@ function getRoute(starts, ends) {
 									distNearestIntersection = data;
 									nearestIntersection = intersection.id;
 									
-									route = getShortestRoute(Locations.findOne({"name":starts}).icrossings,[nearestIntersection],Locations.findOne({"name":ends}).entrances);
+									route = getShortestRoute(null,[nearestIntersection],Locations.findOne({"name":ends}).entrances);
 									//console.log("*" + route);
 									if (route != null) {
 										getRouteDescription(route);

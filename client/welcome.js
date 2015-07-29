@@ -55,8 +55,6 @@ Template.welcome.helpers({
 							  'category': regex
 						  }, {
 							  'function':regex
-						  }, {
-							  'description':regex
 						  }
                        ]
                    };

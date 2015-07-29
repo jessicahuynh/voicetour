@@ -1,4 +1,4 @@
-Locations.initEasySearch(['name','nickname','function','description','category'],
+Locations.initEasySearch(['name','nickname','function','category'],
 	{
 		'limit':50
 	}
