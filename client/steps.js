@@ -6,7 +6,12 @@ Template.steps.helpers({
 		return Session.get("routeStartStop");
 	},
 	estimate:function() {
-		return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes total walking";
+		if (Session.get("routeStartStop")[0] = "Y") {
+				return "no time at all!"
+			}
+			else {
+				return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes total of walking";
+			}
 	},
 	stepMapOptions: function() {
 		if (GoogleMaps.loaded()) {
