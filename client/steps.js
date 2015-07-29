@@ -6,8 +6,22 @@ Template.steps.helpers({
 		return Session.get("routeStartStop");
 	},
 	estimate:function() {
-		if (isNan(Session.get("routeDist")))
-				Session.set("routeDist",0);
+		console.log(Session.get("routeDist"));
+		if (Session.get("routeToTake")[0][0] == "Y") {
+				return "no walking needed"
+		}
+		else {
+				if (Session.get("routeDist") == "" || Session.get("routeDist")== null || Session.get("routeDist") == undefined || Session.get("routeDist") == NaN) {
+				return "";
+			}
+			else {
+	
+					return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes of walking";
+				
+				
+			}
+		}
+
 		return "about "+Math.ceil(Session.get("routeDist")*0.02)+ " minutes of walking";
 	},
 	stepMapOptions: function() {
