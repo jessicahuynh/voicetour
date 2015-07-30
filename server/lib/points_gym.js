@@ -25,6 +25,42 @@ points_gym = [
 		"type":"entrance",
 		"getTo":"Head to the bend in the road next to the Lower Mods."
 	},
+	{
+		"id":"mods_c01",
+		"coordinate":new Point(42.366051, -71.253886),
+		"type":"crossing"
+	},
+	// fields and courts
+	{
+		"id":"rieger_e01", 
+		"coordinate": new Point(42.364778, -71.253695),
+		"type":"entrance"
+	},
+	{
+		"id":"rieger_e02",
+		"coordinate":new Point(42.364462, -71.254299),
+		"type":"entrance"
+	},
+	{
+		"id":"marcusfield_e01",
+		"coordinate":new Point(42.363320, -71.256909),
+		"type":"entrance"
+	},
+	{
+		"id":"marcusfield_e02",
+		"coordinate":new Point(42.363398, -71.256647),
+		"type":"entrance"
+	},
+	{
+		"id":"steindiamond_e01",
+		"coordinate":new Point(42.364509, -71.256403),
+		"type":"entrance"
+	},
+	{
+		"id":"steindiamond_e02",
+		"coordinate":new Point(42.364370, -71.256830),
+		"type":"entrance"
+	},
 	// athletics
 	{
 		"id":"gosman_c01",
@@ -108,11 +144,8 @@ points_gym = [
 		"coordinate":new Point(42.365364, -71.253399),
 		"type":"entrance"
 	},
-	{
-		"id":"mods_c01",
-		"coordinate":new Point(42.366051, -71.253886),
-		"type":"crossing"
-	},
+
+	//across the bridge
 
 	{
 		"id":"mailman_e01",

@@ -918,6 +918,54 @@ locations = [
 		"nearby":["sachar","goldman"],
 		"entrances":['samuellemberg_e01','samuellemberg_e02']
 	},
+	{
+		"id":"rieger",
+		"name":"Rieger Tennis Courts",
+		"nickname":"Rieger",
+		"function":"The Rieger Tennis Courts are home to Brandeis Tennis.",
+		"description":"",
+		"coordinates":[new Point(42.364942, -71.253357),
+			new Point(42.363792, -71.255513),
+			new Point(42.363529, -71.255267),
+			new Point(42.364682, -71.253104)],
+		"category":["athletics"],
+		"area":["athletics","athletic complex"],
+		"nearby":["uppermods","lowermods","linsey","linseyparkinglot","gosmanparkinglot"],
+		"entrances":["rieger_e01","rieger_e02"]
+	},
+	{
+		"id":"marcusfield",
+		"name":"Marcus Field",
+		"nickname":"Marcus",
+		"function":"Marcus Field is home to Brandeis softball.",
+		"description":"",
+		"coordinates":[new Point(42.363429, -71.256845),
+			new Point(42.363353, -71.256063),
+			new Point(42.363087, -71.256150),
+			new Point(42.362893, -71.256535),
+			new Point(42.362844, -71.256953)],
+		"category":["athletics"],
+		"area":["athletics","athletic complex"],
+		"nearby":["rieger","steindiamond","gordonfield","athleticslot","gosman"],
+		"entrances":["marcusfield_e01","marcusfield_e02"]
+	},
+	{
+		"id":"steindiamond",
+		"name":"Stein Diamond",
+		"nickname":"Stein Diamond",
+		"function":"The Stein Diamond is home to Brandeis baseball.",
+		"description":"",
+		"coordinates":[new Point(42.364459, -71.256743),
+			new Point(42.364375, -71.255428),
+			new Point(42.364094, -71.255409),
+			new Point(42.363619, -71.255634),
+			new Point(42.363390, -71.256349),
+			new Point(42.363507, -71.256827)],
+		"category":["athletics"],
+		"area":["athletics","athletic complex"],
+		"nearby":["rieger","marcusfield","gordonfield","athleticslot","gosman"],
+		"entrances":["steindiamond_e01","steindiamond_e02"]
+	}
 
 
 ]
