@@ -1,4 +1,11 @@
-<template name = "hours">
-	<p>Open Hour: {{period}}</p>
-	<p>Status: <span class="{{status}}">{{status}}</span></p>
+<template name="hours">
+	<div class="panel panel-default hours-panel">
+			<div class="panel-heading">
+				<h3 class="panel-title">Hours of operation</h3>
+			</div>
+			<div class="panel-body">
+				<p>Today's hours: {{period}}</p>
+				<p>Status: <span class="{{status}}">{{status}}</span></p>
+			</div>
+		</div>
 </template>
