@@ -69,6 +69,13 @@ locations_artinstallations = [
 		"coordinates":[new Point(42.362997, -71.260077)],
 		"function":"This tree was planted in memory of Mark S. Chopelas (1963-2003).",
 		"description":"The inscription on the plaque reads \"The Student Union of Brandeis University has planted this tree in memory of Mark S. \"Choppa\" Chopelas (April 3, 1963 - March 1, 2003). A devoted friend, mentor, and coach to all who knew him.\" A quote at the bottom of the plaque reads \"What we remember from childhood we remember forever...\" - Cynthia O'Nick\n\nThere is a fund in his name, the Mark Chopelas Youth Benefit Fund, that aids the children of Malden."
+	},
+	{
+		"id":"familyatplay",
+		"name":"Family At Play, 1968",
+		"nickname":"Family at Play",
+		"coordinates":[new Point(42.365552, -71.258741)],
+		"function":"This bronze sculpture by Chaim Gross was the gift of Antje and Leonard L. Farber.",
 	}
 
 	
