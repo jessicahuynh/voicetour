@@ -16,13 +16,23 @@ paths_libraryeast = [
 	},
 	{
 	    "start":"library_c03",
-	    "end":"library_c04",
-	    "description": "Walk along the road towards the crossroads",
+	    "end":"usdan_c10",
+	    "description": "Walk along the road beside the library",
+	},
+	{
+	    "start":"usdan_c10",
+	    "end":"library_c03",
+	    "description": "Walk along the road beside the library",
 	},
 	{
 	    "start":"library_c04",
-	    "end":"library_c03",
-	    "description": "Walk along the raod to the crossroads",
+	    "end":"usdan_c10",
+	    "description": "Walk along the road beside the library",
+	},
+	{
+	    "start":"usdan_c10",
+	    "end":"library_c04",
+	    "description": "Walk along the road beside the library",
 	},
 	{
 	    "start":"library_c03",
@@ -32,7 +42,7 @@ paths_libraryeast = [
 	{
 	    "start":"library_c02",
 	    "end":"library_c01",
-	    "description": "Walk along the raod on your right side",
+	    "description": "Walk along the road on your right side",
 	},
 	{
 	    "start":"goldfarb_e01",
@@ -568,6 +578,16 @@ paths_libraryeast = [
 	    "start":"usdan_e01",
 	    "end":"usdan_c08",
 	    "description": "Exit the building and trun right.",
+	},
+	{
+	    "start":"usdan_c10",
+	    "end":"usdan_c09",
+	    "description": "Walk along the small path toward the bus stop.",
+	},
+	{
+	    "start":"usdan_c09",
+	    "end":"usdan_c10",
+	    "description": "Walk along the small path toward the library.",
 	},
 
 
