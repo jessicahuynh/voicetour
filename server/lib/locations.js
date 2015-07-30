@@ -162,13 +162,17 @@ locations = [
 	facultycenter = {
 		"id":"facultycenter",
 		"name":"Faculty Center",
+		"nickname":"Faculty Club",
 		"coordinates":[
 			new Point(42.36569,-71.261466), 
 			new Point(42.365861,-71.261069), 
 			new Point(42.365651,-71.260898), 
 			new Point(42.36548,-71.2613)],
+		"function":"The Faculty Club provides sit-in lunch.",
 		"description":"The Faculty Club is a restaurant that is open to faculty and students alike and is on the student meal plan. The Student Union hosts a program called “Take Your Professor to Lunch”, which encourages students to get to know faculty members outside the classroom. The Student Union distributes vouchers to the students in order to cover the cost of the meal. This opportunity aides in fostering Brandeis’ legacy of strong professor-student relationships. Mitch Albom, a Brandeis alum, wrote the famous book Tuesdays with Morrie, which chronicles his time with Morrie Schwartz, his life-long mentor and Brandeis professor.",
-		"category":["dining"]
+		"category":["dining"],
+		"area":["lower campus"],
+		"nearby":["shermandining","scc"]
 		},
 	goldman = {
 		"id":"goldman",
