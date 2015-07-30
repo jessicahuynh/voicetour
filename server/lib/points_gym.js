@@ -61,6 +61,21 @@ points_gym = [
 		"coordinate":new Point(42.364370, -71.256830),
 		"type":"entrance"
 	},
+	{
+		"id":"gordonfield_e01", // next to baseball
+		"coordinate":new Point(42.364024, -71.257072),
+		"type":"entrance"
+	},
+	{
+		"id":"gordonfield_e02",
+		"coordinate":new Point(42.363988, -71.257985),
+		"type":"entrance"
+	},
+	{
+		"id":"gordonfield_e03",
+		"coordinate": new Point(42.362706, -71.258053),
+		"type":"entrance"
+	},
 	// athletics
 	{
 		"id":"gosman_c01",

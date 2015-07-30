@@ -965,6 +965,43 @@ locations = [
 		"area":["athletics","athletic complex"],
 		"nearby":["rieger","marcusfield","gordonfield","athleticslot","gosman"],
 		"entrances":["steindiamond_e01","steindiamond_e02"]
+	},
+	{
+		"id":"gordonfield",
+		"name":"Gordon Field",
+		"nickname":"Gordon Field",
+		"function":"Gordon Field is home to Brandeis soccer.",
+		"description":"",
+		"category":["athletics"],
+		"area":["athletics","athletic complex"],
+		"nearby":["marcusfield","steindiamond","athleticslot","commuterrail"],
+		"coordinates":[new Point(42.364005, -71.257901),
+			new Point(42.364009, -71.257982),
+			new Point(42.362726, -71.258113),
+			new Point(42.362737, -71.257996),
+			new Point(42.362573, -71.257753),
+			new Point(42.362557, -71.257396),
+			new Point(42.362821, -71.257032),
+			new Point(42.363855, -71.256946),
+			new Point(42.364076, -71.257145),
+			new Point(42.364171, -71.257560)],
+		"entrances":["gordonfield_e01","gordonfield_e02","gordonfield_e03"]
+	},
+	{
+		"id":"chapelsfieldwetland",
+		"name":"Chapels Field Wetland",
+		"nickname":"Chapels Field Wetland",
+		"function":"The Chapels Field Wetland acts as a catchment basin for water from upper campus, preventing the flooding of Massell Quad and the Chapels.",
+		"description":"",
+		"category":["landscape"],
+		"area":["upper campus"],
+		"nearby":["chapelsfield","berlin","bethlehem","harlan","farber"],
+		"coordinates":[new Point(42.368033, -71.259924),
+			new Point(42.367690, -71.259097),
+			new Point(42.368603, -71.258490),
+			new Point(42.369017, -71.260276),
+			new Point(42.368729, -71.260412),
+			new Point(42.368522, -71.259772)]
 	}
 
 
