@@ -12,6 +12,20 @@ points_gym = [
 		"type":"entrance",
 		"getTo":"Head to Squire Bridge's entrance next to Mailman House."
 	},
+	//mods
+	{
+		"id":"uppermods_e01",
+		"coordinate":new Point(42.366053, -71.253890),
+		"type":"entrance",
+		"getTo":"Head to the road leading out of the Upper Mods."
+	},
+	{
+		"id":"lowermods_e01",
+		"coordinate":new Point(42.365694, -71.253384),
+		"type":"entrance",
+		"getTo":"Head to the bend in the road next to the Lower Mods."
+	},
+	// athletics
 	{
 		"id":"gosman_c01",
 		"coordinate":new Point(42.365305, -71.256108),
