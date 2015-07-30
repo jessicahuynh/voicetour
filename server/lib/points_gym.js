@@ -83,9 +83,13 @@ points_gym = [
 		"type":"crossing"
 	},
 	{
-	
 		"id":"athleticslot_e01",
 		"coordinate":new Point(42.365022, -71.255865),
+		"type":"entrance"
+	},
+	{
+		"id":"athleticslot_e02", //next to gordon field
+		"coordinate":new Point(42.364224, -71.257695),
 		"type":"entrance"
 	},
 	{

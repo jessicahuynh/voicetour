@@ -3,13 +3,90 @@ paths_gym = [
 	{
 		"start":"gosman_c01",
 		"end":"athleticslot_e01",
-		"description":"Trun and go toward the South Street."
+		"description":"Turn and go toward the South Street."
 	},
 	{
 		"start":"athleticslot_e01",
 		"end":"gosman_c01",
 		"description":"Get off South street and go forward."
 	},
+	{
+		"start":"athleticslot_e01",
+		"end":"athleticslot_e02",
+		"description":"Cut across the parking lot to the other side, where there is a sidewalk."
+	},
+	{
+		"start":"athleticslot_e02",
+		"end":"athleticslot_e01",
+		"description":"Cut caross the parking lot to the other side, to the road next to Gosman."
+	},
+	// fields and stuff
+	{
+		"start":"athleticslot_e02",
+		"end":"gordonfield_e02",
+		"description":"Facing the track, take the rightmost concrete sidewalk."
+	},
+	{
+		"start":"gordonfield_e02",
+		"end":"athleticslot_e02",
+		"description":"Leave Gordon Field and walk along the sidewalk towards the parking lot."
+	},
+	{
+		"start":"gordonfield_e02",
+		"end":"gordonfield_e03",
+		"description":"Head straight down the track to the other side."
+	},
+	{
+		"start":"gordonfield_e03",
+		"end":"gordonfield_e02",
+		"description":"Head straight up the track to the other side."
+	},
+	{
+		"start":"gordonfield_e03",
+		"end":"lemberg_c02",
+		"description":"Walk out onto the dirt path and swing a right. Take the first left in the direction of Lemberg."
+	},
+	{
+		"start":"lemberg_c02",
+		"end":"gordonfield_e03",
+		"description":"Walk down the dirt road then take a right. Follow the dirt road left to the entrance to Gordon Field."
+	},
+	{
+		"start":"gordonfield_e03",
+		"end":"commuterrail_c02",
+		"description":"Cross the green field, heading for the fence gate closest to the train station."
+	},
+	{
+		"start":"commuterrail_c02",
+		"end":"gordonfield_e03",
+		"description":"Cross the green field to the fence gate closest to the train station."
+	},
+	{
+		"start":"lemberg_c02",
+		"end":"commuterrail_c02",
+		"description":"Head down the dirt road and then take a right. At the end of the dirt road, take a right across the green field towards the fence gate closet to the train station."
+	},
+	{
+		"start":"commuterrail_c02",
+		"end":"commuterrail_e02",
+		"description":"Walk to the commuter rail ramp."
+	},
+	{
+		"start":"commuterrail_e02",
+		"end":"commuterrail_c02",
+		"description":"Turn right and pass through the fence gate."
+	},
+	{
+		"start":"commuterrail_c02",
+		"end":"commuterrail_c01",
+		"description":'Cross the parking lot and head for the sidewalk.'
+	},
+	{
+		"start":"commuterrail_c01",
+		"end":"commuterrail_c02",
+		"description":'Cross the parking lot, heading to the gap in the fence closet to the train station.'
+	},
+	//gosman and linsey
 	{
 		"start":"gosman_c01",
 		"end":"linsey_c01",
@@ -157,14 +234,24 @@ paths_gym = [
 		"description":"Facing parallel to the tennis courts, turn right."
 	},
 	{
-		"start":"gosmanparkinglot_e01",
+		"start":"gosmanparkinglot_e02",
 		"end":"lowermods_e01",
 		"description":"Veer right for the Lower Mods."
 	},
 	{
 		"start":"lowermods_e01",
-		"end":"gosmanparkinglot_e01",
+		"end":"gosmanparkinglot_e02",
 		"description":"Facing parallel to the tennis courts, turn left."
+	},
+	{
+		"start":"gosmanparkinglot_e01",
+		"end":"rieger_e01",
+		"description":"Head to the opening for the tennis courts."
+	},
+	{
+		"start":"rieger_e01",
+		"end":"gosmanparkinglot_e01",
+		"description":"Exit the courts and walk out to the road."
 	},
 	// parking lots
 	{

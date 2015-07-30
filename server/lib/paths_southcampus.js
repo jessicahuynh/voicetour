@@ -469,7 +469,7 @@ paths_southcampus = [
 {
     "start":"admissions_c04",
     "end":"slosberg_c01",
-    "description":"Take the rightmost path that goes towards the Village."
+    "description":"Take the leftmost path that goes towards the Village."
 },
 {
     "start":"slosberg_c01",

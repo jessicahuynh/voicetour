@@ -9,7 +9,7 @@ locations_parking = [
 			new Point(42.364272,-71.257766),
 			new Point(42.364914,-71.256057), ],
 		"category":["parking"],
-		"entrances":["athleticslot_e01"]
+		"entrances":["athleticslot_e01","athleticslot_e02"]
 	},
 	{
 		"id":"gosmanparkinglot",

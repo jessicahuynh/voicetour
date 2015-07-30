@@ -461,6 +461,18 @@ points_grad = [
 		"id":"commuterrail_c01", // sidewalk next to parking lot
 		"coordinate":new Point(42.362313, -71.260269),
 		"type":"crossing"
+	},
+	{
+		"id":"commuterrail_c02", //fence opening closest to station
+		"coordinate":new Point(42.362148, -71.259673),
+		"type":"crossing",
+		"getTo":"Head to the fence opening between the commuter rail parking lot and the field that is closest to the train station."
+	},
+	{
+		"id":"commuterrail_c03", // farthest from
+		"coordinate":new Point(42.362408, -71.259738),
+		"type":"crossing",
+		"getTo":"Head to the fence opening between the commuter rail parking lot and the field that is farthest from the train station."
 	}
 ]
 
