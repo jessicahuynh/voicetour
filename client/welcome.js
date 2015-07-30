@@ -8,14 +8,14 @@ Template.welcome.helpers({
 	inLocation: function () {
 		var name = Locations.findOne({ "name": Session.get("inLocation")[0].name }).name;
 		if (Session.get("inLocation")[1] == "in") {
-			return "You're in " + name;
+			return name;
 		}	
 		else {
 			if (Session.get("unit") == "m") {
-				return "You're about " + Math.round(Session.get("inLocation")[2]) + "m from " + name;
+				return Math.round(Session.get("inLocation")[2]) + "m from " + name;
 			}
 			else {
-				return "You're about " + Math.floor(Math.round(Session.get("inLocation")[2]*3.28)) + "ft from " + name;
+				return Math.floor(Math.round(Session.get("inLocation")[2]*3.28)) + "ft from " + name;
 			}
 			
 		}

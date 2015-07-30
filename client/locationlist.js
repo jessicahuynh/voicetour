@@ -12,10 +12,20 @@ Template.locationList.rendered = function() {
 Template.locationList.helpers({
 	locationsData: function() {
 		if (Session.get("category") == "" || Session.get("category") == "All") {
-			return Locations.find({},{sort:{"nickname":1}});
+			if (Session.get("area") == "" || Session.get("area") == "All") {
+				return Locations.find({},{sort:{"nickname":1}});
+			}
+			else {
+				return Locations.find({"area":Session.get("area")},{sort:{"nickname":1}});
+			}
 		}
 		else {
-			return Locations.find({"category":Session.get("category")},{sort:{"nickname":1}});
+			if (Session.get("area") == "" || Session.get("area") == "All") {
+				return Locations.find({"category":Session.get("category")},{sort:{"nickname":1}});
+			}
+			else {
+				return Locations.find({"category":Session.get("category"),"area":Session.get("area")},{sort:{"nickname":1}});
+			}
 		}
 	},
 	selectedCat:function() {
