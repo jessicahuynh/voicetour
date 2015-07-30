@@ -166,14 +166,34 @@ paths_gym = [
 		"description":"Fellow the path along the gym, go up stairs across the bridge."
 	},
 	{
-		"start":"mailman_e01",
-		"end":"gosman_e01",
-		"description":"Go down the stairs and across the bridge."
+		"start":"mailman_c01",
+		"end":"squirebridge_e02",
+		"description":"Walk up to the bridge"
 	},
 	{
-		"start":"mailman_c01",
-		"end":"rosenstiel_c01",
-		"description":"Go up the stairs to the loop road."
+		"start":"squirebridge_e02",
+		"end":"mailman_c01",
+		"description":"Keep going for a bit, then turn right."
+	},
+	{
+		"start":"gosman_e01",
+		"end":"squirebridge_e01",
+		"description":"Exit, veer right, and then climb up the stairs to the bridge."
+	},
+	{
+		"start":"squirebridge_e01",
+		"end":"gosman_e01",
+		"description":"Walk down the stairs and walk to the flags. Turn right to the entrance of Gosman."
+	},
+	{
+		"start":"squirebridge_e01",
+		"end":"squirebridge_e02",
+		"description":"Walk across the bridge."
+	},
+	{
+		"start":"squirebridge_e02",
+		"end":"squirebridge_e01",
+		"description":"Walk across the bridge."
 	},
 	{
 		"start":"rosenstiel_c01",
@@ -186,7 +206,7 @@ paths_gym = [
 		"description":"Go down the slope."
 	},
 	{
-		"start":"sstreet_c01",
+		"start":"sstreet_e01",
 		"end":"mailman_c01",
 		"description":"Go up the slope."
 	},
