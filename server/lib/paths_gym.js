@@ -223,12 +223,12 @@ paths_gym = [
 		"description":"Go down the stairs to little plate form."
 	},
 	{
-		"start":"mailman_e01",
+		"start":"mailman_c01",
 		"end":"sstreet_c01",
 		"description":"Go down the slope."
 	},
 	{
-		"start":"sstreet_e01",
+		"start":"sstreet_c01",
 		"end":"mailman_c01",
 		"description":"Go up the slope."
 	},
