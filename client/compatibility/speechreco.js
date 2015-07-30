@@ -196,7 +196,7 @@ function startAudio() {
                 }
             }
     
-            document.getElementById("result").innerHTML = r;
+            document.getElementById("result").innerHTML = "";
             
             applyIntent(intent,entities,mic);
         };
@@ -288,7 +288,7 @@ function navigateCommand(entities) {
        if (!disDestination) {
            // if the location is actually a location
            if (Locations.findOne({"name":entities["end"].value}) != undefined) {
-               r += "<span class='said'>"+entities["end"].body+"</span>";
+               r += "<span class='said'>"+entities["end"].value+"</span>";
                Session.set("navigateTo",entities["end"].value);
                rSay += entities["end"].value;
                numClarify = 0;
@@ -306,7 +306,7 @@ function navigateCommand(entities) {
            disDestination = disambiguate(entities["deis_loc"].value);
            if (!disDestination) {
                if (Locations.findOne({"name":entities["deis_loc"].value}) != undefined) {
-                   r += "<span class='said'>"+entities["deis_loc"].body+"</span>";
+                   r += "<span class='said'>"+entities["deis_loc"].value+"</span>";
                    Session.set("navigateTo",entities["deis_loc"].value);
                    rSay += entities["end"].value;
                    numClarify = 0;
@@ -332,7 +332,7 @@ function navigateCommand(entities) {
              }
              else {
                 if (Locations.findOne({"name":entities["start"].value}) != undefined) {
-                    r += " from <span class='said'>"+entities["start"].body+"</span>";
+                    r += " from <span class='said'>"+entities["start"].value+"</span>";
                     Session.set("navigateFrom",entities["start"].value);
                     rSay += " from " + entities["start"].value;
                     numClarify = 0;
