@@ -130,40 +130,62 @@ paths_gym = [
 		"end":"linsey_c01",
 		"description":"Walk down the stairs and cross the road."
 	},
+	// mods
 	{
 		"start":"linsey_c03",
-		"end":"mods_c01",
+		"end":"uppermods_e01",
 		"description":"Walk up the slope."
 	},
 	{
-		"start":"mods_c01",
+		"start":"uppermods_e01",
 		"end":"linsey_c03",
 		"description":"Walk down the slope."
 	},
 	{
 		"start":"linsey_c03",
 		"end":"linseyparkinglot_e01",
-		"description":"Fellow the path toward the clump of trees."
+		"description":"Follow the path toward the clump of trees."
 	},
 	{
 		"start":"linseyparkinglot_e01",
+		"end":"lowermods_e01",
+		"description":"Veer left for the Lower Mods."
+	},
+	{
+		"start":"lowermods_e01",
+		"end":"linseyparkinglot_e01",
+		"description":"Facing parallel to the tennis courts, turn right."
+	},
+	{
+		"start":"gosmanparkinglot_e01",
+		"end":"lowermods_e01",
+		"description":"Veer right for the Lower Mods."
+	},
+	{
+		"start":"lowermods_e01",
+		"end":"gosmanparkinglot_e01",
+		"description":"Facing parallel to the tennis courts, turn left."
+	},
+	// parking lots
+	{
+		"start":"linseyparkinglot_e01",
 		"end":"linsey_c03",
-		"description":"Fellow the path beside the clump of trees."
+		"description":"Follow the path beside the clump of trees."
 	},
 	{
 		"start":"gosmanparkinglot_e02",
 		"end":"linseyparkinglot_e01",
-		"description":"Fellow the path toward the clump of trees."
+		"description":"Follow the path toward the clump of trees."
 	},
 	{
 		"start":"linseyparkinglot_e01",
 		"end":"gosmanparkinglot_e02",
-		"description":"Fellow the path beside the clump of trees."
+		"description":"Follow the path beside the clump of trees."
 	},
 	{
 		"start":"gosman_e01",
 		"end":"mailman_e01",
-		"description":"Fellow the path along the gym, go up stairs across the bridge."
+		"description":"Follow the path along the gym, go up stairs across the bridge."
 	},
 	{
 		"start":"mailman_c01",

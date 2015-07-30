@@ -25,11 +25,6 @@ points_gym = [
 		"type":"entrance",
 		"getTo":"Head to the bend in the road next to the Lower Mods."
 	},
-	{
-		"id":"mods_c01",
-		"coordinate":new Point(42.366051, -71.253886),
-		"type":"crossing"
-	},
 	// fields and courts
 	{
 		"id":"rieger_e01", 
