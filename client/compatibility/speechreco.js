@@ -196,7 +196,7 @@ function startAudio() {
                 }
             }
     
-            document.getElementById("result").innerHTML = r;
+            //document.getElementById("result").innerHTML = r;
             
             applyIntent(intent,entities,mic);
         };
