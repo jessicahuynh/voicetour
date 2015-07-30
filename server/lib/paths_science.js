@@ -510,11 +510,17 @@ paths_science = [
 	    "end":"rosensweig_e02",
 	    "description": "Walk toward the building next to the path way.",
 	},
-	// {
-	//     "start":"rosensweig_e03",
-	//     "end":"",
-	//     "description": "Walk toward the Loop Road .",
-	// },
+	{
+	    "start":"gzang_ie01",
+	    "end":"edison_e01",
+	    "description": "Walk through the hall way.",
+	},
+	{
+	    "start":"edison_e01",
+	    "end":"gzang_ie01",
+	    "description": "Walk through the hall way.",
+	},
+
 
 
 ]
