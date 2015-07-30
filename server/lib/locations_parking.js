@@ -216,7 +216,7 @@ locations_parking = [
 	{
 		"id":"theaterparking",
 		"name":"Theater Lot",
-		"nickname":"theater lot",
+		"nickname":"Theater lot",
 		"coordinates":[
 			new Point(42.364363, -71.263228),
 			new Point(42.363935, -71.261710),
@@ -232,7 +232,7 @@ locations_parking = [
 	{
 		"id":"hellerparking",
 		"name":"Heller Parking Lot",
-		"nickname":"heller lot",
+		"nickname":"Heller lot",
 		"coordinates":[
 			new Point(42.369277, -71.260469),
 			new Point(42.369111, -71.260026),

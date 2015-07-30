@@ -237,17 +237,21 @@ points_science = [
 	    "coordinate":new Point(42.366092, -71.258608),
 	    "type": "crossing",
 	},
-
 	{
 	    "id": "feldberg_ie01",//to volen
 	    "coordinate":new Point(42.366855, -71.258670),
 	    "type": "ientrance",
 	},
 	{
-	    "id": "feldberg_e01",
+	    "id": "feldberg_e01", //back entrance, top of steps
 	    "coordinate":new Point(42.366647, -71.259054),
 	    "type": "entrance",
 	},
+	{
+		"id":"feldberg_c01", // foot of stairs
+		"coordinate":new Point(42.366571, -71.259108),
+		"type":"entrance"
+	}
 ]
 
 function Point(x,y) {

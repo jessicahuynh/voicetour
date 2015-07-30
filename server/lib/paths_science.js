@@ -22,7 +22,7 @@ paths_science = [
 	{
 		"start":"volen_e01",
 		"end":"volen_ic02",
-		"description":"Turn left towards the wooden double doors."	
+		"description":"Turn left towards the wooden double doors labeled Mitchtom School of Computer Science."	
 	},
 	{
 		"start":"volen_ic02",
@@ -32,7 +32,7 @@ paths_science = [
 	{
 		"start":"volen_ic02",
 		"end":"volen_ie03",
-		"description":"Open the doors and walk down the hallway."
+		"description":"Open the doors labeled Michtom School of Computer Science and walk down the hallway."
 	},
 	{
 		"start":"volen_ie03",
@@ -121,6 +121,16 @@ paths_science = [
 	},
 	{
 		"start":"goldsmith_e01",
+		"end":"volen_c01",
+		"description":"Exit and turn left to the plaza."
+	},
+	{
+		"start":"volen_c01",
+		"end":"goldsmith_e01",
+		"description":"Walk to the foot of the stairs and enter Goldsmith on your right."
+	},
+	{
+		"start":"goldsmith_e01",
 		"end":"goldsmith_ie02",
 		"description":"Head up three flights of stairs and then walk to a set of glass doors. Enter these doors and then take a right to the skywalk."
 	},
@@ -158,6 +168,46 @@ paths_science = [
 		"start":"gzang_e01",
 		"end":"volen_c01",
 		"description":"Walk straight forwards, towards the circular plaza in front."
+	},
+	{
+		"start":"volen_ic02",
+		"end":"feldberg_ie01",
+		"description":"Enter through the doors that say Feldberg Communications Center."
+	},
+	{
+		"start":"feldberg_ie01",
+		"end":"volen_ic02",
+		"description":"Pass through the doors to Volen."
+	},
+	{
+		"start":"feldberg_ie01",
+		"end":"feldberg_e01",
+		"description":"Pass down the hallway through Feldberg to the other side."
+	},
+	{
+		"start":"feldberg_e01",
+		"end":"feldberg_ie01",
+		"description":"Pass down the hallwayt through Feldberg to the sign labeled Volen."
+	},
+	{
+		"start":"feldberg_e01",
+		"end":"feldberg_c01",
+		"description":"Exit and walk down the steps."
+	},
+	{
+		"start":"feldberg_c01",
+		"end":"feldberg_e01",
+		"description":"Climb up the stairs to the entrance of Feldberg."
+	},
+	{
+		"start":"feldberg_c01",
+		"end":"fellowsgarden_c03",
+		"description":"Turn right to where Fellows Garden meets the main path."
+	},
+	{
+		"start":"fellowsgarden_c03",
+		"end":"feldberg_c01",
+		"description":"While facing the green building, turn immediately left and walk to the foot of the stairs under the sign labeled Feldberg Communications Center."
 	},
 	/* shapiro science, oh god */
 	{
