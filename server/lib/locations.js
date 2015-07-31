@@ -18,7 +18,7 @@ locations = [
 		"entrances":["volen_e01","volen_ie02","volen_ie03","feldberg_ie01"],
 		"icrossings":["volen_ic02"],
 		"nearby":["feldberg","gzang","goldsmith","chapelsfield"],
-		"pic":"https://www.dropbox.com/s/p3ony4eizclrwr9/volen.png?dl=0",
+		"area":["upper campus","science complex"]
 	},
 	{
 		"id":"scc",
@@ -38,7 +38,7 @@ locations = [
 		"description":"The Shapiro Campus Center opened in 2002 and is the hub of student life on campus. The SCC is open to students 24 hours a day, seven days a week. Many student organizations, including Student Union, Waltham Group, Student Events, WBRS (a radio station),the newspaper offices, BTV offices, and many others can be found within the campus center. It continues to be the most student-centered, “out of the classroom building on campus. Although it is also home to the offices of the Dean of Student Life, Student Activities, and Department of Student Rights and Community Standards, students primarily utilize this building for social and extra curricular activities. It also contains Einstein Bros. Cafe, the campus Brandeis Bookstore, student art exhibition space, rehearsal spaces, meeting rooms, a computer library and the 250 seat Carl J. Shapiro Theater. This theater is home to the Undergraduate Theatre Collective, our student run theatre organization. They produce, act in and build sets for over ten shows a year, ranging from straight plays to musical theater to sketch comedy!",
 		"category":["student life"],
 		"entrances":["scc_e01","scc_e02","scc_e03"],
-		"pic":"https://www.dropbox.com/s/b4ax67vqy7r34ta/scc.png?dl=0",
+		"area":["lower campus"]
 	},
 	{
 		"id":"fellowsgarden",
@@ -52,7 +52,8 @@ locations = [
 		"function": "Fellows Garden is a nice place to hangout with friends in nice weather",
 		"description":"Fellows Garden was dedicated on the occasion of Brandeis University's twenty-fifth commencement.",
 		"category":["landscape"],
-		"entrances":['fellowsgarden_c01','fellowsgarden_c02','fellowsgarden_c03']
+		"entrances":['fellowsgarden_c01','fellowsgarden_c02','fellowsgarden_c03'],
+		"area":["lower campus"]
 	},
 	{
 		"id":"greatlawn",
@@ -66,7 +67,8 @@ locations = [
 		"function": "Great Lawn is a nice place to hangout with friends in nice weather",
 		"description":"The Great Lawn is one of students’ favorite expanses of green on campus. Here you will typically see students doing their homework, playing frisbee, or just catching some afternoon sunshine between classes. It is also the setting for our activities fair, which takes place at the beginning of each semester, when over 260 clubs recruit first-years and continuing undergrads to their groups.",
 		"category":["landscape"],
-		"entrances":['scc_c07','scc_c08','scc_c09','scc_c10']
+		"entrances":['scc_c07','scc_c08','scc_c09','scc_c10'],
+		"area":["lower campus"]
 	},
 	{
 		"id":"roseart",
@@ -88,7 +90,8 @@ locations = [
 		"description":"The Rose Art Museum houses the largest collection of modern art in New England. Admission is free to students and many intern there during the year. For a fee of $10 per semester, Brandeis students can rent a piece from the Student Loan Collection to hang in their room. The Rose Art Museum houses works by artists such as Marc Chagall, Andy Warhol, and Wassily Kandinsky. Recent acquisitions in 2012 have included works by Bruce Conner and Mark Bradford. As one of the most daring and innovative contemporary art museums the Rose regularly showcases new and innovative exhibitions. It also hosts regular artist talks and its permanent collection is frequently used as a teaching tool both in and outside of the classroom.",
 		"category":["art"],
 		"entrances":['museum_e01'],
-		"nearby":["lightofreason"]
+		"nearby":["lightofreason"],
+		"area":["lower campus"]
 	},
 
 	bassine = {
@@ -100,10 +103,11 @@ locations = [
 			new Point(42.366997,-71.258307),
 			new Point(42.366656,-71.257562),
 			new Point(42.366782,-71.257457), ],
-		"function": "Bassine Science Building has many bio lab?",
-		"description":"Lab",
-		"category":["academics"],
-		"entrances":["bassine_e01","bassine_e02","bassine_e03"]
+		"function": "Bassine Science Building is home to biology at Brandeis.",
+		"description":"There are many labs here.",
+		"category":["academics","offices"],
+		"entrances":["bassine_e01","bassine_e02","bassine_e03"],
+		"area":["upper campus","science complex"]
 
 	},
 
@@ -116,9 +120,10 @@ locations = [
 			new Point(42.366800,-71.258632),
 			new Point(42.366546,-71.258833),
 			new Point(42.366751,-71.259269)],
-		"function":"Feldberg contains offices and is home to Library and Technology Services.",
+		"function":"Feldberg contains offices and is home to Library and Technology Services (LTS).",
 		"category":["academics","offices"],
-		"entrances":["feldberg_e01","feldberg_ie01"]
+		"entrances":["feldberg_e01","feldberg_ie01"],
+		"area":["upper campus","science complex"]
 	},
 	
 	turner = {
@@ -133,7 +138,8 @@ locations = [
 			new Point(42.361845, -71.263886),
 			new Point(42.361886, -71.264220)],
 		"category":["administrative","academics"],
-		"entrances":["turner_e01"]
+		"entrances":["turner_e01"],
+		"area":["lower campus"]
 	},
 	bernstein = {
 		"id":"bernstein-marcus",
@@ -144,7 +150,8 @@ locations = [
 			new Point(42.365222,-71.259642), 
 			new Point(42.365046,-71.259492), 
 			new Point(42.36489,-71.259837)],
-		"category":["administrative"]
+		"category":["administrative"],
+		"area":["lower campus"]
 		},
 	epstein = {
 		"id":"epstein",
@@ -157,7 +164,8 @@ locations = [
 			new Point(42.362134,-71.260864), 
 			new Point(42.362204,-71.261671)],
 		"category":["academics","offices"],
-		"entrances":["epstein_e01","epstein_e02"]
+		"entrances":["epstein_e01","epstein_e02"],
+		"area":["lower campus"]
 		},
 	facultycenter = {
 		"id":"facultycenter",
@@ -185,7 +193,8 @@ locations = [
 			new Point(42.364525,-71.262821), 
 			new Point(42.364628,-71.263304)],
 		"category":["academics","art"],
-		"entrances":['goldman_e01','goldman_e02']
+		"entrances":['goldman_e01','goldman_e02'],
+		"area":["lower campus"]
 		},
 	gryzmish = {
 		"id":"gryzmish",
@@ -197,7 +206,8 @@ locations = [
 			new Point(42.365759,-71.25918), 
 			new Point(42.365577,-71.259025), 
 			new Point(42.365417,-71.259403)],
-		"category":["administrative"]
+		"category":["administrative"],
+		"area":["lower campus"]
 		},
 	sachar = {
 		"id":"sachar",
@@ -225,7 +235,8 @@ locations = [
 			new Point(42.364738, -71.265078), 
 		],
 		"category":["academics"],
-		"entrances":['sachar_e01']
+		"entrances":['sachar_e01'],
+		"area":["lower campus"]
 		},
 	irving = {
 		"id":"irving",
@@ -236,7 +247,8 @@ locations = [
 			new Point(42.365423,-71.259113), 
 			new Point(42.36529,-71.259006), 
 			new Point(42.365076,-71.259521)],
-		"category":["administrative"]
+		"category":["administrative"],
+		"area":["lower campus"]
 		},
 	info = {
 		"id":"info",
@@ -249,7 +261,8 @@ locations = [
 			new Point(42.364978,-71.258681), 
 			],
 		"category":["offices"],
-		"entrances":["info_e01"]
+		"entrances":["info_e01"],
+		"area":["lower campus"]
 		},
 	pollack = {
 		"id":"pollack",
@@ -262,6 +275,7 @@ locations = [
 			new Point(42.365158,-71.262541)],
 		"category":["academics","art"],
 		"entrances":['pollack_e01'],
+		"area":["lower campus"]
 		},
 	rabbSchool = {
 		"id":"rabbSchool",
@@ -275,7 +289,8 @@ locations = [
 		"function":"The Rabb School is home to continuing education, graduate and professional programs, OLLI @ Brandeis, and summer programs, including the Justice Brandeis Semester (JBS).",
 		"category":["academics"],
 		"nearby":["lemberg","slosberg"],
-		"entrances":["rabbSchool_e01","rabbSchool_e02","rabbSchool_e03"]
+		"entrances":["rabbSchool_e01","rabbSchool_e02","rabbSchool_e03"],
+		"area":["lower campus"]
 		},
 	admissions = {
 		"id":"admissions",
@@ -291,7 +306,8 @@ locations = [
 		"function":"Admissions hosts tours and provides information about Brandeis to any interested parties.",
 		"category":["offices"],
 		"entrances":["admissions_e01","admissions_e02"],
-		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC","village"]
+		"nearby":["spingold","slosberg","greatlawn","bernstein-marcus","ridgewoodA","ridgewoodB","ridgewoodC","village"],
+		"area":["lower campus"]
 		},	
 	slosberg = {
 		"id":"slosberg",
@@ -306,7 +322,8 @@ locations = [
 		"description":"Slosberg Music Center, built in the shape of a grand piano with 88 windows to represent the 88 keys on a piano, is home to the music department. Inside you will discover a 225 seat concert hall where eight student ensembles and the internationally acclaimed Lydian String Quartet perform everything from Beethoven to original student-composed electronic music. Additionally, there are practice rooms open to all students including both music majors and non-music majors. The first piano of acclaimed composer Leonard Bernstein (faculty 1951-55) is displayed in the lobby. Each year, nearly 300 professional and student performances and exhibitions take place on campus, culminating in the annual Leonard Bernstein Festival for the Creative Arts, founded in 1952 by Bernstein himself. First Lady Eleanor Roosevelt, who was also a founding faculty member of Brandeis, had a television show in Slosberg, and it is said that on that show JFK confirmed he was running for President of the United States.",
 		"category":["academics","art"],
 		"entrances":["slosberg_e01","slosberg_e02","slosberg_e03","slosberg_e04"],
-		"nearby":["admissions","bernstein-marcus","lemberg","village"]
+		"nearby":["admissions","bernstein-marcus","lemberg","village"],
+		"area":["lower campus"]
 		},
 	spingold = {
 		"id":"spingold",
@@ -326,7 +343,8 @@ locations = [
 			],
 		"description":"Spingold Theater, is home to the theatre department. The cutting-edge Brandeis Theatre Company produces five productions each season. Debra Messing (Grace Adler) of Will & Grace , Steven Culp (Rex VanDe Camp) of Desperate Housewives, and Loretta Devine of the original Broadway cast of Dreamgirls, among many others, are graduates of our programs. Undergraduate students are encouraged to get involved with campus productions, whether that means assistant stage managing, costume designing, or acting in them!",
 		"category":["academics","art"],
-		"entrances":['spingold_e01','spingold_e02']
+		"entrances":['spingold_e01','spingold_e02'],
+		"area":["lower campus"]
 		},
 	abelson = {
 		"id":"abelson",
@@ -338,43 +356,54 @@ locations = [
 			new Point(42.366157, -71.258709), 
 			new Point(42.366220, -71.258861)],
 		"category":["academics"],
-		"entrances":["abelson_e01","abelson_e02","abelson_c01","gzang_ie03"]
+		"entrances":["abelson_e01","abelson_e02","abelson_c01","gzang_ie03"],
+		"function":"Ableson is home to physics.",
+		"area":["upper campus","science complex"]
 		},
 	berlin = {
 		"id":"berlin",
 		"name":"Mendel and Leah Berlin Chapel",
 		"nickname":"Berlin Chapel",
+		"function":"Berlin is the Jewish house of worship and the largest of the three chapels.",
+		"description":"Berlin Chapel can accommodate up to 130 guests. The chapel is used throughout the year for Orthodox Jewish student services, but is available on the weekend for bar/bat mitzvah services and Jewish wedding ceremonies. The chapel has its own Torah and 80 prayer books. Floor-to-ceiling windows on two walls bathe guests in a tremendous amount of sunlight, adding to the overall warmth of the facility.",
 		"coordinates":[
 			new Point(42.368284,-71.260708), 
 			new Point(42.368244,-71.260593), 
 			new Point(42.368082,-71.260705), 
 			new Point(42.368135,-71.26081)],
 		"category":["religious"],
-		"entrances":["berlin_e01"]
+		"entrances":["berlin_e01"],
+		"area":["upper campus","chapels"]
 		},
 	bethlehem = {
 		"id":"bethlehem",
 		"name":"Bethlehem Chapel",
 		"nickname":"Bethlehem Chapel",
+		"function":"Bethlehem Chapel serves the Catholic faithful at Brandeis.",
+		"description":"The Catholic chapel at Brandeis is a cozy place capable of accommodating up to 50 guests. Located furthest from the main road, Bethlehem Chapel provides a quiet place to host an intimate Catholic wedding ceremony or christening. The chapel has its own small piano and floor-to-ceiling window wall, providing a beautiful view of Chapel's Pond.",
 		"coordinates":[
 			new Point(42.368343,-71.260178), 
 			new Point(42.368259,-71.259998), 
 			new Point(42.368196,-71.260047), 
 			new Point(42.368267,-71.260243)],
 		"category":["religious"],
-		"entrances":["bethlehem_e01"]
+		"entrances":["bethlehem_e01"],
+		"area":["upper campus","chapels"]
 		},
 	harlan = {
 		"id":"harlan",
 		"name":"John Marshall Harlan Chapel",
 		"nickname":"Harlan Chapel",
+		"function":"Harlan is the Protestant chapel at Brandeis.",
+		"description":"The Protestant chapel on campus hosts a variety of Christian and nondenominational ceremonies during the year. Harlan Chapel, situated closest to the road for the maxium amount of accessibility, can accommodate up to 50 guests. Couples of any Christian faith or those who are not religiously affiliated are welcome to host their wedding ceremony here. Harlan Chapel also has its own small piano and floor-to-ceiling window wall that provides a beautiful backdrop directly across from the altar.",
 		"coordinates":[
 			new Point(42.368776,-71.260739), 
 			new Point(42.368692,-71.260564), 
 			new Point(42.36865,-71.2606), 
 			new Point(42.368732,-71.260779)],
 		"category":["religious"],
-		"entrances":["harlan_e01"]
+		"entrances":["harlan_e01"],
+		"area":["upper campus","chapels"]
 		},
 	chapelsField = {
 		"id":"chapelsField",
@@ -386,7 +415,8 @@ locations = [
 			new Point(42.367281,-71.259034), 
 			new Point(42.367681,-71.260542)],
 		"description":"Chapels Field is usually bustling with student activities ranging from sports events, such as Quidditch practice, to concerts, such as Springfest. The three chapels on Chapel’s Field represent three different faiths and surround a heart shaped pond. They are built in such a way that no chapel casts its shadow over another chapel, symbolizing our respect for pluralism and diversity. The university has added a Muslim Prayer Room to campus and has connections with various other religious groups off-campus to address the spiritual needs of all. In total, the Brandeis community represents seventeen recognized world religions.",
-		"category":["landscape"]
+		"category":["landscape"],
+		"area":["upper campus","chapels"]
 		},
 	brown = {
 		"id":"brown",
@@ -399,6 +429,7 @@ locations = [
 			new Point(42.367266,-71.257265)],
 		"category":["academics"],
 		"entrances":["brown_e01"],
+		"area":["upper campus"]
 		},
 	farber = {
 		"id":"farber",
@@ -411,6 +442,7 @@ locations = [
 			new Point(42.367688,-71.25867)],
 		"category":["library"],
 		"entrances":["farber_e01"],
+		"area":["upper campus","libraries"]
 		},
 	goldsmith = {
 		"id":"goldsmith",
@@ -423,7 +455,8 @@ locations = [
 			new Point(42.367103, -71.258148)],
 		"function":"Goldsmith is home to the mathematics department.",
 		"category":["academics"],
-		"entrances":["goldsmith_e01","goldsmith_ie02"]
+		"entrances":["goldsmith_e01","goldsmith_ie02"],
+		"area":["upper campus","science complex"]
 		},
 	{
 		"id":"edison",
@@ -435,9 +468,10 @@ locations = [
 			new Point(42.366321, -71.257893),
 			new Point(42.366182, -71.258006)
 		],
-		"function":"",
+		"function":"Edison-Lecks is home to chemistry.",
 		"category":["academics"],
-		"entrances":["edison_e01","gzang_ie02"]
+		"entrances":["edison_e01","gzang_ie02"],
+		"area":["upper campus","science complex"]
 	},
 	heller = {
 		"id":"heller",
@@ -451,6 +485,7 @@ locations = [
 		"function":"Heller-Brown is home to the Heller School for Social Policy and Management, one of the top ten schools of social policy in the United States and one of the eight approved U.S. training institutions for World Bank Scholars.",
 		"category":["academics"],
 		"entrances":["heller_e01"],
+		"area":["upper campus"]
 		},
 	rabb = {
 		"id":"rabb",
@@ -463,7 +498,8 @@ locations = [
 			new Point(42.36915,-71.257674), 
 			],
 		"category":["academics"],
-		"entrances":["rabb_e01"]
+		"entrances":["rabb_e01"],
+		"area":["upper campus","mandel"]
 		},
 	roseMedical = {
 		"id":"roseMedical",
@@ -475,19 +511,24 @@ locations = [
 			new Point(42.365724,-71.257239), 
 			new Point(42.365884,-71.257585)],
 		"category":["academics"],
-		"entrances":["rosenstiel_e01","rosenstiel_e02"]
+		"entrances":["rosenstiel_e01","rosenstiel_e02"],
+		"area":["upper campus","science complex"]
 		},
 	schwartz = {
 		"id":"schwartz",
 		"name":"Schwartz Hall",
 		"nickname":"Schwartz",
+		"function":"Schwartz contains many lecture halls.",
+		"description":"",
 		"coordinates":[
 			new Point(42.367642,-71.257438), 
 			new Point(42.367563,-71.257024), 
 			new Point(42.367418,-71.257072), 
 			new Point(42.367494,-71.257484)],
 		"category":["academics"],
-		"entrances":["schwartz_e01"]
+		"entrances":["schwartz_e01"],
+		"area":["upper campus"],
+		"nearby":["brown","mandelpeacegarden","usdan","levin"]
 		},
 	scienceCenter = {
 		"id":"ssc",
@@ -506,6 +547,7 @@ locations = [
 		"description":"The Carl J. Shapiro Science Center is home to many of our undergraduate science programs. The center is comprised of three main centers, the Gerstenzang Science Library (commonly referred to as G-Zang by students), and other research facilities. The first center is the Brandeis University National Center for Behavioral Genomics which focuses on brain function and behavior in addition to finding therapeutic strategies for brain disease and dysfunction. The second is The Volen Center, or National Center for Complex Systems, in which faculty and students study the brain and intelligence. This center’s staff specialize in artificial intelligence, cognitive science, and various neuroscience topics (examples include experimental psychology, computational neuroscience, and cellular and molecular neurobiology). The final center is The Brandeis Materials Research Science and Engineering Center which focuses on developing the relationship between biology and materials science via a top-down and bottom-up method. Each center was founded with interdisciplinary study in mind. In fact, a few classes are taught by faculty of varying disciplines – one class is even taught by three professors – a biologist, a chemist, and a physicist. This interdisciplinary approach is different from the instruction methods at most universities. Beyond the centers, faculty and students from many departments collaborate in research, in the classrooms and in the labs. The Leo Gerstenzang Complex has traditional lab areas as well as special classrooms for teaching math and science. Brandeis Students have many opportunities to engage in research during their undergraduate years. In fact, since 2003, undergraduate students have co-authored over one hundred and thirty published articles. ",
 		"category":["academics","student life"],
 		"entrances":["ssc_e01","ssc_e02","ssc_e03","ssc_ie01"],
+		"area":["upper campus","science complex"]
 		},
 	usdan = {
 		"id":"usdan",
@@ -516,10 +558,10 @@ locations = [
 			new Point(42.367852,-71.256794), 
 			new Point(42.367777,-71.256451), 
 			new Point(42.368243,-71.256259)],
-		"category":["student life"],
 		"description":"Usdan Student Center contains an a la carte style dining hall, a post office, an ATM, the Student Service Bureau (where you can lease microwaves or refrigerators, sign up for newspaper delivery, and rent movies, among other things), offices offices, and a variety of meeting spaces. It is a busy meeting place for students and faculty – especially between classes or at meals. The convenience store, also located inside Usdan, is open until 2am seven days a week and has everything from laundry detergent to midnight snacks available. Usdan also houses the Hiatt Career Center, Academic Services, Department of Community Living, and Student Financial Services. Services at the Hiatt Career Center are free to students and alumni. Services include one-on-one career counseling sessions, a network of over 25,000 internships, assistance in writing resumes and cover letters, and interview prep. Usdan is also home to the study abroad offices – over a third of the Junior class goes abroad every year! If you’d like to explore Usdan, you’ll find the dining hall, post office, and some offices on the lower level.",
-		"entrances":["usdan_e01"]
-		
+		"entrances":["usdan_e01"],
+		"category":["student life"],
+		"area":["upper campus"]
 		},
 	gosman = {
 		"id":"gosman",
@@ -531,13 +573,16 @@ locations = [
 			new Point(42.364998,-71.253952), 
 			new Point(42.364449,-71.254864)],
 		"category":["athletics"],
-		"description":"Gosman Sports and Convocation Center: If you were to cross the street here and take the footbridge to the other side of South Street, you would reach Gosman. Gosman is one of the largest, best-equipped sports and recreation facilities in New England. Gosman was, until recently, the practice facility for the Boston Celtics. The complex is a state-of- the-art facility for all students, not just varsity athletes. The 70,000 square-foot field house contains basketball, volleyball, tennis, and squash courts, a six-lane indoor track, batting cages, workout rooms complete with personal trainers, and a fencing room. Each year, Gosman hosts athletic competitions (including NCAA Division III national contests), big-name concerts, and the graduation ceremony. Since it has opened, performers have included Adam Sandler, Jerry Seinfeld, Live, Blues Traveler, Counting Crows, Ben Harper, Indigo Girls, John Mayer, and The Steve Miller Band. The Dalai Lama and former presidents Jimmy Carter and Bill Clinton visited as speakers.",
+		"description":"Gosman is one of the largest, best-equipped sports and recreation facilities in New England. Gosman was, until recently, the practice facility for the Boston Celtics. The complex is a state-of- the-art facility for all students, not just varsity athletes. The 70,000 square-foot field house contains basketball, volleyball, tennis, and squash courts, a six-lane indoor track, batting cages, workout rooms complete with personal trainers, and a fencing room. Each year, Gosman hosts athletic competitions (including NCAA Division III national contests), big-name concerts, and the graduation ceremony. Since it has opened, performers have included Adam Sandler, Jerry Seinfeld, Live, Blues Traveler, Counting Crows, Ben Harper, Indigo Girls, John Mayer, and The Steve Miller Band. The Dalai Lama and former presidents Jimmy Carter and Bill Clinton visited as speakers.",
+		"function":"Gosman contains many practice facilities, a dance studio, a gym, and the Fieldhouse.",
 		"entrances":["gosman_e01"],
+		"area":["athletics","athletic complex"]
 		},
 	linsey = {
 		"id":"linsey",
 		"name":"Joseph M. Linsey Sports Center",
 		"nickname":"Linsey",
+		"function":"Linsey contains Linsey Pool and is home to the Brandeis swim team.",
 		"coordinates":[
 			new Point(42.366071, -71.254290), 
 			new Point(42.365863, -71.254620), 
@@ -545,6 +590,7 @@ locations = [
 			new Point(42.365844, -71.254032), ],
 		"category":["athletics"],
 		"entrances":["linsey_e01","linsey_e02"],
+		"area":["athletics","athletic complex"]
 	},
 	mailman = {
 		"id":"mailman",
@@ -557,6 +603,7 @@ locations = [
 			new Point(42.365809, -71.255654), ],
 		"category":["health"],
 		"entrances":["mailman_e01"],
+		"area":["upper campus"]
 	},
 	castle = {
 		"id":"castle",
@@ -571,12 +618,14 @@ locations = [
 		"category":["dorm","landscape","art"],
 		"description":"Usen Castle may seem out of place on our campus, and, in fact, it predates the university. The castle was built to look like many of the castles that one might find in Scotland; however, this castle was built based on rough exterior sketches drawn from the outside of an already-existing castle. As a result, the castle is filled with architectural mishaps including rogue staircases, trapdoors, and oddly shaped rooms. While it is now a national historic landmark, the castle is also a residence hall with singles, doubles, and suites available for students in their sophomore year. With its quirky character and spectacular view of Boston, the castle makes for a unique living experience.",
 		"entrances":["castle_e01","castle_e02"],
-		"pic":"https://www.dropbox.com/s/eka3me21xgwb0au/castle.jpg?dl=0",
+		"area":["upper campus"]
 	},
 	icc = {
 		"id":"icc",
 		"name":"Intercultural Center",
 		"nickname":"ICC",
+		"description":"The Intercultural Center is dedicated to creating a haven of respect, education, and celebration that fosters growth and awareness of the myriad cultures of Brandeis.",
+		"function":"The ICC serves as an umbrella organization for sixteen student organizations, providing a venue where students can learn and demonstrate social responsibility and diverse leadership; the organizations provide events that focus on issues of culture, ethnicity and social justice.",
 		"coordinates":[
 			new Point(42.367807, -71.254980), 
 			new Point(42.367790, -71.255139), 
@@ -584,6 +633,7 @@ locations = [
 			new Point(42.367591, -71.254939),],
 		"category":["student life"],
 		"entrances":["icc_e01"],
+		"area":["upper campus","east"]
 	},
 
 	kutz = {
@@ -603,8 +653,9 @@ locations = [
 			new Point(42.369151, -71.255997),
 			new Point(42.369151, -71.256053),
 			new Point(42.369131, -71.256053),],
-		"category":["administrative"],
-		"entrances":["kutz_e01","Kutz_e02"],
+		"category":["administrative","offices","student life"],
+		"entrances":["kutz_e01","kutz_e02"],
+		"area":["upper campus"]
 	},
 	mandel = {
 		"id":"mandel",
@@ -645,7 +696,7 @@ locations = [
 		"category":["academics"],
 		"entrances":["mandel_e01"],
 		"nearby":["olin-sang","golding","rabbGrad", "heller"],
-		"pic":"https://www.dropbox.com/s/nw72e9xj84bm96h/Mandel.png?dl=0",
+		"area":["upper campus","mandel"]
 	},
 	golding = {
 		"id":"golding",
@@ -658,7 +709,8 @@ locations = [
 			new Point(42.370232, -71.257451),],
 		"category":["academics"],
 		"entrances":["golding_e01"],
-		"nearby":["olin-sang","mandel","lown","shiffman"]
+		"nearby":["olin-sang","mandel","lown","shiffman"],
+		"area":["upper campus","mandel"]
 	},
 	shiffman = {
 		"id":"shiffman",
@@ -671,6 +723,7 @@ locations = [
 			new Point(42.369583, -71.256729),],
 		"category":["academics"],
 		"entrances":["shiffman_e01"],
+		"area":["upper campus","mandel"]
 	},
 	olinsang = {
 		"id":"olin-sang",
@@ -683,6 +736,7 @@ locations = [
 			new Point(42.369507, -71.257322),],
 		"category":["academics"],
 		"entrances":["olin-sang_e01"],
+		"area":["upper campus","mandel"]
 	},
 	goldfarb = {
 		"id":"goldfarb",
@@ -703,11 +757,13 @@ locations = [
 		"category":["academics"],
 		"description": "Goldfarb/Farber Libraries house ever growing collections and reference resources in creative arts, humanities, government documents, Judaica, and social sciences. Research materials are extremely accessible to students due to the online availability of resources, and additional resources are made available through the Boston Library Consortium and the Interlibrary Loan system. The library offers services for students including a listening center, computer labs, study rooms, a media lab that helps students edit their films and soundtracks, as well as the Writing Center. The Writing Center assists students in all aspects of writing their papers, from brainstorming to editing. Recently, a new café was added to the Green Room section of the library.",
 		"entrances":["goldfarb_e01","goldfarb_e02"],
+		"area":["upper campus","libraries"]
 	},	
 	gerstenzang = {
 		"id":"gerstenzang",
-		"name":"Gerstenzang Science Library",
+		"name":"Leo Gerstenzang Science Library",
 		"nickname":"Gzang",
+		"function":"Gzang is home to many large lecture halls, LTS, and genetic counseling, in addition to a library.",
 		"coordinates":[
 			new Point(42.366974, -71.258330), 
 			new Point(42.366653, -71.257549), 
@@ -715,11 +771,13 @@ locations = [
 			new Point(42.366647, -71.258526)],
 		"category":["library","academics"],
 		"entrances":["gzang_e01","gzang_e02","gzang_ie01","gzang_ie02","gzang_ie03","volen_ie03"],
+		"area":["upper campus","science complex"]
 	},
 	pearlman = {
 		"id":"pearlman",
 		"name":"Pearlman Hall",
 		"nickname":"Pearlman",
+		"function":"Pearlman is home to sociology.",
 		"coordinates":[
 			new Point(42.367619, -71.258118), 
 			new Point(42.367577, -71.257855), 
@@ -727,6 +785,7 @@ locations = [
 			new Point(42.367367, -71.258206)],
 		"category":["academics"],
 		"entrances":["pearlman_e01","pearlman_e02"],
+		"area":["upper campus"]
 	},
 
 	{
@@ -742,6 +801,7 @@ locations = [
 			new Point(42.369722, -71.259721),],
 		"category":["offices","academics"],
 		"entrances":["abraham_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"mandelJewish",
@@ -757,6 +817,7 @@ locations = [
 			new Point(42.369722, -71.259721),],
 		"category":["offices","academics"],
 		"entrances":["mandelJewish_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"schneider",
@@ -774,18 +835,21 @@ locations = [
 			new Point(42.369166, -71.259735),],
 		"category":["offices","academics"],
 		"entrances":["schneider_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"lown",
 		"name":"Lown School of Near Eastern and Judaic Studies",
-		"nickname":"Lown Building",
+		"nickname":"Lown",
+		"function":"Lown is home to the National Center for Jewish Film and many courses in Near Eastern and Judaic Studies (NEJS) and Islamic and Middle Eastern Studies (IMES).",
 		"coordinates":[
 			new Point(42.370321, -71.257312), 
 			new Point(42.370185, -71.257497), 
 			new Point(42.369941, -71.257161),
 			new Point(42.370076, -71.256976),],
-		"category":["academics"],
+		"category":["academics","offices"],
 		"entrances":["lown_e01"],
+		"area":["upper campus","mandel"]
 	},
 	{
 		"id":"levin",
@@ -803,11 +867,13 @@ locations = [
 			new Point(42.367883, -71.257026),],
 		"category":["student life"],
 		"entrances":["levin_e01","levin_e02",],
+		"area":["upper campus"]
 	},
 	{
 		"id":"rosensweig",
 		"name":"Kosow-Wolfson-Rosensweig",
-		"nickname":"Rosensweig",
+		"nickname":"Kosow",
+		"function":"Kosow is home to biochemistry.",
 		"coordinates":[
 			new Point(42.366323, -71.256866), 
 			new Point(42.366046, -71.257092), 
@@ -818,6 +884,7 @@ locations = [
 			new Point(42.366248, -71.256689),],
 		"category":["academics"],
 		"entrances":["rosensweig_e01","rosensweig_e02","rosensweig_e03"],
+		"area":["upper campus","science complex"]
 	},
 	{
 		"id":"foster",
@@ -833,6 +900,7 @@ locations = [
 			new Point(42.366274, -71.256662),],
 		"category":["academics"],
 		"entrances":["foster_e01"],
+		"area":["upper campus","science complex"]
 	},
 	{
 		"id":"safety",
@@ -856,6 +924,7 @@ locations = [
 		"category":["health"],
 		"description":"Stoneman Public Safety, Stoneman is home to Brandeis Police.",
 		"entrances":["police_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"healthcenter",
@@ -873,6 +942,7 @@ locations = [
 		"category":["health"],
 		"description":"The Health Center offers confidential health services. In the case of an emergency, there is a nurse or doctor on call at all times. The Brandeis Emergency Medical Corps (BEMCO) is a student-operated, certified EMT service, trained to respond to student’s calls 24/7.",
 		"entrances":["healthcenter_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"superconducting",
@@ -886,6 +956,7 @@ locations = [
 			new Point(42.365927, -71.255305),],
 		"category":["academics","offices"],
 		"entrances":["superconducting_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"mandelpeacegarden",
@@ -896,7 +967,8 @@ locations = [
 			new Point(42.367868, -71.257631), 
 			new Point(42.367728, -71.257779), 
 			new Point(42.367751, -71.257513),],
-		"category":["landscape"],
+		"category":["landscape","art"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"lemberg",
@@ -914,7 +986,8 @@ locations = [
 		],
 		"category":["academics"],
 		"nearby":["rabbSchool","slosberg"],
-		"entrances":["lemberg_e01"]
+		"entrances":["lemberg_e01"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"samuellemberg",
@@ -933,7 +1006,8 @@ locations = [
 		],
 		"category":["academics"],
 		"nearby":["sachar","goldman"],
-		"entrances":['samuellemberg_e01','samuellemberg_e02']
+		"entrances":['samuellemberg_e01','samuellemberg_e02'],
+		"area":["lower campus"]
 	},
 	{
 		"id":"rieger",
@@ -1011,7 +1085,7 @@ locations = [
 		"function":"The Chapels Field Wetland acts as a catchment basin for water from upper campus, preventing the flooding of Massell Quad and the Chapels.",
 		"description":"",
 		"category":["landscape"],
-		"area":["upper campus"],
+		"area":["upper campus","chapels"],
 		"nearby":["chapelsfield","berlin","bethlehem","harlan","farber"],
 		"coordinates":[new Point(42.368033, -71.259924),
 			new Point(42.367690, -71.259097),
