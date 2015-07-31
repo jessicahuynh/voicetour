@@ -251,10 +251,10 @@ function disambiguate(entity) {
     var dis = "";
     var disambiguated = false;
     if (entity == "Shapiro") {
-        disambiguationChoices = ["Carl J. Shapiro Science Center","Carl and Ruth Shapiro Admissions Center","Carl and Ruth Shapiro Campus Center","Shapiro Hall"];
-        dis = "Did you mean the <span class='said'>Shapiro Science Center</span>, <span class='said'>Carl and Ruth Shapiro Admissions Center</span>, <span class='said'>Shapiro Campus Center</span>, or <span class='said'>Shapiro Hall</span> in Massell Quad?";
+        disambiguationChoices = ["Carl J. Shapiro Science Center","Carl and Ruth Shapiro Admissions Center","Carl and Ruth Shapiro Campus Center","Abraham Shapiro Academic Complex","Shapiro Hall"];
+        dis = "Did you mean the <span class='said'>Shapiro Science Center</span>, <span class='said'>Carl and Ruth Shapiro Admissions Center</span>, <span class='said'>Shapiro Campus Center</span>, <span class='said'>Abraham Shapiro Academic Complex</span>, or <span class='said'>Shapiro Hall</span> in Massell Quad?";
         
-        Session.set("micResponse","Did you mean the Shapiro Science Center, Carl and Ruth Shapiro Admissions Center, Shapiro Campus CEnter, or Shapiro Hall in Massell Quad?");
+        Session.set("micResponse","Did you mean the Shapiro Science Center, Carl and Ruth Shapiro Admissions Center, Shapiro Campus CEnter, Abraham Shapiro Academic Complex, or Shapiro Hall in Massell Quad?");
         
         Session.set("disambiguationChoices",disambiguationChoices);
         

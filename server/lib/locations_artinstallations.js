@@ -29,6 +29,7 @@ locations_artinstallations = [
 	{
 		"id":"magnolias",
 		"name":"Six Magnolia Trees",
+		"nickname":"Six Magnolia Trees",
 		"function":"These six magnolia trees were planted in memory of the Holocaust.",
 		"description":"They are both symbolic of the past and representative of our optimism for the future. Planted by the students of Brandeis University Yom HaShoah at April 22, 2004.",
 		"coordinates":[new Point(42.368132, -71.260572)]
@@ -42,16 +43,20 @@ locations_artinstallations = [
 	{
 		"id":"holocaust_rememberance",
 		"name":"Memorial to the Martyrs of the Holocaust",
+		"nickname":"Martyrs of the Holocaust Memorial",
 		"function":"This monument is in memory of the six million Jews who perished in the Holocaust.",
 		"coordinates":[new Point(42.368295, -71.260781)]
 	},
 	{
 		"id":"chapelstriangle",
+		"name":"Chapels Pond Triangle",
+		"nickname":"Chapels Pond Triangle",
 		"coordinates":[new Point(42.368235, -71.260346)]
 	},
 	{
 		"id":"praying_human",
 		"name":"Submitting human in front of the Chapels",
+		"nickname":"Praying human",
 		"coordinates":[new Point(42.368463, -71.260944)]
 	},
 	{

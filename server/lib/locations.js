@@ -177,6 +177,7 @@ locations = [
 	goldman = {
 		"id":"goldman",
 		"name":"Goldman-Schwartz Fine Arts",
+		"nickname":"Goldman-Schwartz",
 		"description":"Goldman-Schwartz Fine Arts is home to the Department of Fine Arts. It welcomes students to experience art through scholarship and as a process of creation. By uniting intellectual inquiry with artist excellence, it affirms the importance of a broad education and prepare the students for creative participation in a changing society.",
 		"coordinates":[
 			new Point(42.365001,-71.263157), 
@@ -188,7 +189,8 @@ locations = [
 		},
 	gryzmish = {
 		"id":"gryzmish",
-		"name":"Gryzmish Center",
+		"name":"Ethel and Reuben Gryzmish Academic Center",
+		"nickname":"Gryzmish",
 		"description":"Gryzmish Center is home to Office of Communications, Department of Integrated Media, Office of Student & Enrollment, Planning & Institutional Rsrch, Division of Admin & Finance, Office of Human Resources, Investment Management, Office of the General Counsel and Department of Digital Communications.",
 		"coordinates":[
 			new Point(42.365593,-71.259553), 
@@ -200,6 +202,7 @@ locations = [
 	sachar = {
 		"id":"sachar",
 		"name":"Sachar International Center",
+		"nickname":"Sachar",
 		"coordinates":[
 			new Point(42.364940, -71.265213), 
 			new Point(42.364988, -71.265133), 
@@ -226,7 +229,8 @@ locations = [
 		},
 	irving = {
 		"id":"irving",
-		"name":"Irving Presidential Enclave",
+		"name":"Julius and Matilda Irving Presidential Enclave",
+		"nickname":"Irving",
 		"coordinates":[
 			new Point(42.365209,-71.259623), 
 			new Point(42.365423,-71.259113), 
@@ -250,6 +254,7 @@ locations = [
 	pollack = {
 		"id":"pollack",
 		"name":"Pollack Fine Arts Teaching Center",
+		"nickname":"Pollack",
 		"coordinates":[
 			new Point(42.365328,-71.26243), 
 			new Point(42.365291,-71.262325), 
@@ -261,6 +266,7 @@ locations = [
 	rabbSchool = {
 		"id":"rabbSchool",
 		"name":"The Rabb School of Continuing Studies",
+		"nickname":"Rabb School",
 		"coordinates":[
 			new Point(42.363061,-71.258924),
 			new Point(42.36298,-71.25929),  
@@ -449,6 +455,7 @@ locations = [
 	rabb = {
 		"id":"rabb",
 		"name":"Rabb Graduate Center",
+		"nickname":"Rabb Graduate Center",
 		"coordinates":[
 			new Point(42.369289,-71.25762), 
 			new Point(42.369127,-71.256792), 
@@ -461,6 +468,7 @@ locations = [
 	roseMedical = {
 		"id":"roseMedical",
 		"name":"Rosenstiel Basic Medical Sciences Research Center",
+		"nickname":"Rosenstiel",
 		"coordinates":[
 			new Point(42.366103,-71.257429), 
 			new Point(42.365901,-71.257013), 
@@ -724,6 +732,7 @@ locations = [
 	{
 		"id":"abraham",
 		"name":"Abraham Shapiro Academic Complex",
+		"nickname":"Shapiro Academic Complex",
 		"coordinates":[
 			new Point(42.369827, -71.259680), 
 			new Point(42.369761, -71.259332), 
@@ -737,6 +746,7 @@ locations = [
 	{
 		"id":"mandelJewish",
 		"name":"Mandel Center for Studies in Jewish Education",
+		"nickname":"Mandel Center",
 		"coordinates":[
 			new Point(42.369615, -71.259750), 
 			new Point(42.369553, -71.259402), 
@@ -780,6 +790,7 @@ locations = [
 	{
 		"id":"levin",
 		"name":"Levin Ballroom",
+		"nickname":"Levin",
 		"coordinates":[
 			new Point(42.368350, -71.256863), 
 			new Point(42.368408, -71.257168), 
@@ -811,6 +822,7 @@ locations = [
 	{
 		"id":"foster",
 		"name":"Henry and Lois Foster Bio-Medical Research Center",
+		"nickname":"Foster Bio-Medical Research Center",
 		"coordinates":[
 			new Point(42.366149, -71.256427), 
 			new Point(42.365998, -71.256557), 
@@ -825,6 +837,7 @@ locations = [
 	{
 		"id":"safety",
 		"name":"Stoneman Infirmary and Public Safety",
+		"nickname":"Public Safety",
 		"coordinates":[
 			new Point(42.366291, -71.255616), 
 			new Point(42.366332, -71.255391), 
