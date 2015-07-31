@@ -1,44 +1,27 @@
 # Brandeis Voice Tour
 
-This is going to be a web and mobile app with multi-modal navigation that tours around [Brandeis University](http://www.brandeis.edu)'s campus.
+This is a web and mobile app with multi-modal navigation that allows people to navigate around [Brandeis University](http://www.brandeis.edu)'s campus.
 
-## Planned features
+Link: [http://leiner.cs-i.brandeis.edu:4200]
+
+## Features
 * Find your current location on campus
 * Search through locations
 * Navigate between locations, inside and out
 * Self-guided tour
-* Follow fixed tours
-* Create own tour
+* Filter the list of locations
 * Display information about locations (description, open hours, etc.)
 
-All of these features are planned to be used with voice commands as well. We will also have the ability to have information read to you.
-
-## Current status
-
-We are currently working on the UX, implementing voice commands, adding more locations, and route finding.
-
-### v1.3.0
-- UI improvements related to search bar
-- Route finding implemented!
-- Autocomplete when searching for locations to navigate
-- Location data and intersection points for Massell, Chapels, Rosie, and athletics
-- Algorithm to determine the shortest path from a building with multiple entrances
-
-### v1.2.0
-- Search through multiple fields
-- Collapsable sidebar and other UI tweaks
-- Location information pages
-
-### v1.1.0
-* Much more reliable location finding
-* Nearly 50 additional locations
-* List and filter locations
-
-### v1.0.0
-* Minimum viable product!
-* HTML5 geolocation
-* Detect location within coordinates of an n*polygon
-* Define bounds of six test locations
+## Voice Commands
+* Help
+* Where am I?
+* Tell me about _location_
+* Search for _Term_
+* Take me to _location_ from _Location_
+* Start self-guided tour
+* Read
+* Repeat
+* Show me the list of locations
 
 ## Members
 Jessica Huynh
