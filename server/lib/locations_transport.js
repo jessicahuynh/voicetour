@@ -6,6 +6,8 @@ locations_transport = [
 		"coordinates":[new Point(42.359553, -71.256634)],
 		"function":"The Grad stop services both the campus and Waltham BranVan.",
 		"category":["transportation"],
+		"area":["lower campus","charles river"],
+		"nearby":["charlesrivercommons"]
 	},
 	{
 		"id":"stop_c-lot",
@@ -13,7 +15,8 @@ locations_transport = [
 		"nickname":"C-Lot stop",
 		"coordinates":[new Point(42.359316, -71.258342)],
 		"function":"The C-Lot stop services the campus BranVan.",
-		"category":["transportation"]
+		"category":["transportation"],
+		"area":["lower campus","charles river"]
 	},
 	{
 		"id":"stop_567",
@@ -21,7 +24,8 @@ locations_transport = [
 		"nickname":"567 shuttle stop",
 		"coordinates":[new Point(42.361128, -71.261215)],
 		"function":"The 567 shuttle stop serves the campus BranVan.",
-		"category":["transportation"]
+		"category":["transportation"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"stop_trainstation",
@@ -29,7 +33,8 @@ locations_transport = [
 		"nickname":"Train station stop",
 		"coordinates":[new Point(42.361712, -71.260823)],
 		"function":"The shuttle stop across from the train station serves the campus BranVan.",
-		"category":["transportation"]
+		"category":["transportation"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"commuterrail",
@@ -47,7 +52,8 @@ locations_transport = [
 		"description":"The inbound platform towards Boston is on the side furthest from campus. Outbound is on the side closest to campus.",
 		"category":["transportation"],
 		"entrances":["commuterrail_e01","commuterrail_e02"],
-		"nearby":["epstein","ss567","grad111","grad112","grad113","grad114"]
+		"nearby":["epstein","ss567","grad111","grad112","grad113","grad114"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"stop_admissions",
@@ -57,7 +63,8 @@ locations_transport = [
 		"function":"The Admissions bus shelter serves the campus and Waltham BranVans, along with the Boston and Riverside shuttles.",
 		"description":"The bus shelter itself was a gift of the Student Union 2013-2014.",
 		"category":["transportation"],
-		"nearby":["admissions","slosberg","bernstein-marcus","greatlawn","scc","ridgewoodA"]
+		"nearby":["admissions","slosberg","bernstein-marcus","greatlawn","scc","ridgewoodA"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"stop_lemberg",
@@ -66,7 +73,8 @@ locations_transport = [
 		"coordinates":[new Point(42.363194, -71.258541)],
 		"function":"The Lemberg stop serves the campus BranVan.",
 		"category":["transportation"],
-		"nearby":["lemberg","rabbSchool","gordonfield"]
+		"nearby":["lemberg","rabbSchool","gordonfield"],
+		"area":["lower campus"]
 	}
 ]
 

@@ -9,7 +9,8 @@ locations_parking = [
 			new Point(42.364272,-71.257766),
 			new Point(42.364914,-71.256057), ],
 		"category":["parking"],
-		"entrances":["athleticslot_e01","athleticslot_e02"]
+		"entrances":["athleticslot_e01","athleticslot_e02"],
+		"area":["athletics","athletic complex"]
 	},
 	{
 		"id":"gosmanparkinglot",
@@ -21,7 +22,8 @@ locations_parking = [
 			new Point(42.365393,-71.252676),
 			new Point(42.364858,-71.253718), ],
 		"category":["parking"],
-		"entrances":["gosmanparkinglot_e01","gosmanparkinglot_e02"]
+		"entrances":["gosmanparkinglot_e01","gosmanparkinglot_e02"],
+		"area":["athletics","athletic complex"]
 	},
 	{
 		"id":"linseyparkinglot",
@@ -33,7 +35,8 @@ locations_parking = [
 			new Point(42.365645,-71.253642), 
 			new Point(42.365739,-71.253857)],
 		"category":["parking"],
-		"entrances":["linseyparkinglot_e01"]
+		"entrances":["linseyparkinglot_e01"],
+		"area":["athletics","athletic complex"]
 	},
 	{
 		"id":"towerlot",
@@ -45,7 +48,8 @@ locations_parking = [
 			new Point(42.370091, -71.259134), 
 			new Point(42.369904, -71.258646)],
 		"category":["parking"],
-		"entrances":["towerlot_e01"]
+		"entrances":["towerlot_e01"],
+		"area":["upper campus","mandel"]
 	},
 	{
 		"id":"librarylot",
@@ -57,7 +61,8 @@ locations_parking = [
 			new Point(42.368845, -71.257814), 
 			new Point(42.368924, -71.257598)],
 		"category":["parking"],
-		"entrances":["librarylot_e01"]
+		"entrances":["librarylot_e01"],
+		"area":["upper campus","libraries"]
 	},
 	{
 		"id":"kutzlot",
@@ -69,7 +74,8 @@ locations_parking = [
 			new Point(42.368675, -71.256459), 
 			new Point(42.368580, -71.256135)],
 		"category":["parking"],
-		"entrances":["kutzlot_e01"]
+		"entrances":["kutzlot_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"northquadlot",
@@ -81,7 +87,8 @@ locations_parking = [
 			new Point(42.369640, -71.254723), 
 			new Point(42.369763, -71.254697)],
 		"category":["parking"],
-		"entrances":["northquadlot_e01"]
+		"entrances":["northquadlot_e01"],
+		"area":["upper campus","north"]
 	},
 	{
 		"id":"sciencevisitorlot",
@@ -93,7 +100,8 @@ locations_parking = [
 			new Point(42.366187, -71.257086), 
 			new Point(42.366530, -71.256810)],
 		"category":["parking"],
-		"entrances":["sciencevisitorlot_e01"]
+		"entrances":["sciencevisitorlot_e01"],
+		"area":["upper campus","science complex"]
 	},
 	{
 		"id":"sciencespeciallot",
@@ -105,7 +113,8 @@ locations_parking = [
 			new Point(42.366308, -71.257368), 
 			new Point(42.366636, -71.257060)],
 		"category":["parking"],
-		"entrances":["sciencespeciallot_e01"]
+		"entrances":["sciencespeciallot_e01"],
+		"area":["upper campus","science complex"]
 	},
 	{
 		"id":"sciencelot",
@@ -117,7 +126,8 @@ locations_parking = [
 			new Point(42.366481, -71.255527), 
 			new Point(42.366629, -71.255677)],
 		"category":["parking"],
-		"entrances":["sciencelot_e01","sciencelot_e02"]
+		"entrances":["sciencelot_e01","sciencelot_e02"],
+		"area":["upper campus","science complex"]
 	},
 	{
 		"id":"stonemanlot",
@@ -129,7 +139,8 @@ locations_parking = [
 			new Point(42.366836, -71.254822), 
 			new Point(42.366331, -71.255020)],
 		"category":["parking"],
-		"entrances":["stonemanlot_e01"]
+		"entrances":["stonemanlot_e01"],
+		"area":["upper campus"]
 	},
 	{
 		"id":"eastquadlot",
@@ -142,7 +153,8 @@ locations_parking = [
 			new Point(42.366950, -71.254004),
 			new Point(42.367311, -71.253783),],
 		"category":["parking"],
-		"entrances":["eastquadlot_e01","eastquadlot_e02"]
+		"entrances":["eastquadlot_e01","eastquadlot_e02"],
+		"area":["upper campus","east"]
 	},
 	{
 		"id":"charlesriverlot",
@@ -166,7 +178,8 @@ locations_parking = [
 			new Point(42.359378, -71.258467)
 		],
 		"category":["parking"],
-		"entrances":["clot_e01","clot_e02","clot_e03"]
+		"entrances":["clot_e01","clot_e02","clot_e03"],
+		"area":["lower campus","charles river"]
 	},
 	{
 		"id":"bernsteinparkinglot",
@@ -179,7 +192,8 @@ locations_parking = [
 			new Point(42.365064, -71.260004)
 		],
 		"category":["parking"],
-		"nearby":["bernstein-marcus","stop_admissions","greatlawn","slosberg"]
+		"nearby":["bernstein-marcus","stop_admissions","greatlawn","slosberg"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"hlot",
@@ -195,7 +209,8 @@ locations_parking = [
 		],
 		"description":"Parking for vehicles bearing red permit . Violators towed at owener's expense.",
 		"category":["parking"],
-		"nearby":["shapirodorm"]
+		"nearby":["shapirodorm"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"admissionsvisitorparking",
@@ -211,7 +226,8 @@ locations_parking = [
 		"category":["parking"],
 		"description":"Parking for Admissions visitors ONLY. Violators towed at owner's expense.",
 		"nearby":["slosberg","admissions","bernstein-marcus","stop_admissions","ridgewoodA"],
-		"entrances":["slosberg_c02","slosberg_c03"]
+		"entrances":["slosberg_c02","slosberg_c03"],
+		"area":["lower campus"]
 	},
 	{
 		"id":"theaterparking",
@@ -227,7 +243,8 @@ locations_parking = [
 		],
 		"category":["parking"],
 		"nearby":["spingold,ridgewoodB,zivB,zivA,lemberg,goldman"],
-		"entrances":[]
+		"entrances":[],
+		"area":["lower campus"]
 	},
 	{
 		"id":"hellerparking",
@@ -241,7 +258,8 @@ locations_parking = [
 		],
 		"category":["parking"],
 		"nearby":["schneider","harlan"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 
 ]

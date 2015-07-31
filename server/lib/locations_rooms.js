@@ -21,15 +21,16 @@ locations_rooms = [
 			new Point(42.363118, -71.260645), 
 			new Point(42.363148, -71.260623), 
 			],
-		"function":"",
+		"function":"Dunkin' sells donuts.",
 		"description": "",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["lower campus"]
 	},
 	{
 		"id":"einstein",
 		"name":"Einstein Bros. Bagels",
-		"nickname":"Einstein",
+		"nickname":"Einstein's",
 		"coordinates": [
 			new Point(42.365729, -71.260335), 
 			new Point(42.365671, -71.260347), 
@@ -39,7 +40,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["lower campus"]
 	},
 // 	{
 // 		"id":"facultyclub",
@@ -65,10 +67,11 @@ locations_rooms = [
 			new Point(42.366559, -71.260432), 
 			new Point(42.366437, -71.260811), 
 			],
-		"function":"",
+		"function":"Sherman is an all-you-can-eat dining hall and is the only integrated kosher cafeteria in the United States.",
 		"description":"Sherman Dining Hall is one of main dining facilities on campus. It is an all-you-care-to- eat buffet style option. Sherman is unique in that it is the only integrated kosher (Jewish dietary law) cafeteria in the country, where all students can eat together in the same place. Options include grilled foods, a sandwich station, a salad bar, pizza, a stir fry bar, omelet stations, a gluten free section, a crepe station, vegan and vegetarian options, as well as a large dessert selection. Furthermore, students can submit recipes from home and receive notice as to when these coveted meals will be served in Sherman.",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["lower campus"]
 	},
 		{
 		"id":"starbucksHeller",
@@ -83,7 +86,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 		{
 		"id":"starbucksLib",
@@ -98,7 +102,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 		{
 		"id":"peets",
@@ -113,7 +118,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus","science complex"]
 	},
 		{
 		"id":"stein",
@@ -128,7 +134,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["lower campus"]
 	},
 	{
 		"id":"usdanBoulevard",
@@ -147,7 +154,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 	{
 		"id":"usdanCafe",
@@ -162,7 +170,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},	
 {
 		"id":"cStore",
@@ -177,7 +186,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 {
 		"id":"usdanLouisDeli",
@@ -192,7 +202,8 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["dining"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
  },
 	{
 		"id":"isso",
@@ -207,12 +218,13 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["offices"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 	{
 		"id":"mail",
-		"name":"Mail Room",
-		"nickname":"Mail",
+		"name":"Mailroom",
+		"nickname":"Mailroom",
 		"coordinates": [
 			new Point(42.368302, -71.256598), 
 			new Point(42.368246, -71.256290), 
@@ -222,11 +234,12 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["offices"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 	{
 		"id":"registrar",
-		"name":"Registrar Office",
+		"name":"Registrar's Office",
 		"nickname":"Registrar",
 		"coordinates": [
 			new Point(42.369076, -71.255889), 
@@ -237,12 +250,13 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["offices"],
-		"entrances":[]
+		"entrances":[],
+		"area":["upper campus"]
 	},
 	{
 		"id":"bookStore",
-		"name":"Book Store",
-		"nickname":"Book store",
+		"name":"Campus Bookstore",
+		"nickname":"Bookstore",
 		"coordinates": [
 			new Point(42.365738, -71.260542), 
 			new Point(42.365735, -71.260419),
@@ -252,8 +266,22 @@ locations_rooms = [
 		"function":"",
 		"description":"",
 		"category":["student life"],
-		"entrances":[]
+		"entrances":[],
+		"area":["lower campus"]
 	},
+	{
+		"id":"fieldhouse",
+		"name":"Auerbach Arena",
+		"nickname":"The Fieldhouse",
+		"coordinates":[new Point(42.364903, -71.255339),
+			new Point(42.364476, -71.254855),
+			new Point(42.364998, -71.253966),
+			new Point(42.365444, -71.254475)],
+		"function":"The Fieldhouse is home to Brandeis basketball and volleyball. Many events, such as graduation, are held here as well.",
+		"description":"",
+		"category":["athletics","student life"],
+		"area":["athletics","athletic complex"]
+	}
 ]
 
 function Point(x,y) {
